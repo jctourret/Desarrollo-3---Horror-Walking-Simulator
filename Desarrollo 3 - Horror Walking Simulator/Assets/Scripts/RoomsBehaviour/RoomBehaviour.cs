@@ -14,6 +14,12 @@ public class RoomBehaviour : MonoBehaviour, IRoom
     [Header("Rotate values")]
     public Vector3 finalRotationVec;
 
+    [Header("Move To values")]
+    public Vector3 newPosition;
+
+    [Header("Show Gameobjects")]
+    public List<GameObject> hiddenObjs;
+
     float MAX_TIME = 1f;
 
     // ================================================================== \\
@@ -29,7 +35,16 @@ public class RoomBehaviour : MonoBehaviour, IRoom
                 break;
 
             case Behaviour.MoveTo:
+
+                MoveRoom();
+
                 break;
+        }
+
+        foreach(GameObject obj in hiddenObjs)
+        {
+            if(obj != null)
+                obj.SetActive(true);
         }
     }
 
@@ -50,6 +65,12 @@ public class RoomBehaviour : MonoBehaviour, IRoom
 
             yield return null;
         }
+    }
+
+    void MoveRoom()
+    {
+
+        this.transform.position = newPosition;
 
     }
 }
