@@ -22,10 +22,14 @@ public class PlayerMovement : MonoBehaviour
     }
 
 
-    void Update()
+    void FixedUpdate()
     {
         PlayerInput();
 
+    }
+
+    private void Update()
+    {
         PlayerJump();
     }
 
