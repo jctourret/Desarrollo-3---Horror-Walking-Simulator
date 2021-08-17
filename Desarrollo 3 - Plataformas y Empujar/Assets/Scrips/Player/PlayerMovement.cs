@@ -10,7 +10,6 @@ public class PlayerMovement : MonoBehaviour
     [Header("Jump Variables")]
     public float forceJump = 5f;
     public float hightLimit = 2f;
-    //public bool isJumping = false;
 
     Rigidbody rig;
 
@@ -21,11 +20,9 @@ public class PlayerMovement : MonoBehaviour
         rig = GetComponent<Rigidbody>();
     }
 
-
     void FixedUpdate()
     {
         PlayerInput();
-
     }
 
     private void Update()

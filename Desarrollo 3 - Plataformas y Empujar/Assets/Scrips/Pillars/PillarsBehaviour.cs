@@ -1,11 +1,18 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 using TMPro;
 
 public class PillarsBehaviour : MonoBehaviour
 {
+    public static Action IsCollapsing;
+    public static Action CreatePillar;
+
+    //===============================================
+    
     [Header("Delay Animation")]
+    public Animator animator;
     [Range(0,2)]
     public float delayTime = 1f;
 
@@ -27,15 +34,14 @@ public class PillarsBehaviour : MonoBehaviour
     float timer = 0f;
     bool timerToDestroy = false;
 
-    Animator animator;
 
     //===============================================
 
     private void Start()
     {
-        animator = GetComponent<Animator>();
-
         timerText.SetActive(false);
+
+        CreatePillar();
     }
 
     private void OnEnable()
@@ -68,6 +74,7 @@ public class PillarsBehaviour : MonoBehaviour
         yield return new WaitForSeconds(delayTime);
 
         timerText.SetActive(true);
+
         pillarState = PillarState.waiting;
     }
 
@@ -81,6 +88,8 @@ public class PillarsBehaviour : MonoBehaviour
             {
                 timer = destroyTime;
                 timerToDestroy = true;
+
+                IsCollapsing();
 
                 timerText.GetComponent<TextMeshPro>().color = Color.red;
             }
