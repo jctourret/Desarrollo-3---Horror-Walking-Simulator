@@ -35,7 +35,7 @@ public class CallCameraTrigger : MonoBehaviour
             time += Time.deltaTime;
 
             Vector3 desiredPosition = this.transform.position + offset;
-            Vector3 smoothedPosition = Vector3.Lerp(newCamera.position, desiredPosition, smoothSpeed);
+            Vector3 smoothedPosition = Vector3.LerpUnclamped(newCamera.position, desiredPosition, smoothSpeed);
             newCamera.position = smoothedPosition;
 
             yield return null;
