@@ -1,9 +1,8 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using UnityEngine.AI;
 using UnityEngine;
 
 public class PillarsManager : MonoBehaviour
-{
+{ 
     [Header("Pillars Spawner")]
     public Transform parent;
     public GameObject pillar;
@@ -11,6 +10,8 @@ public class PillarsManager : MonoBehaviour
     public float distBetweenPillars = 2f;
 
     public int numerationPillars = 0;
+
+    NavMeshSurface navMesh;
 
     enum SpawnDirection
     {
@@ -27,18 +28,21 @@ public class PillarsManager : MonoBehaviour
     private void Awake()
     {
         numerationPillars = 0;
+        navMesh = GetComponent<NavMeshSurface>();
     }
 
     private void OnEnable()
     {
         PillarsBehaviour.IsCollapsing += CallOtherPillar;
         PillarsBehaviour.CreatePillar += NumbersOfPillars;
+        PillarsBehaviour.OnPillarUp += BakeMesh;
     }
 
     private void OnDisable()
     {
         PillarsBehaviour.IsCollapsing -= CallOtherPillar;        
-        PillarsBehaviour.CreatePillar -= NumbersOfPillars;        
+        PillarsBehaviour.CreatePillar -= NumbersOfPillars;
+        PillarsBehaviour.OnPillarUp -= BakeMesh;
     }
 
     //=====================================
@@ -90,6 +94,12 @@ public class PillarsManager : MonoBehaviour
         GameObject go = Instantiate(pillar, new Vector3(this.transform.position.x, pillar.transform.position.y, this.transform.position.z), Quaternion.Euler(Vector3.up), parent);
 
         go.transform.name = pillar.name + "-" + (numerationPillars + 1).ToString();
+    }
+
+    void BakeMesh()
+    {
+        navMesh.BuildNavMesh();
+        Debug.Log("Baking Mesh");
     }
 
     //===========================================

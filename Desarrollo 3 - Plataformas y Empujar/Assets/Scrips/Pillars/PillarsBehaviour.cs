@@ -8,7 +8,7 @@ public class PillarsBehaviour : MonoBehaviour
 {
     public static Action IsCollapsing;
     public static Action CreatePillar;
-
+    public static Action OnPillarUp;
     //===============================================
     
     [Header("Delay Animation")]
@@ -41,7 +41,8 @@ public class PillarsBehaviour : MonoBehaviour
     {
         timerText.SetActive(false);
 
-        CreatePillar();
+        CreatePillar?.Invoke();
+        StartCoroutine(MoveUpPillar());
     }
 
     private void OnEnable()
@@ -56,7 +57,6 @@ public class PillarsBehaviour : MonoBehaviour
         switch (pillarState)
         {
             case PillarState.MoveUp:
-                StartCoroutine(MoveUpPillar());
                 break;
             
             case PillarState.waiting:
@@ -64,7 +64,6 @@ public class PillarsBehaviour : MonoBehaviour
                 break;
             
             case PillarState.MoveDown:
-                StartCoroutine(MoveDownPillar());
                 break;
         }
     }
@@ -76,6 +75,7 @@ public class PillarsBehaviour : MonoBehaviour
         timerText.SetActive(true);
 
         pillarState = PillarState.waiting;
+        OnPillarUp?.Invoke();
     }
 
     void UpdateTimer()
@@ -89,13 +89,14 @@ public class PillarsBehaviour : MonoBehaviour
                 timer = destroyTime;
                 timerToDestroy = true;
 
-                IsCollapsing();
+                IsCollapsing?.Invoke();
 
                 timerText.GetComponent<TextMeshPro>().color = Color.red;
             }
             else
             {
                 pillarState = PillarState.MoveDown;
+                StartCoroutine(MoveDownPillar());
             }
         }
 

@@ -1,9 +1,10 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System;
 using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
+    public static Action<Vector3> OnPlayerMove;
+
     [Header("Player Move")]
     public float speedMovement = 10f;
 
@@ -23,6 +24,7 @@ public class PlayerMovement : MonoBehaviour
     void FixedUpdate()
     {
         PlayerInput();
+        OnPlayerMove?.Invoke(transform.position);
     }
 
     private void Update()
@@ -34,12 +36,14 @@ public class PlayerMovement : MonoBehaviour
 
     void PlayerInput()
     {
-        float vertical = Input.GetAxis("Vertical");
-        float horizontal = Input.GetAxis("Horizontal");
-
-        Vector3 direction = new Vector3(horizontal, 0f, vertical).normalized * speedMovement * Time.deltaTime;
-
-        rig.MovePosition(transform.position + direction);
+        Vector3 currentPos = rig.position;
+        float horizontalInput = Input.GetAxis("Horizontal");
+        float verticalInput = Input.GetAxis("Vertical");
+        Vector3 input = new Vector3(verticalInput, 0.0f, -horizontalInput);
+        input = Vector3.ClampMagnitude(input, 1);
+        Vector3 movement = input * speedMovement;
+        Vector3 newPos = currentPos + movement * Time.fixedDeltaTime;
+        rig.MovePosition(newPos);
     }
 
     void PlayerJump()
