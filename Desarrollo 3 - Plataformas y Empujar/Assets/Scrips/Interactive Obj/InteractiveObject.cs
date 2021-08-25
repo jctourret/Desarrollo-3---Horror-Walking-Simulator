@@ -11,7 +11,7 @@ public class InteractiveObject : MonoBehaviour
         Open
     };
 
-    public GameObject posterUI;
+    public GameObject UIposter;
 
     public StateObject stateObject;
 
@@ -22,7 +22,7 @@ public class InteractiveObject : MonoBehaviour
 
     private void Start()
     {
-        posterUI.SetActive(false);
+        UIposter.SetActive(false);
 
         animator = GetComponent<Animator>();
     }
@@ -31,7 +31,7 @@ public class InteractiveObject : MonoBehaviour
     {
         if (stateObject == StateObject.Available)
         {
-            posterUI.SetActive(true);
+            UIposter.SetActive(true);
 
             inRange = true;
         }
@@ -44,7 +44,7 @@ public class InteractiveObject : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.E))
             {
                 stateObject = StateObject.Open;
-                posterUI.SetActive(false);
+                UIposter.SetActive(false);
                 animator.SetTrigger("Open");
             }
         }
@@ -54,7 +54,7 @@ public class InteractiveObject : MonoBehaviour
     {
         if (stateObject == StateObject.Available)
         {
-            posterUI.SetActive(false);
+            UIposter.SetActive(false);
 
             inRange = false;
         }

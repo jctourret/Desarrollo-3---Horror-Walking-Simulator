@@ -186,7 +186,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8b498290ad6d4a40bda45000b7e7017, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  posterUI: {fileID: 7797896614635863373}
+  UIposter: {fileID: 7797896614635863373}
   stateObject: 1
 --- !u!95 &547727257
 Animator:
