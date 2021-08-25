@@ -1,18 +1,21 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
+    public static Func<Camera> RecieveCamera;
+
+    Camera mainCamera;
 
     void Awake()
     {
         instance = this;
     }
 
-
-    public Transform mainCamera;
-
-
+    private void Start()
+    {
+        mainCamera = RecieveCamera?.Invoke();
+    }
+    
 }

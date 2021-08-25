@@ -1,21 +1,28 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System;
 using UnityEngine;
 
 public class PlayerStats : MonoBehaviour, IDamageable
 {
+    public static Action OnPlayerDamaged;
+    public static Action OnPlayerDeath;
     [Header("Stats")]
-    public float life = 100f;
+    public int lives = 3;
     
     //=============================================
 
     public void TakeDamage(int damage)
     {
-
+        lives = lives - damage;
+        OnPlayerDamaged?.Invoke();
+        Eliminated();
     }
 
     public void Eliminated()
     {
-
+        if (lives <= 0)
+        {
+            Destroy(gameObject);
+            OnPlayerDeath?.Invoke();
+        }
     }
 }

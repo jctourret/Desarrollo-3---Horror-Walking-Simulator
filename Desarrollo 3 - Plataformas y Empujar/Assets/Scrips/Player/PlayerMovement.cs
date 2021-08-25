@@ -3,7 +3,11 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
+    string[] staticDirections = {"Static N","Static NE","Static E","Static SE","Static S","Static SW", "Static W", "Static NW"};
+    string[] runDirections = { "Run N", "Run NE", "Run E", "Run SE", "Run S", "Run SW", "Run W", "Run NW" };
+
     public static Action<Vector3> OnPlayerMove;
+    public static Func<Camera> RecieveCamera;
 
     [Header("Player Move")]
     public float speedMovement = 10f;
@@ -13,12 +17,18 @@ public class PlayerMovement : MonoBehaviour
     public float hightLimit = 2f;
 
     Rigidbody rig;
+    Animator animator;
+    Camera camera;
+
+    int lastDirection;
 
     //==============================================
 
     void Start()
     {
         rig = GetComponent<Rigidbody>();
+        animator = GetComponent<Animator>();
+        camera = RecieveCamera?.Invoke();
     }
 
     void FixedUpdate()
@@ -32,6 +42,10 @@ public class PlayerMovement : MonoBehaviour
         PlayerJump();
     }
 
+    private void LateUpdate()
+    {
+        transform.LookAt(camera.transform);
+    }
     //==============================================
 
     void PlayerInput()
@@ -43,6 +57,7 @@ public class PlayerMovement : MonoBehaviour
         input = Vector3.ClampMagnitude(input, 1);
         Vector3 movement = input * speedMovement;
         Vector3 newPos = currentPos + movement * Time.fixedDeltaTime;
+        SetDirection(movement);
         rig.MovePosition(newPos);
     }
 
@@ -63,6 +78,41 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
+    void SetDirection(Vector3 direction)
+    {
+        string[] directionArray = null;
+
+        if (direction.magnitude < 0.1f)
+        {
+            directionArray = staticDirections;
+        }
+        else
+        {
+            //directionArray = runDirections;
+            directionArray = staticDirections;
+            lastDirection = DirectionToIndex(direction,runDirections.Length);
+        }
+        animator.Play(directionArray[lastDirection]);
+    }
+
+
+    int DirectionToIndex(Vector3 direction, int states)
+    {
+        Vector3 normalizedDir = direction.normalized;
+
+        float step = 360f / states;
+
+        float angle = Vector3.SignedAngle(Vector3.forward, normalizedDir, Vector3.up);
+
+        if (angle < 0)
+        {
+            angle += 360;
+        }
+
+        float stepCount = angle / step;
+
+        return Mathf.FloorToInt(stepCount);
+    }
     //==============================================
 
     private void OnDrawGizmos()
