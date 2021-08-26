@@ -2,7 +2,11 @@
 using UnityEngine;
 
 public class PillarsManager : MonoBehaviour
-{ 
+{
+    [Header("Initial Pillar")]
+    public GameObject initialPillar;
+    public float initialScalePillar = 15f;
+
     [Header("Pillars Spawner")]
     public Transform parent;
     public GameObject pillar;
@@ -29,6 +33,7 @@ public class PillarsManager : MonoBehaviour
 
     SpawnDirection spawnDirection;
     bool finalRoom = false;
+    bool initialRoom = true;
 
     //=====================================
 
@@ -36,6 +41,8 @@ public class PillarsManager : MonoBehaviour
     {
         numerationPillars = 0;
         navMesh = GetComponent<NavMeshSurface>();
+
+        this.transform.position = initialPillar.transform.position;
     }
 
     private void OnEnable()
@@ -43,13 +50,17 @@ public class PillarsManager : MonoBehaviour
         PillarsBehaviour.IsCollapsing += CallOtherPillar;
         PillarsBehaviour.CreatePillar += NumbersOfPillars;
         PillarsBehaviour.OnPillarUp += BakeMesh;
+
+        StartLever.ActivateObject += CallOtherPillar;
     }
 
     private void OnDisable()
     {
-        PillarsBehaviour.IsCollapsing -= CallOtherPillar;        
+        PillarsBehaviour.IsCollapsing -= CallOtherPillar;
         PillarsBehaviour.CreatePillar -= NumbersOfPillars;
         PillarsBehaviour.OnPillarUp -= BakeMesh;
+
+        StartLever.ActivateObject -= CallOtherPillar;
     }
 
     //=====================================
@@ -73,9 +84,14 @@ public class PillarsManager : MonoBehaviour
 
         spawnDirection = SelectDirection();
 
-        if (finalRoom == true)
+        if (finalRoom)
         {
             scale = finalScalePillar;
+        }
+        else if (initialRoom)
+        {
+            scale = initialScalePillar;
+            initialRoom = false;
         }
         else
         {

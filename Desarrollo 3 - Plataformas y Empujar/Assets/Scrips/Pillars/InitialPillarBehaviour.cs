@@ -1,27 +1,20 @@
 ﻿using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using System;
 using TMPro;
 
-public class BossPillarBehaviour : MonoBehaviour
+public class InitialPillarBehaviour : MonoBehaviour
 {
-    //public static Action IsCollapsing;
-    public static Action CreatePillar;
-    public static Action OnPillarUp;
     //===============================================
 
     [Header("Delay Animation")]
-    public Animator animator;
     [Range(0, 2)]
-    public float delayTime = 1f;
+    public float delayTime = 1.5f;
 
     [Header("UI Timer")]
     public GameObject timerText;
-    public float waitTime = 60f;
-
-    [Header("Exit Stairs")]
-    public GameObject exitStairs;
-    public Transform position_ExitStairs;
+    public float destroyTime = 10f;
 
     //===============================================
 
@@ -34,42 +27,34 @@ public class BossPillarBehaviour : MonoBehaviour
     PillarState pillarState;
 
     float timer = 0f;
-    bool callTheExit = false; // Se usa para llamar a la salida del "nivel"
+
+    Animator animator;
 
     //===============================================
 
     private void Awake()
     {
+        animator = GetComponent<Animator>();
         timerText.SetActive(false);
-
-        //CreatePillar?.Invoke();
-        //StartCoroutine(MoveUpPillar());
-        
         pillarState = PillarState.MoveUp;
     }
 
     private void OnEnable()
     {
-        Boss_StartLever.ActivateObject += StartCollapse;
+        StartLever.ActivateObject += StartCollapse;
     }
 
     private void OnDisable()
     {
-        Boss_StartLever.ActivateObject -= StartCollapse;        
+        StartLever.ActivateObject -= StartCollapse;
     }
 
     private void Update()
     {
         switch (pillarState)
         {
-            case PillarState.MoveUp:
-                break;
-
             case PillarState.waiting:
                 UpdateTimer();
-                break;
-
-            case PillarState.MoveDown:
                 break;
         }
     }
@@ -86,19 +71,9 @@ public class BossPillarBehaviour : MonoBehaviour
         yield return new WaitForSeconds(delayTime);
 
         timerText.SetActive(true);
-        timer = waitTime;
+        timer = destroyTime;
 
         pillarState = PillarState.waiting;
-    }
-
-    IEnumerator MoveUpPillar()
-    {
-        yield return new WaitForSeconds(delayTime);
-
-        timerText.SetActive(true);
-
-        pillarState = PillarState.waiting;
-        //OnPillarUp?.Invoke();
     }
 
     void UpdateTimer()
@@ -107,20 +82,22 @@ public class BossPillarBehaviour : MonoBehaviour
 
         if (timer < 0)
         {
-            if (callTheExit == false)
-            {
-                callTheExit = true;
-
-                timerText.SetActive(false);
-
-                var go = Instantiate(exitStairs, position_ExitStairs.position, Quaternion.Euler(Vector3.up));
-            }
-            else
-            {
-                pillarState = PillarState.MoveDown;
-            }
+            pillarState = PillarState.MoveDown;
+            StartCoroutine(MoveDownPillar());
         }
 
         timerText.GetComponent<TextMeshPro>().text = timer.ToString("0");
     }
+
+    IEnumerator MoveDownPillar()
+    {
+        animator.SetTrigger("Change");
+
+        timerText.SetActive(false);
+
+        yield return new WaitForSeconds(delayTime);
+
+        Destroy(this.gameObject);
+    }
+
 }

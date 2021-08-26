@@ -5,21 +5,27 @@ using UnityEngine.AI;
 public class EnemyAI : MonoBehaviour
 {
     public static Func<Camera> RecieveCamera;
-    NavMeshAgent agent;
-    Rigidbody rbody;
-    Camera camera;
+
     [SerializeField]
     float pushForce = 5f;
+    
+    new Camera camera;
     int damage = 1;
+    NavMeshAgent agent;
+    Rigidbody rbody;
+
+    //======================================
 
     private void OnEnable()
     {
         PlayerMovement.OnPlayerMove += SetDestination;
     }
+
     private void OnDisable()
     {
         PlayerMovement.OnPlayerMove -= SetDestination;
     }
+
     void Start()
     {
         agent = GetComponent<NavMeshAgent>();
@@ -32,10 +38,13 @@ public class EnemyAI : MonoBehaviour
         transform.LookAt(camera.transform);
     }
 
+    //=======================================
+
     void SetDestination(Vector3 destination)
     {
         agent.destination = destination;
     }
+
     private void OnCollisionEnter(Collision collision)
     {
         IDamageable damaged = collision.collider.GetComponent<IDamageable>();

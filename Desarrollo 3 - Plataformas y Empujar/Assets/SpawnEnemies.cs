@@ -28,19 +28,19 @@ public class SpawnEnemies : MonoBehaviour
         if (other.tag == "Player")
         {
             Spawn();
+
+            this.transform.GetComponent<BoxCollider>().enabled = false; // Para que se desactive el Box Collider por si el jugador vuelve a la plataforma
+                                                                        // por X motivo se evita que vuelvan a aparecer Mobs o ocurran otras cosas
         }
     }
 
     void Spawn()
-    {
-        
+    {        
         for (int i = 0; i < enemiesToSpawn; enemiesToSpawn--)
         {
             Vector3 enemyPosition = spawnPoints[Random.Range(0,spawnPoints.Count)];
             GameObject go = Instantiate(enemy,enemyPosition,Quaternion.identity);
         }
-
     }
-
 }
 

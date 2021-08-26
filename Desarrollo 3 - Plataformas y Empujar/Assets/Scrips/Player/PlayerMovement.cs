@@ -18,7 +18,7 @@ public class PlayerMovement : MonoBehaviour
 
     Rigidbody rig;
     Animator animator;
-    Camera camera;
+    new Camera camera;
 
     int lastDirection;
 

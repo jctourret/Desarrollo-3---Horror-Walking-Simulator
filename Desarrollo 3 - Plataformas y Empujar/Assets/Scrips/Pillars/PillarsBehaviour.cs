@@ -9,8 +9,9 @@ public class PillarsBehaviour : MonoBehaviour
     public static Action IsCollapsing;
     public static Action CreatePillar;
     public static Action OnPillarUp;
+
     //===============================================
-    
+
     [Header("Delay Animation")]
     public Animator animator;
     [Range(0,2)]
@@ -34,7 +35,6 @@ public class PillarsBehaviour : MonoBehaviour
     float timer = 0f;
     bool timerToDestroy = false;
 
-
     //===============================================
 
     private void Start()
@@ -42,11 +42,7 @@ public class PillarsBehaviour : MonoBehaviour
         timerText.SetActive(false);
 
         CreatePillar?.Invoke();
-        StartCoroutine(MoveUpPillar());
-    }
-
-    private void OnEnable()
-    {
+        
         pillarState = PillarState.MoveUp;
 
         timer = waitTime;
@@ -68,12 +64,26 @@ public class PillarsBehaviour : MonoBehaviour
         }
     }
 
-    IEnumerator MoveUpPillar()
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.transform.tag == "Player")
+        {
+            StartCoroutine(StartCollapse());
+
+            this.transform.GetComponent<BoxCollider>().enabled = false;
+        }
+    }
+
+    //===============================================
+
+    IEnumerator StartCollapse()
     {
         yield return new WaitForSeconds(delayTime);
 
-        timerText.SetActive(true);
+        timer = waitTime;
 
+        timerText.SetActive(true);
+        
         pillarState = PillarState.waiting;
         OnPillarUp?.Invoke();
     }

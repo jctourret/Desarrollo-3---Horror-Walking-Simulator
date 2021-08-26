@@ -6,9 +6,21 @@ public class SetRoom : MonoBehaviour
 {
     public Transform parentRoom;
 
-    public List<GameObject> rooms;
+    List<GameObject> rooms;
 
     //===============================
+
+    private void Awake()
+    {
+        rooms = new List<GameObject>();
+        
+        Object[] auxRooms;
+        auxRooms = Resources.LoadAll("Rooms", typeof(GameObject));
+        for (int i = 0; i < auxRooms.Length; i++)
+        {
+            rooms.Add((GameObject)auxRooms[i]);
+        }
+    }
 
     private void OnEnable()
     {

@@ -3,13 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 
-public class InteractiveObject : MonoBehaviour
+public class Boss_StartLever : MonoBehaviour
 {
     public static Action ActivateObject;
 
     public enum StateObject
     {
-        Closed,
         Available,
         Open
     };
@@ -49,8 +48,6 @@ public class InteractiveObject : MonoBehaviour
                 stateObject = StateObject.Open;
                 UIposter.SetActive(false);
                 animator.SetTrigger("Open");
-
-                ActivateObject.Invoke();
             }
         }
     }
@@ -63,5 +60,12 @@ public class InteractiveObject : MonoBehaviour
 
             inRange = false;
         }
+    }
+
+    //========================================
+
+    public void ActivateLever()
+    {
+        ActivateObject.Invoke();
     }
 }
