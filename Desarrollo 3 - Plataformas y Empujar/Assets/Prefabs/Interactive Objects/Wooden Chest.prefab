@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2439162056335579723}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Wooden Top
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -44,7 +44,7 @@ GameObject:
   - component: {fileID: 2439162056412487595}
   - component: {fileID: 2439162056412487596}
   - component: {fileID: 2439162056412487597}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -219,7 +219,7 @@ GameObject:
   - component: {fileID: 2439162057616813419}
   - component: {fileID: 2439162057616813420}
   - component: {fileID: 2439162057616813421}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Top
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -312,7 +312,7 @@ GameObject:
   - component: {fileID: 2439162058217627479}
   - component: {fileID: 2439162058217627496}
   - component: {fileID: 2439162058217627497}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -459,6 +459,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: UI Interactive Poster
+      objectReference: {fileID: 0}
+    - target: {fileID: 5615449218809917686, guid: 0bb130e2b7073d745b255eca681f0ab6,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 5615449219825802753, guid: 0bb130e2b7073d745b255eca681f0ab6,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0bb130e2b7073d745b255eca681f0ab6, type: 3}

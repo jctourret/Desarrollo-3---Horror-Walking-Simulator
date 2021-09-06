@@ -31,21 +31,21 @@ public class PlayerMovement : MonoBehaviour
 
     CharacterController controller;
     Animator animator;
-    new Camera camera;
+    //new Camera camera;
 
     int lastDirection;
 
     //==============================================
 
-    private void OnEnable()
-    {
-        CameraBehaviour.OnSendCamera += GetCamera;
-    }
-
-    private void OnDisable()
-    {
-        CameraBehaviour.OnSendCamera -= GetCamera;
-    }
+    //private void OnEnable()
+    //{
+    //    CameraBehaviour.OnSendCamera += GetCamera;
+    //}
+    //
+    //private void OnDisable()
+    //{
+    //    CameraBehaviour.OnSendCamera -= GetCamera;
+    //}
 
 
     void Start()
@@ -65,10 +65,10 @@ public class PlayerMovement : MonoBehaviour
         CheckFallDeath();
     }
 
-    private void LateUpdate()
-    {
-        transform.LookAt(camera.transform);
-    }
+    //private void LateUpdate()
+    //{
+    //    transform.LookAt(camera.transform);
+    //}
     //==============================================
 
     void CheckFallDeath()
@@ -80,10 +80,10 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-    void GetCamera(Camera newCamera)
-    {
-        camera = newCamera;
-    }
+    //void GetCamera(Camera newCamera)
+    //{
+    //    camera = newCamera;
+    //}
 
     void PlayerInput()
     {

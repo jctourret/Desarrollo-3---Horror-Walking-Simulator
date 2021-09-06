@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 6318341462181283894}
   - component: {fileID: 1012936918298126450}
   - component: {fileID: 1695734840828626901}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Cube (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -105,7 +105,7 @@ GameObject:
   - component: {fileID: 7705654347261461517}
   - component: {fileID: 3537697038249232072}
   - component: {fileID: 8321375961220053735}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Cube (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -198,7 +198,7 @@ GameObject:
   - component: {fileID: 8035967715642136029}
   - component: {fileID: 3752045593365643416}
   - component: {fileID: 5765660936822494467}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -291,7 +291,7 @@ GameObject:
   - component: {fileID: 256649956286039626}
   - component: {fileID: 4172239979910726310}
   - component: {fileID: 7839856158759538646}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Cube (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -381,7 +381,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5064801009856171842}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -419,7 +419,7 @@ GameObject:
   - component: {fileID: 5064801010279291532}
   - component: {fileID: 8959141787148522280}
   - component: {fileID: 8568731160863260628}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Boss - Start Lever
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -500,7 +500,7 @@ GameObject:
   - component: {fileID: 7169814504006861106}
   - component: {fileID: 718252813406259125}
   - component: {fileID: 3067311617923131115}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Post
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -650,8 +650,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5615449218809917686, guid: 0bb130e2b7073d745b255eca681f0ab6,
         type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 5615449218809917686, guid: 0bb130e2b7073d745b255eca681f0ab6,
+        type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5615449219825802753, guid: 0bb130e2b7073d745b255eca681f0ab6,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0bb130e2b7073d745b255eca681f0ab6, type: 3}

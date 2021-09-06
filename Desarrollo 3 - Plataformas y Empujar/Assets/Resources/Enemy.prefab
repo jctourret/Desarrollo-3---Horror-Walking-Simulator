@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 7872731995163676873}
   - component: {fileID: 5677984711528228810}
   - component: {fileID: 1032290758536462639}
+  - component: {fileID: 245583562658209478}
   - component: {fileID: 2867842720459860448}
   - component: {fileID: 8746359772618172923}
   - component: {fileID: -4121523129338136864}
@@ -111,7 +112,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b66f5026e3ca676458c99ddd27a530ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pushForce: 5
+  camera: {fileID: 0}
+--- !u!114 &245583562658209478
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5677984711528228809}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fac46f8f4ee942049aec5ee4e29a01e8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  life: 3
+  isLive: 1
 --- !u!195 &2867842720459860448
 NavMeshAgent:
   m_ObjectHideFlags: 0

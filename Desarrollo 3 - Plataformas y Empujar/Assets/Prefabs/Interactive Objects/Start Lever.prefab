@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2673622867552725473}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Lever
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -43,7 +43,7 @@ GameObject:
   - component: {fileID: 2673622867644810556}
   - component: {fileID: 2673622867644810557}
   - component: {fileID: 2673622867644810558}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Sphere
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -133,7 +133,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2673622868178001346}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -168,7 +168,7 @@ GameObject:
   - component: {fileID: 2673622868564412428}
   - component: {fileID: 92806462}
   - component: {fileID: 1906724006051274682}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Start Lever
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -249,7 +249,7 @@ GameObject:
   - component: {fileID: 2673622868691192039}
   - component: {fileID: 2673622868691192032}
   - component: {fileID: 2673622868691192033}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -342,7 +342,7 @@ GameObject:
   - component: {fileID: 2673622869025405392}
   - component: {fileID: 2673622869025405393}
   - component: {fileID: 2673622869025405394}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Lever
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -494,8 +494,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5615449218809917686, guid: 0bb130e2b7073d745b255eca681f0ab6,
         type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 5615449218809917686, guid: 0bb130e2b7073d745b255eca681f0ab6,
+        type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5615449219825802753, guid: 0bb130e2b7073d745b255eca681f0ab6,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0bb130e2b7073d745b255eca681f0ab6, type: 3}
