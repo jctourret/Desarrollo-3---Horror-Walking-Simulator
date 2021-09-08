@@ -108,7 +108,7 @@ GameObject:
   - component: {fileID: 8987873419970899971}
   - component: {fileID: 8987873419970899973}
   m_Layer: 12
-  m_Name: Golden_Money_Colectable
+  m_Name: Golden_Money_Collectable
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

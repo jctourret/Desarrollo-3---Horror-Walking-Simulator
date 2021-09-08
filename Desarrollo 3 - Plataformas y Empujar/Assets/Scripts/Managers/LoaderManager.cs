@@ -32,7 +32,7 @@ public class LoaderManager : MonoBehaviourSingleton<LoaderManager>
         basicItems = new List<GameObject>();
 
         Object[] allBItems;
-        allBItems = Resources.LoadAll("ColectableItems/BasicItems", typeof(GameObject));
+        allBItems = Resources.LoadAll("Collectable_Items/BasicItems", typeof(GameObject));
         foreach (GameObject item in allBItems)
         {
             basicItems.Add((GameObject)item);

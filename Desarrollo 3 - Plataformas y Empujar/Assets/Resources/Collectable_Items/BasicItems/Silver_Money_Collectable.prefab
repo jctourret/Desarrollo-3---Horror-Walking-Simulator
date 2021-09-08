@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 6506436024654265175}
   - component: {fileID: 6506436024654265169}
   m_Layer: 12
-  m_Name: Silver_Money_Colectable
+  m_Name: Silver_Money_Collectable
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
