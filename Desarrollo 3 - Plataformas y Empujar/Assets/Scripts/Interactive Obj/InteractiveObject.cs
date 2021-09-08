@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 
-public class InteractiveObject : MonoBehaviour
+abstract class InteractiveObject : MonoBehaviour
 {
-    public static Action ActivateObject;
+    //public static Action ActivateObject;
 
     public enum StateObject
     {
@@ -14,9 +14,11 @@ public class InteractiveObject : MonoBehaviour
         Open
     };
 
+    [Header("Interactive Obj")]
+    public StateObject stateObject;
     public GameObject UIposter;
 
-    public StateObject stateObject;
+    //========================================
 
     Animator animator;
     bool inRange = false;
@@ -50,7 +52,7 @@ public class InteractiveObject : MonoBehaviour
                 UIposter.SetActive(false);
                 animator.SetTrigger("Open");
 
-                ActivateObject.Invoke();
+                //ActivateObject.Invoke();
             }
         }
     }
