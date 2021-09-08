@@ -61,6 +61,7 @@ public class StartLever : MonoBehaviour
     }
 
     //========================================
+    // Usado en la animacion de la Lever
 
     public void ActivateLever()
     {
