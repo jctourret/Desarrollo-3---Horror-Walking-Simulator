@@ -10,7 +10,6 @@ public class EnemyAI : MonoBehaviour
     Rigidbody rbody;
 
     GameObject target;
-    GameObject pilar;
     //======================================
 
     private void OnEnable()
@@ -27,18 +26,27 @@ public class EnemyAI : MonoBehaviour
     {
         agent = GetComponent<NavMeshAgent>();
         rbody = GetComponent<Rigidbody>();
+        rbody.isKinematic = true;
     }
 
     private void LateUpdate()
     {
         transform.LookAt(camera.transform);
-        agent.destination = target.transform.position;
+        if (agent.isActiveAndEnabled)
+        {
+            agent.destination = target.transform.position;
+        }
     }
 
     //=======================================
     void GetCamera(Camera newCamera)
     {
         camera = newCamera;
+    }
+    public void pilarFalls()
+    {
+        agent.enabled = false;
+        rbody.isKinematic = false;
     }
 
     private void OnCollisionEnter(Collision collision)
