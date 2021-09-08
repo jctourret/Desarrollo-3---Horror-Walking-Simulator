@@ -6,9 +6,9 @@ using TMPro;
 
 public class PillarsBehaviour : MonoBehaviour
 {
-    public static Action IsCollapsing;
     public static Action CreatePillar;
     public static Action OnPillarUp;
+    public static Action IsCollapsing;
 
     //===============================================
 
@@ -21,6 +21,9 @@ public class PillarsBehaviour : MonoBehaviour
     public GameObject timerText;
     public float waitTime = 30f;
     public float destroyTime = 5f;
+    public Transform parentRoom;
+
+    GameObject room;
 
     //===============================================
 
@@ -37,6 +40,13 @@ public class PillarsBehaviour : MonoBehaviour
 
     //===============================================
 
+    private void OnEnable()
+    {
+        room = LoaderManager.Get().GetARoom();
+
+        var go = Instantiate(room, parentRoom);
+        go.transform.name = room.name;
+    }
     private void Start()
     {
         timerText.SetActive(false);
@@ -116,6 +126,11 @@ public class PillarsBehaviour : MonoBehaviour
     IEnumerator MoveDownPillar()
     {
         animator.SetTrigger("Change");
+
+        for(int i = 0; i < room.GetComponentInChildren<SpawnEnemies>().enemies.Count; i++)
+        {
+            room.GetComponentInChildren<SpawnEnemies>().enemies[i].pilarFalls();
+        }
 
         timerText.SetActive(false);
 
