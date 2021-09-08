@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class EnemyStats : MonoBehaviour, IDamageable
 {
-
     public int life = 10;
 
     //==================================
@@ -22,7 +21,7 @@ public class EnemyStats : MonoBehaviour, IDamageable
     {
         life -= damage;
 
-        Debug.Log("vida actual - " + life);
+        //Debug.Log("vida actual - " + life);
 
         if (life <= 0)
             Eliminated();

@@ -18,8 +18,8 @@ TagManager:
   - Player
   - Interative
   - Player_Bullet
-  - 
-  - 
+  - Colectable_Item
+  - Enemy
   - 
   - 
   - 

@@ -2931,7 +2931,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 94e5949e2cb02174e8b551b768591d7a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxEnemies: 3
+  enemiesToSpawn: []
 --- !u!1 &1749584367
 GameObject:
   m_ObjectHideFlags: 0
@@ -3866,3 +3866,4 @@ MonoBehaviour:
   lerpTime: 2
   smoothSpeed: 0.005
   offset: {x: -18, y: 13.75, z: -12}
+  camera: {fileID: 0}

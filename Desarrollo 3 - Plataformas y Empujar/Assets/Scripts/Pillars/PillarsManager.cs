@@ -3,23 +3,32 @@ using UnityEngine;
 
 public class PillarsManager : MonoBehaviour
 {
+    public Transform parent;
+
     [Header("Initial Pillar")]
     public GameObject initialPillar;
     public float initialScalePillar = 15f;
 
     [Header("Pillars Spawner")]
-    public Transform parent;
     public GameObject pillar;
     public float scalePillars = 20f;
     public float distBetweenPillars = 2f;
 
+    [Header("Market and Treasure pillars")]
+    public GameObject marketPillar;
+    [SerializeField] [Range(-5, 0)] int minRandNumber = -1; // Para el azar de la aparicion de la habitacion
+    [SerializeField] [Range(0, 5)] int maxRandNumber = 3;
+    [SerializeField] int pillarsBeforeMerket;
+
     [Header("Final Pillars Spawner")]
     public GameObject finalPillar;
-    public float finalScalePillar = 30f;
-    public int pillarsBeforeFinal = 10;
+    [SerializeField] float finalScalePillar = 30f;
+    [SerializeField] int pillarsBeforeFinal = 10;
 
     [Header("Actual Pillar")]
-    public int numerationPillars = 0;
+    [SerializeField] int numerationPillars = 0;
+
+    //=====================================
 
     NavMeshSurface navMesh;
     new Camera camera;
@@ -33,8 +42,16 @@ public class PillarsManager : MonoBehaviour
     };
 
     SpawnDirection spawnDirection;
-    bool finalRoom = false;
-    bool initialRoom = true;
+
+    enum TypeOfPillars
+    {
+        InitialRoom,
+        CommonRoom,
+        MarketRoom,
+        FinalRoom
+    };
+
+    TypeOfPillars typeOfPillar = TypeOfPillars.InitialRoom;
 
     //=====================================
 
@@ -44,6 +61,10 @@ public class PillarsManager : MonoBehaviour
         navMesh = GetComponent<NavMeshSurface>();
 
         this.transform.position = initialPillar.transform.position;
+
+        // Seleccion del numero del pillar del mercado:
+        int mid = pillarsBeforeFinal / 2;
+        pillarsBeforeMerket = mid + Random.Range(minRandNumber, maxRandNumber);
     }
 
     private void OnEnable()
@@ -77,10 +98,18 @@ public class PillarsManager : MonoBehaviour
     {
         numerationPillars++;
 
-        if (numerationPillars >= pillarsBeforeFinal)
+        if (numerationPillars == pillarsBeforeMerket)
         {
-            finalRoom = true;
-        }   
+            typeOfPillar = TypeOfPillars.MarketRoom;
+        }
+        else if (numerationPillars >= pillarsBeforeFinal)
+        {
+            typeOfPillar = TypeOfPillars.FinalRoom;
+        }
+        else
+        {
+            typeOfPillar = TypeOfPillars.CommonRoom;
+        }
     }
 
     void CallOtherPillar()
@@ -92,14 +121,14 @@ public class PillarsManager : MonoBehaviour
 
         spawnDirection = SelectDirection();
 
-        if (finalRoom)
-        {
-            scale = finalScalePillar;
-        }
-        else if (initialRoom)
+        if (typeOfPillar == TypeOfPillars.InitialRoom)
         {
             scale = initialScalePillar;
-            initialRoom = false;
+            typeOfPillar = TypeOfPillars.CommonRoom;
+        }
+        else if (typeOfPillar == TypeOfPillars.FinalRoom)
+        {
+            scale = finalScalePillar;
         }
         else
         {
@@ -142,17 +171,29 @@ public class PillarsManager : MonoBehaviour
 
         // ---
 
-        if (finalRoom == true)
+        switch (typeOfPillar)
         {
-            var go = Instantiate(finalPillar, new Vector3(this.transform.position.x, pillar.transform.position.y, this.transform.position.z), Quaternion.Euler(Vector3.up), parent);
-            go.transform.name = finalPillar.name;
-            go.GetComponentInChildren<CallCameraTrigger>().camera = camera;
-        }
-        else
-        {
-            var go = Instantiate(pillar, new Vector3(this.transform.position.x, pillar.transform.position.y, this.transform.position.z), Quaternion.Euler(Vector3.up), parent);
-            go.transform.name = pillar.name + "-" + (numerationPillars + 1).ToString();
-            go.GetComponentInChildren<CallCameraTrigger>().camera = camera;
+            case TypeOfPillars.FinalRoom:
+
+                var go = Instantiate(finalPillar, new Vector3(this.transform.position.x, pillar.transform.position.y, this.transform.position.z), Quaternion.Euler(Vector3.up), parent);
+                go.transform.name = finalPillar.name;
+                go.GetComponentInChildren<CallCameraTrigger>().camera = camera;
+
+                break;
+            case TypeOfPillars.MarketRoom:
+
+                var go2 = Instantiate(marketPillar, new Vector3(this.transform.position.x, pillar.transform.position.y, this.transform.position.z), Quaternion.Euler(Vector3.up), parent);
+                go2.transform.name = marketPillar.name + "-" + (numerationPillars + 1).ToString();
+                go2.GetComponentInChildren<CallCameraTrigger>().camera = camera;
+
+                break;
+            case TypeOfPillars.CommonRoom:
+
+                var go3 = Instantiate(pillar, new Vector3(this.transform.position.x, pillar.transform.position.y, this.transform.position.z), Quaternion.Euler(Vector3.up), parent);
+                go3.transform.name = pillar.name + "-" + (numerationPillars + 1).ToString();
+                go3.GetComponentInChildren<CallCameraTrigger>().camera = camera;
+
+                break;
         }
     }
 

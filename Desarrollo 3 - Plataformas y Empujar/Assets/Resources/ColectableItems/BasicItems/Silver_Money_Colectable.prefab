@@ -78,6 +78,7 @@ MonoBehaviour:
   rewardType: 1
   earnScore: 2
   jumpForce: 40
+  y_fallLimit: -30
 --- !u!1 &6506436025006726065
 GameObject:
   m_ObjectHideFlags: 0
@@ -88,6 +89,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6506436025006726067}
   - component: {fileID: 6506436025006726066}
+  - component: {fileID: 5579891770198113134}
   m_Layer: 12
   m_Name: Sprite
   m_TagString: Untagged
@@ -160,3 +162,15 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &5579891770198113134
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6506436025006726065}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1f8b89b1ab80dd42894bf6bb543e971, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

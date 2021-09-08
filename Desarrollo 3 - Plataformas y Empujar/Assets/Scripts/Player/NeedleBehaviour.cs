@@ -10,9 +10,9 @@ public class NeedleBehaviour : MonoBehaviour
     //==================================
 
     Rigidbody rig;
-    float timeToBlock = 0.15f; /// Se usa para hacerlo kinematico cuando colisiona despues de el tiempo determinado
-                               /// Posible idea: Usar el FixedJoin para unir o pegar la aguja con otro objeto
-    float destroyTime = 5f;
+    [SerializeField] float timeToBlock = 0.1f; /// Se usa para hacerlo kinematico cuando colisiona despues de el tiempo determinado
+                                               /// Posible idea: Usar el FixedJoin para unir o pegar la aguja con otro objeto
+    [SerializeField] float destroyTime = 5f;
 
     //==================================
 
@@ -37,6 +37,8 @@ public class NeedleBehaviour : MonoBehaviour
         if (collision.transform.GetComponent<IDamageable>() != null)
         {
             collision.transform.GetComponent<IDamageable>().TakeDamage(damage);
+
+            this.transform.GetComponent<BoxCollider>().enabled = false;
         }
 
         Destroy(this.gameObject, destroyTime);
@@ -46,7 +48,6 @@ public class NeedleBehaviour : MonoBehaviour
     {
         yield return new WaitForSeconds(timeToBlock);
 
-        GetComponent<BoxCollider>().enabled = false;
         rig.isKinematic = true;
     }
 
