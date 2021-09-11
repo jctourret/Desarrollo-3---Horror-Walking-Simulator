@@ -6,12 +6,16 @@ public class PlayerMovement : MonoBehaviour
 {
     string[] staticDirections = {"Static N","Static NE","Static E","Static SE","Static S","Static SW", "Static W", "Static NW"};
     string[] runDirections = { "Run N", "Run NE", "Run E", "Run SE", "Run S", "Run SW", "Run W", "Run NW" };
+    string[] dashDirections = { "Dash N", "Dash Ne", "Dash E", "Dash SE", "Dash S", "Dash SW", "Dash W", "Dash NW"};
 
     public static Action<Vector3> OnPlayerMove;
     public static Action OnPlayerFallDeath;
 
     [Header("Player Move")]
     public float speedMovement = 10f;
+    [SerializeField]
+    float dashTime = 1.5f;
+    bool controllable;
 
     [Header("Gravity")]
     [SerializeField]
@@ -39,7 +43,9 @@ public class PlayerMovement : MonoBehaviour
     void Start()
     {
         controller = GetComponent<CharacterController>();
+        controller.Move(transform.position);
         animator = GetComponentInChildren<Animator>();
+        controllable = true;
 
         float timeToApex = jumpTime / 2;
         gravity = (-2 * maxJumpHeight) / Mathf.Pow(timeToApex,2);
@@ -66,17 +72,38 @@ public class PlayerMovement : MonoBehaviour
 
     void PlayerInput()
     {
-        float horizontalInput = Input.GetAxis("Horizontal");
-        float verticalInput = Input.GetAxis("Vertical");
+        float horizontalInput;
+        float verticalInput;
+        if (controllable)
+        {
+            horizontalInput = Input.GetAxis("Horizontal");
+            verticalInput = Input.GetAxis("Vertical");
+        }
+        else
+        {
+            horizontalInput = 0;
+            verticalInput = 0;
+        }
+
         Vector3 input = new Vector3(verticalInput, 0.0f, -horizontalInput);
         input = Vector3.ClampMagnitude(input, 1);
         Vector3 movement = input * speedMovement * Time.deltaTime;
-        SetDirection(movement);
 
         movement = applyGravity(movement);
-        movement = PlayerJump(movement);
+        if (Input.GetKeyDown(KeyCode.LeftShift))
+        {
+            StartCoroutine(Dash(movement));
+            controllable = false;
+        }
+        else
+        {
+            SetDirection(movement);
 
-        controller.Move(movement);
+            
+            movement = PlayerJump(movement);
+
+            controller.Move(movement);
+        }
     }
 
     Vector3 applyGravity(Vector3 movement)
@@ -105,7 +132,7 @@ public class PlayerMovement : MonoBehaviour
     {
         string[] directionArray = null;
 
-        if (direction.magnitude < 0.1f)
+        if (direction.magnitude < 0.01f)
         {
             directionArray = staticDirections;
         }
@@ -137,7 +164,22 @@ public class PlayerMovement : MonoBehaviour
         return Mathf.FloorToInt(stepCount);
     }
 
-    
+    //=============================================
+
+
+    IEnumerator Dash(Vector3 movement)
+    {
+        float startTime = Time.time;
+
+        while (Time.time< startTime + dashTime)
+        {
+            controller.Move(movement*2);
+            yield return null;
+        }
+        controllable = true;
+    }
+
+
     //==============================================
 
     private void OnDrawGizmos()

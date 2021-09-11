@@ -5,12 +5,12 @@ public class SpawnEnemies : MonoBehaviour
 {
     [SerializeField]
     List<EnemyAndPoint> toSpawn;
-    public List<EnemyAI> enemies;
+    public List<EnemyAI> enemiesSpawned;
 
     private void Start()
     {
         toSpawn = new List<EnemyAndPoint>();
-        enemies = new List<EnemyAI>();
+        enemiesSpawned = new List<EnemyAI>();
     }
 
     private void OnTriggerEnter(Collider other)
@@ -27,7 +27,7 @@ public class SpawnEnemies : MonoBehaviour
         {
             Vector3 enemyPosition = toSpawn[i].transform.position;
             GameObject go = Instantiate(toSpawn[i].enemy,enemyPosition,Quaternion.identity);
-            enemies.Add(go.GetComponent<EnemyAI>());
+            enemiesSpawned.Add(go.GetComponent<EnemyAI>());
             go.GetComponent<EnemyAI>().camera = EnemyManager.instance.camera;
         }
     }

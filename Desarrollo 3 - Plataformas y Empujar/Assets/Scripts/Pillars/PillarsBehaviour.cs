@@ -127,9 +127,9 @@ public class PillarsBehaviour : MonoBehaviour
     {
         animator.SetTrigger("Change");
 
-        for(int i = 0; i < room.GetComponentInChildren<SpawnEnemies>().enemies.Count; i++)
+        for(int i = 0; i < room.GetComponentInChildren<SpawnEnemies>().enemiesSpawned.Count; i++)
         {
-            room.GetComponentInChildren<SpawnEnemies>().enemies[i].pilarFalls();
+            room.GetComponentInChildren<SpawnEnemies>().enemiesSpawned[i].pilarFalls();
         }
 
         timerText.SetActive(false);
