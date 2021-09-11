@@ -297,7 +297,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   UIposter: {fileID: 4675646218294455108}
-  stateObject: 0
+  stateObject: 1
   stair: {fileID: 0}
 --- !u!1 &940458641634034654
 GameObject:
