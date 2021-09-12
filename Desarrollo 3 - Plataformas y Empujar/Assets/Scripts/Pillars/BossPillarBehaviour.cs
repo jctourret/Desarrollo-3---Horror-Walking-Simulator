@@ -5,9 +5,11 @@ using TMPro;
 
 public class BossPillarBehaviour : MonoBehaviour
 {
-    //public static Action IsCollapsing;
+    public static Action UIplayerToken;
+
     public static Action CreatePillar;
     public static Action OnPillarUp;
+
     //===============================================
 
     [Header("Delay Animation")]
@@ -42,9 +44,6 @@ public class BossPillarBehaviour : MonoBehaviour
     {
         timerText.SetActive(false);
 
-        //CreatePillar?.Invoke();
-        //StartCoroutine(MoveUpPillar());
-        
         pillarState = PillarState.MoveUp;
     }
 
@@ -74,6 +73,16 @@ public class BossPillarBehaviour : MonoBehaviour
         }
     }
 
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.transform.tag == "Player")
+        {
+            this.transform.GetComponent<BoxCollider>().enabled = false;
+
+            UIplayerToken.Invoke();
+        }
+    }
+
     //===============================================
 
     void StartCollapse()
@@ -91,15 +100,14 @@ public class BossPillarBehaviour : MonoBehaviour
         pillarState = PillarState.waiting;
     }
 
-    IEnumerator MoveUpPillar()
-    {
-        yield return new WaitForSeconds(delayTime);
-
-        timerText.SetActive(true);
-
-        pillarState = PillarState.waiting;
-        //OnPillarUp?.Invoke();
-    }
+    //IEnumerator MoveUpPillar()
+    //{
+    //    yield return new WaitForSeconds(delayTime);
+    //
+    //    timerText.SetActive(true);
+    //
+    //    pillarState = PillarState.waiting;
+    //}
 
     void UpdateTimer()
     {

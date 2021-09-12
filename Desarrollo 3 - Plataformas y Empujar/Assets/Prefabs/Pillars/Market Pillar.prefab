@@ -3935,6 +3935,8 @@ MonoBehaviour:
   timerText: {fileID: 1244708620726936288}
   waitTime: 10.5
   destroyTime: 5.5
+  specialRoom: 1
+  parentRoom: {fileID: 0}
 --- !u!1 &2914618333033826086
 GameObject:
   m_ObjectHideFlags: 0

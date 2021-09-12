@@ -541,7 +541,7 @@ GameObject:
   - component: {fileID: 315162326}
   - component: {fileID: 315162327}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: NavMesh
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2931,7 +2931,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 94e5949e2cb02174e8b551b768591d7a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemiesToSpawn: []
+  toSpawn: []
+  enemiesSpawned: []
 --- !u!1 &1749584367
 GameObject:
   m_ObjectHideFlags: 0
@@ -3736,7 +3737,6 @@ GameObject:
   - component: {fileID: 993539792361210761}
   - component: {fileID: 1397043806}
   - component: {fileID: 993539792361210760}
-  - component: {fileID: 993539792237330803}
   m_Layer: 0
   m_Name: Pillar
   m_TagString: Untagged
@@ -3793,18 +3793,6 @@ MonoBehaviour:
   timerText: {fileID: 993539790968823325}
   waitTime: 5.5
   destroyTime: 5.5
---- !u!114 &993539792237330803
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 993539792361210758}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 33a32d4aa6cae1743ac1d0763d1ef5e9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
   parentRoom: {fileID: 1607108129}
 --- !u!1 &5050380333070416585
 GameObject:

@@ -6,9 +6,10 @@ using TMPro;
 
 public class PillarsBehaviour : MonoBehaviour
 {
-    public static Action CreatePillar;
+    public static Action UIplayerToken;
+
     public static Action OnPillarUp;
-    public static Action IsCollapsing;
+    public static Action CreatePillar;
 
     //===============================================
 
@@ -21,7 +22,10 @@ public class PillarsBehaviour : MonoBehaviour
     public GameObject timerText;
     public float waitTime = 30f;
     public float destroyTime = 5f;
-    public Transform parentRoom;
+
+    [Header("Special Room")]
+    [SerializeField] bool specialRoom = false;
+    [SerializeField] Transform parentRoom;
 
     GameObject room;
 
@@ -42,16 +46,12 @@ public class PillarsBehaviour : MonoBehaviour
 
     private void OnEnable()
     {
-        room = LoaderManager.Get().GetARoom();
-
-        var go = Instantiate(room, parentRoom);
-        go.transform.name = room.name;
+        GetARoom();
     }
+
     private void Start()
     {
         timerText.SetActive(false);
-
-        CreatePillar?.Invoke();
         
         pillarState = PillarState.MoveUp;
 
@@ -81,21 +81,34 @@ public class PillarsBehaviour : MonoBehaviour
             StartCoroutine(StartCollapse());
 
             this.transform.GetComponent<BoxCollider>().enabled = false;
+
+            UIplayerToken.Invoke();
         }
     }
 
     //===============================================
 
+    void GetARoom()
+    {
+        if (specialRoom == false)
+        {
+            room = LoaderManager.Get().GetARoom();
+
+            var go = Instantiate(room, parentRoom);
+            go.transform.name = room.name;
+        }
+    }
+
     IEnumerator StartCollapse()
     {
+        OnPillarUp?.Invoke();
+
         yield return new WaitForSeconds(delayTime);
 
         timer = waitTime;
-
         timerText.SetActive(true);
         
         pillarState = PillarState.waiting;
-        OnPillarUp?.Invoke();
     }
 
     void UpdateTimer()
@@ -109,7 +122,7 @@ public class PillarsBehaviour : MonoBehaviour
                 timer = destroyTime;
                 timerToDestroy = true;
 
-                IsCollapsing?.Invoke();
+                CreatePillar?.Invoke(); // Crea el nuevo pilar
 
                 timerText.GetComponent<TextMeshPro>().color = Color.red;
             }
@@ -127,12 +140,14 @@ public class PillarsBehaviour : MonoBehaviour
     {
         animator.SetTrigger("Change");
 
-        for(int i = 0; i < room.GetComponentInChildren<SpawnEnemies>().enemiesSpawned.Count; i++)
-        {
-            room.GetComponentInChildren<SpawnEnemies>().enemiesSpawned[i].pilarFalls();
-        }
+        /// ATENCION!
+        /// Esta parte del codigo esta comentada porque genera errores que detienen el codigo de esta corrutina, haciendo que no continue.
+        //for(int i = 0; i < room.GetComponentInChildren<SpawnEnemies>().enemiesSpawned.Count; i++)
+        //{
+        //    room.GetComponentInChildren<SpawnEnemies>().enemiesSpawned[i].pilarFalls();
+        //}
 
-        timerText.SetActive(false);
+        timerText.SetActive(false);        
 
         yield return new WaitForSeconds(delayTime);
 

@@ -1,8 +1,10 @@
-﻿using UnityEngine.AI;
+﻿using System;
+using UnityEngine.AI;
 using UnityEngine;
 
 public class PillarsManager : MonoBehaviour
 {
+
     public Transform parent;
 
     [Header("Initial Pillar")]
@@ -18,15 +20,15 @@ public class PillarsManager : MonoBehaviour
     public GameObject marketPillar;
     [SerializeField] [Range(-5, 0)] int minRandNumber = -1; // Para el azar de la aparicion de la habitacion
     [SerializeField] [Range(0, 5)] int maxRandNumber = 3;
-    [SerializeField] int pillarsBeforeMerket;
+    [SerializeField] int pillarsBeforeMerket; // ---> uno de los valores a pedir para el mapa
 
     [Header("Final Pillars Spawner")]
     public GameObject finalPillar;
     [SerializeField] float finalScalePillar = 30f;
-    [SerializeField] int pillarsBeforeFinal = 10;
+    [SerializeField] int pillarsBeforeFinal = 10; // ---> uno de los valores a pedir para el mapa
 
     [Header("Actual Pillar")]
-    [SerializeField] int numerationPillars = 0;
+    public int numerationPillars = 0;
 
     //=====================================
 
@@ -64,13 +66,12 @@ public class PillarsManager : MonoBehaviour
 
         // Seleccion del numero del pillar del mercado:
         int mid = pillarsBeforeFinal / 2;
-        pillarsBeforeMerket = mid + Random.Range(minRandNumber, maxRandNumber);
+        pillarsBeforeMerket = mid + UnityEngine.Random.Range(minRandNumber, maxRandNumber);
     }
 
     private void OnEnable()
     {
-        PillarsBehaviour.IsCollapsing += CallOtherPillar;
-        PillarsBehaviour.CreatePillar += NumbersOfPillars;
+        PillarsBehaviour.CreatePillar += CallOtherPillar;
         PillarsBehaviour.OnPillarUp += BakeMesh;
 
         StartLever.ActivateObject += CallOtherPillar;
@@ -79,12 +80,19 @@ public class PillarsManager : MonoBehaviour
 
     private void OnDisable()
     {
-        PillarsBehaviour.IsCollapsing -= CallOtherPillar;
-        PillarsBehaviour.CreatePillar -= NumbersOfPillars;
+        PillarsBehaviour.CreatePillar -= CallOtherPillar;
         PillarsBehaviour.OnPillarUp -= BakeMesh;
 
         StartLever.ActivateObject -= CallOtherPillar;
         CameraBehaviour.OnSendCamera -= GetCamera;
+    }
+
+    //=====================================
+
+    public int[] MapCreation() // Para la creacion del mapa UI
+    {
+        int[] map = { pillarsBeforeMerket, pillarsBeforeFinal };
+        return map;
     }
 
     //=====================================
@@ -116,6 +124,10 @@ public class PillarsManager : MonoBehaviour
     {
         Vector3 newPosition;
         float scale = 0f;
+
+        // ---
+
+        NumbersOfPillars();
 
         // ---
 
@@ -207,7 +219,7 @@ public class PillarsManager : MonoBehaviour
 
     SpawnDirection SelectDirection()
     {
-        int rand = Random.Range(0, 4);
+        int rand = UnityEngine.Random.Range(0, 4);
 
         SpawnDirection direction = (SpawnDirection)rand;
 

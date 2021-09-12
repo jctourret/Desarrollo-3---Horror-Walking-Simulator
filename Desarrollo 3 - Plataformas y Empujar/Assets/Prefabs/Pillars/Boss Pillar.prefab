@@ -215,6 +215,7 @@ GameObject:
   m_Component:
   - component: {fileID: 119948029761666868}
   - component: {fileID: 7908113385560488900}
+  - component: {fileID: 4201883463099021152}
   m_Layer: 0
   m_Name: Boss Pillar
   m_TagString: Untagged
@@ -259,6 +260,19 @@ MonoBehaviour:
   exitStairs: {fileID: 8491222097700362972, guid: 257ae22fbfd832f458fafc4a58f29f6b,
     type: 3}
   position_ExitStairs: {fileID: 97277632}
+--- !u!65 &4201883463099021152
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 119948029761666875}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 29, y: 1, z: 29}
+  m_Center: {x: 0, y: 1.6, z: 0}
 --- !u!1 &892811369303029267
 GameObject:
   m_ObjectHideFlags: 0
@@ -319,6 +333,7 @@ MonoBehaviour:
   lerpTime: 2
   smoothSpeed: 0.005
   offset: {x: -23, y: 18, z: -16}
+  camera: {fileID: 0}
 --- !u!1 &892811370253187741
 GameObject:
   m_ObjectHideFlags: 0

@@ -7714,6 +7714,7 @@ MonoBehaviour:
   lerpTime: 2
   smoothSpeed: 0.005
   offset: {x: -18, y: 13.75, z: -12}
+  camera: {fileID: 0}
 --- !u!1 &8769043800638637118
 GameObject:
   m_ObjectHideFlags: 0
@@ -7907,6 +7908,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7416932046036857715}
     m_Modifications:
+    - target: {fileID: 1906724006051274682, guid: 3971b53763116a942b205645b86152be,
+        type: 3}
+      propertyPath: stateObject
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2673622868564412429, guid: 3971b53763116a942b205645b86152be,
         type: 3}
       propertyPath: m_RootOrder
