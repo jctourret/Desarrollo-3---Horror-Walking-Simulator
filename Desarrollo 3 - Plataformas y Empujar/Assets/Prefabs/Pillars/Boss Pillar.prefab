@@ -330,8 +330,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3979826e1673ce24f8a9cc21377be4da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lerpTime: 2
-  smoothSpeed: 0.005
+  smoothSpeed: 0.5
   offset: {x: -23, y: 18, z: -16}
   camera: {fileID: 0}
 --- !u!1 &892811370253187741
