@@ -50,14 +50,11 @@ public class Basic_ItemReward : MonoBehaviour
                     {
                         Destroy(this.gameObject);
                     }
-
                     break;
+
                 case RewardType.MoneyReward:
-
                     EarnMoney(earnScore);
-
                     Destroy(this.gameObject);
-
                     break;
             }
         }
