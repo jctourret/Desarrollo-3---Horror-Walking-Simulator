@@ -331,7 +331,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   smoothSpeed: 0.5
-  offset: {x: -23, y: 18, z: -16}
+  isACommonPillar: 0
   camera: {fileID: 0}
 --- !u!1 &892811370253187741
 GameObject:

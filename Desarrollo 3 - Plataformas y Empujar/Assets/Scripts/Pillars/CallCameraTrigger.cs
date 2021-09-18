@@ -8,7 +8,9 @@ public class CallCameraTrigger : MonoBehaviour
 
     [Range(0, 2)]
     public float smoothSpeed = 0.125f;
-    public Vector3 offset;
+
+    public bool isACommonPillar = true;
+    Vector3 offset;
 
     [HideInInspector]
     public new Camera camera;
@@ -24,7 +26,19 @@ public class CallCameraTrigger : MonoBehaviour
     {
         CameraBehaviour.OnSendCamera -= GetCamera;
     }
-    
+
+    private void Start()
+    {
+        if (isACommonPillar)
+        {
+            offset = CameraBehaviour.cameraOfsett;
+        }
+        else
+        {
+            offset = CameraBehaviour.cameraBossOfsett;
+        }
+    }
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.transform.tag == "Player")

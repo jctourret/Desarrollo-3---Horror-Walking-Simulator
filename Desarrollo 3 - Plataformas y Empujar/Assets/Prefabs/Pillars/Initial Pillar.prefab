@@ -7711,7 +7711,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3979826e1673ce24f8a9cc21377be4da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  smoothSpeed: 0.5
+  smoothSpeed: 0.05
+  isCommonPillar: 1
   offset: {x: -18, y: 12.5, z: -12}
   camera: {fileID: 0}
 --- !u!1 &8769043800638637118
