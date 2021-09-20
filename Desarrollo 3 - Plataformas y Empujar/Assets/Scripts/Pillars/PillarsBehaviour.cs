@@ -23,6 +23,9 @@ public class PillarsBehaviour : MonoBehaviour
     public float waitTime = 30f;
     public float destroyTime = 5f;
 
+    [Header("Diegetic Lights")]
+    [SerializeField] List<GameObject> nightLights = new List<GameObject>();
+
     [Header("Special Room")]
     [SerializeField] bool specialRoom = false;
     [SerializeField] Transform parentRoom;
@@ -131,6 +134,11 @@ public class PillarsBehaviour : MonoBehaviour
                 pillarState = PillarState.MoveDown;
                 StartCoroutine(MoveDownPillar());
             }
+        }
+        
+        foreach (var light in nightLights)
+        {
+            light.GetComponent<NightLight_Behaviour>().SetIntensityOfLight(timerToDestroy, timer);
         }
 
         timerText.GetComponent<TextMeshPro>().text = timer.ToString("0");
