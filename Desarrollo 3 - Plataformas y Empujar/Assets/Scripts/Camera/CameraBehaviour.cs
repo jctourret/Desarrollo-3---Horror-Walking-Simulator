@@ -12,6 +12,14 @@ public class CameraBehaviour : MonoBehaviour
     public static Vector3 cameraOfsett;
     public static Vector3 cameraBossOfsett;
 
+    [Header("Screen Shake")]
+    [SerializeField]
+    float duration;
+    [SerializeField]
+    float magnitude;
+    [SerializeField]
+    bool cameraShaking;
+
     private void Awake()
     {
         OnSendCamera?.Invoke(GetComponent<Camera>());
@@ -31,7 +39,7 @@ public class CameraBehaviour : MonoBehaviour
     }
 
 
-    void StartCameraShake()
+    void StartCameraShake(int i)
     {
         if (!cameraShaking)
         {

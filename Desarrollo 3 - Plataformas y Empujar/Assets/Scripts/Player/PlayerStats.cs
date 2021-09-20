@@ -11,15 +11,17 @@ public class PlayerStats : MonoBehaviour, IDamageable
     public static Action OnPlayerDamageDeath;
 
     [Header("Stats")]
+    public int maxLives = 6;
+    public int lives = 6;
+
+    [Header("Invincibility")]
     [SerializeField]
     float invDuration;
 
     SpriteRenderer rend;
 
     bool invulnerable;
-    public int maxLives = 6;
-    public int lives = 6;
-
+    
     //=============================================
 
     /// <summary>
@@ -109,13 +111,12 @@ public class PlayerStats : MonoBehaviour, IDamageable
         return false;
     }
 
-    [Header("Invincibility")]
     public void TakeDamage(int damage)
     {
         if (!invulnerable)
         {
             lives = lives - damage;
-            OnPlayerDamaged?.Invoke();
+            OnPlayerDamaged?.Invoke(damage);
             Eliminated();
             StartCoroutine(invulnerabilityTimer());
         }
