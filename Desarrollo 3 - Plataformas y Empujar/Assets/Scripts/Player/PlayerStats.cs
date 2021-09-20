@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using UnityEngine;
 
 public class PlayerStats : MonoBehaviour, IDamageable
@@ -10,6 +11,12 @@ public class PlayerStats : MonoBehaviour, IDamageable
     public static Action OnPlayerDamageDeath;
 
     [Header("Stats")]
+    [SerializeField]
+    float invDuration;
+
+    SpriteRenderer rend;
+
+    bool invulnerable;
     public int maxLives = 6;
     public int lives = 6;
 
@@ -102,11 +109,16 @@ public class PlayerStats : MonoBehaviour, IDamageable
         return false;
     }
 
+    [Header("Invincibility")]
     public void TakeDamage(int damage)
     {
-        lives = lives - damage;
-        OnPlayerDamaged?.Invoke(damage);
-        Eliminated();
+        if (!invulnerable)
+        {
+            lives = lives - damage;
+            OnPlayerDamaged?.Invoke();
+            Eliminated();
+            StartCoroutine(invulnerabilityTimer());
+        }
     }
 
     public void Eliminated()
@@ -116,5 +128,24 @@ public class PlayerStats : MonoBehaviour, IDamageable
             Destroy(gameObject);
             OnPlayerDamageDeath?.Invoke();
         }
+    }
+
+    IEnumerator invulnerabilityTimer()
+    {
+        float elapsed = 0.0f;
+        Color originalColor = rend.color; 
+        while (elapsed < invDuration)
+        {
+            if(elapsed % 2 == 0)
+            {
+                rend.color = Color.clear;
+            }
+            else
+            {
+                rend.color = originalColor;
+            }
+            yield return null;
+        }
+        invulnerable = false;
     }
 }

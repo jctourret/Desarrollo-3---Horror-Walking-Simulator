@@ -14,7 +14,7 @@ public class ThrowNeedle : MonoBehaviour
     //==================================
 
     float reloadShoot = 0.5f;
-    bool hableToShoot = true;
+    bool ableToShoot = true;
 
     float multiplierForce = 100f;
     Vector3[] directions = new Vector3[4];
@@ -28,7 +28,7 @@ public class ThrowNeedle : MonoBehaviour
         directions[2] = new Vector3(0, 90, 0);  // Right direction
         directions[3] = new Vector3(0, -90, 0); // Left direction
 
-        hableToShoot = true;
+        ableToShoot = true;
     }
 
     private void Update()
@@ -40,7 +40,7 @@ public class ThrowNeedle : MonoBehaviour
 
     void ShootInput()
     {
-        if (hableToShoot)
+        if (ableToShoot)
         {
             if (Input.GetKeyDown(KeyCode.UpArrow))
             {
@@ -79,11 +79,11 @@ public class ThrowNeedle : MonoBehaviour
 
     IEnumerator LoadNeedle()
     {
-        hableToShoot = false;
+        ableToShoot = false;
 
         yield return new WaitForSeconds(reloadShoot);
         
-        hableToShoot = true;
+        ableToShoot = true;
     }
 
 

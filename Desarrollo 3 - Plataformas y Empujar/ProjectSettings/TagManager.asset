@@ -16,7 +16,7 @@ TagManager:
   - 
   - Trap
   - Player
-  - Interative
+  - Interactive
   - Player_Bullet
   - Colectable_Item
   - Enemy

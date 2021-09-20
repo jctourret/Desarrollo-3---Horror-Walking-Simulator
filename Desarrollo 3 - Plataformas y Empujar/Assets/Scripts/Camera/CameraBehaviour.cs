@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using UnityEngine;
 
 public class CameraBehaviour : MonoBehaviour
@@ -17,5 +18,42 @@ public class CameraBehaviour : MonoBehaviour
 
         cameraOfsett = commonOfsett;
         cameraBossOfsett = bossOfsett;
+    }
+
+    private void OnEnable()
+    {
+        PlayerStats.OnPlayerDamaged += StartCameraShake;
+    }
+
+    private void OnDisable()
+    {
+        PlayerStats.OnPlayerDamaged -= StartCameraShake;
+    }
+
+
+    void StartCameraShake()
+    {
+        if (!cameraShaking)
+        {
+            cameraShaking = true;
+
+            StartCoroutine(CameraShake());
+        }
+    }
+
+    IEnumerator CameraShake()
+    {
+        Vector3 originalPos = transform.localPosition;
+        float elapsed = 0.0f;
+        while (elapsed < duration)
+        {
+            elapsed += Time.deltaTime;
+            float x = UnityEngine.Random.Range(-1f, 1f) * magnitude;
+            float y = UnityEngine.Random.Range(-1f, 1f) * magnitude;
+
+            transform.localPosition = new Vector3(x, y, originalPos.z);
+            yield return null;
+        }
+        transform.localPosition = originalPos;
     }
 }

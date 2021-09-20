@@ -18,7 +18,10 @@ public class LookToCamera : MonoBehaviour
 
     private void LateUpdate()
     {
-        transform.LookAt(camera.transform);
+        if (camera != null)
+        {
+            transform.LookAt(camera.transform);
+        }
     }
 
     void GetCamera(Camera newCamera)
