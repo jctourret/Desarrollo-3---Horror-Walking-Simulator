@@ -33,7 +33,7 @@ public class PillarsManager : MonoBehaviour
     //=====================================
 
     NavMeshSurface navMesh;
-    new Camera camera;
+    Camera cam;
 
     enum SpawnDirection
     {
@@ -99,7 +99,7 @@ public class PillarsManager : MonoBehaviour
 
     void GetCamera(Camera newCamera)
     {
-        camera = newCamera;
+        cam = newCamera;
     }
 
     void NumbersOfPillars()
@@ -189,21 +189,21 @@ public class PillarsManager : MonoBehaviour
 
                 var go = Instantiate(finalPillar, new Vector3(this.transform.position.x, pillar.transform.position.y, this.transform.position.z), Quaternion.Euler(Vector3.up), parent);
                 go.transform.name = finalPillar.name;
-                go.GetComponentInChildren<CallCameraTrigger>().camera = camera;
+                go.GetComponentInChildren<CallCameraTrigger>().cam = cam;
 
                 break;
             case TypeOfPillars.MarketRoom:
 
                 var go2 = Instantiate(marketPillar, new Vector3(this.transform.position.x, pillar.transform.position.y, this.transform.position.z), Quaternion.Euler(Vector3.up), parent);
                 go2.transform.name = marketPillar.name + "-" + (numerationPillars + 1).ToString();
-                go2.GetComponentInChildren<CallCameraTrigger>().camera = camera;
+                go2.GetComponentInChildren<CallCameraTrigger>().cam = cam;
 
                 break;
             case TypeOfPillars.CommonRoom:
 
                 var go3 = Instantiate(pillar, new Vector3(this.transform.position.x, pillar.transform.position.y, this.transform.position.z), Quaternion.Euler(Vector3.up), parent);
                 go3.transform.name = pillar.name + "-" + (numerationPillars + 1).ToString();
-                go3.GetComponentInChildren<CallCameraTrigger>().camera = camera;
+                go3.GetComponentInChildren<CallCameraTrigger>().cam = cam;
 
                 break;
         }

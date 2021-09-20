@@ -195,7 +195,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d03662b6ea104d469f1b3b09b631f8c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  camera: {fileID: 0}
+  cam: {fileID: 0}
 --- !u!114 &4676794
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1443,7 +1443,7 @@ MonoBehaviour:
   commonOfsett: {x: -13.5, y: 11.9, z: -9.24}
   bossOfsett: {x: -23, y: 18, z: -16}
   duration: 1
-  magnitude: 1
+  magnitude: 0.5
   cameraShaking: 0
 --- !u!1 &1028039913
 GameObject:
@@ -2237,8 +2237,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 175916143355190073, guid: aa69266d657d4c94a8b9d9878dcbcd85,
         type: 3}
+      propertyPath: flickers
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 175916143355190073, guid: aa69266d657d4c94a8b9d9878dcbcd85,
+        type: 3}
       propertyPath: maxLives
       value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 175916143355190073, guid: aa69266d657d4c94a8b9d9878dcbcd85,
+        type: 3}
+      propertyPath: invDuration
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 175916143355190076, guid: aa69266d657d4c94a8b9d9878dcbcd85,
         type: 3}

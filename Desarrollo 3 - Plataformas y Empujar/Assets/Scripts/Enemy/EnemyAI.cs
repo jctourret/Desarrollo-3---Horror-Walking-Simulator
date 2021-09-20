@@ -4,7 +4,7 @@ using UnityEngine.AI;
 
 public class EnemyAI : MonoBehaviour
 {   
-    public new Camera camera;
+    public Camera cam;
     int damage = 1;
     NavMeshAgent agent;
     Rigidbody rbody;
@@ -31,7 +31,7 @@ public class EnemyAI : MonoBehaviour
 
     private void LateUpdate()
     {
-        transform.LookAt(camera.transform);
+        transform.LookAt(cam.transform);
         if (agent.isActiveAndEnabled)
         {
             agent.destination = target.transform.position;
@@ -41,7 +41,7 @@ public class EnemyAI : MonoBehaviour
     //=======================================
     void GetCamera(Camera newCamera)
     {
-        camera = newCamera;
+        cam = newCamera;
     }
     public void pilarFalls()
     {

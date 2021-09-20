@@ -28,7 +28,7 @@ public class SpawnEnemies : MonoBehaviour
             Vector3 enemyPosition = toSpawn[i].transform.position;
             GameObject go = Instantiate(toSpawn[i].enemy,enemyPosition,Quaternion.identity);
             enemiesSpawned.Add(go.GetComponent<EnemyAI>());
-            go.GetComponent<EnemyAI>().camera = EnemyManager.instance.camera;
+            go.GetComponent<EnemyAI>().cam = EnemyManager.instance.cam;
         }
     }
 }

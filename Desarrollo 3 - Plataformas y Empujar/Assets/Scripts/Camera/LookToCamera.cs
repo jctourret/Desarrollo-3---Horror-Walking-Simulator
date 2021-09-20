@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class LookToCamera : MonoBehaviour
 {
-    new Camera camera;
+    Camera cam;
 
     private void OnEnable()
     {
@@ -18,15 +18,15 @@ public class LookToCamera : MonoBehaviour
 
     private void LateUpdate()
     {
-        if (camera != null)
+        if (cam != null)
         {
-            transform.LookAt(camera.transform);
+            transform.LookAt(cam.transform);
         }
     }
 
     void GetCamera(Camera newCamera)
     {
-        camera = newCamera;
+        cam = newCamera;
     }
 
 }

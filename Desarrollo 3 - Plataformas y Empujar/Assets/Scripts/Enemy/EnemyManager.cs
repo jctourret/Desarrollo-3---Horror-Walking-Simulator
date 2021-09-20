@@ -6,7 +6,7 @@ public class EnemyManager : MonoBehaviour
 {
     public static EnemyManager instance;
     public static GameObject player;
-    public new Camera camera;
+    public Camera cam;
 
     private void Awake()
     {
@@ -31,6 +31,6 @@ public class EnemyManager : MonoBehaviour
 
     void GetCamera(Camera newCamera)
     {
-        camera = newCamera;
+        cam = newCamera;
     }
 }

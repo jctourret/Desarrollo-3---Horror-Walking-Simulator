@@ -22,10 +22,13 @@ public class CameraBehaviour : MonoBehaviour
 
     private void Awake()
     {
-        OnSendCamera?.Invoke(GetComponent<Camera>());
-
         cameraOfsett = commonOfsett;
         cameraBossOfsett = bossOfsett;
+    }
+
+    private void Start()
+    {
+        OnSendCamera?.Invoke(GetComponent<Camera>());
     }
 
     private void OnEnable()
@@ -59,9 +62,10 @@ public class CameraBehaviour : MonoBehaviour
             float x = UnityEngine.Random.Range(-1f, 1f) * magnitude;
             float y = UnityEngine.Random.Range(-1f, 1f) * magnitude;
 
-            transform.localPosition = new Vector3(x, y, originalPos.z);
+            transform.localPosition = originalPos + new Vector3(x, y, 0.0f);
             yield return null;
         }
+        cameraShaking = false;
         transform.localPosition = originalPos;
     }
 }

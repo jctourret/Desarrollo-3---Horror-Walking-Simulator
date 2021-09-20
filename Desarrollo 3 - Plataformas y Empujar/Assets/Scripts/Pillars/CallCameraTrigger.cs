@@ -12,8 +12,7 @@ public class CallCameraTrigger : MonoBehaviour
     public bool isACommonPillar = true;
     Vector3 offset;
 
-    [HideInInspector]
-    public new Camera camera;
+    public Camera cam;
 
     //=============================================
 
@@ -51,7 +50,7 @@ public class CallCameraTrigger : MonoBehaviour
         
     void GetCamera(Camera newCamera)
     {
-        camera = newCamera;
+        cam = newCamera;
     }
     
     IEnumerator MoveCamera()
@@ -62,7 +61,7 @@ public class CallCameraTrigger : MonoBehaviour
 
         while (time <= 1)
         {
-            camera.transform.position = Vector3.Lerp(camera.transform.position, desiredPosition, time * smoothSpeed);
+            cam.transform.position = Vector3.Lerp(cam.transform.position, desiredPosition, time * smoothSpeed);
 
             time += Time.deltaTime;
             

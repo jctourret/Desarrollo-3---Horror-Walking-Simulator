@@ -17,12 +17,20 @@ public class PlayerStats : MonoBehaviour, IDamageable
     [Header("Invincibility")]
     [SerializeField]
     float invDuration;
+    [SerializeField]
+    bool invulnerable = false;
+    [SerializeField]
+    int flickers = 3;
 
     SpriteRenderer rend;
 
-    bool invulnerable;
-    
+
     //=============================================
+
+    private void Start()
+    {
+        rend = GetComponentInChildren<SpriteRenderer>();
+    }
 
     /// <summary>
     /// Testeo de Daño
@@ -118,6 +126,7 @@ public class PlayerStats : MonoBehaviour, IDamageable
             lives = lives - damage;
             OnPlayerDamaged?.Invoke(damage);
             Eliminated();
+            invulnerable = true;
             StartCoroutine(invulnerabilityTimer());
         }
     }
@@ -134,19 +143,27 @@ public class PlayerStats : MonoBehaviour, IDamageable
     IEnumerator invulnerabilityTimer()
     {
         float elapsed = 0.0f;
+        float flickerTimer = 0.0f;
         Color originalColor = rend.color; 
         while (elapsed < invDuration)
         {
-            if(elapsed % 2 == 0)
+            elapsed += Time.deltaTime;
+            flickerTimer += Time.deltaTime;
+            if(flickerTimer > invDuration/flickers)
             {
-                rend.color = Color.clear;
-            }
-            else
-            {
-                rend.color = originalColor;
+                if (rend.color == originalColor)
+                {
+                    rend.color = Color.clear;
+                }
+                else
+                {
+                    rend.color = originalColor;
+                }
+                flickerTimer = 0.0f;
             }
             yield return null;
         }
+        rend.color = originalColor;
         invulnerable = false;
     }
 }
