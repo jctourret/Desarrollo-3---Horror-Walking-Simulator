@@ -20,7 +20,9 @@ public class LookToCamera : MonoBehaviour
     {
         if (cam != null)
         {
-            transform.LookAt(cam.transform);
+            Vector3 adjustedCam = cam.transform.position;
+            adjustedCam.y = gameObject.transform.position.y;
+            transform.LookAt(adjustedCam);
         }
     }
 

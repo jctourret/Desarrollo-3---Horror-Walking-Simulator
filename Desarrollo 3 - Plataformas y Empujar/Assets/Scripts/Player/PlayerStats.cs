@@ -153,7 +153,7 @@ public class PlayerStats : MonoBehaviour, IDamageable
             {
                 if (rend.color == originalColor)
                 {
-                    rend.color = Color.clear;
+                    rend.color = Color.red;
                 }
                 else
                 {

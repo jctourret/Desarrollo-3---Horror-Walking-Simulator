@@ -9,8 +9,6 @@ public class SpawnEnemies : MonoBehaviour
 
     private void Start()
     {
-        toSpawn = new List<EnemyAndPoint>();
-        enemiesSpawned = new List<EnemyAI>();
     }
 
     private void OnTriggerEnter(Collider other)
@@ -28,6 +26,7 @@ public class SpawnEnemies : MonoBehaviour
             Vector3 enemyPosition = toSpawn[i].transform.position;
             GameObject go = Instantiate(toSpawn[i].enemy,enemyPosition,Quaternion.identity);
             enemiesSpawned.Add(go.GetComponent<EnemyAI>());
+            go.GetComponent<EnemyAI>().target = EnemyManager.instance.player;
             go.GetComponent<EnemyAI>().cam = EnemyManager.instance.cam;
         }
     }

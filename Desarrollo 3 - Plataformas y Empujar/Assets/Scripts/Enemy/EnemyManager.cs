@@ -5,7 +5,7 @@ using UnityEngine;
 public class EnemyManager : MonoBehaviour
 {
     public static EnemyManager instance;
-    public static GameObject player;
+    public GameObject player;
     public Camera cam;
 
     private void Awake()
@@ -21,12 +21,20 @@ public class EnemyManager : MonoBehaviour
     }
     private void OnEnable()
     {
-        CameraBehaviour.OnSendCamera += GetCamera;   
+        CameraBehaviour.OnSendCamera += GetCamera;
     }
 
     private void OnDisable()
     {
         CameraBehaviour.OnSendCamera -= GetCamera;
+    }
+
+    void assingTarget(GameObject target, GameObject chaser)
+    {
+        if(chaser.GetComponent<EnemyAI>() != null)
+        {
+            chaser.GetComponent<EnemyAI>().target = target;
+        }
     }
 
     void GetCamera(Camera newCamera)

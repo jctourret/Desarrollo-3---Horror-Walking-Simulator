@@ -14,10 +14,15 @@ public class PlayerMovement : MonoBehaviour
     [Header("Player Move")]
     public float speedMovement = 10f;
     [SerializeField]
-    int offsetAngle = 45;
+    float offsetAngle = 1;
     [SerializeField]
     float dashTime = 1.5f;
     bool controllable;
+    [SerializeField]
+    Vector3 north;
+    Vector3 movement;
+    [SerializeField]
+    bool isRunning;
 
     [Header("Gravity")]
     [SerializeField]
@@ -26,6 +31,10 @@ public class PlayerMovement : MonoBehaviour
     float groundedGravity;
     [SerializeField]
     float gravity;
+    [SerializeField]
+    float maxFallSpeed;
+    float timeToApex;
+    bool isRaising = false; 
 
     [Header("Jump Variables")]
     [SerializeField]
@@ -34,6 +43,8 @@ public class PlayerMovement : MonoBehaviour
     float jumpTime;
     [SerializeField]
     float initialJumpVelocity;
+    bool isJumping = false;
+    float jumpTimer = 0.0f;
 
     CharacterController controller;
     Animator animator;
@@ -51,20 +62,23 @@ public class PlayerMovement : MonoBehaviour
     void Start()
     {
         controller = GetComponent<CharacterController>();
-        controller.Move(transform.position);
         animator = GetComponentInChildren<Animator>();
         controllable = true;
 
-        float timeToApex = jumpTime / 2;
+        
+        timeToApex = jumpTime / 2;
         gravity = (-2 * maxJumpHeight) / Mathf.Pow(timeToApex,2);
         initialJumpVelocity = (2 * maxJumpHeight) / timeToApex;
+        controller.Move(transform.position);
+
     }
 
     void Update()
     {
         MoveInput();
         OnPlayerMove?.Invoke(transform.position);
-
+        north = new Vector3(Vector3.right.x * Mathf.Cos(Mathf.Deg2Rad * offsetAngle) + Vector3.right.z * Mathf.Sin(Mathf.Deg2Rad * offsetAngle), 0,
+            Vector3.right.x * Mathf.Sin(Mathf.Deg2Rad * offsetAngle) + Vector3.right.z * Mathf.Cos(Mathf.Deg2Rad * offsetAngle));
         CheckFallDeath();
     }
 
@@ -114,32 +128,44 @@ public class PlayerMovement : MonoBehaviour
             verticalInput = 0;
         }
 
-        float verticalOffsetInput = verticalInput * Mathf.Cos(offsetAngle) + horizontalInput * Mathf.Sin(offsetAngle);
-        float horizontalOffsetInput = -verticalInput * Mathf.Sin(offsetAngle) + horizontalInput * Mathf.Cos(offsetAngle); 
+        float verticalOffsetInput = verticalInput * Mathf.Cos(Mathf.Deg2Rad * offsetAngle) + horizontalInput * Mathf.Sin(Mathf.Deg2Rad * offsetAngle);
+        float horizontalOffsetInput = -verticalInput * Mathf.Sin(Mathf.Deg2Rad * offsetAngle) + horizontalInput * Mathf.Cos(Mathf.Deg2Rad * offsetAngle); 
 
         Vector3 input = new Vector3(verticalOffsetInput, 0.0f, -horizontalOffsetInput);
 
         input = Vector3.ClampMagnitude(input, 1);
-        Vector3 movement = input * speedMovement * Time.deltaTime;
+        movement = input * speedMovement * Time.deltaTime;
 
         if (Input.GetKeyDown(KeyCode.LeftShift))
         {
-            movement = applyGravity(movement);
             StartCoroutine(Dash(movement));
             controllable = false;
         }
         else
         {
             SetDirection(movement);
-            movement = applyGravity(movement);
+            if (!isJumping)
+            {
+                InputJump();
+            }
+            else
+            {
+                applyJump();
+            }
 
-            movement = PlayerJump(movement);
-
+            if (!isRaising)
+            {
+                applyGravity();
+            }
+            if(movement.y < maxFallSpeed)
+            {
+                movement.y = maxFallSpeed;
+            }
             controller.Move(movement);
         }
     }
 
-    Vector3 applyGravity(Vector3 movement)
+    void applyGravity()
     {
         if (controller.isGrounded)
         {
@@ -149,30 +175,48 @@ public class PlayerMovement : MonoBehaviour
         {
             movement.y += gravity * Time.deltaTime;
         }
-        return movement;
     }
 
-    Vector3 PlayerJump(Vector3 movement)
+    void InputJump()
     {
         if (controller.isGrounded && Input.GetKeyDown(KeyCode.Space))
         {
-            movement.y = initialJumpVelocity;
+            isRaising = true;
+            isJumping = true;
         }
-        return movement;
+    }
+
+    void applyJump()
+    {
+        if (timeToApex>=jumpTimer)
+        {
+            movement.y = initialJumpVelocity * Time.deltaTime;
+            jumpTimer += Time.deltaTime;
+        }
+        else
+        {
+            isRaising = false;
+            if (jumpTime>=jumpTimer)
+            {
+                isJumping = false;
+                jumpTimer = 0.0f;
+            }
+        }
     }
 
     void SetDirection(Vector3 direction)
     {
         string[] directionArray = null;
 
-        if (direction.magnitude < 0.1f)
+        if (direction.magnitude < 0.01f)
         {
             directionArray = staticDirections;
+            isRunning = false;
         }
         else
         {
-            //directionArray = runDirections;
-            directionArray = staticDirections;
+            directionArray = runDirections;
+            isRunning = true;
             lastDirection = DirectionToIndex(direction,runDirections.Length);
         }
         animator.Play(directionArray[lastDirection]);
@@ -184,8 +228,7 @@ public class PlayerMovement : MonoBehaviour
         Vector3 normalizedDir = direction.normalized;
 
         float step = 360f / states;
-
-        Vector3 north = new Vector3(Vector3.right.x * Mathf.Cos(offsetAngle) + Vector3.right.z * Mathf.Sin(offsetAngle), 0, Vector3.right.x * Mathf.Sin(offsetAngle) + Vector3.right.z * Mathf.Cos(offsetAngle));
+        
         float angle = Vector3.SignedAngle(north, normalizedDir, Vector3.up);
 
         if (angle < 0)
@@ -213,7 +256,6 @@ public class PlayerMovement : MonoBehaviour
         controllable = true;
     }
 
-
     //==============================================
 
     private void OnDrawGizmos()
@@ -221,6 +263,7 @@ public class PlayerMovement : MonoBehaviour
         Vector3 pos = transform.position - new Vector3(0, maxJumpHeight, 0);
 
         Gizmos.color = Color.blue;
+        Gizmos.DrawLine(transform.position, transform.position + north);
         Gizmos.DrawLine(transform.position, pos);
     }
 }

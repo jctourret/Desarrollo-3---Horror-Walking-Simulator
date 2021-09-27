@@ -195,6 +195,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d03662b6ea104d469f1b3b09b631f8c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 0}
   cam: {fileID: 0}
 --- !u!114 &4676794
 MonoBehaviour:
@@ -1443,7 +1444,7 @@ MonoBehaviour:
   commonOfsett: {x: -13.5, y: 11.9, z: -9.24}
   bossOfsett: {x: -23, y: 18, z: -16}
   duration: 1
-  magnitude: 0.5
+  magnitude: 0.25
   cameraShaking: 0
 --- !u!1 &1028039913
 GameObject:
@@ -1603,7 +1604,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1222912344
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2188,7 +2189,7 @@ PrefabInstance:
     - target: {fileID: 175916143355190072, guid: aa69266d657d4c94a8b9d9878dcbcd85,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 8.34
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 175916143355190072, guid: aa69266d657d4c94a8b9d9878dcbcd85,
         type: 3}
@@ -2257,8 +2258,33 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 175916143355190078, guid: aa69266d657d4c94a8b9d9878dcbcd85,
         type: 3}
+      propertyPath: jumpTime
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 175916143355190078, guid: aa69266d657d4c94a8b9d9878dcbcd85,
+        type: 3}
+      propertyPath: fallDeath
+      value: -20
+      objectReference: {fileID: 0}
+    - target: {fileID: 175916143355190078, guid: aa69266d657d4c94a8b9d9878dcbcd85,
+        type: 3}
       propertyPath: offsetAngle
-      value: 45
+      value: 33.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 175916143355190078, guid: aa69266d657d4c94a8b9d9878dcbcd85,
+        type: 3}
+      propertyPath: maxJumpHeight
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 175916143355190078, guid: aa69266d657d4c94a8b9d9878dcbcd85,
+        type: 3}
+      propertyPath: groundedGravity
+      value: -0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4077659575427413691, guid: aa69266d657d4c94a8b9d9878dcbcd85,
+        type: 3}
+      propertyPath: m_SkinWidth
+      value: 0.04
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: aa69266d657d4c94a8b9d9878dcbcd85, type: 3}
