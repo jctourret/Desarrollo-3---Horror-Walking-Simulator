@@ -16,6 +16,7 @@ public class SpawnEnemies : MonoBehaviour
         if (other.tag == "Player")
         {
             Spawn();
+            GetComponent<BoxCollider>().enabled = false;
         }
     }
 

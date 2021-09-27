@@ -4,30 +4,32 @@ using UnityEngine;
 
 public class ThrowNeedle : MonoBehaviour
 {
-
     public Transform needleSpawner;
     public GameObject needleObj;
 
     [Range(0,15)]
     public float throwForce = 10f;
 
+    [Header("Directions of Axis")]
+    public Vector3[] directions = new Vector3[4];
+    /// Directions:
+    /// [0] Up
+    /// [1] Down
+    /// [2] Right 
+    /// [3] Left
+    /// -----------
+    
     //==================================
 
     float reloadShoot = 0.5f;
     bool ableToShoot = true;
 
     float multiplierForce = 100f;
-    Vector3[] directions = new Vector3[4];
 
     //==================================
 
-    private void Awake()
+    private void Start()
     {
-        directions[0] = new Vector3(0, 0, 0);   // Up direction
-        directions[1] = new Vector3(180, 0, 0); // Down direction
-        directions[2] = new Vector3(0, 90, 0);  // Right direction
-        directions[3] = new Vector3(0, -90, 0); // Left direction
-
         ableToShoot = true;
     }
 
@@ -44,7 +46,6 @@ public class ThrowNeedle : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.UpArrow))
             {
-
                 var go = Instantiate(needleObj, needleSpawner.position, Quaternion.Euler(directions[0]));
                 go.GetComponent<Rigidbody>().AddForce(needleSpawner.forward * throwForce * multiplierForce, ForceMode.Force);
                 StartCoroutine(LoadNeedle());
@@ -52,7 +53,6 @@ public class ThrowNeedle : MonoBehaviour
             }
             else if (Input.GetKeyDown(KeyCode.DownArrow))
             {
-
                 var go = Instantiate(needleObj, needleSpawner.position, Quaternion.Euler(directions[1]));
                 go.GetComponent<Rigidbody>().AddForce(-needleSpawner.forward * throwForce * multiplierForce, ForceMode.Force);
                 StartCoroutine(LoadNeedle());
@@ -60,7 +60,6 @@ public class ThrowNeedle : MonoBehaviour
             }
             else if (Input.GetKeyDown(KeyCode.RightArrow))
             {
-
                 var go = Instantiate(needleObj, needleSpawner.position, Quaternion.Euler(directions[2]));
                 go.GetComponent<Rigidbody>().AddForce(needleSpawner.right * throwForce * multiplierForce, ForceMode.Force);
                 StartCoroutine(LoadNeedle());
@@ -68,11 +67,9 @@ public class ThrowNeedle : MonoBehaviour
             }
             else if (Input.GetKeyDown(KeyCode.LeftArrow))
             {
-
                 var go = Instantiate(needleObj, needleSpawner.position, Quaternion.Euler(directions[3]));
                 go.GetComponent<Rigidbody>().AddForce(-needleSpawner.right * throwForce * multiplierForce, ForceMode.Force);
                 StartCoroutine(LoadNeedle());
-
             }
         }
     }
@@ -85,6 +82,4 @@ public class ThrowNeedle : MonoBehaviour
         
         ableToShoot = true;
     }
-
-
 }

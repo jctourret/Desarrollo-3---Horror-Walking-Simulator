@@ -12,11 +12,6 @@ public class EnemyStats : MonoBehaviour, IDamageable
 
     //==================================
 
-    void Awake()
-    {
-
-    }
-
     public void TakeDamage(int damage)
     {
         life -= damage;

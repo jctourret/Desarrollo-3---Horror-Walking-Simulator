@@ -54,7 +54,7 @@ public class EnemyAI : MonoBehaviour
     void Start()
     {
         agent = GetComponent<NavMeshAgent>();
-        rbody = GetComponent<Rigidbody>();
+        rbody = GetComponentInChildren<Rigidbody>();
         rbody.isKinematic = true;
         OnEnemySpawn?.Invoke(gameObject);
         animator = GetComponentInChildren<Animator>();
