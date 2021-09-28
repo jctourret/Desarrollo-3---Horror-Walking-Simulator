@@ -31,7 +31,7 @@ public class NeedleBehaviour : MonoBehaviour
         {
             this.gameObject.AddComponent<FixedJoint>();
 
-            GetComponent<FixedJoint>().connectedBody = collision.transform.GetComponent<Rigidbody>();
+            this.transform.parent = collision.transform;
         }
 
         if (collision.transform.GetComponent<IDamageable>() != null)

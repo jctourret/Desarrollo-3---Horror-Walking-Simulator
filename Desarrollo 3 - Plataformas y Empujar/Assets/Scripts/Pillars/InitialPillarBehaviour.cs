@@ -1,8 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using System;
-using TMPro;
 
 public class InitialPillarBehaviour : MonoBehaviour
 {
@@ -12,9 +10,9 @@ public class InitialPillarBehaviour : MonoBehaviour
     [Range(0, 2)]
     public float delayTime = 1.5f;
 
-    [Header("UI Timer")]
-    public GameObject timerText;
+    [Header("Diegetic Lights")]
     public float destroyTime = 10f;
+    [SerializeField] List<GameObject> nightLights = new List<GameObject>();
 
     //===============================================
 
@@ -32,11 +30,15 @@ public class InitialPillarBehaviour : MonoBehaviour
 
     //===============================================
 
-    private void Awake()
+    private void Start()
     {
         animator = GetComponent<Animator>();
-        timerText.SetActive(false);
         pillarState = PillarState.MoveUp;
+
+        foreach (var light in nightLights)
+        {
+            light.GetComponent<NightLight_Behaviour>().SetIntensityOfLight(false, destroyTime);
+        }
     }
 
     private void OnEnable()
@@ -69,10 +71,7 @@ public class InitialPillarBehaviour : MonoBehaviour
     IEnumerator WaitTime()
     {
         yield return new WaitForSeconds(delayTime);
-
-        timerText.SetActive(true);
         timer = destroyTime;
-
         pillarState = PillarState.waiting;
     }
 
@@ -86,14 +85,15 @@ public class InitialPillarBehaviour : MonoBehaviour
             StartCoroutine(MoveDownPillar());
         }
 
-        timerText.GetComponent<TextMeshPro>().text = timer.ToString("0");
+        foreach (var light in nightLights)
+        {
+            light.GetComponent<NightLight_Behaviour>().SetIntensityOfLight(true, timer);
+        }
     }
 
     IEnumerator MoveDownPillar()
     {
         animator.SetTrigger("Change");
-
-        timerText.SetActive(false);
 
         yield return new WaitForSeconds(delayTime);
 

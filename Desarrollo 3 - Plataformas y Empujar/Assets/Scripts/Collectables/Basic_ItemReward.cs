@@ -39,14 +39,14 @@ public class Basic_ItemReward : MonoBehaviour
         rig.AddForce(Vector3.up * jumpForce, ForceMode.Force);
     }
 
-    private void OnCollisionEnter(Collision collision)
+    private void OnTriggerEnter(Collider other)
     {
-        if (collision.transform.tag == "Player")
+        if (other.transform.tag == "Player")
         {
             switch (rewardType)
             {
                 case RewardType.LifeReward:
-                    if (collision.transform.GetComponent<PlayerStats>().EarnLive(earnScore))
+                    if (other.transform.GetComponentInParent<PlayerStats>().EarnLive(earnScore))
                     {
                         Destroy(this.gameObject);
                     }

@@ -10,6 +10,8 @@ public class EnemyStats : MonoBehaviour, IDamageable
     [HideInInspector]
     public bool isLive = true;
 
+    [SerializeField]
+    GameObject generalBody;
     //==================================
 
     public void TakeDamage(int damage)
@@ -32,7 +34,7 @@ public class EnemyStats : MonoBehaviour, IDamageable
 
         LoaderManager.Get().SpawnBasicItem(this.transform.position);
 
-        Destroy(this.gameObject); // Esta linea se tiene que eliminar cuando se tenga la animacion
+        Destroy(generalBody.gameObject);// this.gameObject); // Esta linea se tiene que eliminar cuando se tenga la animacion
     }
 
     //==================================

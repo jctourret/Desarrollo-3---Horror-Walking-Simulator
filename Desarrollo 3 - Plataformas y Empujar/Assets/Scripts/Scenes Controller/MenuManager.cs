@@ -10,6 +10,11 @@ public class MenuManager : MonoBehaviour
 
     public void GoToScene(string scene)
     {
+        ScenesLoaderHandler.LoadScene(scene);
+    }
+
+    public void GoToSceneWithoutLoading(string scene)
+    {
         SceneManager.LoadScene(scene);
     }
 

@@ -1,4 +1,5 @@
 ﻿using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using System;
 using TMPro;
@@ -17,9 +18,9 @@ public class BossPillarBehaviour : MonoBehaviour
     [Range(0, 2)]
     public float delayTime = 1f;
 
-    [Header("UI Timer")]
-    public GameObject timerText;
+    [Header("Diegetic Lights")]
     public float waitTime = 60f;
+    [SerializeField] List<GameObject> nightLights = new List<GameObject>();
 
     [Header("Exit Stairs")]
     public GameObject exitStairs;
@@ -40,11 +41,14 @@ public class BossPillarBehaviour : MonoBehaviour
 
     //===============================================
 
-    private void Awake()
+    private void Start()
     {
-        timerText.SetActive(false);
-
         pillarState = PillarState.MoveUp;
+
+        foreach (var light in nightLights)
+        {
+            light.GetComponent<NightLight_Behaviour>().SetIntensityOfLight(false, waitTime / 2);
+        }
     }
 
     private void OnEnable()
@@ -94,20 +98,10 @@ public class BossPillarBehaviour : MonoBehaviour
     {
         yield return new WaitForSeconds(delayTime);
 
-        timerText.SetActive(true);
         timer = waitTime;
 
         pillarState = PillarState.waiting;
     }
-
-    //IEnumerator MoveUpPillar()
-    //{
-    //    yield return new WaitForSeconds(delayTime);
-    //
-    //    timerText.SetActive(true);
-    //
-    //    pillarState = PillarState.waiting;
-    //}
 
     void UpdateTimer()
     {
@@ -119,8 +113,6 @@ public class BossPillarBehaviour : MonoBehaviour
             {
                 callTheExit = true;
 
-                timerText.SetActive(false);
-
                 var go = Instantiate(exitStairs, position_ExitStairs.position, Quaternion.Euler(Vector3.up));
             }
             else
@@ -129,6 +121,9 @@ public class BossPillarBehaviour : MonoBehaviour
             }
         }
 
-        timerText.GetComponent<TextMeshPro>().text = timer.ToString("0");
+        foreach (var light in nightLights)
+        {
+            light.GetComponent<NightLight_Behaviour>().SetIntensityOfLight(true, timer);
+        }
     }
 }

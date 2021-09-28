@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using UnityEngine;
 using System;
-using TMPro;
 
 public class PillarsBehaviour : MonoBehaviour
 {
@@ -19,7 +18,6 @@ public class PillarsBehaviour : MonoBehaviour
     public float delayTime = 1f;
 
     [Header("UI Timer")]
-    public GameObject timerText;
     public float waitTime = 30f;
     public float destroyTime = 5f;
 
@@ -53,9 +51,7 @@ public class PillarsBehaviour : MonoBehaviour
     }
 
     private void Start()
-    {
-        timerText.SetActive(false);
-        
+    {        
         pillarState = PillarState.MoveUp;
 
         timer = waitTime;
@@ -109,7 +105,6 @@ public class PillarsBehaviour : MonoBehaviour
         yield return new WaitForSeconds(delayTime);
 
         timer = waitTime;
-        timerText.SetActive(true);
         
         pillarState = PillarState.waiting;
     }
@@ -126,8 +121,6 @@ public class PillarsBehaviour : MonoBehaviour
                 timerToDestroy = true;
 
                 CreatePillar?.Invoke(); // Crea el nuevo pilar
-
-                timerText.GetComponent<TextMeshPro>().color = Color.red;
             }
             else
             {
@@ -140,8 +133,6 @@ public class PillarsBehaviour : MonoBehaviour
         {
             light.GetComponent<NightLight_Behaviour>().SetIntensityOfLight(timerToDestroy, timer);
         }
-
-        timerText.GetComponent<TextMeshPro>().text = timer.ToString("0");
     }
 
     IEnumerator MoveDownPillar()
@@ -153,9 +144,7 @@ public class PillarsBehaviour : MonoBehaviour
         //for(int i = 0; i < room.GetComponentInChildren<SpawnEnemies>().enemiesSpawned.Count; i++)
         //{
         //    room.GetComponentInChildren<SpawnEnemies>().enemiesSpawned[i].pilarFalls();
-        //}
-
-        timerText.SetActive(false);        
+        //}  
 
         yield return new WaitForSeconds(delayTime);
 
