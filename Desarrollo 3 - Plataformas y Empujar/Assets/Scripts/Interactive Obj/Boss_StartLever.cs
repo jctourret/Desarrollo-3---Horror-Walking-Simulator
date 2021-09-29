@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using System;
 
 public class Boss_StartLever : MonoBehaviour
@@ -16,6 +14,8 @@ public class Boss_StartLever : MonoBehaviour
     public GameObject UIposter;
 
     public StateObject stateObject;
+
+    public SpawnEnemies spawnEnemies;
 
     Animator animator;
     bool inRange = false;
@@ -67,5 +67,7 @@ public class Boss_StartLever : MonoBehaviour
     public void ActivateLever()
     {
         ActivateObject.Invoke();
+
+        spawnEnemies.Spawn();
     }
 }

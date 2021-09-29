@@ -42,7 +42,7 @@ public class LoaderManager : MonoBehaviourSingleton<LoaderManager>
         BItemsParent.transform.name = "// --- Items --- \\\\";
     }
 
-    public void SpawnBasicItem(Vector3 position)
+    public void SpawnBasicItem(Vector3 position, Camera cam)
     {
         int random = Random.Range(0, MAX_PORCENTAGE);
 
@@ -52,6 +52,8 @@ public class LoaderManager : MonoBehaviourSingleton<LoaderManager>
 
             var go = Instantiate(basicItems[random], position, Quaternion.Euler(Vector3.up));
             go.transform.name = basicItems[random].name;
+
+            go.GetComponentInChildren<LookToCamera>().cam = cam;
         }
     }
 

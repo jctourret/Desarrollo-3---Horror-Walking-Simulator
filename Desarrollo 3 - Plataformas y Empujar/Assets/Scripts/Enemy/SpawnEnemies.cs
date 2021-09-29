@@ -7,10 +7,6 @@ public class SpawnEnemies : MonoBehaviour
     List<EnemyAndPoint> toSpawn;
     public List<EnemyAI> enemiesSpawned;
 
-    private void Start()
-    {
-    }
-
     private void OnTriggerEnter(Collider other)
     {
         if (other.tag == "Player")
@@ -20,7 +16,7 @@ public class SpawnEnemies : MonoBehaviour
         }
     }
 
-    void Spawn()
+    public void Spawn()
     {        
         for (int i = 0; i < toSpawn.Count; i++)
         {

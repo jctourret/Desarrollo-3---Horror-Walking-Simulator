@@ -21,8 +21,8 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField]
     Vector3 north;
     Vector3 movement;
-    [SerializeField]
-    bool isRunning;
+    //[SerializeField]
+    //bool isRunning;
 
     [Header("Gravity")]
     [SerializeField]
@@ -212,12 +212,12 @@ public class PlayerMovement : MonoBehaviour
         if (direction.magnitude < 0.01f)
         {
             directionArray = staticDirections;
-            isRunning = false;
+            //isRunning = false;
         }
         else
         {
             directionArray = runDirections;
-            isRunning = true;
+            //isRunning = true;
             lastDirection = DirectionToIndex(direction,runDirections.Length);
         }
         animator.Play(directionArray[lastDirection]);

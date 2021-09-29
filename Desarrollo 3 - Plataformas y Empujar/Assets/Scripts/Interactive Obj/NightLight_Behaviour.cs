@@ -6,7 +6,6 @@ public class NightLight_Behaviour : MonoBehaviour
     [SerializeField] Color collapsingColorMaterial = Color.red;
     [SerializeField] Light pointLight;
 
-    bool isActive = false;
     Material material;
 
     private void Awake()

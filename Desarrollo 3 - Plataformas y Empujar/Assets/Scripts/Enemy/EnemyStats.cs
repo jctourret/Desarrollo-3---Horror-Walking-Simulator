@@ -9,16 +9,11 @@ public class EnemyStats : MonoBehaviour, IDamageable
     //==================================
     [HideInInspector]
     public bool isLive = true;
-
-    [SerializeField]
-    GameObject generalBody;
     //==================================
 
     public void TakeDamage(int damage)
     {
         life -= damage;
-
-        //Debug.Log("vida actual - " + life);
 
         if (life <= 0)
             Eliminated();
@@ -32,9 +27,9 @@ public class EnemyStats : MonoBehaviour, IDamageable
 
         // <-- Acá se llama a la animacion de muerte
 
-        LoaderManager.Get().SpawnBasicItem(this.transform.position);
+        LoaderManager.Get().SpawnBasicItem(this.transform.position, EnemyManager.instance.cam);
 
-        Destroy(generalBody.gameObject);// this.gameObject); // Esta linea se tiene que eliminar cuando se tenga la animacion
+        Destroy(this.transform.parent.gameObject); // Esta linea se tiene que eliminar cuando se tenga la animacion
     }
 
     //==================================

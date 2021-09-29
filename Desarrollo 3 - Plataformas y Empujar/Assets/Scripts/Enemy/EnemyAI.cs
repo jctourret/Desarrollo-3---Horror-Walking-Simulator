@@ -10,7 +10,6 @@ public class EnemyAI : MonoBehaviour
 
     public static Action<GameObject> OnEnemySpawn;
     public Camera cam;
-    int damage = 1;
     NavMeshAgent agent;
     Rigidbody rbody;
 
@@ -23,6 +22,8 @@ public class EnemyAI : MonoBehaviour
     float offsetAngle = 33.3f;
 
     [Header("Attack")]
+    [SerializeField]
+    int damage = 1;
     [SerializeField]
     float attackDelay;
     [SerializeField]

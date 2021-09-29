@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class LookToCamera : MonoBehaviour
 {
-    Camera cam;
+    [HideInInspector]
+    public Camera cam;
 
     private void OnEnable()
     {

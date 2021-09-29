@@ -433,9 +433,9 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5064801010279291534}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 1.5, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.033333335, y: 1, z: 0.033333335}
   m_Children:
   - {fileID: 839882845254796272}
   - {fileID: 5064801009856171842}
@@ -469,6 +469,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   UIposter: {fileID: 839882845254796278}
   stateObject: 0
+  spawnEnemies: {fileID: 0}
 --- !u!95 &8568731160863260628
 Animator:
   serializedVersion: 3
@@ -601,7 +602,7 @@ PrefabInstance:
     - target: {fileID: 5615449218809917680, guid: 0bb130e2b7073d745b255eca681f0ab6,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.25
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5615449218809917680, guid: 0bb130e2b7073d745b255eca681f0ab6,
         type: 3}
