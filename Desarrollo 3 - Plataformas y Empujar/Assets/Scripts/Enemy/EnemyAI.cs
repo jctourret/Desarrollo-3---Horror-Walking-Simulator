@@ -70,38 +70,44 @@ public class EnemyAI : MonoBehaviour
 
     private void Update()
     {
-        float distance = Vector3.Distance(transform.position, target.transform.position);
+        float distance;
+        if (target != null)
+        { 
+            distance = Vector3.Distance(transform.position, target.transform.position);
 
-        if (distance <= agent.stoppingDistance)
-        {
-            if (!hasAttacked)
+            if (distance <= agent.stoppingDistance)
             {
-                StartCoroutine(Attack(target));
-                hasAttacked = true;
-            }
-        }
-        else
-        {
-            if (agent.isActiveAndEnabled)
-            {
-                agent.SetDestination(target.transform.position);
-            }
-        }
-        if (hasAttacked)
-        {
-            if(attackCooldownTimer < attackCooldown)
-            {
-                attackCooldownTimer += Time.deltaTime;
+                if (!hasAttacked)
+                {
+                    StartCoroutine(Attack(target));
+                    hasAttacked = true;
+                }
             }
             else
             {
-                hasAttacked = false;
-                attackCooldownTimer = 0.0f;
+                if (agent.isActiveAndEnabled)
+                {
+                    agent.SetDestination(target.transform.position);
+                }
             }
+
+            if (hasAttacked)
+            {
+                if (attackCooldownTimer < attackCooldown)
+                {
+                    attackCooldownTimer += Time.deltaTime;
+                }
+                else
+                {
+                    hasAttacked = false;
+                    attackCooldownTimer = 0.0f;
+                }
+            }
+
+            Vector3 direction = currentPos - previousPos;
+            direction = direction.normalized;
+            SetDirection(direction);
         }
-        Vector3 direction = currentPos - previousPos;
-        direction = direction.normalized;
-        SetDirection(direction);
     }
 
     private void LateUpdate()
@@ -161,12 +167,12 @@ public class EnemyAI : MonoBehaviour
     {
         float startTime = Time.time;
 
+        Vector3 startTargetLocation = target.transform.position - transform.position;
         while(Time.time < startTime + attackDelay)
         {
             yield return null;
         }
-
-        float angle = Vector3.SignedAngle(gameObject.transform.forward, gameObject.transform.position - target.transform.position, Vector3.up);
+        float angle = Vector3.SignedAngle(startTargetLocation, target.transform.position - transform.position, Vector3.up);
         float distante = Vector3.Distance(transform.position, target.transform.position);
         if (angle < 0)
         {
@@ -180,6 +186,5 @@ public class EnemyAI : MonoBehaviour
                 damageable.TakeDamage(damage);
             }
         }
-
     }
 }
