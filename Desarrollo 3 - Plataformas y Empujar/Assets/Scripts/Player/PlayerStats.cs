@@ -24,7 +24,6 @@ public class PlayerStats : MonoBehaviour, IDamageable
 
     SpriteRenderer rend;
 
-
     //=============================================
 
     private void Start()

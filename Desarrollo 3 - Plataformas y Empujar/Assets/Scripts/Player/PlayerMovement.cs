@@ -69,6 +69,7 @@ public class PlayerMovement : MonoBehaviour
         timeToApex = jumpTime / 2;
         gravity = (-2 * maxJumpHeight) / Mathf.Pow(timeToApex,2);
         initialJumpVelocity = (2 * maxJumpHeight) / timeToApex;
+
         controller.Move(transform.position);
 
     }
