@@ -102,11 +102,13 @@ public class PillarsBehaviour : MonoBehaviour
     {
         OnPillarUp?.Invoke();
 
-        yield return new WaitForSeconds(delayTime);
+        //yield return new WaitForSeconds(delayTime);
 
         timer = waitTime;
         
         pillarState = PillarState.waiting;
+
+        yield return null;
     }
 
     void UpdateTimer()

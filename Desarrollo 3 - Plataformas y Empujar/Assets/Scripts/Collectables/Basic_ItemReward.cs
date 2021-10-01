@@ -10,20 +10,23 @@ public class Basic_ItemReward : MonoBehaviour
     enum RewardType
     {
         LifeReward,
-        MoneyReward
+        MoneyReward,
+        MaxLifeReward
     };
 
-    [SerializeField]
-    RewardType rewardType;
+    [SerializeField] RewardType rewardType;
 
-    [SerializeField]
-    int earnScore = 1;
+    [SerializeField] int earnScore = 1;
     
-    [SerializeField]
-    float jumpForce = 5f;
+    [SerializeField] float jumpForce = 5f;
     
     [SerializeField] [Range(-50,0)]
     float y_fallLimit = -30f;
+
+    [Header("If The Item Grants MaxLife")]
+    [SerializeField] bool earnLive = false;
+
+    //===================================
 
     Rigidbody rig;
 
@@ -56,6 +59,13 @@ public class Basic_ItemReward : MonoBehaviour
                     EarnMoney(earnScore);
                     Destroy(this.gameObject);
                     break;
+
+                case RewardType.MaxLifeReward:
+
+                    other.transform.GetComponentInParent<PlayerStats>().EarnMaxLives(earnScore, earnLive);
+                    Destroy(this.gameObject);
+
+                    break;
             }
         }
     }
@@ -74,5 +84,4 @@ public class Basic_ItemReward : MonoBehaviour
             Destroy(this.gameObject);
         }
     }
-
 }

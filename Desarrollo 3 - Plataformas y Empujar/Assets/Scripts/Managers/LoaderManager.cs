@@ -4,12 +4,18 @@ using UnityEngine;
 
 public class LoaderManager : MonoBehaviourSingleton<LoaderManager>
 {
+    GameObject ItemsParent = null;
+
     public override void Awake()
     {
         base.Awake();
 
         LoadBasicItems();
+        LoadSpecialItems();
         LoadRooms();
+
+        ItemsParent = new GameObject();
+        ItemsParent.transform.name = "// --- Items --- \\\\";
     }
 
     //=====================================================================================
@@ -27,6 +33,8 @@ public class LoaderManager : MonoBehaviourSingleton<LoaderManager>
 
     private List<GameObject> basicItems;
 
+    private List<GameObject> specialItems;
+
     private void LoadBasicItems()
     {
         basicItems = new List<GameObject>();
@@ -37,9 +45,18 @@ public class LoaderManager : MonoBehaviourSingleton<LoaderManager>
         {
             basicItems.Add((GameObject)item);
         }
+    }
 
-        GameObject BItemsParent = new GameObject();
-        BItemsParent.transform.name = "// --- Items --- \\\\";
+    private void LoadSpecialItems()
+    {
+        specialItems = new List<GameObject>();
+
+        Object[] allSItems;
+        allSItems = Resources.LoadAll("Collectable_Items/SpecialItems", typeof(GameObject));
+        foreach (GameObject item in allSItems)
+        {
+            specialItems.Add((GameObject)item);
+        }
     }
 
     public void SpawnBasicItem(Vector3 position, Camera cam)
@@ -52,6 +69,8 @@ public class LoaderManager : MonoBehaviourSingleton<LoaderManager>
 
             var go = Instantiate(basicItems[random], position, Quaternion.Euler(Vector3.up));
             go.transform.name = basicItems[random].name;
+
+            go.transform.parent = ItemsParent.transform;
 
             go.GetComponentInChildren<LookToCamera>().cam = cam;
         }

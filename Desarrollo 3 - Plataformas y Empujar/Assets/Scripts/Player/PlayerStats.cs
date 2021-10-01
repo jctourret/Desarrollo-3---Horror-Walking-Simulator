@@ -62,7 +62,7 @@ public class PlayerStats : MonoBehaviour, IDamageable
         /// Aumenta Vida Maxima:
         if (Input.GetKeyDown(KeyCode.M))
         {
-            EarnMaxLives(1);
+            EarnMaxLives(1, true);
             Debug.Log("Tiene mas Vida Magicamente 1!");
         }
 
@@ -87,12 +87,13 @@ public class PlayerStats : MonoBehaviour, IDamageable
 
     //============================================
 
-    public void EarnMaxLives(int score) // Score es el total de corazones que Gana, no las mitades
+    public void EarnMaxLives(int score, bool earnLive) // Score es el total de corazones que Gana, no las mitades
     {
         maxLives += score * 2;
         OnPlayerEarnMaxLive?.Invoke(score);
 
-        EarnLive(score * 2);
+        if(earnLive)
+            EarnLive(score * 2);
     }
 
     public void LoseMaxLife(int score) // Score es el total de corazones que Gana, no las mitades

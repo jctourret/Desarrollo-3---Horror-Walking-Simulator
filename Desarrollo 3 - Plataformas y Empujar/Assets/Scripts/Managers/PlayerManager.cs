@@ -6,7 +6,7 @@ public class PlayerManager : MonoBehaviour
     public static Action<int> ShowMoney;
 
     [SerializeField]
-    int playerMoney = 0;
+    static int playerMoney = 0;
 
     //================================================
 
@@ -26,16 +26,18 @@ public class PlayerManager : MonoBehaviour
     private void OnEnable()
     {
         Basic_ItemReward.EarnMoney += EarnPlayerMoney;
+        MarketSlot.PayItem += LosePlayerMoney;
     }
 
     private void OnDisable()
     {
         Basic_ItemReward.EarnMoney -= EarnPlayerMoney;
+        MarketSlot.PayItem -= LosePlayerMoney;
     }
 
     //================================================
 
-    public int GetPlayerMoney()
+    public static int GetPlayerMoney()
     {
         return playerMoney;
     }
@@ -47,4 +49,10 @@ public class PlayerManager : MonoBehaviour
         ShowMoney(GetPlayerMoney());
     }
 
+    public void LosePlayerMoney(int cost)
+    {
+        playerMoney -= cost;
+
+        ShowMoney(GetPlayerMoney());
+    }
 }
