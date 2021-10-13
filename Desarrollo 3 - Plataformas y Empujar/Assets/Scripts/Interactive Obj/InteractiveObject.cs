@@ -1,12 +1,7 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using System;
+﻿using UnityEngine;
 
 abstract class InteractiveObject : MonoBehaviour
 {
-    //public static Action ActivateObject;
-
     public enum StateObject
     {
         Closed,
@@ -15,13 +10,13 @@ abstract class InteractiveObject : MonoBehaviour
     };
 
     [Header("Interactive Obj")]
-    public StateObject stateObject;
-    public GameObject UIposter;
+    [SerializeField] protected StateObject stateObject;
+    [SerializeField] protected GameObject UIposter;
 
     //========================================
 
-    Animator animator;
-    bool inRange = false;
+    protected Animator animator;
+    protected bool inRange = false;
 
     //========================================
 
@@ -42,7 +37,7 @@ abstract class InteractiveObject : MonoBehaviour
         }
     }
 
-    private void Update()
+    public virtual void Update()
     {
         if (stateObject == StateObject.Available && inRange == true)
         {
@@ -51,8 +46,6 @@ abstract class InteractiveObject : MonoBehaviour
                 stateObject = StateObject.Open;
                 UIposter.SetActive(false);
                 animator.SetTrigger("Open");
-
-                //ActivateObject.Invoke();
             }
         }
     }

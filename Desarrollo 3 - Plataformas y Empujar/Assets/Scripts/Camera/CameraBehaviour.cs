@@ -13,17 +13,20 @@ public class CameraBehaviour : MonoBehaviour
     public static Vector3 cameraBossOfsett;
 
     [Header("Screen Shake")]
-    [SerializeField]
-    float duration;
-    [SerializeField]
-    float magnitude;
-    [SerializeField]
-    bool cameraShaking;
+    [SerializeField] float duration;
+    [SerializeField] float magnitude;
+    [SerializeField] bool cameraShaking;
+
+    static Camera cam;
+
+    // ===============================
 
     private void Awake()
     {
         cameraOfsett = commonOfsett;
         cameraBossOfsett = bossOfsett;
+
+        cam = this.transform.GetComponent<Camera>();
     }
 
     private void Start()
@@ -40,7 +43,6 @@ public class CameraBehaviour : MonoBehaviour
     {
         PlayerStats.OnPlayerDamaged -= StartCameraShake;
     }
-
 
     void StartCameraShake(int i)
     {
@@ -67,5 +69,12 @@ public class CameraBehaviour : MonoBehaviour
         }
         cameraShaking = false;
         transform.localPosition = originalPos;
+    }
+
+    // ===============================
+
+    public static Camera GetCamera()
+    {
+        return cam;
     }
 }

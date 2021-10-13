@@ -6,7 +6,6 @@ using System;
 public class BossPillarBehaviour : Pillar
 {
     public static Action UIplayerToken;
-
     public static Action CreatePillar;
     public static Action OnPillarUp;
 
@@ -83,7 +82,7 @@ public class BossPillarBehaviour : Pillar
             {
                 callTheExit = true;
 
-                var go = Instantiate(exitStairs, position_ExitStairs.position, Quaternion.Euler(Vector3.up));
+                var go = Instantiate(exitStairs, position_ExitStairs.position, this.transform.rotation);
             }
             else
             {

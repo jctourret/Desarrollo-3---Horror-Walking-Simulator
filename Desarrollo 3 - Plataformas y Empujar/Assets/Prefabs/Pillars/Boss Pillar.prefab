@@ -85,8 +85,8 @@ MonoBehaviour:
   - {fileID: 2210142344026455408}
   - {fileID: 688117992687624839}
   - {fileID: 192992807547213829}
-  waitTime: 60
-  destroyTime: 0
+  waitTime: 0
+  destroyTime: 40
   pillarScale: 17
   exitStairs: {fileID: 8491222097700362972, guid: 257ae22fbfd832f458fafc4a58f29f6b,
     type: 3}

@@ -205,7 +205,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd406e7fe1aaebd47bf2c64c4507ab6c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stateObject: 0
+  stateObject: 1
   UIposter: {fileID: 7797896614635863373}
 --- !u!1 &2439162057616813423
 GameObject:

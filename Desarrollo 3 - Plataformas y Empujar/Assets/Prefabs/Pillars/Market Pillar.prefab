@@ -3797,7 +3797,7 @@ MonoBehaviour:
   - {fileID: 3972494955161397622}
   - {fileID: 5309804148197193540}
   - {fileID: 7457394230682933816}
-  waitTime: 30
+  waitTime: 25
   destroyTime: 5.5
   pillarScale: 14
   specialRoom: 1

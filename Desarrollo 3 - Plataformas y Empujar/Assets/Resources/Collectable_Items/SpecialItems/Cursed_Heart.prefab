@@ -56,7 +56,7 @@ GameObject:
   - component: {fileID: 8646279837231898190}
   - component: {fileID: 6572473947807536598}
   - component: {fileID: 6681293437494683251}
-  - component: {fileID: 6572473947807536592}
+  - component: {fileID: 854155513988185751}
   m_Layer: 12
   m_Name: Cursed_Heart
   m_TagString: Untagged
@@ -122,7 +122,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cost: 8
---- !u!114 &6572473947807536592
+--- !u!114 &854155513988185751
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -131,13 +131,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 6572473947807536596}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c0be45473a8d1c745b52767cc0e7cb08, type: 3}
+  m_Script: {fileID: 11500000, guid: 1b52d783426bac64980dc55b2fbaf054, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rewardType: 2
-  earnScore: 2
-  jumpForce: 40
+  jumpDirection: {x: -0.5, y: 2, z: 0}
+  jumpForce: 200
   y_fallLimit: -30
+  rewardType: 0
+  earnScore: 2
   earnLive: 0
 --- !u!1 &6572473947925067056
 GameObject:

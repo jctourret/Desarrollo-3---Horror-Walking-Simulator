@@ -277,8 +277,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c0be45473a8d1c745b52767cc0e7cb08, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  jumpDirection: {x: -0.5, y: 1.5, z: 0}
+  jumpForce: 150
+  y_fallLimit: -30
   rewardType: 1
   earnScore: 3
-  jumpForce: 40
-  y_fallLimit: -30
-  earnLive: 0
