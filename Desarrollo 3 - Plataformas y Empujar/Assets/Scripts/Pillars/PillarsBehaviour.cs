@@ -1,46 +1,20 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using System;
 
-public class PillarsBehaviour : MonoBehaviour
+public class PillarsBehaviour : Pillar
 {
     public static Action UIplayerToken;
-
     public static Action OnPillarUp;
     public static Action CreatePillar;
 
     //===============================================
 
-    [Header("Delay Animation")]
-    public Animator animator;
-    [Range(0,2)]
-    public float delayTime = 1f;
-
-    [Header("UI Timer")]
-    public float waitTime = 30f;
-    public float destroyTime = 5f;
-
-    [Header("Diegetic Lights")]
-    [SerializeField] List<GameObject> nightLights = new List<GameObject>();
-
     [Header("Special Room")]
-    [SerializeField] bool specialRoom = false;
-    [SerializeField] Transform parentRoom;
+    [SerializeField] private bool specialRoom = false;
+    [SerializeField] private Transform parentRoom;
 
     GameObject room;
-
-    //===============================================
-
-    enum PillarState
-    {
-        MoveUp,
-        waiting,
-        MoveDown
-    };
-    PillarState pillarState;
-
-    float timer = 0f;
     bool timerToDestroy = false;
 
     //===============================================
@@ -50,9 +24,9 @@ public class PillarsBehaviour : MonoBehaviour
         GetARoom();
     }
 
-    private void Start()
-    {        
-        pillarState = PillarState.MoveUp;
+    public override void Start()
+    {
+        base.Start();
 
         timer = waitTime;
     }
@@ -77,7 +51,7 @@ public class PillarsBehaviour : MonoBehaviour
     {
         if (other.transform.tag == "Player")
         {
-            StartCoroutine(StartCollapse());
+            StartCoroutine(InitializeCollapse());
 
             this.transform.GetComponent<BoxCollider>().enabled = false;
 
@@ -98,11 +72,9 @@ public class PillarsBehaviour : MonoBehaviour
         }
     }
 
-    IEnumerator StartCollapse()
+    IEnumerator InitializeCollapse()
     {
         OnPillarUp?.Invoke();
-
-        //yield return new WaitForSeconds(delayTime);
 
         timer = waitTime;
         
@@ -111,7 +83,7 @@ public class PillarsBehaviour : MonoBehaviour
         yield return null;
     }
 
-    void UpdateTimer()
+    public override void UpdateTimer()
     {
         timer -= Time.deltaTime;
 
@@ -136,21 +108,4 @@ public class PillarsBehaviour : MonoBehaviour
             light.GetComponent<NightLight_Behaviour>().SetIntensityOfLight(timerToDestroy, timer);
         }
     }
-
-    IEnumerator MoveDownPillar()
-    {
-        animator.SetTrigger("Change");
-
-        /// ATENCION!
-        /// Esta parte del codigo esta comentada porque genera errores que detienen el codigo de esta corrutina, haciendo que no continue.
-        //for(int i = 0; i < room.GetComponentInChildren<SpawnEnemies>().enemiesSpawned.Count; i++)
-        //{
-        //    room.GetComponentInChildren<SpawnEnemies>().enemiesSpawned[i].pilarFalls();
-        //}  
-
-        yield return new WaitForSeconds(delayTime);
-
-        Destroy(this.gameObject);
-    }
-
 }

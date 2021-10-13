@@ -1,40 +1,17 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class InitialPillarBehaviour : MonoBehaviour
+public class InitialPillarBehaviour : Pillar
 {
-    //===============================================
+    //public override void Awake()
+    //{
+    //    base.Awake();
+    //}
 
-    [Header("Delay Animation")]
-    [Range(0, 2)]
-    public float delayTime = 1.5f;
-
-    [Header("Diegetic Lights")]
-    public float destroyTime = 10f;
-    [SerializeField] List<GameObject> nightLights = new List<GameObject>();
-
-    //===============================================
-
-    enum PillarState
+    public override void Start()
     {
-        MoveUp,
-        waiting,
-        MoveDown
-    };
-    PillarState pillarState;
-
-    float timer = 0f;
-
-    Animator animator;
-
-    //===============================================
-
-    private void Start()
-    {
-        animator = GetComponent<Animator>();
-        pillarState = PillarState.MoveUp;
-
+        base.Start();
+        
         foreach (var light in nightLights)
         {
             light.GetComponent<NightLight_Behaviour>().SetIntensityOfLight(false, destroyTime);
@@ -63,19 +40,7 @@ public class InitialPillarBehaviour : MonoBehaviour
 
     //===============================================
 
-    void StartCollapse()
-    {
-        StartCoroutine(WaitTime());
-    }
-
-    IEnumerator WaitTime()
-    {
-        yield return new WaitForSeconds(delayTime);
-        timer = destroyTime;
-        pillarState = PillarState.waiting;
-    }
-
-    void UpdateTimer()
+    public override void UpdateTimer()
     {
         timer -= Time.deltaTime;
 
@@ -90,14 +55,4 @@ public class InitialPillarBehaviour : MonoBehaviour
             light.GetComponent<NightLight_Behaviour>().SetIntensityOfLight(true, timer);
         }
     }
-
-    IEnumerator MoveDownPillar()
-    {
-        animator.SetTrigger("Change");
-
-        yield return new WaitForSeconds(delayTime);
-
-        Destroy(this.gameObject);
-    }
-
 }

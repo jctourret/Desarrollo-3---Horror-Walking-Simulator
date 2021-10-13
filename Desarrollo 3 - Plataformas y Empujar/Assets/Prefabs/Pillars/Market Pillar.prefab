@@ -3757,14 +3757,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2878492370517561320}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.0593238, y: 4.4158144, z: -2.15321}
+  m_LocalRotation: {x: 0, y: -0.38268343, z: 0, w: 0.92387956}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1244708619535384436}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -45, z: 0}
 --- !u!65 &6711727276284563439
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3792,13 +3792,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animator: {fileID: 2058097511776863913}
   delayTime: 1.5
-  waitTime: 10.5
-  destroyTime: 5.5
   nightLights:
   - {fileID: 2583976781517378199}
   - {fileID: 3972494955161397622}
   - {fileID: 5309804148197193540}
   - {fileID: 7457394230682933816}
+  waitTime: 30
+  destroyTime: 5.5
+  pillarScale: 14
   specialRoom: 1
   parentRoom: {fileID: 0}
 --- !u!114 &514969416513140262

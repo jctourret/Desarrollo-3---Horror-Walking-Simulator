@@ -11,10 +11,7 @@ public class NightLight_Behaviour : MonoBehaviour
     private void Awake()
     {
         material = GetComponent<MeshRenderer>().material;
-    }
 
-    private void Start()
-    {
         material.SetColor("_EmissionColor", normalColorMaterial * 0);
         pointLight.intensity = 0;
     }
