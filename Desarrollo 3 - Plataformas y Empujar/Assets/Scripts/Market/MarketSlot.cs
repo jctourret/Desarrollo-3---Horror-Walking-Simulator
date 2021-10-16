@@ -58,7 +58,7 @@ public class MarketSlot : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.E))
             {
-                if(PlayerManager.GetPlayerMoney() >= itemMarket.Cost)
+                if(PlayerStats.GetPlayerMoney() >= itemMarket.Cost)
                 {
                     PayItem(itemMarket.Cost);
 
