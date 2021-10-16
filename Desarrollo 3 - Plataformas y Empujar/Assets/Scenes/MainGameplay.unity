@@ -164,7 +164,7 @@ MonoBehaviour:
   pillarsBeforeMerket: 0
   finalPillar: {fileID: 119948029761666875, guid: 7157eed61947fa74fab1f025b469015a,
     type: 3}
-  pillarsBeforeFinal: 2
+  pillarsBeforeFinal: 11
   numerationPillars: 0
 --- !u!4 &4676792
 Transform:
