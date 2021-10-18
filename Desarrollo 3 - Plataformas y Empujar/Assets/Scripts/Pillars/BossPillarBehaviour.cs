@@ -2,48 +2,26 @@
 using System.Collections.Generic;
 using UnityEngine;
 using System;
-using TMPro;
 
-public class BossPillarBehaviour : MonoBehaviour
+public class BossPillarBehaviour : Pillar
 {
     public static Action UIplayerToken;
-
     public static Action CreatePillar;
     public static Action OnPillarUp;
 
     //===============================================
 
-    [Header("Delay Animation")]
-    public Animator animator;
-    [Range(0, 2)]
-    public float delayTime = 1f;
-
-    [Header("Diegetic Lights")]
-    public float waitTime = 60f;
-    [SerializeField] List<GameObject> nightLights = new List<GameObject>();
-
     [Header("Exit Stairs")]
-    public GameObject exitStairs;
-    public Transform position_ExitStairs;
+    [SerializeField] private GameObject exitStairs;
+    [SerializeField] private Transform position_ExitStairs;
 
-    //===============================================
-
-    enum PillarState
-    {
-        MoveUp,
-        waiting,
-        MoveDown
-    };
-    PillarState pillarState;
-
-    float timer = 0f;
     bool callTheExit = false; // Se usa para llamar a la salida del "nivel"
 
     //===============================================
 
-    private void Start()
+    public override void Start()
     {
-        pillarState = PillarState.MoveUp;
+        base.Start();
 
         foreach (var light in nightLights)
         {
@@ -89,22 +67,13 @@ public class BossPillarBehaviour : MonoBehaviour
 
     //===============================================
 
-    void StartCollapse()
+    public override void StartCollapse()
     {
         StartCoroutine(WaitTime());
         OnPillarUp?.Invoke();
     }
 
-    IEnumerator WaitTime()
-    {
-        yield return new WaitForSeconds(delayTime);
-
-        timer = waitTime;
-
-        pillarState = PillarState.waiting;
-    }
-
-    void UpdateTimer()
+    public override void UpdateTimer()
     {
         timer -= Time.deltaTime;
 
@@ -114,7 +83,7 @@ public class BossPillarBehaviour : MonoBehaviour
             {
                 callTheExit = true;
 
-                var go = Instantiate(exitStairs, position_ExitStairs.position, Quaternion.Euler(Vector3.up));
+                var go = Instantiate(exitStairs, position_ExitStairs.position, this.transform.rotation);
             }
             else
             {

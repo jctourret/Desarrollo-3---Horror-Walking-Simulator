@@ -67,12 +67,40 @@ public class LoaderManager : MonoBehaviourSingleton<LoaderManager>
         {
             random = Random.Range(0, basicItems.Count);
 
-            var go = Instantiate(basicItems[random], position, Quaternion.Euler(Vector3.up));
-            go.transform.name = basicItems[random].name;
+            var item = Instantiate(basicItems[random], position, Quaternion.Euler(Vector3.up));
+            item.transform.name = basicItems[random].name;
 
-            //go.transform.parent = ItemsParent.transform;
+            item.transform.parent = ItemsParent.transform;
 
-            go.GetComponentInChildren<LookToCamera>().cam = cam;
+            item.GetComponentInChildren<LookToCamera>().cam = cam;
+        }
+    }
+
+    public void SpawnSpecialItem(Vector3 position, Camera cam)
+    {
+        int random = Random.Range(0, MAX_PORCENTAGE);
+
+        if (random > nothing)   // Si tiene suerte sale algo bueno
+        {
+            random = Random.Range(0, specialItems.Count);
+
+            var item = Instantiate(specialItems[random], position, Quaternion.Euler(Vector3.up));
+            item.transform.name = specialItems[random].name;
+
+            item.transform.parent = ItemsParent.transform;
+
+            item.GetComponentInChildren<LookToCamera>().cam = cam;
+        }
+        else                    // Sino le sale un item comun
+        {
+            random = Random.Range(0, basicItems.Count);
+
+            var item = Instantiate(basicItems[random], position, Quaternion.Euler(Vector3.up));
+            item.transform.name = basicItems[random].name;
+
+            item.transform.parent = ItemsParent.transform;
+
+            item.GetComponentInChildren<LookToCamera>().cam = cam;
         }
     }
 

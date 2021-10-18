@@ -114,6 +114,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b1f8b89b1ab80dd42894bf6bb543e971, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cam: {fileID: 0}
 --- !u!1 &5677984711528228809
 GameObject:
   m_ObjectHideFlags: 0
@@ -161,7 +162,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cam: {fileID: 0}
-  attackDelay: 0.5
+  damage: 1
+  attackDelay: 0.2
   attackCooldown: 1
   attackCooldownTimer: 0
   attackRange: 2.5
@@ -268,7 +270,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   life: 3
   isLive: 1
-  generalBody: {fileID: 5677984711528228809}
 --- !u!136 &4540178514556861066
 CapsuleCollider:
   m_ObjectHideFlags: 0

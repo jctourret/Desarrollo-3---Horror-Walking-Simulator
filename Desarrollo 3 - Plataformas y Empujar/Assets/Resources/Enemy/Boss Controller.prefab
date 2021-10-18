@@ -163,10 +163,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cam: {fileID: 0}
   damage: 2
-  attackDelay: 0.5
+  attackDelay: 0.25
   attackCooldown: 1
   attackCooldownTimer: 0
-  attackRange: 2.5
+  attackRange: 5
   attackConeAngle: 45
   hasAttacked: 0
   targetInAttackRange: 0
@@ -254,7 +254,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fac46f8f4ee942049aec5ee4e29a01e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  life: 3
+  life: 20
   isLive: 1
 --- !u!136 &2738753996714814416
 CapsuleCollider:

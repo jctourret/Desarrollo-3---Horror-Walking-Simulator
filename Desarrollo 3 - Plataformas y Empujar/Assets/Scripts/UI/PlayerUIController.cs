@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine.UI;
+﻿using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
@@ -33,7 +31,7 @@ public class PlayerUIController : MonoBehaviour
         PlayerStats.OnPlayerDamaged += RemoveLife;
         PlayerStats.OnPlayerEarnMaxLive += AddMaxLife;
         PlayerStats.OnPlayerLoseMaxLive += RemoveMaxLife;
-        PlayerManager.ShowMoney += AddCoins;
+        PlayerStats.ShowMoney += AddCoins;
     }
 
     private void OnDisable()
@@ -42,7 +40,7 @@ public class PlayerUIController : MonoBehaviour
         PlayerStats.OnPlayerEarnLive -= AddLife;
         PlayerStats.OnPlayerEarnMaxLive -= AddMaxLife;
         PlayerStats.OnPlayerLoseMaxLive -= RemoveMaxLife;
-        PlayerManager.ShowMoney -= AddCoins;
+        PlayerStats.ShowMoney -= AddCoins;
     }
 
     private void Start()

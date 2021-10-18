@@ -4,28 +4,24 @@ using UnityEngine;
 
 public class PillarsManager : MonoBehaviour
 {
-
-    public Transform parent;
+    [SerializeField] Transform parent;
+    [SerializeField] float distBetweenPillars = 2f;
 
     [Header("Initial Pillar")]
-    public GameObject initialPillar;
-    public float initialScalePillar = 15f;
+    [SerializeField] GameObject initialPillar;
 
     [Header("Pillars Spawner")]
-    public GameObject pillar;
-    public float scalePillars = 20f;
-    public float distBetweenPillars = 2f;
+    [SerializeField] GameObject pillar;
 
     [Header("Market and Treasure pillars")]
-    public GameObject marketPillar;
+    [SerializeField] GameObject marketPillar;
     [SerializeField] [Range(-5, 0)] int minRandNumber = -1; // Para el azar de la aparicion de la habitacion
     [SerializeField] [Range(0, 5)] int maxRandNumber = 3;
     [SerializeField] int pillarsBeforeMerket; // ---> uno de los valores a pedir para el mapa
 
     [Header("Final Pillars Spawner")]
-    public GameObject finalPillar;
-    [SerializeField] float finalScalePillar = 30f;
-    [SerializeField] int pillarsBeforeFinal = 11; // ---> uno de los valores a pedir para el mapa
+    [SerializeField] GameObject finalPillar;
+    [SerializeField] int pillarsBeforeFinal = 10; // ---> uno de los valores a pedir para el mapa
 
     [Header("Actual Pillar")]
     public int numerationPillars = 0;
@@ -108,7 +104,11 @@ public class PillarsManager : MonoBehaviour
     {
         numerationPillars++;
 
-        if (numerationPillars == pillarsBeforeMerket)
+        if(numerationPillars == 1)
+        {
+            typeOfPillar = TypeOfPillars.InitialRoom;
+        }
+        else if (numerationPillars == pillarsBeforeMerket)
         {
             typeOfPillar = TypeOfPillars.MarketRoom;
         }
@@ -135,18 +135,20 @@ public class PillarsManager : MonoBehaviour
 
         spawnDirection = SelectDirection();
 
-        if (typeOfPillar == TypeOfPillars.InitialRoom)
+        switch (typeOfPillar)
         {
-            scale = initialScalePillar;
-            typeOfPillar = TypeOfPillars.CommonRoom;
-        }
-        else if (typeOfPillar == TypeOfPillars.FinalRoom)
-        {
-            scale = finalScalePillar;
-        }
-        else
-        {
-            scale = scalePillars;
+            case TypeOfPillars.InitialRoom:
+                scale = initialPillar.GetComponent<Pillar>().GetPillarScale();
+                typeOfPillar = TypeOfPillars.CommonRoom;
+                break;
+
+            case TypeOfPillars.FinalRoom:
+                scale = finalPillar.GetComponent<Pillar>().GetPillarScale();
+                break;
+
+            default:
+                scale = pillar.GetComponent<Pillar>().GetPillarScale();
+                break;
         }
 
         // ---
@@ -154,32 +156,23 @@ public class PillarsManager : MonoBehaviour
         switch (spawnDirection)
         {
             case SpawnDirection.Up:
-
-                newPosition = new Vector3(scale + distBetweenPillars , 0, 0);
-
-                this.transform.position = this.transform.position + newPosition;
-                
+                newPosition = new Vector3(scale + distBetweenPillars, 0, scale + distBetweenPillars);
+                this.transform.position = this.transform.position + newPosition;                
                 break;
+
             case SpawnDirection.Down:
-
-                newPosition = new Vector3( -scale - distBetweenPillars, 0, 0);
-
+                newPosition = new Vector3(-scale - distBetweenPillars, 0, -scale - distBetweenPillars);
                 this.transform.position = this.transform.position + newPosition;
-
                 break;
+
             case SpawnDirection.Left:
-
-                newPosition = new Vector3(0, 0, scale + distBetweenPillars);
-
+                newPosition = new Vector3(-scale - distBetweenPillars, 0, scale + distBetweenPillars);
                 this.transform.position = this.transform.position + newPosition;
-
                 break;
+
             case SpawnDirection.Right:
-
-                newPosition = new Vector3(0, 0, -scale - distBetweenPillars);
-
+                newPosition = new Vector3(scale + distBetweenPillars, 0, -scale - distBetweenPillars);
                 this.transform.position = this.transform.position + newPosition;
-
                 break;
         }
 
@@ -188,25 +181,21 @@ public class PillarsManager : MonoBehaviour
         switch (typeOfPillar)
         {
             case TypeOfPillars.FinalRoom:
-
-                var go = Instantiate(finalPillar, new Vector3(this.transform.position.x, pillar.transform.position.y, this.transform.position.z), Quaternion.Euler(Vector3.up), parent);
+                var go = Instantiate(finalPillar, new Vector3(this.transform.position.x, pillar.transform.position.y, this.transform.position.z), Quaternion.Euler(Vector3.up * -45), parent);
                 go.transform.name = finalPillar.name;
                 go.GetComponentInChildren<CallCameraTrigger>().cam = cam;
-
                 break;
-            case TypeOfPillars.MarketRoom:
 
-                var go2 = Instantiate(marketPillar, new Vector3(this.transform.position.x, pillar.transform.position.y, this.transform.position.z), Quaternion.Euler(Vector3.up), parent);
+            case TypeOfPillars.MarketRoom:
+                var go2 = Instantiate(marketPillar, new Vector3(this.transform.position.x, pillar.transform.position.y, this.transform.position.z), Quaternion.Euler(Vector3.up * -45), parent);
                 go2.transform.name = marketPillar.name + "-" + (numerationPillars + 1).ToString();
                 go2.GetComponentInChildren<CallCameraTrigger>().cam = cam;
-
                 break;
-            case TypeOfPillars.CommonRoom:
 
-                var go3 = Instantiate(pillar, new Vector3(this.transform.position.x, pillar.transform.position.y, this.transform.position.z), Quaternion.Euler(Vector3.up), parent);
+            case TypeOfPillars.CommonRoom:
+                var go3 = Instantiate(pillar, new Vector3(this.transform.position.x, pillar.transform.position.y, this.transform.position.z), Quaternion.Euler(Vector3.up * -45), parent);
                 go3.transform.name = pillar.name + "-" + (numerationPillars + 1).ToString();
                 go3.GetComponentInChildren<CallCameraTrigger>().cam = cam;
-
                 break;
         }
     }
@@ -228,36 +217,31 @@ public class PillarsManager : MonoBehaviour
         switch (direction)
         {
             case SpawnDirection.Up:
-
                 if (spawnDirection == SpawnDirection.Down)
                 {
                     direction = SpawnDirection.Down;
                 }
-
                 break;
-            case SpawnDirection.Down:
 
+            case SpawnDirection.Down:
                 if (spawnDirection == SpawnDirection.Up)
                 {
                     direction = SpawnDirection.Up;
                 }
-
                 break;
-            case SpawnDirection.Left:
 
+            case SpawnDirection.Left:
                 if (spawnDirection == SpawnDirection.Right)
                 {
                     direction = SpawnDirection.Right;
                 }
-
                 break;
-            case SpawnDirection.Right:
 
+            case SpawnDirection.Right:
                 if (spawnDirection == SpawnDirection.Left)
                 {
                     direction = SpawnDirection.Left;
                 }
-
                 break;
         }
 

@@ -1,10 +1,22 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 class WoodenChest : InteractiveObject
 {
-    
-    // Acá se saca que power up se le dara al jugador
+    public override void Update()
+    {
+        if (stateObject == StateObject.Available && inRange == true)
+        {
+            if (Input.GetKeyDown(KeyCode.E))
+            {
+                stateObject = StateObject.Open;
+                UIposter.SetActive(false);
+                animator.SetTrigger("Open");
+            }
+        }
+    }
 
+    public void DropItem()
+    {
+        LoaderManager.Get().SpawnSpecialItem(this.transform.position, CameraBehaviour.GetCamera());
+    }
 }

@@ -10,6 +10,11 @@ public class PlayerStats : MonoBehaviour, IDamageable
     public static Action<int> OnPlayerLoseMaxLive;
     public static Action OnPlayerDamageDeath;
 
+    public static Action<int> ShowMoney;
+
+    [Header("Invincibility")]
+    [SerializeField] static int playerMoney = 0;
+
     [Header("Stats")]
     public int maxLives = 6;
     public int lives = 6;
@@ -26,7 +31,19 @@ public class PlayerStats : MonoBehaviour, IDamageable
 
     //=============================================
 
-    private void Start()
+    private void OnEnable()
+    {
+        Basic_ItemReward.EarnMoney += EarnPlayerMoney;
+        MarketSlot.PayItem += LosePlayerMoney;
+    }
+
+    private void OnDisable()
+    {
+        Basic_ItemReward.EarnMoney -= EarnPlayerMoney;
+        MarketSlot.PayItem -= LosePlayerMoney;
+    }
+
+    private void Awake()
     {
         rend = GetComponentInChildren<SpriteRenderer>();
     }
@@ -72,6 +89,13 @@ public class PlayerStats : MonoBehaviour, IDamageable
             LoseMaxLife(1);
             Debug.Log("Perdiste Vida Maxima Magicamente 2!");
         }
+
+        /// Aumenta Dinero:
+        if (Input.GetKeyDown(KeyCode.I))
+        {
+            EarnPlayerMoney(1);
+            Debug.Log("Se Sumo Dinero Magicamente!");
+        }
     }
     /// </summary>
     /// 
@@ -83,6 +107,27 @@ public class PlayerStats : MonoBehaviour, IDamageable
     public int GetLives()
     {
         return lives;
+    }
+
+    //============================================
+
+    public static int GetPlayerMoney()
+    {
+        return playerMoney;
+    }
+
+    public void EarnPlayerMoney(int money)
+    {
+        playerMoney += money;
+
+        ShowMoney(GetPlayerMoney());
+    }
+
+    public void LosePlayerMoney(int cost)
+    {
+        playerMoney -= cost;
+
+        ShowMoney(GetPlayerMoney());
     }
 
     //============================================

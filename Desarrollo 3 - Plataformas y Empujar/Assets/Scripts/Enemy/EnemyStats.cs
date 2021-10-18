@@ -23,7 +23,7 @@ public class EnemyStats : MonoBehaviour, IDamageable
     {
         isLive = false;
 
-        this.transform.GetComponent<BoxCollider>().enabled = false;
+        this.transform.GetComponent<Collider>().enabled = false; //El jefe NO TIENE un boxCollider, tiene un capsuleCollider
 
         // <-- Acá se llama a la animacion de muerte
 

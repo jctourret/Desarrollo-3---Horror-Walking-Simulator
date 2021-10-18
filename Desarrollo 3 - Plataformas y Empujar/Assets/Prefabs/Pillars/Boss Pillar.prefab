@@ -55,7 +55,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 119948029761666875}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0, y: -0.38268343, z: 0, w: 0.92387956}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -65,7 +65,7 @@ Transform:
   - {fileID: 6920874081638526995}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -45, z: 0}
 --- !u!114 &7908113385560488900
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -80,12 +80,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animator: {fileID: 435566925}
   delayTime: 1
-  waitTime: 10.5
   nightLights:
   - {fileID: 7189641762340469771}
   - {fileID: 2210142344026455408}
   - {fileID: 688117992687624839}
   - {fileID: 192992807547213829}
+  waitTime: 0
+  destroyTime: 40
+  pillarScale: 17
   exitStairs: {fileID: 8491222097700362972, guid: 257ae22fbfd832f458fafc4a58f29f6b,
     type: 3}
   position_ExitStairs: {fileID: 97277632}
@@ -339,7 +341,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3316403172947925874}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.56, z: 0}
+  m_LocalPosition: {x: 0, y: 0.4, z: 0}
   m_LocalScale: {x: 0.033333335, y: 1, z: 0.033333335}
   m_Children:
   - {fileID: 7189641762340469767}

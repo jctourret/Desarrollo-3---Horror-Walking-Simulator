@@ -1,9 +1,7 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using System;
 
-public class Basic_ItemReward : MonoBehaviour
+public class Basic_ItemReward : Collectable
 {
     public static Action<int> EarnMoney;
 
@@ -11,36 +9,10 @@ public class Basic_ItemReward : MonoBehaviour
     {
         LifeReward,
         MoneyReward,
-        MaxLifeReward
     };
 
     [SerializeField] RewardType rewardType;
-
     [SerializeField] int earnScore = 1;
-    
-    [SerializeField] float jumpForce = 5f;
-    
-    [SerializeField] [Range(-50,0)]
-    float y_fallLimit = -30f;
-
-    [Header("If The Item Grants MaxLife")]
-    [SerializeField] bool earnLive = false;
-
-    //===================================
-
-    Rigidbody rig;
-
-    //===================================
-
-    private void Awake()
-    {
-        rig = GetComponent<Rigidbody>();
-    }
-
-    private void Start()
-    {
-        rig.AddForce(Vector3.up * jumpForce, ForceMode.Force);
-    }
 
     private void OnTriggerEnter(Collider other)
     {
@@ -59,29 +31,7 @@ public class Basic_ItemReward : MonoBehaviour
                     EarnMoney(earnScore);
                     Destroy(this.gameObject);
                     break;
-
-                case RewardType.MaxLifeReward:
-
-                    other.transform.GetComponentInParent<PlayerStats>().EarnMaxLives(earnScore, earnLive);
-                    Destroy(this.gameObject);
-
-                    break;
             }
-        }
-    }
-
-    private void Update()
-    {
-        DeleteAfterFall();
-    }
-
-    //=======================================
-
-    void DeleteAfterFall()
-    {
-        if (this.transform.position.y < y_fallLimit)
-        {
-            Destroy(this.gameObject);
         }
     }
 }
