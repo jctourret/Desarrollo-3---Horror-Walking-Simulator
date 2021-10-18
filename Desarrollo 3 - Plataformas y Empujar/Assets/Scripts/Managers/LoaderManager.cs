@@ -70,7 +70,7 @@ public class LoaderManager : MonoBehaviourSingleton<LoaderManager>
             var go = Instantiate(basicItems[random], position, Quaternion.Euler(Vector3.up));
             go.transform.name = basicItems[random].name;
 
-            go.transform.parent = ItemsParent.transform;
+            //go.transform.parent = ItemsParent.transform;
 
             go.GetComponentInChildren<LookToCamera>().cam = cam;
         }

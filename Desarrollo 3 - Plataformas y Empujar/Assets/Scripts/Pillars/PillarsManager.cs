@@ -25,7 +25,7 @@ public class PillarsManager : MonoBehaviour
     [Header("Final Pillars Spawner")]
     public GameObject finalPillar;
     [SerializeField] float finalScalePillar = 30f;
-    [SerializeField] int pillarsBeforeFinal = 10; // ---> uno de los valores a pedir para el mapa
+    [SerializeField] int pillarsBeforeFinal = 11; // ---> uno de los valores a pedir para el mapa
 
     [Header("Actual Pillar")]
     public int numerationPillars = 0;
@@ -73,6 +73,7 @@ public class PillarsManager : MonoBehaviour
     {
         PillarsBehaviour.CreatePillar += CallOtherPillar;
         PillarsBehaviour.OnPillarUp += BakeMesh;
+        BossPillarBehaviour.OnPillarUp += BakeMesh;
 
         StartLever.ActivateObject += CallOtherPillar;
         CameraBehaviour.OnSendCamera += GetCamera;
@@ -82,6 +83,7 @@ public class PillarsManager : MonoBehaviour
     {
         PillarsBehaviour.CreatePillar -= CallOtherPillar;
         PillarsBehaviour.OnPillarUp -= BakeMesh;
+        BossPillarBehaviour.OnPillarUp -= BakeMesh;
 
         StartLever.ActivateObject -= CallOtherPillar;
         CameraBehaviour.OnSendCamera -= GetCamera;

@@ -5,21 +5,12 @@ using UnityEngine.AI;
 
 public class EnemyAI : MonoBehaviour
 {
-    string[] staticDirections = { "Static N", "Static NE", "Static E", "Static SE", "Static S", "Static SW", "Static W", "Static NW" };
-    string[] runDirections = { "Run N", "Run NE", "Run E", "Run SE", "Run S", "Run SW", "Run W", "Run NW" };
 
     public static Action<GameObject> OnEnemySpawn;
     public Camera cam;
     NavMeshAgent agent;
     Rigidbody rbody;
-
-    [Header("Chase")]
-    Vector3 previousPos;
-    Vector3 currentPos;
     Animator animator;
-    int lastDirection = 0;
-    Vector3 north;
-    float offsetAngle = 33.3f;
 
     [Header("Attack")]
     [SerializeField]
@@ -56,21 +47,17 @@ public class EnemyAI : MonoBehaviour
     {
         agent = GetComponent<NavMeshAgent>();
         rbody = GetComponentInChildren<Rigidbody>();
+        animator = GetComponentInChildren<Animator>();
         rbody.isKinematic = true;
         OnEnemySpawn?.Invoke(gameObject);
-        animator = GetComponentInChildren<Animator>();
 
-        north = new Vector3(Vector3.right.x * Mathf.Cos(Mathf.Deg2Rad * offsetAngle) + Vector3.right.z * Mathf.Sin(Mathf.Deg2Rad * offsetAngle), 0,
-            Vector3.right.x * Mathf.Sin(Mathf.Deg2Rad * offsetAngle) + Vector3.right.z * Mathf.Cos(Mathf.Deg2Rad * offsetAngle));
-    }
-    private void FixedUpdate()
-    {
-        previousPos = currentPos;
-        currentPos = transform.position;
     }
 
     private void Update()
     {
+        animator.SetFloat("Horizontal",agent.velocity.x);
+        animator.SetFloat("Vertical", agent.velocity.z);
+        animator.SetFloat("Magnitude",agent.velocity.magnitude);
         float distance;
         if (target != null)
         { 
@@ -105,9 +92,6 @@ public class EnemyAI : MonoBehaviour
                 }
             }
 
-            Vector3 direction = currentPos - previousPos;
-            direction = direction.normalized;
-            SetDirection(direction);
         }
     }
 
@@ -119,40 +103,6 @@ public class EnemyAI : MonoBehaviour
     }
 
     //=======================================
-    void SetDirection(Vector3 direction)
-    {
-        string[] directionArray = null;
-
-        if (direction.magnitude < 0.1f)
-        {
-            directionArray = staticDirections;
-        }
-        else
-        {
-            //directionArray = runDirections;
-            directionArray = staticDirections;
-            lastDirection = DirectionToIndex(direction, staticDirections.Length);
-        }
-        animator.Play(directionArray[lastDirection]);
-    }
-
-    int DirectionToIndex(Vector3 direction, int states)
-    {
-        Vector3 normalizedDir = direction.normalized;
-
-        float step = 360f / states;
-
-        float angle = Vector3.SignedAngle(north, normalizedDir, Vector3.up);
-
-        if (angle < 0)
-        {
-            angle += 360;
-        }
-
-        float stepCount = angle / step;
-
-        return Mathf.FloorToInt(stepCount);
-    }
 
     void GetCamera(Camera newCamera)
     {
@@ -163,7 +113,6 @@ public class EnemyAI : MonoBehaviour
         agent.enabled = false;
         rbody.isKinematic = false;
     }
-    
     IEnumerator Attack(GameObject target)
     {
         float startTime = Time.time;

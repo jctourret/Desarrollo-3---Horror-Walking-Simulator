@@ -140,13 +140,10 @@ public class PillarsBehaviour : MonoBehaviour
     IEnumerator MoveDownPillar()
     {
         animator.SetTrigger("Change");
-
-        /// ATENCION!
-        /// Esta parte del codigo esta comentada porque genera errores que detienen el codigo de esta corrutina, haciendo que no continue.
-        //for(int i = 0; i < room.GetComponentInChildren<SpawnEnemies>().enemiesSpawned.Count; i++)
-        //{
-        //    room.GetComponentInChildren<SpawnEnemies>().enemiesSpawned[i].pilarFalls();
-        //}  
+        for(int i = 0; i < room.GetComponentInChildren<SpawnEnemies>().enemiesSpawned.Count; i++)
+        {
+            room.GetComponentInChildren<SpawnEnemies>().enemiesSpawned[i].pilarFalls();
+        }
 
         yield return new WaitForSeconds(delayTime);
 

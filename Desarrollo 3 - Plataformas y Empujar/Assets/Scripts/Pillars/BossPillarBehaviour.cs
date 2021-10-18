@@ -92,6 +92,7 @@ public class BossPillarBehaviour : MonoBehaviour
     void StartCollapse()
     {
         StartCoroutine(WaitTime());
+        OnPillarUp?.Invoke();
     }
 
     IEnumerator WaitTime()
