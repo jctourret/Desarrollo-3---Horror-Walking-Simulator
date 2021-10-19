@@ -45,28 +45,28 @@ public class ThrowNeedle : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.UpArrow))
             {
                 var go = Instantiate(needleObj, this.transform.position, Quaternion.Euler(rotations[0]));
-                go.GetComponent<Rigidbody>().AddForce(this.transform.forward * throwForce * multiplierForce, ForceMode.Force);
+                go.GetComponent<Rigidbody>().AddForce(Vector3.forward * throwForce * multiplierForce, ForceMode.Force);
                 StartCoroutine(LoadNeedle());
 
             }
             else if (Input.GetKeyDown(KeyCode.RightArrow))
             {
                 var go = Instantiate(needleObj, this.transform.position, Quaternion.Euler(rotations[1]));
-                go.GetComponent<Rigidbody>().AddForce(this.transform.right * throwForce * multiplierForce, ForceMode.Force);
+                go.GetComponent<Rigidbody>().AddForce(Vector3.right * throwForce * multiplierForce, ForceMode.Force);
                 StartCoroutine(LoadNeedle());
 
             }
             else if (Input.GetKeyDown(KeyCode.DownArrow))
             {
                 var go = Instantiate(needleObj, this.transform.position, Quaternion.Euler(rotations[2]));
-                go.GetComponent<Rigidbody>().AddForce(-this.transform.forward * throwForce * multiplierForce, ForceMode.Force);
+                go.GetComponent<Rigidbody>().AddForce(-Vector3.forward * throwForce * multiplierForce, ForceMode.Force);
                 StartCoroutine(LoadNeedle());
 
             }
             else if (Input.GetKeyDown(KeyCode.LeftArrow))
             {
                 var go = Instantiate(needleObj, this.transform.position, Quaternion.Euler(rotations[3]));
-                go.GetComponent<Rigidbody>().AddForce(-this.transform.right * throwForce * multiplierForce, ForceMode.Force);
+                go.GetComponent<Rigidbody>().AddForce(-Vector3.right * throwForce * multiplierForce, ForceMode.Force);
                 StartCoroutine(LoadNeedle());
             }
         }
