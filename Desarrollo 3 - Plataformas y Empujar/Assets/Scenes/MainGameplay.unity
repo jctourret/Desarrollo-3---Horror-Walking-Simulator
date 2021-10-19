@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481694, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641258, b: 0.5748172, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -3531,31 +3531,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player Controller
       objectReference: {fileID: 0}
-    - target: {fileID: 175916143355190078, guid: aa69266d657d4c94a8b9d9878dcbcd85,
-        type: 3}
-      propertyPath: gravity
-      value: -5
-      objectReference: {fileID: 0}
-    - target: {fileID: 175916143355190078, guid: aa69266d657d4c94a8b9d9878dcbcd85,
-        type: 3}
-      propertyPath: jumpTime
-      value: 1.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 175916143355190078, guid: aa69266d657d4c94a8b9d9878dcbcd85,
-        type: 3}
-      propertyPath: fallDeath
-      value: -18
-      objectReference: {fileID: 0}
-    - target: {fileID: 175916143355190078, guid: aa69266d657d4c94a8b9d9878dcbcd85,
-        type: 3}
-      propertyPath: maxJumpHeight
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 4865136828093839596, guid: aa69266d657d4c94a8b9d9878dcbcd85,
-        type: 3}
-      propertyPath: m_Controller
-      value: 
-      objectReference: {fileID: 9100000, guid: 21afb70a13a130c4389a576d0b740679, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: aa69266d657d4c94a8b9d9878dcbcd85, type: 3}
 --- !u!114 &175916143614632853 stripped
@@ -3636,6 +3611,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2747764046855531977, guid: c9e6097dd78241847a77f06c471996a4,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.176
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c9e6097dd78241847a77f06c471996a4, type: 3}

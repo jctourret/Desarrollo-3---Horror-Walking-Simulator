@@ -33,7 +33,6 @@ Transform:
   m_Children:
   - {fileID: 7648075994975990932}
   - {fileID: 5296525083072150542}
-  - {fileID: 6831568635100673387}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -67,18 +66,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30821e63352a96f4db0db6b545c58899, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speedMovement: 5
-  offsetAngle: 33.3
+  movementSpeed: 10
   dashTime: 0.75
-  north: {x: 0, y: 0, z: 0}
-  isRunning: 0
-  fallDeath: -8
-  groundedGravity: -0.1
-  gravity: 0
-  maxFallSpeed: -5
-  maxJumpHeight: 1.5
-  jumpTime: 2
-  initialJumpVelocity: 0
+  playerVelocity: {x: 0, y: 0, z: 0}
+  gravity: -5
+  fallDeath: -18
+  maxJumpHeight: 2
   lastDirection: 0
   interactionRadius: 0
   displayRadius: 0
@@ -111,15 +104,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e7118b99fc4dd194a9344b958437dbe5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  needleSpawner: {fileID: 6831568635100673387}
   needleObj: {fileID: 8572405176669334020, guid: 9ff684b155a742046a9f72243b4c69f7,
     type: 3}
   throwForce: 10
-  directions:
-  - {x: 0, y: 45, z: 0}
-  - {x: 0, y: 225, z: 0}
-  - {x: 0, y: 135, z: 0}
-  - {x: 0, y: 315, z: 0}
+  rotations:
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 90, z: 0}
+  - {x: 0, y: 180, z: 0}
+  - {x: 0, y: 270, z: 0}
 --- !u!1 &2704569170466384239
 GameObject:
   m_ObjectHideFlags: 0
@@ -279,33 +271,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b1f8b89b1ab80dd42894bf6bb543e971, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &5243393320638544873
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 6831568635100673387}
-  m_Layer: 9
-  m_Name: Transfom Needle
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &6831568635100673387
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5243393320638544873}
-  m_LocalRotation: {x: 0, y: 0.38268343, z: 0, w: 0.92387956}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 175916143355190072}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 45, z: 0}
+  cam: {fileID: 0}
