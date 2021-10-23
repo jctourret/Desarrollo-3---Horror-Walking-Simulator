@@ -1,20 +1,13 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class LookToCamera : MonoBehaviour
 {
     [HideInInspector]
     public Camera cam;
 
-    private void OnEnable()
+    private void Start()
     {
-        CameraBehaviour.OnSendCamera += GetCamera;
-    }
-
-    private void OnDisable()
-    {
-        CameraBehaviour.OnSendCamera -= GetCamera;
+        cam = CameraBehaviour.GetCamera();
     }
 
     private void LateUpdate()
@@ -23,13 +16,7 @@ public class LookToCamera : MonoBehaviour
         {
             Vector3 adjustedCam = cam.transform.position;
             adjustedCam.y = gameObject.transform.position.y;
-            transform.LookAt(adjustedCam);
+            this.transform.LookAt(adjustedCam);
         }
     }
-
-    void GetCamera(Camera newCamera)
-    {
-        cam = newCamera;
-    }
-
 }
