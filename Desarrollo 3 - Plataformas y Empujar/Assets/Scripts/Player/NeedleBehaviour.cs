@@ -1,54 +1,37 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class NeedleBehaviour : MonoBehaviour
 {
-
     public int damage = 1;
 
     //==================================
 
-    Rigidbody rig;
     [SerializeField] float timeToBlock = 0.1f; /// Se usa para hacerlo kinematico cuando colisiona despues de el tiempo determinado
-                                               /// Posible idea: Usar el FixedJoin para unir o pegar la aguja con otro objeto
-    [SerializeField] float destroyTime = 5f;
+    [SerializeField] float destroyTime = 6f;
 
     //==================================
 
     private void Awake()
     {
-        rig = GetComponent<Rigidbody>();
-
-        Destroy(this.gameObject, destroyTime * 2);
+        Destroy(this.gameObject, destroyTime);
     }
 
     private void OnCollisionEnter(Collision collision)
     {
+        this.transform.parent = collision.transform;
+        this.transform.GetComponent<BoxCollider>().enabled = false;
+
         StartCoroutine(StopNeedle());
 
-        if (collision.transform.GetComponent<Rigidbody>() != null)
-        {
-            this.gameObject.AddComponent<FixedJoint>();
-
-            this.transform.parent = collision.transform;
-        }
-
         if (collision.transform.GetComponent<IDamageable>() != null)
-        {
             collision.transform.GetComponent<IDamageable>().TakeDamage(damage);
-
-            this.transform.GetComponent<BoxCollider>().enabled = false;
-        }
-
-        Destroy(this.gameObject, destroyTime);
     }
 
     IEnumerator StopNeedle()
     {
         yield return new WaitForSeconds(timeToBlock);
 
-        rig.isKinematic = true;
+        this.transform.GetComponent<Rigidbody>().isKinematic = true;
     }
-
 }

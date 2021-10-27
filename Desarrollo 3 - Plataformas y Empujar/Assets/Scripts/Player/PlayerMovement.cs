@@ -9,34 +9,27 @@ public class PlayerMovement : MonoBehaviour
 
     [Header("Player Move")]
     public float movementSpeed = 10f;
-    [SerializeField]
-    float dashTime = 1.5f;
-    bool controllable;
-    [SerializeField]
-    Vector3 playerVelocity;
-    //[SerializeField]
-    bool isGrounded;
+    [SerializeField] private float dashTime = 1.5f;
+    [SerializeField] private Vector3 playerVelocity;
+
+    private bool controllable;
+    private bool isGrounded;
 
     [Header("Gravity")]
-    [SerializeField]
-    float gravity;
-    [SerializeField]
-    float fallDeath;
+    [SerializeField] private float gravity;
+    [SerializeField] private float fallDeath;
 
     [Header("Jump Variables")]
-    [SerializeField]
-    float maxJumpHeight;
+    [SerializeField] private float maxJumpHeight;
 
-    CharacterController controller;
-    Animator animator;
-    [SerializeField]
-    int lastDirection;
+    [SerializeField] private int lastDirection;
 
     [Header("Interaction")]
-    [SerializeField]
-    float interactionRadius;
-    [SerializeField]
-    float displayRadius;
+    [SerializeField] private float interactionRadius;
+    [SerializeField] private float displayRadius;
+
+    private CharacterController controller;
+    private Animator animator;
 
     //==============================================
 
@@ -44,10 +37,9 @@ public class PlayerMovement : MonoBehaviour
     {
         controller = GetComponent<CharacterController>();
         animator = GetComponentInChildren<Animator>();
-        controllable = true;
+        controllable = false;
 
-        controller.Move(transform.position);
-
+        //controller.Move(transform.position);
     }
 
     void Update()
@@ -55,14 +47,13 @@ public class PlayerMovement : MonoBehaviour
         MoveInput();
         OnPlayerMove?.Invoke(transform.position);
         CheckFallDeath();
-    }
-   
+    }   
 
     //==============================================
 
     void CheckFallDeath()
     {
-        if (transform.position.y < fallDeath)
+        if (transform.position.y < fallDeath && controllable)
         {
             OnPlayerFallDeath?.Invoke();
             Destroy(gameObject);
@@ -75,7 +66,7 @@ public class PlayerMovement : MonoBehaviour
         isGrounded = controller.isGrounded;
         if (isGrounded && playerVelocity.y < 0)
         {
-            playerVelocity.y = 0f;
+            playerVelocity.y = -2f;
         }
 
         if (controllable)
@@ -98,6 +89,7 @@ public class PlayerMovement : MonoBehaviour
 
             controller.Move(move * Time.deltaTime * movementSpeed);
 
+
             if (move != Vector3.zero)
             {
                 gameObject.transform.forward = move;
@@ -106,8 +98,12 @@ public class PlayerMovement : MonoBehaviour
             {
                 playerVelocity.y += Mathf.Sqrt(maxJumpHeight * -3.0f * gravity); // Que es el 3?
             }
+            
+
             animator.SetBool("IsGrounded", isGrounded);
             playerVelocity.y += gravity * Time.deltaTime;
+
+
             if (playerVelocity.y < 0)
             {
                 animator.SetBool("Falling",true);
@@ -121,27 +117,32 @@ public class PlayerMovement : MonoBehaviour
             controller.Move(playerVelocity * Time.deltaTime);
 
 
-
             if (Input.GetKeyDown(KeyCode.LeftShift))
             {
                 StartCoroutine(Dash(move));
-                controllable = false;
             }
         }
     }
 
     //=============================================
 
+    public void ActivatePlayer()
+    {
+        controllable = true;
+    }
 
     IEnumerator Dash(Vector3 movement)
     {
         float startTime = Time.time;
 
+        controllable = false;
+
         while (Time.time< startTime + dashTime)
         {
-            controller.Move(movement*2);
+            controller.Move(movement * 2);
             yield return null;
         }
+
         controllable = true;
     }
 

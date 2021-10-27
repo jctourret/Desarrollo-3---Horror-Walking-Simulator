@@ -202,10 +202,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 268174861167636539}
-  - component: {fileID: 2464147949210768004}
   - component: {fileID: 2535808611032893485}
-  - component: {fileID: 4059421467441682126}
   - component: {fileID: 4540178514556861066}
+  - component: {fileID: 4059421467441682126}
   m_Layer: 13
   m_Name: Collider
   m_TagString: Untagged
@@ -227,19 +226,6 @@ Transform:
   m_Father: {fileID: 5677984711528228821}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &2464147949210768004
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7569610275332045779}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 0
-  serializedVersion: 2
-  m_Size: {x: 1, y: 2, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!54 &2535808611032893485
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -256,20 +242,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
---- !u!114 &4059421467441682126
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7569610275332045779}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fac46f8f4ee942049aec5ee4e29a01e8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  life: 3
-  isLive: 1
 --- !u!136 &4540178514556861066
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -284,3 +256,17 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &4059421467441682126
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7569610275332045779}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fac46f8f4ee942049aec5ee4e29a01e8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  life: 3
+  isLive: 1
