@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class MapBehaviour : MonoBehaviour
+public class UI_MapBehaviour : MonoBehaviour
 {
     [Header("Map Values")]
     [SerializeField] PillarsManager pillarsManager;

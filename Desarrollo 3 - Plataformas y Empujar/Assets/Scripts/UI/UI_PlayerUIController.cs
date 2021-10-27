@@ -2,7 +2,7 @@
 using TMPro;
 using UnityEngine;
 
-public class PlayerUIController : MonoBehaviour
+public class UI_PlayerUIController : MonoBehaviour
 {
     [Header("Lifes")]
     [SerializeField] GameObject emptyHeart;
@@ -123,9 +123,9 @@ public class PlayerUIController : MonoBehaviour
         {
             if (lastHeartActive > 0)
             {
-                if (listOfHearts[lastHeartActive - 1].GetComponent<ControlHeart>().GetState())
+                if (listOfHearts[lastHeartActive - 1].GetComponent<UI_ControlHeart>().GetState())
                 {
-                    listOfHearts[lastHeartActive - 1].GetComponent<ControlHeart>().ReduceLife(false);
+                    listOfHearts[lastHeartActive - 1].GetComponent<UI_ControlHeart>().ReduceLife(false);
                 }
                 else
                 {
@@ -146,15 +146,15 @@ public class PlayerUIController : MonoBehaviour
         {
             if(lastHeartActive <= listOfHearts.Count)
             {
-                if (!listOfHearts[lastHeartActive - 1].GetComponent<ControlHeart>().GetState())
+                if (!listOfHearts[lastHeartActive - 1].GetComponent<UI_ControlHeart>().GetState())
                 {
-                    listOfHearts[lastHeartActive - 1].GetComponent<ControlHeart>().ReduceLife(true);
+                    listOfHearts[lastHeartActive - 1].GetComponent<UI_ControlHeart>().ReduceLife(true);
                 }
                 else
                 {
                     lastHeartActive++;
                     listOfHearts[lastHeartActive - 1].SetActive(true);
-                    listOfHearts[lastHeartActive - 1].GetComponent<ControlHeart>().ReduceLife(false);
+                    listOfHearts[lastHeartActive - 1].GetComponent<UI_ControlHeart>().ReduceLife(false);
                 }
             }
             else
