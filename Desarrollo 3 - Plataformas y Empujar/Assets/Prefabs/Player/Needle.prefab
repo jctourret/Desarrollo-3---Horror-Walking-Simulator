@@ -235,5 +235,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 1
-  timeToBlock: 0.1
-  destroyTime: 5
+  timeToBlock: 0.05
+  destroyTime: 6

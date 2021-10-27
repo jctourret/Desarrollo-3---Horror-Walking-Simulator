@@ -59,7 +59,7 @@ public class LoaderManager : MonoBehaviourSingleton<LoaderManager>
         }
     }
 
-    public void SpawnBasicItem(Vector3 position, Camera cam)
+    public void SpawnBasicItem(Vector3 position)
     {
         int random = Random.Range(0, MAX_PORCENTAGE);
 
@@ -71,8 +71,6 @@ public class LoaderManager : MonoBehaviourSingleton<LoaderManager>
             item.transform.name = basicItems[random].name;
 
             item.transform.parent = ItemsParent.transform;
-
-            item.GetComponentInChildren<LookToCamera>().cam = cam;
         }
     }
 

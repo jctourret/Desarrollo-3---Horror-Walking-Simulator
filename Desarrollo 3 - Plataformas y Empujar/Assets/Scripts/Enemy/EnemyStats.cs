@@ -7,9 +7,6 @@ public class EnemyStats : MonoBehaviour, IDamageable
     public int life = 10;
 
     //==================================
-    [HideInInspector]
-    public bool isLive = true;
-    //==================================
 
     public void TakeDamage(int damage)
     {
@@ -21,13 +18,11 @@ public class EnemyStats : MonoBehaviour, IDamageable
 
     public void Eliminated()
     {
-        isLive = false;
-
-        this.transform.GetComponent<Collider>().enabled = false; //El jefe NO TIENE un boxCollider, tiene un capsuleCollider
+        //this.transform.GetComponent<Collider>().enabled = false; //El jefe NO TIENE un boxCollider, tiene un capsuleCollider
 
         // <-- Acá se llama a la animacion de muerte
 
-        LoaderManager.Get().SpawnBasicItem(this.transform.position, EnemyManager.instance.cam);
+        LoaderManager.Get().SpawnBasicItem(this.transform.position);
 
         Destroy(this.transform.parent.gameObject); // Esta linea se tiene que eliminar cuando se tenga la animacion
     }

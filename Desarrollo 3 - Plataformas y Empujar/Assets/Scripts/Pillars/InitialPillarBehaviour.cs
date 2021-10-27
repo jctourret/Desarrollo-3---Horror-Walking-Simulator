@@ -3,10 +3,11 @@ using UnityEngine;
 
 public class InitialPillarBehaviour : Pillar
 {
-    //public override void Awake()
-    //{
-    //    base.Awake();
-    //}
+    [Header("Player Parent")]
+    [SerializeField] private Transform playerParent;
+    [SerializeField] private Transform player;
+
+    //===============================================
 
     public override void Start()
     {
@@ -54,5 +55,12 @@ public class InitialPillarBehaviour : Pillar
         {
             light.GetComponent<NightLight_Behaviour>().SetIntensityOfLight(true, timer);
         }
+    }
+
+    public void MovePlayerParent()
+    {
+        player.parent = playerParent;
+
+        player.GetComponent<PlayerMovement>().ActivatePlayer();
     }
 }
