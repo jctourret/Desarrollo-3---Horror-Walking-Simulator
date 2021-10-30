@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class MenuManager : MonoBehaviour
+public class UI_MenuManager : MonoBehaviour
 {
     public void CloseLayer(GameObject layer)
     {
