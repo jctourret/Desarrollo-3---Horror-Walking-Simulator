@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine.UI;
 using UnityEngine;
 
-public class ControlHeart : MonoBehaviour
+public class UI_ControlHeart : MonoBehaviour
 {
     public Sprite fullHeart;
     public Sprite halfHeart;
