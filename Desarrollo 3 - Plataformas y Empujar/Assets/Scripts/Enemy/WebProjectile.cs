@@ -4,15 +4,37 @@ using UnityEngine;
 
 public class WebProjectile : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField] float slowStrength;
+    [SerializeField] float slowDuration;
+    [SerializeField] GameObject trap;
+    [SerializeField] Vector3 velocity;
+
+    PlayerMovement target;
+    Rigidbody rb;
+
+
+    private void Start()
     {
-        
+        rb = gameObject.GetComponent<Rigidbody>();
     }
 
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
-        
+        velocity = rb.velocity;
     }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        target = collision.collider.gameObject.GetComponentInParent<PlayerMovement>();
+        if(target != null)
+        {
+            StartCoroutine(target.Slow(slowStrength,slowDuration));
+        }
+        if(collision.collider.gameObject.tag == "Terrain")
+        {
+            GameObject go = Instantiate(trap,transform.position,Quaternion.identity,null);
+            Destroy(gameObject);
+        }
+    }
+
 }

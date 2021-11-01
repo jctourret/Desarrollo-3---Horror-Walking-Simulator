@@ -8,10 +8,13 @@ public class PlayerMovement : MonoBehaviour
     public static Action OnPlayerFallDeath;
 
     [Header("Player Move")]
-    public float movementSpeed = 10f;
+    [SerializeField] float currentSpeed = 10f;
+    [SerializeField] float normalSpeed = 10f;
+    [SerializeField] float minSpeed = 2;
     [SerializeField] private float dashTime = 1.5f;
     [SerializeField] private Vector3 playerVelocity;
 
+    private bool isSlowed;
     private bool controllable;
     private bool isGrounded;
 
@@ -87,7 +90,7 @@ public class PlayerMovement : MonoBehaviour
                 animator.SetFloat("Vertical",move.z);
             }
 
-            controller.Move(move * Time.deltaTime * movementSpeed);
+            controller.Move(move * Time.deltaTime * currentSpeed);
 
 
             if (move != Vector3.zero)
@@ -102,7 +105,6 @@ public class PlayerMovement : MonoBehaviour
 
             animator.SetBool("IsGrounded", isGrounded);
             playerVelocity.y += gravity * Time.deltaTime;
-
 
             if (playerVelocity.y < 0)
             {
@@ -121,6 +123,24 @@ public class PlayerMovement : MonoBehaviour
             {
                 StartCoroutine(Dash(move));
             }
+        }
+    }
+
+    public void Slow(float slowStrength)
+    {
+        if(currentSpeed > minSpeed && !isSlowed)
+        {
+            currentSpeed -= slowStrength;
+            isSlowed = true;
+        }
+    }
+
+    public void unSlow(float slowStrength)
+    {
+        if(currentSpeed < normalSpeed && isSlowed)
+        {
+            currentSpeed += slowStrength;
+            isSlowed = false;
         }
     }
 
@@ -144,6 +164,19 @@ public class PlayerMovement : MonoBehaviour
         }
 
         controllable = true;
+    }
+
+    public IEnumerator Slow(float slowStrength, float slowDuration)
+    {
+        if (currentSpeed > minSpeed)
+        {
+            currentSpeed -= slowStrength;
+        }
+        yield return new WaitForSeconds(slowDuration);
+        if(currentSpeed < normalSpeed)
+        {
+            currentSpeed += slowStrength;
+        }
     }
 
     //==============================================

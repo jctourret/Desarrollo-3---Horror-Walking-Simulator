@@ -3548,6 +3548,11 @@ PrefabInstance:
       propertyPath: fallDeath
       value: -12
       objectReference: {fileID: 0}
+    - target: {fileID: 175916143355190078, guid: aa69266d657d4c94a8b9d9878dcbcd85,
+        type: 3}
+      propertyPath: maxJumpHeight
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: aa69266d657d4c94a8b9d9878dcbcd85, type: 3}
 --- !u!114 &175916143614632853 stripped

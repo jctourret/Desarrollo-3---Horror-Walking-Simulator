@@ -13,7 +13,7 @@ public class WebTrap : MonoBehaviour
         currentTarget = other.GetComponentInParent<PlayerMovement>();
         if (currentTarget != null)
         {
-            currentTarget.movementSpeed -= slowStrength;
+            currentTarget.Slow(slowStrength);
         }
     }
 
@@ -23,7 +23,7 @@ public class WebTrap : MonoBehaviour
         {
             if (other.GetComponent<PlayerMovement>() == currentTarget)
             {
-                currentTarget.movementSpeed += slowStrength;
+                currentTarget.unSlow(slowStrength);
                 currentTarget = null;
             }
         }
