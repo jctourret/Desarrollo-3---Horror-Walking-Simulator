@@ -629,7 +629,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_text: "PROGRAMMERS:\n\nAquistapace Tomas \nJuan Cruz Tourret\n\nARTISTS:\n\nJuan
-    Manuel -\nSof\xEDa Oliva\n\nSOUND ENGINEERS:\n\n*\n*\n*"
+    Manuel \"Potato\" Fernandez\nSof\xEDa Oliva\n\nSOUND ENGINEERS:\n\nSebasti\xE1n
+    Mi\xF1o\nJoaqu\xEDn Otero\nAndr\xE9s Monta\xF1a Duret"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 66c00dc07a89ab448be727fd3faec75c, type: 2}
   m_sharedMaterial: {fileID: -7893029012903042335, guid: 66c00dc07a89ab448be727fd3faec75c,
@@ -657,8 +658,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 26
-  m_fontSizeBase: 26
+  m_fontSize: 24
+  m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
