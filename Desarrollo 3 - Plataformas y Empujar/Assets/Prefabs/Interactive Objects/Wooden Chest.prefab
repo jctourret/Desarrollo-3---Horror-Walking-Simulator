@@ -88,6 +88,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2114164808694355021}
+  - component: {fileID: 4119737162128280815}
   m_Layer: 0
   m_Name: Toy_Box_Box_Body
   m_TagString: Untagged
@@ -112,6 +113,19 @@ Transform:
   m_Father: {fileID: 2439162056807052782}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &4119737162128280815
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1593382691538702071}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 2.2673368, z: 2.24}
+  m_Center: {x: 0, y: 0.8686681, z: 0}
 --- !u!1 &2439162056807052783
 GameObject:
   m_ObjectHideFlags: 0
