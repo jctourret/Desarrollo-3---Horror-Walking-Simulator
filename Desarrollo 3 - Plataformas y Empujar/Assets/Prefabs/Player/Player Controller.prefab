@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 771980846}
   - component: {fileID: 771980848}
   - component: {fileID: 771980845}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: See Through
   m_TagString: ShaderSphere
   m_Icon: {fileID: 0}
@@ -108,7 +108,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   myLayerMask:
     serializedVersion: 2
-    m_Bits: 1
+    m_Bits: 32772
   speedToActivate: 10
   maxScale: 5
 --- !u!1 &175916143355190076
