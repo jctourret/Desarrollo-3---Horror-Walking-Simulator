@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1940582152711284321}
   - component: {fileID: 2183431833004045936}
   - component: {fileID: 7301212257089838520}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Wood Pillar (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -198,7 +198,7 @@ GameObject:
   - component: {fileID: 5738643697120333438}
   - component: {fileID: 1898166456942076316}
   - component: {fileID: 4573974746067942371}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Wall (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3616,7 +3616,7 @@ GameObject:
   - component: {fileID: 1134660638806658840}
   - component: {fileID: 2887052363764211272}
   - component: {fileID: 7613603393851795792}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3833,7 +3833,7 @@ GameObject:
   - component: {fileID: 2578032725307218931}
   - component: {fileID: 5596151782304801837}
   - component: {fileID: 7977676260157469484}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Wood Pillar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4001,7 +4001,7 @@ GameObject:
   - component: {fileID: 1223131188836453745}
   - component: {fileID: 3669430802661339779}
   - component: {fileID: 8924201528083140558}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Wall (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4187,7 +4187,7 @@ GameObject:
   - component: {fileID: 2165917489737325105}
   - component: {fileID: 3482510385032597221}
   - component: {fileID: 1373077731007315561}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Wood Pillar (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4340,7 +4340,7 @@ GameObject:
   - component: {fileID: 7488700660011989647}
   - component: {fileID: 1808321075951636323}
   - component: {fileID: 377433937919677184}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Roof
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4433,7 +4433,7 @@ GameObject:
   - component: {fileID: 8990810142670882696}
   - component: {fileID: 3558799328642691920}
   - component: {fileID: 1068117441105981}
-  m_Layer: 0
+  m_Layer: 15
   m_Name: Wood Pillar (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
