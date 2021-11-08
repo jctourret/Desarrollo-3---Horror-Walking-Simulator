@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{F9C73B0E-830A-43F9-974D-FD47F06368F0}" SchemaVersion="103">
+	<Events>
+		<WorkUnit Name="Default Work Unit" ID="{F9C73B0E-830A-43F9-974D-FD47F06368F0}" PersistMode="Standalone">
+			<ChildrenList>
+				<Event Name="alarma_caida_torre" ID="{8A0F4FCA-7935-4FA6-9BD3-B8ED4A6555FF}"/>
+				<Event Name="aparece_torre" ID="{9FAC5430-CB50-4790-AEB3-D926116505FA}">
+					<ChildrenList>
+						<Action Name="" ID="{2D3F55C3-2F25-4D1D-9503-7C5424D15084}" ShortID="175388583">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="aparece_torre_v1" ID="{9225B3EB-BBFC-421C-9799-8CD0276A3EB4}" WorkUnitID="{0068F637-75D2-4DCF-A442-34947F9C8869}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="aparicion_trampas" ID="{C7D661BA-9D91-4379-AFD0-0C265FC9D0A0}"/>
+				<Event Name="aterriza_personaje" ID="{005E94E7-D086-4598-8B63-FE959A241034}">
+					<ChildrenList>
+						<Action Name="" ID="{AE2204F5-89D3-44AA-AC82-D21E6623E492}" ShortID="965399237">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="aterriza_personaje_v1" ID="{95B385D3-0509-45C5-A361-B3C20BDD6620}" WorkUnitID="{0068F637-75D2-4DCF-A442-34947F9C8869}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="caida_personaje" ID="{5696C2CF-32FF-4A0E-8A19-BC03611D596F}"/>
+				<Event Name="desaparece_torre" ID="{580CB6DF-94C5-4085-A3EF-BEE836EA7249}">
+					<ChildrenList>
+						<Action Name="" ID="{46E0A047-DA77-4E5C-94BB-9C4E9DC57F18}" ShortID="138204552">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="desaparece_torre_v1" ID="{7A96E510-3186-4322-B8D3-9732B656E513}" WorkUnitID="{0068F637-75D2-4DCF-A442-34947F9C8869}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="impacto_boss" ID="{C03CE9BD-0AF7-40B1-A550-2C7E0BB63D70}"/>
+				<Event Name="impacto_enemigo" ID="{EDFD7D9E-B561-446F-99EE-B2D6E60956EB}">
+					<ChildrenList>
+						<Action Name="" ID="{B922CC0A-6696-4FE7-8FE7-A4AF81A3CC90}" ShortID="399953460">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="impacto_a_enemigo_v1" ID="{7A840B79-CDEF-4B42-82B7-07CAD5DE6478}" WorkUnitID="{0068F637-75D2-4DCF-A442-34947F9C8869}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="interface_menu" ID="{5EADD777-89F4-407C-8A3F-F71124A9FFCB}"/>
+				<Event Name="lanza_aguja" ID="{3F8CE6A3-AB6B-4CBE-B204-F52C7C048C8F}">
+					<ChildrenList>
+						<Action Name="" ID="{BE8D87B4-8CA7-493E-864A-FDDC2EA43BC7}" ShortID="213280191">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="lanza_aguja_v1" ID="{EBAE1AF7-070D-4011-9383-093F0D658EFC}" WorkUnitID="{0068F637-75D2-4DCF-A442-34947F9C8869}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="menu_inicio" ID="{DBF122D9-679B-49F3-B349-3C76244401B3}"/>
+				<Event Name="muere_boss" ID="{DD7C6599-1029-4AD8-8797-7254D0CE3219}"/>
+				<Event Name="muere_personaje" ID="{0653F29C-7E72-44B8-AF82-EB19EFA98D7B}"/>
+				<Event Name="musica_partida" ID="{6710C306-0235-4DE8-988B-6DA7F5C2553E}"/>
+				<Event Name="nivel_superado" ID="{DB91280B-60D2-4A14-B8D2-F4BE9429C5D4}"/>
+				<Event Name="palanca_torre1" ID="{93D22A15-4786-4D44-8A3B-11C7B9FFA373}">
+					<ChildrenList>
+						<Action Name="" ID="{3C21358E-F793-436E-A847-D4C80DDE5D98}" ShortID="809158631">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="palanca_torre1_v1" ID="{403A06DE-6E6C-46B8-8237-D630594F1A93}" WorkUnitID="{0068F637-75D2-4DCF-A442-34947F9C8869}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="pasos_personaje" ID="{CD987F27-7D2E-4A82-B3F7-3DB7F857CEC8}">
+					<ChildrenList>
+						<Action Name="" ID="{2FC7515E-8B08-4F89-A8B9-8309593C3F68}" ShortID="88869771">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="pasos_personaje" ID="{69D7B720-B4E5-4880-9A14-99BCCDB71A06}" WorkUnitID="{0068F637-75D2-4DCF-A442-34947F9C8869}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="presencia_boss" ID="{4A2D7198-377A-4117-9DBD-E0DAAAED7B75}"/>
+				<Event Name="recibe_dano" ID="{17FA0275-77C9-4136-86D4-AE32B91BD52E}">
+					<ChildrenList>
+						<Action Name="" ID="{09A45A80-E86D-41FA-AAC5-E45AA5074B0F}" ShortID="694220726">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="recibe_dano_v1" ID="{BE5144A0-7F93-4461-93D0-94A90B049F9C}" WorkUnitID="{0068F637-75D2-4DCF-A442-34947F9C8869}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="recoge_botones" ID="{37A0CB4E-0A56-4BA3-8015-109464A10963}">
+					<ChildrenList>
+						<Action Name="" ID="{6BBD3644-3FAF-482D-8D8F-C1B2DB3BA064}" ShortID="116228031">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="recoge_botones" ID="{017567BE-C328-42EF-9553-7D6410AE2048}" WorkUnitID="{0068F637-75D2-4DCF-A442-34947F9C8869}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="salto_personajes" ID="{3ED4F2E3-A409-46CE-A7D4-A288FC94A23E}">
+					<ChildrenList>
+						<Action Name="" ID="{5F9C09B6-0302-48D9-A00A-C0E46D3B62F2}" ShortID="333034486">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="salto_personaje_v1" ID="{07661A69-C867-4F6C-B444-E2C6E47C7386}" WorkUnitID="{0068F637-75D2-4DCF-A442-34947F9C8869}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="muere_arana" ID="{9D26E57F-C0B0-4471-8562-748FC608CFCC}">
+					<ChildrenList>
+						<Action Name="" ID="{17F4038E-4788-4909-BBEC-CA0A620E03F7}" ShortID="623162570">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="muere_arana" ID="{80483BC5-7833-428C-AE93-BCEA4EFE67E5}" WorkUnitID="{0068F637-75D2-4DCF-A442-34947F9C8869}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+			</ChildrenList>
+		</WorkUnit>
+	</Events>
+</WwiseDocument>

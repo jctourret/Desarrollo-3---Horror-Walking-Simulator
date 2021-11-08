@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SoundBanksInfo Platform="Windows" BasePlatform="Windows" SchemaVersion="12" SoundbankVersion="140">
+	<RootPaths>
+		<ProjectRoot>/Users/highmacintosh/Library/Application Support/Wwise2019/Bottles/Wwise2019x64/dosdevices/z:/Volumes/HD 2TB/ToyBox Game Audio/05 Wwise/ToyBox Wwise 20211106/ToyBox_Wwise_sesion_01/</ProjectRoot>
+		<SourceFilesRoot>/Users/highmacintosh/Library/Application Support/Wwise2019/Bottles/Wwise2019x64/dosdevices/z:/Volumes/HD 2TB/ToyBox Game Audio/05 Wwise/ToyBox Wwise 20211106/ToyBox_Wwise_sesion_01/.cache/Windows/</SourceFilesRoot>
+		<SoundBanksRoot>/Users/highmacintosh/Library/Application Support/Wwise2019/Bottles/Wwise2019x64/dosdevices/z:/Volumes/HD 2TB/ToyBox Game Audio/05 Wwise/ToyBox Wwise 20211106/ToyBox_Wwise_sesion_01/GeneratedSoundBanks/Windows/</SoundBanksRoot>
+		<ExternalSourcesInputFile></ExternalSourcesInputFile>
+		<ExternalSourcesOutputRoot>/Users/highmacintosh/Library/Application Support/Wwise2019/Bottles/Wwise2019x64/dosdevices/z:/Volumes/HD 2TB/ToyBox Game Audio/05 Wwise/ToyBox Wwise 20211106/ToyBox_Wwise_sesion_01/GeneratedSoundBanks/Windows</ExternalSourcesOutputRoot>
+	</RootPaths>
+	<DialogueEvents/>
+	<StreamedFiles/>
+	<MediaFilesNotInAnyBank/>
+	<SoundBanks>
+		<SoundBank Id="626013394" Language="SFX" Hash="876606795">
+			<ObjectPath>\SoundBanks\Default Work Unit\Main_SoundBank_01</ObjectPath>
+			<ShortName>Main_SoundBank_01</ShortName>
+			<Path>Main_SoundBank_01.bnk</Path>
+			<IncludedEvents>
+				<Event Id="2691954849" Name="alarma_caida_torre" ObjectPath="\Events\Default Work Unit\alarma_caida_torre"/>
+				<Event Id="649159425" Name="aparece_torre" ObjectPath="\Events\Default Work Unit\aparece_torre">
+					<IncludedMemoryFiles>
+						<File Id="900190173" Language="SFX">
+							<ShortName>aparece_torre_v1.wav</ShortName>
+							<Path>SFX/aparece_torre_v1_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="1294526122" Name="aparicion_trampas" ObjectPath="\Events\Default Work Unit\aparicion_trampas"/>
+				<Event Id="201916069" Name="aterriza_personaje" ObjectPath="\Events\Default Work Unit\aterriza_personaje">
+					<IncludedMemoryFiles>
+						<File Id="529807827" Language="SFX">
+							<ShortName>aterriza_personaje_v1.wav</ShortName>
+							<Path>SFX/aterriza_personaje_v1_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="3984214485" Name="caida_personaje" ObjectPath="\Events\Default Work Unit\caida_personaje"/>
+				<Event Id="3686195039" Name="desaparece_torre" ObjectPath="\Events\Default Work Unit\desaparece_torre">
+					<IncludedMemoryFiles>
+						<File Id="592969696" Language="SFX">
+							<ShortName>desaparece_torre_v1.wav</ShortName>
+							<Path>SFX/desaparece_torre_v1_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="4257584934" Name="impacto_boss" ObjectPath="\Events\Default Work Unit\impacto_boss"/>
+				<Event Id="2768271749" Name="impacto_enemigo" ObjectPath="\Events\Default Work Unit\impacto_enemigo">
+					<IncludedMemoryFiles>
+						<File Id="214972885" Language="SFX">
+							<ShortName>impacto_a_enemigo_v1.wav</ShortName>
+							<Path>SFX/impacto_a_enemigo_v1_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="2547179148" Name="interface_menu" ObjectPath="\Events\Default Work Unit\interface_menu"/>
+				<Event Id="4004036222" Name="lanza_aguja" ObjectPath="\Events\Default Work Unit\lanza_aguja">
+					<IncludedMemoryFiles>
+						<File Id="32912149" Language="SFX">
+							<ShortName>lanza_aguja_v1.wav</ShortName>
+							<Path>SFX/lanza_aguja_v1_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="394898390" Name="menu_inicio" ObjectPath="\Events\Default Work Unit\menu_inicio"/>
+				<Event Id="1412811295" Name="muere_arana" ObjectPath="\Events\Default Work Unit\muere_arana">
+					<IncludedMemoryFiles>
+						<File Id="267307929" Language="SFX">
+							<ShortName>muere_arana_03_v1.wav</ShortName>
+							<Path>SFX/muere_arana_03_v1_10C4C929.wem</Path>
+						</File>
+						<File Id="376265599" Language="SFX">
+							<ShortName>muere_arana_01_v1.wav</ShortName>
+							<Path>SFX/muere_arana_01_v1_10C4C929.wem</Path>
+						</File>
+						<File Id="795560534" Language="SFX">
+							<ShortName>muere_arana_02_v1.wav</ShortName>
+							<Path>SFX/muere_arana_02_v1_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="1972438757" Name="muere_boss" ObjectPath="\Events\Default Work Unit\muere_boss"/>
+				<Event Id="1550559233" Name="muere_personaje" ObjectPath="\Events\Default Work Unit\muere_personaje"/>
+				<Event Id="2313578751" Name="musica_partida" ObjectPath="\Events\Default Work Unit\musica_partida"/>
+				<Event Id="4236031371" Name="nivel_superado" ObjectPath="\Events\Default Work Unit\nivel_superado"/>
+				<Event Id="618057445" Name="palanca_torre1" ObjectPath="\Events\Default Work Unit\palanca_torre1">
+					<IncludedMemoryFiles>
+						<File Id="881692936" Language="SFX">
+							<ShortName>palanca_torre1_v1.wav</ShortName>
+							<Path>SFX/palanca_torre1_v1_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="659343135" Name="pasos_personaje" ObjectPath="\Events\Default Work Unit\pasos_personaje">
+					<IncludedMemoryFiles>
+						<File Id="293079254" Language="SFX">
+							<ShortName>paso_personaje_08_v1.wav</ShortName>
+							<Path>SFX/paso_personaje_08_v1_10C4C929.wem</Path>
+						</File>
+						<File Id="297702866" Language="SFX">
+							<ShortName>paso_personaje_01_v1.wav</ShortName>
+							<Path>SFX/paso_personaje_01_v1_10C4C929.wem</Path>
+						</File>
+						<File Id="330122768" Language="SFX">
+							<ShortName>paso_personaje_06_v1.wav</ShortName>
+							<Path>SFX/paso_personaje_06_v1_10C4C929.wem</Path>
+						</File>
+						<File Id="557317516" Language="SFX">
+							<ShortName>paso_personaje_05_v1.wav</ShortName>
+							<Path>SFX/paso_personaje_05_v1_10C4C929.wem</Path>
+						</File>
+						<File Id="625218915" Language="SFX">
+							<ShortName>paso_personaje_03_v1.wav</ShortName>
+							<Path>SFX/paso_personaje_03_v1_10C4C929.wem</Path>
+						</File>
+						<File Id="631171849" Language="SFX">
+							<ShortName>paso_personaje_02_v1.wav</ShortName>
+							<Path>SFX/paso_personaje_02_v1_10C4C929.wem</Path>
+						</File>
+						<File Id="888477466" Language="SFX">
+							<ShortName>paso_personaje_09_v1.wav</ShortName>
+							<Path>SFX/paso_personaje_09_v1_10C4C929.wem</Path>
+						</File>
+						<File Id="914498966" Language="SFX">
+							<ShortName>paso_personaje_07_v1.wav</ShortName>
+							<Path>SFX/paso_personaje_07_v1_10C4C929.wem</Path>
+						</File>
+						<File Id="976685486" Language="SFX">
+							<ShortName>paso_personaje_04_v1.wav</ShortName>
+							<Path>SFX/paso_personaje_04_v1_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="3090377257" Name="presencia_boss" ObjectPath="\Events\Default Work Unit\presencia_boss"/>
+				<Event Id="763444324" Name="recibe_dano" ObjectPath="\Events\Default Work Unit\recibe_dano">
+					<IncludedMemoryFiles>
+						<File Id="788098474" Language="SFX">
+							<ShortName>recibe_dano_v1.wav</ShortName>
+							<Path>SFX/recibe_dano_v1_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="1663865597" Name="recoge_botones" ObjectPath="\Events\Default Work Unit\recoge_botones">
+					<IncludedMemoryFiles>
+						<File Id="897208615" Language="SFX">
+							<ShortName>recoge_botones_02_v1.wav</ShortName>
+							<Path>SFX/recoge_botones_02_v1_10C4C929.wem</Path>
+						</File>
+						<File Id="1006839415" Language="SFX">
+							<ShortName>recoge_botones_01_v1.wav</ShortName>
+							<Path>SFX/recoge_botones_01_v1_10C4C929.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="2693817449" Name="salto_personajes" ObjectPath="\Events\Default Work Unit\salto_personajes"/>
+			</IncludedEvents>
+		</SoundBank>
+		<SoundBank Id="1355168291" Language="SFX" Hash="1958929096">
+			<ObjectPath>Init</ObjectPath>
+			<ShortName>Init</ShortName>
+			<Path>Init.bnk</Path>
+		</SoundBank>
+	</SoundBanks>
+</SoundBanksInfo>

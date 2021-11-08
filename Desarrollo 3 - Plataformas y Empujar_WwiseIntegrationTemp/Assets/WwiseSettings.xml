@@ -1,0 +1,9 @@
+<?xml version='1.0'?>
+<WwiseSettings>
+    <CreateWwiseGlobal>true</CreateWwiseGlobal>
+    <CreateWwiseListener>true</CreateWwiseListener>
+    <SoundbankPath>Audio/GeneratedSoundBanks</SoundbankPath>
+    <WwiseProjectPath>../../Desarrollo 3 - Plataformas y Empujar/ToyBox_Wwise_sesion_01/ToyBox_Wwise_sesion_01.wproj</WwiseProjectPath>
+    <WwiseInstallationPathWindows>D:\Programas\Wwise 2021.1.4.7707</WwiseInstallationPathWindows>
+    <WwiseInstallationPathMac></WwiseInstallationPathMac>
+</WwiseSettings>

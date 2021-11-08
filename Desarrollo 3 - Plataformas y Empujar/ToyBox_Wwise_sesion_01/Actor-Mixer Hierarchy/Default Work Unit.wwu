@@ -1,0 +1,531 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{0068F637-75D2-4DCF-A442-34947F9C8869}" SchemaVersion="103">
+	<AudioObjects>
+		<WorkUnit Name="Default Work Unit" ID="{0068F637-75D2-4DCF-A442-34947F9C8869}" PersistMode="Standalone">
+			<ChildrenList>
+				<Sound Name="aparece_torre_v1" ID="{9225B3EB-BBFC-421C-9799-8CD0276A3EB4}" ShortID="936057937">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4DDCC0E9-8918-4EF8-AD11-22C68F85E755}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E8FBD65D-B603-4940-A021-75BCF3D47498}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="aparece_torre_v1" ID="{696B936C-FF36-460B-9F07-56396A6C2B35}">
+							<Language>SFX</Language>
+							<AudioFile>aparece_torre_v1.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="900190173"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ObjectLists/>
+					<ActiveSourceList>
+						<ActiveSource Name="aparece_torre_v1" ID="{696B936C-FF36-460B-9F07-56396A6C2B35}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="aterriza_personaje_v1" ID="{95B385D3-0509-45C5-A361-B3C20BDD6620}" ShortID="251606014">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4DDCC0E9-8918-4EF8-AD11-22C68F85E755}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E8FBD65D-B603-4940-A021-75BCF3D47498}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="aterriza_personaje_v1" ID="{0305E1EF-538F-469F-887C-FE6062F83662}">
+							<Language>SFX</Language>
+							<AudioFile>aterriza_personaje_v1.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="529807827"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ObjectLists/>
+					<ActiveSourceList>
+						<ActiveSource Name="aterriza_personaje_v1" ID="{0305E1EF-538F-469F-887C-FE6062F83662}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="desaparece_torre_v1" ID="{7A96E510-3186-4322-B8D3-9732B656E513}" ShortID="918800130">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4DDCC0E9-8918-4EF8-AD11-22C68F85E755}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E8FBD65D-B603-4940-A021-75BCF3D47498}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="desaparece_torre_v1" ID="{04BDABEF-B497-4855-A27E-42E2606175F2}">
+							<Language>SFX</Language>
+							<AudioFile>desaparece_torre_v1.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="592969696"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ObjectLists/>
+					<ActiveSourceList>
+						<ActiveSource Name="desaparece_torre_v1" ID="{04BDABEF-B497-4855-A27E-42E2606175F2}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="impacto_a_enemigo_v1" ID="{7A840B79-CDEF-4B42-82B7-07CAD5DE6478}" ShortID="917604334">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4DDCC0E9-8918-4EF8-AD11-22C68F85E755}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E8FBD65D-B603-4940-A021-75BCF3D47498}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="impacto_a_enemigo_v1" ID="{7C1A9926-A82E-4C4D-8771-8BB6682BED01}">
+							<Language>SFX</Language>
+							<AudioFile>impacto_a_enemigo_v1.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="214972885"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ObjectLists/>
+					<ActiveSourceList>
+						<ActiveSource Name="impacto_a_enemigo_v1" ID="{7C1A9926-A82E-4C4D-8771-8BB6682BED01}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="lanza_aguja_v1" ID="{EBAE1AF7-070D-4011-9383-093F0D658EFC}" ShortID="732435552">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4DDCC0E9-8918-4EF8-AD11-22C68F85E755}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E8FBD65D-B603-4940-A021-75BCF3D47498}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="lanza_aguja_v1" ID="{97A5C59C-1B3D-4127-B239-A22FD0F9040C}">
+							<Language>SFX</Language>
+							<AudioFile>lanza_aguja_v1.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="32912149"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ObjectLists/>
+					<ActiveSourceList>
+						<ActiveSource Name="lanza_aguja_v1" ID="{97A5C59C-1B3D-4127-B239-A22FD0F9040C}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<RandomSequenceContainer Name="muere_arana" ID="{80483BC5-7833-428C-AE93-BCEA4EFE67E5}" ShortID="747979732">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4DDCC0E9-8918-4EF8-AD11-22C68F85E755}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E8FBD65D-B603-4940-A021-75BCF3D47498}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<Sound Name="muere_arana_01_v1" ID="{260A96DB-F152-492F-8399-E6338117E896}" ShortID="380356247">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4DDCC0E9-8918-4EF8-AD11-22C68F85E755}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E8FBD65D-B603-4940-A021-75BCF3D47498}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="muere_arana_01_v1" ID="{7C24DF85-9A31-4775-B1CE-E48BD58BED33}">
+									<Language>SFX</Language>
+									<AudioFile>muere_arana_01_v1.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="376265599"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="muere_arana_01_v1" ID="{7C24DF85-9A31-4775-B1CE-E48BD58BED33}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="muere_arana_02_v1" ID="{81E63D31-A3BE-4ABD-A2B3-A581C0F15423}" ShortID="312176963">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4DDCC0E9-8918-4EF8-AD11-22C68F85E755}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E8FBD65D-B603-4940-A021-75BCF3D47498}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="muere_arana_02_v1" ID="{5A0009B0-F55E-4773-878E-C542EC3607F0}">
+									<Language>SFX</Language>
+									<AudioFile>muere_arana_02_v1.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="795560534"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="muere_arana_02_v1" ID="{5A0009B0-F55E-4773-878E-C542EC3607F0}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="muere_arana_03_v1" ID="{C409A422-B396-49A7-8F19-41A4310F5AEB}" ShortID="945032778">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4DDCC0E9-8918-4EF8-AD11-22C68F85E755}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E8FBD65D-B603-4940-A021-75BCF3D47498}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="muere_arana_03_v1" ID="{C0D328F0-D0CF-461B-95A3-47F62C3A8533}">
+									<Language>SFX</Language>
+									<AudioFile>muere_arana_03_v1.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="267307929"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="muere_arana_03_v1" ID="{C0D328F0-D0CF-461B-95A3-47F62C3A8533}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
+					<ObjectLists/>
+				</RandomSequenceContainer>
+				<Sound Name="palanca_torre1_v1" ID="{403A06DE-6E6C-46B8-8237-D630594F1A93}" ShortID="528865341">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4DDCC0E9-8918-4EF8-AD11-22C68F85E755}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E8FBD65D-B603-4940-A021-75BCF3D47498}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="palanca_torre1_v1" ID="{D49F6B66-DBBB-465A-B1EB-B14D6FA9DB4C}">
+							<Language>SFX</Language>
+							<AudioFile>palanca_torre1_v1.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="881692936"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ObjectLists/>
+					<ActiveSourceList>
+						<ActiveSource Name="palanca_torre1_v1" ID="{D49F6B66-DBBB-465A-B1EB-B14D6FA9DB4C}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<RandomSequenceContainer Name="pasos_personaje" ID="{69D7B720-B4E5-4880-9A14-99BCCDB71A06}" ShortID="570495868">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4DDCC0E9-8918-4EF8-AD11-22C68F85E755}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E8FBD65D-B603-4940-A021-75BCF3D47498}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<Sound Name="paso_personaje_01_v1" ID="{F58E7597-25E8-491A-AB10-233365D43FAB}" ShortID="663970711">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4DDCC0E9-8918-4EF8-AD11-22C68F85E755}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E8FBD65D-B603-4940-A021-75BCF3D47498}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="paso_personaje_01_v1" ID="{531BC280-4F04-44A2-A98D-6C8552320047}">
+									<Language>SFX</Language>
+									<AudioFile>paso_personaje_01_v1.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="297702866"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="paso_personaje_01_v1" ID="{531BC280-4F04-44A2-A98D-6C8552320047}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="paso_personaje_02_v1" ID="{56068237-E91B-426B-A060-EA11798712E0}" ShortID="745630569">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4DDCC0E9-8918-4EF8-AD11-22C68F85E755}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E8FBD65D-B603-4940-A021-75BCF3D47498}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="paso_personaje_02_v1" ID="{749F3A95-B27B-42FF-B761-45577B21E6C1}">
+									<Language>SFX</Language>
+									<AudioFile>paso_personaje_02_v1.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="631171849"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="paso_personaje_02_v1" ID="{749F3A95-B27B-42FF-B761-45577B21E6C1}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="paso_personaje_03_v1" ID="{72FC0193-BF9E-4358-A701-1F9E7524CF43}" ShortID="33392525">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4DDCC0E9-8918-4EF8-AD11-22C68F85E755}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E8FBD65D-B603-4940-A021-75BCF3D47498}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="paso_personaje_03_v1" ID="{41CB2F47-91E7-48E6-9A16-5221DB3B26DE}">
+									<Language>SFX</Language>
+									<AudioFile>paso_personaje_03_v1.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="625218915"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="paso_personaje_03_v1" ID="{41CB2F47-91E7-48E6-9A16-5221DB3B26DE}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="paso_personaje_04_v1" ID="{825DFDD2-D8AC-4159-8CD6-447AC3AF5661}" ShortID="539419467">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4DDCC0E9-8918-4EF8-AD11-22C68F85E755}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E8FBD65D-B603-4940-A021-75BCF3D47498}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="paso_personaje_04_v1" ID="{D3DCF4DD-0829-4FF0-A36F-E51E607D540C}">
+									<Language>SFX</Language>
+									<AudioFile>paso_personaje_04_v1.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="976685486"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="paso_personaje_04_v1" ID="{D3DCF4DD-0829-4FF0-A36F-E51E607D540C}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="paso_personaje_05_v1" ID="{7B800BE2-2E9D-41C3-869D-BB24E73F6250}" ShortID="154434549">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4DDCC0E9-8918-4EF8-AD11-22C68F85E755}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E8FBD65D-B603-4940-A021-75BCF3D47498}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="paso_personaje_05_v1" ID="{BE7993A8-F217-456B-8E20-DA730E66E6B6}">
+									<Language>SFX</Language>
+									<AudioFile>paso_personaje_05_v1.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="557317516"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="paso_personaje_05_v1" ID="{BE7993A8-F217-456B-8E20-DA730E66E6B6}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="paso_personaje_06_v1" ID="{294A1B9D-D63F-4EB5-8A33-36353B994A23}" ShortID="394550361">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4DDCC0E9-8918-4EF8-AD11-22C68F85E755}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E8FBD65D-B603-4940-A021-75BCF3D47498}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="paso_personaje_06_v1" ID="{98BFD58A-E06F-4C32-9E2B-5B6C05FFDDA9}">
+									<Language>SFX</Language>
+									<AudioFile>paso_personaje_06_v1.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="330122768"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="paso_personaje_06_v1" ID="{98BFD58A-E06F-4C32-9E2B-5B6C05FFDDA9}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="paso_personaje_07_v1" ID="{9B2F3CC2-08B9-4F9C-A9F7-74F321C6CABC}" ShortID="198972230">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4DDCC0E9-8918-4EF8-AD11-22C68F85E755}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E8FBD65D-B603-4940-A021-75BCF3D47498}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="paso_personaje_07_v1" ID="{430F2AFC-252C-4EC8-9F62-000E72EFEB2D}">
+									<Language>SFX</Language>
+									<AudioFile>paso_personaje_07_v1.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="914498966"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="paso_personaje_07_v1" ID="{430F2AFC-252C-4EC8-9F62-000E72EFEB2D}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="paso_personaje_08_v1" ID="{5E3C52E0-27BC-4A0E-8463-C5B9E0F745F6}" ShortID="987683077">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4DDCC0E9-8918-4EF8-AD11-22C68F85E755}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E8FBD65D-B603-4940-A021-75BCF3D47498}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="paso_personaje_08_v1" ID="{C5C32290-7E88-45B6-A022-532E27B0B8D3}">
+									<Language>SFX</Language>
+									<AudioFile>paso_personaje_08_v1.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="293079254"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="paso_personaje_08_v1" ID="{C5C32290-7E88-45B6-A022-532E27B0B8D3}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="paso_personaje_09_v1" ID="{4F4C074E-7613-42D7-9FE4-AFABE51DC6F0}" ShortID="57195836">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4DDCC0E9-8918-4EF8-AD11-22C68F85E755}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E8FBD65D-B603-4940-A021-75BCF3D47498}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="paso_personaje_09_v1" ID="{C0281607-95B5-4B52-AFD5-D19662F1D759}">
+									<Language>SFX</Language>
+									<AudioFile>paso_personaje_09_v1.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="888477466"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="paso_personaje_09_v1" ID="{C0281607-95B5-4B52-AFD5-D19662F1D759}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
+					<ObjectLists/>
+				</RandomSequenceContainer>
+				<Sound Name="recibe_dano_v1" ID="{BE5144A0-7F93-4461-93D0-94A90B049F9C}" ShortID="229753493">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4DDCC0E9-8918-4EF8-AD11-22C68F85E755}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E8FBD65D-B603-4940-A021-75BCF3D47498}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="recibe_dano_v1" ID="{9E0F2BA6-8B70-4A83-A29C-C1519B8FFB7B}">
+							<Language>SFX</Language>
+							<AudioFile>recibe_dano_v1.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="788098474"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ObjectLists/>
+					<ActiveSourceList>
+						<ActiveSource Name="recibe_dano_v1" ID="{9E0F2BA6-8B70-4A83-A29C-C1519B8FFB7B}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<RandomSequenceContainer Name="recoge_botones" ID="{017567BE-C328-42EF-9553-7D6410AE2048}" ShortID="628948476">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4DDCC0E9-8918-4EF8-AD11-22C68F85E755}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E8FBD65D-B603-4940-A021-75BCF3D47498}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<Sound Name="recoge_botones_01_v1" ID="{0F115296-14A6-4685-AF75-2FAD30CE00C2}" ShortID="71271877">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4DDCC0E9-8918-4EF8-AD11-22C68F85E755}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E8FBD65D-B603-4940-A021-75BCF3D47498}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="recoge_botones_01_v1" ID="{7F27284F-39BF-448B-83B4-D0147DC83A20}">
+									<Language>SFX</Language>
+									<AudioFile>recoge_botones_01_v1.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="1006839415"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="recoge_botones_01_v1" ID="{7F27284F-39BF-448B-83B4-D0147DC83A20}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="recoge_botones_02_v1" ID="{FD7479A6-68A1-42AD-AA93-5166DECB3496}" ShortID="277387477">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4DDCC0E9-8918-4EF8-AD11-22C68F85E755}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E8FBD65D-B603-4940-A021-75BCF3D47498}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="recoge_botones_02_v1" ID="{D92BC4F8-2088-49FE-A68E-A475FCFCC21E}">
+									<Language>SFX</Language>
+									<AudioFile>recoge_botones_02_v1.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="897208615"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="recoge_botones_02_v1" ID="{D92BC4F8-2088-49FE-A68E-A475FCFCC21E}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
+					<ObjectLists/>
+				</RandomSequenceContainer>
+			</ChildrenList>
+		</WorkUnit>
+	</AudioObjects>
+</WwiseDocument>
