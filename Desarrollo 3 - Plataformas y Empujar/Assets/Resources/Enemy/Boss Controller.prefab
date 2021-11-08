@@ -124,8 +124,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6327477697688024719}
-  - component: {fileID: 1680010386917003381}
   - component: {fileID: 4525952357395642554}
+  - component: {fileID: -7805393500264589950}
   m_Layer: 13
   m_Name: Boss Controller
   m_TagString: Untagged
@@ -149,28 +149,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1680010386917003381
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6327477697688024723}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b66f5026e3ca676458c99ddd27a530ee, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cam: {fileID: 0}
-  damage: 2
-  attackDelay: 0.25
-  attackCooldown: 1
-  attackCooldownTimer: 0
-  attackRange: 5
-  attackConeAngle: 45
-  hasAttacked: 0
-  targetInAttackRange: 0
-  target: {fileID: 0}
 --- !u!195 &4525952357395642554
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -193,6 +171,29 @@ NavMeshAgent:
   m_BaseOffset: 0.5
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!114 &-7805393500264589950
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6327477697688024723}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 588c15489ac9589468a31146bd53ce91, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cam: {fileID: 0}
+  rbody: {fileID: 0}
+  hasAttacked: 0
+  targetInAttackRange: 0
+  target: {fileID: 0}
+  damage: 1
+  meleeDelay: 0.5
+  meleeCooldown: 1.5
+  meleeCooldownTimer: 0
+  meleeRange: 5
+  meleeConeAngle: 90
 --- !u!1 &8074776022149212809
 GameObject:
   m_ObjectHideFlags: 0
@@ -220,7 +221,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8074776022149212809}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.025, z: 0}
+  m_LocalPosition: {x: 0.47, y: 0.51, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 6327477697688024719}
@@ -255,7 +256,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   life: 20
-  isLive: 1
 --- !u!136 &2738753996714814416
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -266,7 +266,7 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 1.54
-  m_Height: 2
+  m_Radius: 1.87
+  m_Height: 3.3
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}

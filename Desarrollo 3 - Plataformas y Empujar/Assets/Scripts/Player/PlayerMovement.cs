@@ -159,7 +159,7 @@ public class PlayerMovement : MonoBehaviour
 
         while (Time.time< startTime + dashTime)
         {
-            controller.Move(movement * 2);
+            controller.Move(movement*Time.deltaTime*currentSpeed* 2);
             yield return null;
         }
 
