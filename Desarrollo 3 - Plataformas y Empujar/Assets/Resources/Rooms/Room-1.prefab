@@ -679,13 +679,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   toSpawn:
-  - enemy: {fileID: 5677984711528228809, guid: ac5c26c384d86084a90a4b4d3220f817, type: 3}
+  - enemy: {fileID: 1899568296637910892, guid: 21c90078cb412984387b0a2e74b99e3d, type: 3}
     transform: {fileID: 1046345723797768396}
-  - enemy: {fileID: 5677984711528228809, guid: ac5c26c384d86084a90a4b4d3220f817, type: 3}
+  - enemy: {fileID: 1899568296637910892, guid: 21c90078cb412984387b0a2e74b99e3d, type: 3}
     transform: {fileID: 2572414003212914697}
-  - enemy: {fileID: 5677984711528228809, guid: ac5c26c384d86084a90a4b4d3220f817, type: 3}
+  - enemy: {fileID: 911384526809165171, guid: 3a750359a70eac64a9df72c6929faa40, type: 3}
     transform: {fileID: 2796823268280696157}
-  - enemy: {fileID: 5677984711528228809, guid: ac5c26c384d86084a90a4b4d3220f817, type: 3}
+  - enemy: {fileID: 6931385904930993835, guid: 4b552cc6fcc986940920bdd5169c794a, type: 3}
     transform: {fileID: 4468931784026145289}
   enemiesSpawned: []
 --- !u!1001 &7796902876033268515

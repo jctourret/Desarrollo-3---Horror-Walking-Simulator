@@ -136,13 +136,13 @@ MonoBehaviour:
   hasAttacked: 0
   targetInAttackRange: 0
   target: {fileID: 0}
-  rangedDelay: 0.5
   rangedCooldown: 1
   rangedCooldownTimer: 0
   rangedRange: 3
   shotHeight: 1.5
-  projectile: {fileID: 0}
-  shotPoint: {fileID: 0}
+  projectile: {fileID: 383353154172759919, guid: 715d1fd8e38814841a46f5de71d9219d,
+    type: 3}
+  shotPoint: {fileID: 6931385904869768110}
 --- !u!1 &6931385905656406800
 GameObject:
   m_ObjectHideFlags: 0

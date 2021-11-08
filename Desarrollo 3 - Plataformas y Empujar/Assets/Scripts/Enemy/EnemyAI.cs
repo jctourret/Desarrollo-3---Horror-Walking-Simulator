@@ -77,7 +77,7 @@ public class EnemyAI : MonoBehaviour
 
         return velocityY + velocityXZ;
     }
-    public void pilarFalls()
+    public void Fall()
     {
         if(agent != null)
         {

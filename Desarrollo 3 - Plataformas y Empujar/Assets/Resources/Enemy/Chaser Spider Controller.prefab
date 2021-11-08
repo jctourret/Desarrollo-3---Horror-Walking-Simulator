@@ -165,11 +165,11 @@ MonoBehaviour:
   targetInAttackRange: 0
   target: {fileID: 0}
   damage: 1
-  meleeDelay: 0
-  meleeCooldown: 0
+  meleeDelay: 1
+  meleeCooldown: 1
   meleeCooldownTimer: 0
-  meleeRange: 0
-  meleeConeAngle: 0
+  meleeRange: 2
+  meleeConeAngle: 45
 --- !u!1 &1899568296933524205
 GameObject:
   m_ObjectHideFlags: 0

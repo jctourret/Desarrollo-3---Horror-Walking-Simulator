@@ -63,7 +63,6 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-
     void MoveInput()
     {
         isGrounded = controller.isGrounded;

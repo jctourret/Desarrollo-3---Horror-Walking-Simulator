@@ -68,6 +68,7 @@ public class PillarsBehaviour : Pillar
             room = LoaderManager.Get().GetARoom();
 
             var go = Instantiate(room, parentRoom);
+            room = go;
             go.transform.name = room.name;
         }
     }
@@ -99,6 +100,7 @@ public class PillarsBehaviour : Pillar
             else
             {
                 pillarState = PillarState.MoveDown;
+                room.GetComponentInChildren<SpawnEnemies>().EnemiesInRoomFall();
                 StartCoroutine(MoveDownPillar());
             }
         }

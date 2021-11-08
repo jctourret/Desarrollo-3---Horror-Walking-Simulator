@@ -27,6 +27,14 @@ public class SpawnEnemies : MonoBehaviour
             go.GetComponent<EnemyAI>().cam = EnemyManager.instance.cam;
         }
     }
+
+    public void EnemiesInRoomFall()
+    {
+        for (int i = 0; i < enemiesSpawned.Count-1; i++)
+        {
+            enemiesSpawned[i].Fall();
+        }
+    }
 }
 
 [System.Serializable]

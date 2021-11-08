@@ -178,12 +178,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30821e63352a96f4db0db6b545c58899, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movementSpeed: 5.5
+  currentSpeed: 6
+  normalSpeed: 6
+  minSpeed: 2
   dashTime: 0.75
   playerVelocity: {x: 0, y: 0, z: 0}
   gravity: -25
   fallDeath: -12
-  maxJumpHeight: 2
+  maxJumpHeight: 1.7
   lastDirection: 0
   interactionRadius: 0
   displayRadius: 0
