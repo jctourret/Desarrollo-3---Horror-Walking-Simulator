@@ -26,6 +26,8 @@ public class NeedleBehaviour : MonoBehaviour
 
         if (collision.transform.GetComponent<IDamageable>() != null)
             collision.transform.GetComponent<IDamageable>().TakeDamage(damage);
+        else
+            Debug.Log("No lo detecta");
     }
 
     IEnumerator StopNeedle()
