@@ -153,6 +153,10 @@ public class PillarsManager : MonoBehaviour
 
         // ---
 
+        // new Vecto3 (1.0.1) * scale
+        // new pos = vectorscale + listaDeOffsets[spawnDirection]
+        // newpos.x = vectorScale.x * Mathf.sign(listaDeOffset[spawndirection].x) + listaDeOffset[spawndirection].x
+
         switch (spawnDirection)
         {
             case SpawnDirection.Up:

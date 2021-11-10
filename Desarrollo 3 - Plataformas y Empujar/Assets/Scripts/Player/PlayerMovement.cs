@@ -17,6 +17,7 @@ public class PlayerMovement : MonoBehaviour
     private bool isSlowed;
     private bool controllable;
     private bool isGrounded;
+    private bool inAir = false;
 
     [Header("Gravity")]
     [SerializeField] private float gravity;
@@ -66,9 +67,20 @@ public class PlayerMovement : MonoBehaviour
     void MoveInput()
     {
         isGrounded = controller.isGrounded;
+
         if (isGrounded && playerVelocity.y < 0)
         {
             playerVelocity.y = -2f;
+
+            if (inAir)
+            {
+                inAir = false;
+                AkSoundEngine.PostEvent("aterriza_personaje", gameObject);
+            }
+        }
+        else
+        {
+            inAir = true;
         }
 
         if (controllable)
@@ -78,6 +90,7 @@ public class PlayerMovement : MonoBehaviour
             move = Vector3.ClampMagnitude(move, 1);
             float magnitude = move.magnitude;
             animator.SetFloat("Magnitude", magnitude);
+
             if(magnitude < 0.001)
             {
                 animator.SetFloat("lastDirY",move.z);
@@ -87,6 +100,8 @@ public class PlayerMovement : MonoBehaviour
             {
                 animator.SetFloat("Horizontal",move.x);
                 animator.SetFloat("Vertical",move.z);
+
+                //AkSoundEngine.PostEvent("pasos_personaje", gameObject);
             }
 
             controller.Move(move * Time.deltaTime * currentSpeed);
@@ -107,12 +122,12 @@ public class PlayerMovement : MonoBehaviour
 
             if (playerVelocity.y < 0)
             {
-                animator.SetBool("Falling",true);
-                animator.SetBool("Jumping",false);
+                animator.SetBool("Jumping", false);
+                animator.SetBool("Falling", true);
             }
             else
             {
-                animator.SetBool("Jumping",true);
+                animator.SetBool("Jumping", true);
                 animator.SetBool("Falling", false);
             }
             controller.Move(playerVelocity * Time.deltaTime);
