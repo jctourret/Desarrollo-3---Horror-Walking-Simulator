@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class EnemyStats : MonoBehaviour, IDamageable
 {
@@ -16,20 +14,23 @@ public class EnemyStats : MonoBehaviour, IDamageable
 
         if (life <= 0)
             Eliminated();
+        else
+            AkSoundEngine.PostEvent("recibe_dano", gameObject);
     }
 
     public void Eliminated()
     {
         //this.transform.GetComponent<Collider>().enabled = false; //El jefe NO TIENE un boxCollider, tiene un capsuleCollider
 
-        // <-- Acá se llama a la animacion de muerte
-
-
         if (!alive)
         {
-            Debug.LogError("Algo pasa");
+            Debug.LogError("Eliminacion incorrecta de ARAÑA: EnemyStats.cs");
             return;
         }
+
+        // <-- Acá se llama a la animacion de muerte
+
+        AkSoundEngine.PostEvent("muere_araña", gameObject);
 
         alive = false;
 

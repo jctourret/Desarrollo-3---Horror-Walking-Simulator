@@ -32,6 +32,8 @@ public class Basic_ItemReward : Collectable
                     Destroy(this.gameObject);
                     break;
             }
+
+            AkSoundEngine.PostEvent("recoge_botones", gameObject);
         }
     }
 }

@@ -180,8 +180,14 @@ public class PlayerStats : MonoBehaviour, IDamageable
     {
         if (lives <= 0)
         {
-            Destroy(gameObject);
+            AkSoundEngine.PostEvent("muere_personaje", gameObject);
+            //Destroy(gameObject);
+            gameObject.SetActive(false);
             OnPlayerDamageDeath?.Invoke();
+        }
+        else
+        {
+            AkSoundEngine.PostEvent("impacto_enemigo", gameObject);
         }
     }
 

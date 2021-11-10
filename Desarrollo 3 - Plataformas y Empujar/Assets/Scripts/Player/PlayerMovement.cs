@@ -60,7 +60,9 @@ public class PlayerMovement : MonoBehaviour
         if (transform.position.y < fallDeath && controllable)
         {
             OnPlayerFallDeath?.Invoke();
-            Destroy(gameObject);
+            AkSoundEngine.PostEvent("caida_personaje", gameObject);
+            gameObject.SetActive(false);
+            //Destroy(gameObject);
         }
     }
 
@@ -100,8 +102,6 @@ public class PlayerMovement : MonoBehaviour
             {
                 animator.SetFloat("Horizontal",move.x);
                 animator.SetFloat("Vertical",move.z);
-
-                //AkSoundEngine.PostEvent("pasos_personaje", gameObject);
             }
 
             controller.Move(move * Time.deltaTime * currentSpeed);

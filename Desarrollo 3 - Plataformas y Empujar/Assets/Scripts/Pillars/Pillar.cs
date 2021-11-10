@@ -41,6 +41,8 @@ public class Pillar : MonoBehaviour
     public virtual void Start()
     {
         pillarState = PillarState.MoveUp;
+
+        AkSoundEngine.PostEvent("aparece_torre", gameObject);
     }
 
     //===============================================
@@ -70,6 +72,7 @@ public class Pillar : MonoBehaviour
     public virtual IEnumerator MoveDownPillar()
     {
         animator.SetTrigger("Change");
+        AkSoundEngine.PostEvent("desaparece_torre", gameObject);
         yield return new WaitForSeconds(delayTime);
         Destroy(this.gameObject);
     }

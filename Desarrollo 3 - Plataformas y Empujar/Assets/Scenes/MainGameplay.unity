@@ -3655,11 +3655,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player Controller
       objectReference: {fileID: 0}
-    - target: {fileID: 4811712953323765601, guid: aa69266d657d4c94a8b9d9878dcbcd85,
-        type: 3}
-      propertyPath: m_listeners.initialListenerList.Array.size
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: aa69266d657d4c94a8b9d9878dcbcd85, type: 3}
 --- !u!114 &175916143614632853 stripped
@@ -3786,6 +3781,12 @@ PrefabInstance:
       propertyPath: delay
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 3995862250807983600, guid: c9e6097dd78241847a77f06c471996a4,
+        type: 3}
+      propertyPath: data.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: 2f74163540d3ed746be9f5770fae2dac,
+        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c9e6097dd78241847a77f06c471996a4, type: 3}
 --- !u!1 &2025512200630633457 stripped
