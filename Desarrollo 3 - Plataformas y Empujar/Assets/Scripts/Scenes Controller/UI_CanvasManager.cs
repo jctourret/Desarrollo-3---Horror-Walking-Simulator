@@ -1,8 +1,11 @@
-﻿using UnityEngine;
+﻿using System.Collections.Generic;
+using UnityEngine;
 
-public class CanvasManager : MonoBehaviour
+public class UI_CanvasManager : MonoBehaviour
 {
     public GameObject deathBox;
+
+    public List<GameObject> playerUI = new List<GameObject>();
 
     private void OnEnable()
     {
@@ -18,9 +21,12 @@ public class CanvasManager : MonoBehaviour
 
     void enableDeathBox()
     {
-        deathBox.SetActive(true);
-
         deathBox.GetComponent<Animator>().SetTrigger("Death");
+
+        foreach (GameObject item in playerUI)
+        {
+            item.SetActive(false);
+        }
     }
 
 }

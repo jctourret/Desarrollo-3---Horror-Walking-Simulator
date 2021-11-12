@@ -1,8 +1,6 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
-public class PauseController : MonoBehaviour
+public class UI_PauseController : MonoBehaviour
 {
     public string escapeKey = "Pause";
     public GameObject pauseLayer;

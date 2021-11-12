@@ -261,8 +261,7 @@ MonoBehaviour:
   target: {fileID: 0}
   damage: 1
   meleeDelay: 1
-  meleeCooldown: 1
-  meleeCooldownTimer: 0
+  meleeCooldown: 1.5
   meleeRange: 2
   meleeConeAngle: 45
 --- !u!1 &1899568296933524205
@@ -277,6 +276,7 @@ GameObject:
   - component: {fileID: 1899568296933524201}
   - component: {fileID: 1899568296933524200}
   - component: {fileID: 1899568296933524203}
+  - component: {fileID: 3240230316459033652}
   m_Layer: 13
   m_Name: Visual
   m_TagString: Untagged
@@ -380,3 +380,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cam: {fileID: 0}
+--- !u!114 &3240230316459033652
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1899568296933524205}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25e18bdc3589ada489d28c0d92fbd1c5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

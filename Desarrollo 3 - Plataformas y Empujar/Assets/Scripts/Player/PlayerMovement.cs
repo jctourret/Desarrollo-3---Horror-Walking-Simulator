@@ -34,6 +34,7 @@ public class PlayerMovement : MonoBehaviour
 
     private CharacterController controller;
     private Animator animator;
+    private PlayerStats player;
 
     //==============================================
 
@@ -41,6 +42,7 @@ public class PlayerMovement : MonoBehaviour
     {
         controller = GetComponent<CharacterController>();
         animator = GetComponentInChildren<Animator>();
+        player = GetComponent<PlayerStats>();
         controllable = false;
 
         //controller.Move(transform.position);
@@ -61,7 +63,10 @@ public class PlayerMovement : MonoBehaviour
         {
             OnPlayerFallDeath?.Invoke();
             AkSoundEngine.PostEvent("caida_personaje", gameObject);
-            gameObject.SetActive(false);
+
+            player.TakeDamage(player.GetLives());
+
+            //gameObject.SetActive(false);
             //Destroy(gameObject);
         }
     }

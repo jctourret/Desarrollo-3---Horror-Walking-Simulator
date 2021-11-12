@@ -48,57 +48,6 @@ public class PlayerStats : MonoBehaviour, IDamageable
         rend = GetComponentInChildren<SpriteRenderer>();
     }
 
-    /// <summary>
-    /// Testeo de Daño
-    void Update()
-    {
-        /// Cura Vida:
-        if (Input.GetKeyDown(KeyCode.P))
-        {
-            TakeDamage(1);
-            Debug.Log("Se daño Magicamente 1!");
-        }
-        if (Input.GetKeyDown(KeyCode.O))
-        {
-            TakeDamage(2);
-            Debug.Log("Se daño Magicamente 2!");
-        }
-
-        /// Aumenta Dinero:
-        if (Input.GetKeyDown(KeyCode.L))
-        {
-            EarnLive(1);
-            Debug.Log("Se curo Magicamente 1!");
-        }
-        if (Input.GetKeyDown(KeyCode.K))
-        {
-            EarnLive(2);
-            Debug.Log("Se curo Magicamente 2!");
-        }
-
-        /// Aumenta Vida Maxima:
-        if (Input.GetKeyDown(KeyCode.M))
-        {
-            EarnMaxLives(1, true);
-            Debug.Log("Tiene mas Vida Magicamente 1!");
-        }
-
-        /// Reduce Vida Maxima:
-        if (Input.GetKeyDown(KeyCode.N))
-        {
-            LoseMaxLife(1);
-            Debug.Log("Perdiste Vida Maxima Magicamente 2!");
-        }
-
-        /// Aumenta Dinero:
-        if (Input.GetKeyDown(KeyCode.I))
-        {
-            EarnPlayerMoney(1);
-            Debug.Log("Se Sumo Dinero Magicamente!");
-        }
-    }
-    /// </summary>
-    /// 
     public int GetMaxLives()
     {
         return maxLives;
@@ -182,7 +131,7 @@ public class PlayerStats : MonoBehaviour, IDamageable
         {
             AkSoundEngine.PostEvent("muere_personaje", gameObject);
             //Destroy(gameObject);
-            gameObject.SetActive(false);
+            //gameObject.SetActive(false);
             OnPlayerDamageDeath?.Invoke();
         }
         else

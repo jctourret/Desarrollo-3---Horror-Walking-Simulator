@@ -1,5 +1,4 @@
-﻿using System;
-using UnityEngine.AI;
+﻿using UnityEngine.AI;
 using UnityEngine;
 
 public class PillarsManager : MonoBehaviour
