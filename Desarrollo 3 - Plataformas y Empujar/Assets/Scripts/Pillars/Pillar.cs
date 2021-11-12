@@ -60,6 +60,7 @@ public class Pillar : MonoBehaviour
     public virtual IEnumerator WaitTime()
     {
         yield return new WaitForSeconds(delayTime);
+        AkSoundEngine.PostEvent("alarma_caida_torre", gameObject);
         timer = destroyTime;
         pillarState = PillarState.waiting;
     }

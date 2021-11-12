@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class CanvasManager : MonoBehaviour
 {
@@ -21,6 +19,8 @@ public class CanvasManager : MonoBehaviour
     void enableDeathBox()
     {
         deathBox.SetActive(true);
+
+        deathBox.GetComponent<Animator>().SetTrigger("Death");
     }
 
 }

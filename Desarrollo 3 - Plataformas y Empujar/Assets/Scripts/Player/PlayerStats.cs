@@ -187,7 +187,10 @@ public class PlayerStats : MonoBehaviour, IDamageable
         }
         else
         {
-            AkSoundEngine.PostEvent("impacto_enemigo", gameObject);
+            if(lives < (maxLives / 2))
+                AkSoundEngine.PostEvent("impacto_enemigo", gameObject);
+            else
+                AkSoundEngine.SetRTPCValue("Player_dañado", lives);
         }
     }
 
