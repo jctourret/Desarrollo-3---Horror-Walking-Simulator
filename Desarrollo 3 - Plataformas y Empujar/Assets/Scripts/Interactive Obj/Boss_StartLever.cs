@@ -66,7 +66,7 @@ public class Boss_StartLever : MonoBehaviour
 
     public void ActivateLever()
     {
-        ActivateObject.Invoke();
+        ActivateObject?.Invoke();
 
         spawnEnemies.Spawn();
     }

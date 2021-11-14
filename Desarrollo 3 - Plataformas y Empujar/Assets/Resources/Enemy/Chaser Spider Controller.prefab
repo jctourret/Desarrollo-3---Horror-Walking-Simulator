@@ -260,9 +260,9 @@ MonoBehaviour:
   targetInAttackRange: 0
   target: {fileID: 0}
   damage: 1
-  meleeDelay: 1
+  meleeDelay: 1.5
   meleeCooldown: 1.5
-  meleeRange: 2
+  meleeRange: 3
   meleeConeAngle: 45
 --- !u!1 &1899568296933524205
 GameObject:
