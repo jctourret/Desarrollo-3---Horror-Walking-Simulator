@@ -159,7 +159,7 @@ public class PillarsManager : MonoBehaviour
         switch (spawnDirection)
         {
             case SpawnDirection.Up:
-                newPosition = new Vector3(scale + distBetweenPillars, 0, scale + distBetweenPillars);
+                newPosition = new Vector3(scale + distBetweenPillars, 0, scale + distBetweenPillars); 
                 this.transform.position = this.transform.position + newPosition;                
                 break;
 

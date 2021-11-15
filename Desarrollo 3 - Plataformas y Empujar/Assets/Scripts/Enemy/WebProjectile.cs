@@ -29,6 +29,7 @@ public class WebProjectile : MonoBehaviour
         if(target != null)
         {
             StartCoroutine(target.Slow(slowStrength,slowDuration));
+            Destroy(gameObject);
         }
         if(collision.collider.gameObject.tag == "Terrain")
         {

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Pillar : MonoBehaviour
 {
-    [SerializeField] Animator animator;
+    [SerializeField] protected Animator animator;
 
     [Header("Delay Animation")]
     [Range(0, 2)]

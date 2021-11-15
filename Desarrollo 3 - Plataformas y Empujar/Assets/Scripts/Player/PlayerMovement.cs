@@ -120,7 +120,6 @@ public class PlayerMovement : MonoBehaviour
             {
                 playerVelocity.y += Mathf.Sqrt(maxJumpHeight * -3.0f * gravity); // Que es el 3?
             }
-            
 
             animator.SetBool("IsGrounded", isGrounded);
             playerVelocity.y += gravity * Time.deltaTime;
@@ -136,7 +135,6 @@ public class PlayerMovement : MonoBehaviour
                 animator.SetBool("Falling", false);
             }
             controller.Move(playerVelocity * Time.deltaTime);
-
 
             if (Input.GetKeyDown(KeyCode.LeftShift))
             {

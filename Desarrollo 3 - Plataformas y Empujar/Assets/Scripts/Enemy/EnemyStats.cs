@@ -3,15 +3,21 @@
 public class EnemyStats : MonoBehaviour, IDamageable
 {
     public int life = 10;
-
+    Animator animator;
     bool alive = true;
+
+    private void Start()
+    {
+        animator = GetComponentInChildren<Animator>();
+    }
 
     //==================================
 
     public void TakeDamage(int damage)
     {
         life -= damage;
-
+        animator.SetTrigger("Damaged");
+        Debug.LogError("Estoy recibiendo daño");
         if (life <= 0)
             Eliminated();
         else

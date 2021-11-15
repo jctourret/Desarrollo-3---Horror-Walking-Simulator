@@ -10,7 +10,7 @@ public class UI_PlayerUIController : MonoBehaviour
 
     [SerializeField] float distaceBettweenHearts = 10f;
     [SerializeField] PlayerStats playerStats;
-
+    
     [Header("Coins / Money")]
     [SerializeField] TextMeshProUGUI coinsText;
 

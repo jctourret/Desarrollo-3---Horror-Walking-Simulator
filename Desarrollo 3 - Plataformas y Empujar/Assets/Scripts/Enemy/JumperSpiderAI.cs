@@ -12,7 +12,12 @@ public class JumperSpiderAI : EnemyAI
     [SerializeField] float jumpCooldownTimer;
     [SerializeField] int damage = 1;
 
-    bool isGrounded;
+    [SerializeField] bool isGrounded;
+
+    private void Start()
+    {
+        rbody.isKinematic = false;
+    }
 
     // Update is called once per frame
     void Update()
@@ -21,7 +26,7 @@ public class JumperSpiderAI : EnemyAI
         if (target != null)
         {
             distance = Vector3.Distance(transform.position, target.transform.position);
-            if (!hasAttacked)
+            if (!hasAttacked && isGrounded)
             {
                 if (distance <= jumpDistance)
                 {
@@ -29,47 +34,36 @@ public class JumperSpiderAI : EnemyAI
                 }
                 else
                 {
-                    Vector3 jumpDirection = transform.position - target.transform.position;
+                    Vector3 jumpDirection = target.transform.position - transform.position;
                     Vector3 jumpTarget = jumpDirection.normalized * jumpDistance;
 
                     rbody.velocity = initialVelocity(transform.position, jumpTarget, jumpHeight);
                 }
             }
-            else
-            {
-                if (jumpCooldownTimer < jumpCooldown)
-                {
-                    jumpCooldownTimer += Time.deltaTime;
-                }
-                else
-                {
-                    hasAttacked = false;
-                    jumpCooldownTimer = 0.0f;
-                }
-            }
         }
+        DetectLanding();
     }
 
     void DetectLanding()
     {
-        RaycastHit hit;
-        if (Physics.Raycast(transform.position, Vector3.down, out hit, 1, LayerMask.GetMask()))
+        if (isGrounded)
         {
-            if (!isGrounded)
+            if (jumpCooldownTimer < jumpCooldown)
             {
-                JumpAttack();
+                jumpCooldownTimer += Time.deltaTime;
             }
-            isGrounded = true;
-        }
-        else
-        {
-            isGrounded = false;
+            else
+            {
+                hasAttacked = false;
+                jumpCooldownTimer = 0.0f;
+            }
         }
     }
 
     void JumpAttack()
     {
-        RaycastHit[] hit = Physics.SphereCastAll(transform.position, attackRadius, Vector3.zero, 1.0f);
+        RaycastHit[] hit = Physics.SphereCastAll(transform.position, attackRadius, Vector3.zero, 1.0f,LayerMask.GetMask("Enemy"));
+
         for(int i = 0; i < hit.Length; i++)
         {
             IDamageable damageable = hit[i].collider.GetComponent<IDamageable>();
@@ -78,5 +72,44 @@ public class JumperSpiderAI : EnemyAI
                 damageable.TakeDamage(damage);
             }
         }
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if(collision.collider.tag == "Terrain")
+        {
+            isGrounded = true;
+            rbody.velocity = Vector3.zero;
+            JumpAttack();
+        }
+    }
+
+    private void OnCollisionStay(Collision collision)
+    {
+        if (collision.collider.tag == "Terrain" && isGrounded)
+        {
+            if (jumpCooldownTimer < jumpCooldown)
+            {
+                jumpCooldownTimer += Time.deltaTime;
+            }
+            else
+            {
+                hasAttacked = false;
+                jumpCooldownTimer = 0.0f;
+            }
+        }
+    }
+
+    private void OnCollisionExit(Collision collision)
+    {
+        if (collision.collider.tag == "Terrain")
+        {
+            isGrounded = false;
+        }
+    }
+
+    private void OnDrawGizmos()
+    {
+        Gizmos.DrawRay(transform.position, Vector3.down);
     }
 }

@@ -8,7 +8,7 @@ public class EnemyAI : MonoBehaviour
     public static Action<GameObject> OnEnemySpawn;
     public Camera cam;
     protected NavMeshAgent agent;
-    Animator animator;
+    protected Animator animator;
     Collider coll;
 
     [SerializeField] protected Rigidbody rbody;
@@ -18,23 +18,17 @@ public class EnemyAI : MonoBehaviour
     public GameObject target;
     //======================================
 
-    private void OnEnable()
+    private void Awake()
     {
-        CameraBehaviour.OnSendCamera += GetCamera;
+        rbody = GetComponent<Rigidbody>();
+        
     }
-
-    private void OnDisable()
-    {
-        CameraBehaviour.OnSendCamera -= GetCamera;
-    }
-
     void Start()
     {
         agent = GetComponent<NavMeshAgent>();
         animator = GetComponentInChildren<Animator>();
-        coll = GetComponent<Collider>();
+        coll = GetComponentInChildren<Collider>();
         coll.isTrigger = true;
-        rbody = GetComponent<Rigidbody>();
         rbody.isKinematic = true;
         OnEnemySpawn?.Invoke(gameObject);
     }

@@ -53,11 +53,7 @@ public class ChaserSpiderAI : EnemyAI
 
     IEnumerator Bite(GameObject target)
     {
-        //float startTime = Time.time;
-        //while (Time.time < startTime + meleeDelay)
-        //{
-        //    yield return null;
-        //}
+        animator.SetTrigger("Attacked");
 
         Vector3 startTargetLocation = target.transform.position - transform.position;
 

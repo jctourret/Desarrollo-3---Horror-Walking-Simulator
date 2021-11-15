@@ -10,7 +10,7 @@ public class WebTrap : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        currentTarget = other.GetComponentInParent<PlayerMovement>();
+        currentTarget = other.gameObject.GetComponentInParent<PlayerMovement>();
         if (currentTarget != null)
         {
             currentTarget.Slow(slowStrength);
@@ -21,7 +21,7 @@ public class WebTrap : MonoBehaviour
     {
         if (currentTarget != null)
         {
-            if (other.GetComponent<PlayerMovement>() == currentTarget)
+            if (other.gameObject.GetComponentInParent<PlayerMovement>() == currentTarget)
             {
                 currentTarget.unSlow(slowStrength);
                 currentTarget = null;
