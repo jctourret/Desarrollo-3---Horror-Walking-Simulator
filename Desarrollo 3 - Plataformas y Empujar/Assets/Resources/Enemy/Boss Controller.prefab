@@ -299,8 +299,9 @@ GameObject:
   - component: {fileID: 6435447984147978695}
   - component: {fileID: 1692761408395772846}
   - component: {fileID: 5875446820287999866}
-  - component: {fileID: 4238287322493176742}
   - component: {fileID: 5716348147717529051}
+  - component: {fileID: 887423347682670654}
+  - component: {fileID: 2339924272448485404}
   m_Layer: 13
   m_Name: Collider
   m_TagString: Untagged
@@ -410,7 +411,7 @@ MonoBehaviour:
   data:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: afbc175f5cf022d4e914b348e3873aa1,
+    WwiseObjectReference: {fileID: 11400000, guid: 406b2de7658c8744fac06b2e96299ee3,
       type: 2}
   useCallbacks: 0
   Callbacks: []
@@ -445,42 +446,7 @@ MonoBehaviour:
   data:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: 406b2de7658c8744fac06b2e96299ee3,
-      type: 2}
-  useCallbacks: 0
-  Callbacks: []
-  playingId: 0
-  soundEmitterObject: {fileID: 0}
-  transitionDuration: 0
-  eventIdInternal: 0
-  valueGuidInternal: 
-  m_callbackDataInternal: {fileID: 0}
-  MultiPositionType: 1
-  multiPositionTypeLabel: 0
-  attenuationSphereColor: {r: 1, g: 0, b: 0, a: 0.1}
-  LargeModePositions: []
-  multiPositionArray: []
---- !u!114 &4238287322493176742
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8074776022149212809}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ad56231f54cd0724998f372d5c96ceaf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  triggerList: 
-  useOtherObject: 0
-  actionOnEventType: 0
-  curveInterpolation: 4
-  enableActionOnEvent: 0
-  data:
-    idInternal: 0
-    valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: 70c3020a742fd54418f90cbd4ee5c32e,
+    WwiseObjectReference: {fileID: 11400000, guid: afbc175f5cf022d4e914b348e3873aa1,
       type: 2}
   useCallbacks: 0
   Callbacks: []
@@ -516,6 +482,76 @@ MonoBehaviour:
     idInternal: 0
     valueGuidInternal: 
     WwiseObjectReference: {fileID: 11400000, guid: 1f2253c13c9c86e4198812ef431a085f,
+      type: 2}
+  useCallbacks: 0
+  Callbacks: []
+  playingId: 0
+  soundEmitterObject: {fileID: 0}
+  transitionDuration: 0
+  eventIdInternal: 0
+  valueGuidInternal: 
+  m_callbackDataInternal: {fileID: 0}
+  MultiPositionType: 1
+  multiPositionTypeLabel: 0
+  attenuationSphereColor: {r: 1, g: 0, b: 0, a: 0.1}
+  LargeModePositions: []
+  multiPositionArray: []
+--- !u!114 &887423347682670654
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8074776022149212809}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad56231f54cd0724998f372d5c96ceaf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerList: 
+  useOtherObject: 0
+  actionOnEventType: 0
+  curveInterpolation: 4
+  enableActionOnEvent: 0
+  data:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 4bf9b6c7f7320ed478c211a9ce605e56,
+      type: 2}
+  useCallbacks: 0
+  Callbacks: []
+  playingId: 0
+  soundEmitterObject: {fileID: 0}
+  transitionDuration: 0
+  eventIdInternal: 0
+  valueGuidInternal: 
+  m_callbackDataInternal: {fileID: 0}
+  MultiPositionType: 1
+  multiPositionTypeLabel: 0
+  attenuationSphereColor: {r: 1, g: 0, b: 0, a: 0.1}
+  LargeModePositions: []
+  multiPositionArray: []
+--- !u!114 &2339924272448485404
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8074776022149212809}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad56231f54cd0724998f372d5c96ceaf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerList: 
+  useOtherObject: 0
+  actionOnEventType: 0
+  curveInterpolation: 4
+  enableActionOnEvent: 0
+  data:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 70c3020a742fd54418f90cbd4ee5c32e,
       type: 2}
   useCallbacks: 0
   Callbacks: []

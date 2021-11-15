@@ -12,16 +12,16 @@ public class UI_MenuManager : MonoBehaviour
 
     public void GoToScene(string scene)
     {
-        ScenesLoaderHandler.LoadScene(scene);
-
         AkSoundEngine.PostEvent("menu_click_play", gameObject);
+
+        ScenesLoaderHandler.LoadScene(scene);
     }
 
     public void GoToSceneWithoutLoading(string scene)
     {
-        SceneManager.LoadScene(scene);
-
         AkSoundEngine.PostEvent("menu_click_otro", gameObject);
+
+        SceneManager.LoadScene(scene);
     }
 
     public void ChangeLayer(string name)

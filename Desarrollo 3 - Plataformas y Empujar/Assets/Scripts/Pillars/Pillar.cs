@@ -54,7 +54,7 @@ public class Pillar : MonoBehaviour
     {
         yield return new WaitForSeconds(delayTime);
 
-        //AkSoundEngine.PostEvent("pilar_alarma_caida", gameObject);
+        AkSoundEngine.PostEvent("pilar_alarma_caida", gameObject);
         
         timer = destroyTime;
 

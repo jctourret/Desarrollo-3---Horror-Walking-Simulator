@@ -1117,7 +1117,8 @@ MonoBehaviour:
   data:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 0}
+    WwiseObjectReference: {fileID: 11400000, guid: 367edf6f913d23a4cad963ac904d6877,
+      type: 2}
   useCallbacks: 0
   Callbacks: []
   playingId: 0
@@ -3552,7 +3553,8 @@ MonoBehaviour:
   data:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 0}
+    WwiseObjectReference: {fileID: 11400000, guid: b119c88f320d2e846888317901ed7c84,
+      type: 2}
   useCallbacks: 0
   Callbacks: []
   playingId: 0
@@ -4383,7 +4385,8 @@ MonoBehaviour:
   data:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 0}
+    WwiseObjectReference: {fileID: 11400000, guid: ff5bc8c0db10f55428f47dda1ce60fbf,
+      type: 2}
   useCallbacks: 0
   Callbacks: []
   playingId: 0
@@ -4868,7 +4871,8 @@ MonoBehaviour:
   data:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 0}
+    WwiseObjectReference: {fileID: 11400000, guid: 367edf6f913d23a4cad963ac904d6877,
+      type: 2}
   useCallbacks: 0
   Callbacks: []
   playingId: 0

@@ -50,6 +50,17 @@
 				</Event>
 				<Event Name="pilar_desaparece" ID="{580CB6DF-94C5-4085-A3EF-BEE836EA7249}">
 					<ChildrenList>
+						<Action Name="" ID="{CA734D53-814C-4F55-AEB1-0DB650BDE875}" ShortID="859752952">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+								<Property Name="FadeTime" Type="Real64" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Baby Crying Sounds Like Siren sfx" ID="{DD05EDA2-CFBB-4644-A0E5-68BB04D8CAD3}" WorkUnitID="{0068F637-75D2-4DCF-A442-34947F9C8869}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
 						<Action Name="" ID="{46E0A047-DA77-4E5C-94BB-9C4E9DC57F18}" ShortID="138204552">
 							<ReferenceList>
 								<Reference Name="Target">
@@ -123,6 +134,12 @@
 				</Event>
 				<Event Name="menu_musica_inicio" ID="{DBF122D9-679B-49F3-B349-3C76244401B3}">
 					<ChildrenList>
+						<Action Name="" ID="{B999BE9F-C150-43BB-99B3-3D00500AA87F}" ShortID="951453898">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="3"/>
+							</PropertyList>
+							<ReferenceList/>
+						</Action>
 						<Action Name="" ID="{FFF16033-723C-4ADA-BA31-8BED5F4B3909}" ShortID="921466814">
 							<ReferenceList>
 								<Reference Name="Target">
@@ -173,7 +190,7 @@
 						<Action Name="" ID="{C069B154-045E-41A7-B903-973C74B99B4B}" ShortID="25408183">
 							<PropertyList>
 								<Property Name="ActionType" Type="int16" Value="2"/>
-								<Property Name="FadeTime" Type="Real64" Value="0.5"/>
+								<Property Name="FadeTime" Type="Real64" Value="1"/>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
@@ -207,7 +224,7 @@
 					</ChildrenList>
 				</Event>
 				<Event Name="boss_movimiento" ID="{4A2D7198-377A-4117-9DBD-E0DAAAED7B75}"/>
-				<Event Name="pl" ID="{17FA0275-77C9-4136-86D4-AE32B91BD52E}">
+				<Event Name="player_recibe_dano" ID="{17FA0275-77C9-4136-86D4-AE32B91BD52E}">
 					<ChildrenList>
 						<Action Name="" ID="{3864E0C7-2C64-47FD-84D5-44845A0A0229}" ShortID="398563644">
 							<ReferenceList>
@@ -280,28 +297,8 @@
 						</Action>
 					</ChildrenList>
 				</Event>
-				<Event Name="partida_musica01_inicio" ID="{236A7FB7-A3D8-4597-9433-A069B2C51A49}">
-					<ChildrenList>
-						<Action Name="" ID="{3ED4950B-6C5A-4FE4-8F84-0B614D95F79D}" ShortID="579959765">
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="Mx01_To the Rescue_inicio" ID="{8A0FDEA1-7D98-440D-B612-89066634A504}" WorkUnitID="{0068F637-75D2-4DCF-A442-34947F9C8869}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-					</ChildrenList>
-				</Event>
-				<Event Name="loading_musica" ID="{301E1490-6091-43A0-8A48-3E2BF0A32A7E}">
-					<ChildrenList>
-						<Action Name="" ID="{A3F9D818-05EE-4840-914F-6E080F94682E}" ShortID="15834973">
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="AAIA 08 Atmos Tonal Stuttery Granular Ringing Drone" ID="{0F9B9063-87E5-446C-B1AD-1FADEE5422E6}" WorkUnitID="{0068F637-75D2-4DCF-A442-34947F9C8869}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-					</ChildrenList>
-				</Event>
+				<Event Name="partida_musica01_inicio" ID="{236A7FB7-A3D8-4597-9433-A069B2C51A49}"/>
+				<Event Name="loading_musica" ID="{301E1490-6091-43A0-8A48-3E2BF0A32A7E}"/>
 				<Event Name="loading_spacebar" ID="{83D6F01F-4E63-4AB5-9CE7-4F2E35857062}">
 					<ChildrenList>
 						<Action Name="" ID="{D0F23347-CE57-4724-997D-669F9CA420F2}" ShortID="43892867">
@@ -324,7 +321,7 @@
 						<Action Name="" ID="{379FB392-29A7-4521-A5C8-08327C26D536}" ShortID="845730347">
 							<PropertyList>
 								<Property Name="ActionType" Type="int16" Value="2"/>
-								<Property Name="FadeTime" Type="Real64" Value="1"/>
+								<Property Name="FadeTime" Type="Real64" Value="1.5"/>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
@@ -441,6 +438,16 @@
 								</Reference>
 							</ReferenceList>
 						</Action>
+						<Action Name="" ID="{C5DDDEC3-6154-4D47-B8E9-904B7424AE43}" ShortID="937263093">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="7"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Mx01_To the Rescue_inicio" ID="{8A0FDEA1-7D98-440D-B612-89066634A504}" WorkUnitID="{0068F637-75D2-4DCF-A442-34947F9C8869}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
 						<Action Name="" ID="{6E9D1557-4EAB-4714-8584-32E7354DF206}" ShortID="597619133">
 							<ReferenceList>
 								<Reference Name="Target">
@@ -478,6 +485,16 @@
 							<ReferenceList>
 								<Reference Name="Target">
 									<ObjectRef Name="Mx02_To the Rescue_enemigos" ID="{7F1F2FA9-3A1C-4255-96A1-93045653F31A}" WorkUnitID="{0068F637-75D2-4DCF-A442-34947F9C8869}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{80D20F9F-BDEB-48D3-86B8-6C7DD3C3EEA1}" ShortID="535411379">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="9"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Mx01_To the Rescue_inicio" ID="{8A0FDEA1-7D98-440D-B612-89066634A504}" WorkUnitID="{0068F637-75D2-4DCF-A442-34947F9C8869}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>

@@ -43,6 +43,8 @@ GameObject:
   - component: {fileID: 4201883463099021152}
   - component: {fileID: 9036614952615242090}
   - component: {fileID: 1123578229923980189}
+  - component: {fileID: 8824563790751755482}
+  - component: {fileID: 2816374436713451890}
   m_Layer: 0
   m_Name: Boss Pillar
   m_TagString: Untagged
@@ -149,6 +151,76 @@ MonoBehaviour:
     idInternal: 0
     valueGuidInternal: 
     WwiseObjectReference: {fileID: 11400000, guid: 4ee554f80dec43d4ead500087371872d,
+      type: 2}
+  useCallbacks: 0
+  Callbacks: []
+  playingId: 0
+  soundEmitterObject: {fileID: 0}
+  transitionDuration: 0
+  eventIdInternal: 0
+  valueGuidInternal: 
+  m_callbackDataInternal: {fileID: 0}
+  MultiPositionType: 1
+  multiPositionTypeLabel: 0
+  attenuationSphereColor: {r: 1, g: 0, b: 0, a: 0.1}
+  LargeModePositions: []
+  multiPositionArray: []
+--- !u!114 &8824563790751755482
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 119948029761666875}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad56231f54cd0724998f372d5c96ceaf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerList: 
+  useOtherObject: 0
+  actionOnEventType: 0
+  curveInterpolation: 4
+  enableActionOnEvent: 0
+  data:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: ec0d997c59b7a044eafabf5115e0d26a,
+      type: 2}
+  useCallbacks: 0
+  Callbacks: []
+  playingId: 0
+  soundEmitterObject: {fileID: 0}
+  transitionDuration: 0
+  eventIdInternal: 0
+  valueGuidInternal: 
+  m_callbackDataInternal: {fileID: 0}
+  MultiPositionType: 1
+  multiPositionTypeLabel: 0
+  attenuationSphereColor: {r: 1, g: 0, b: 0, a: 0.1}
+  LargeModePositions: []
+  multiPositionArray: []
+--- !u!114 &2816374436713451890
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 119948029761666875}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad56231f54cd0724998f372d5c96ceaf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerList: 
+  useOtherObject: 0
+  actionOnEventType: 0
+  curveInterpolation: 4
+  enableActionOnEvent: 0
+  data:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 675bc60d697be324db07756f85a37cf3,
       type: 2}
   useCallbacks: 0
   Callbacks: []
@@ -4215,15 +4287,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ce8fa7452d5c52141b874b5ade01b2f8, type: 3}
---- !u!4 &688117992687624843 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 99043026689393404, guid: ce8fa7452d5c52141b874b5ade01b2f8,
-    type: 3}
-  m_PrefabInstance: {fileID: 635975875803635831}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &688117992687624839 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 99043026689393392, guid: ce8fa7452d5c52141b874b5ade01b2f8,
+    type: 3}
+  m_PrefabInstance: {fileID: 635975875803635831}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &688117992687624843 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 99043026689393404, guid: ce8fa7452d5c52141b874b5ade01b2f8,
     type: 3}
   m_PrefabInstance: {fileID: 635975875803635831}
   m_PrefabAsset: {fileID: 0}

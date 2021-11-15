@@ -1,6 +1,133 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{AC3577D3-7A2E-445E-8C3F-DC08EBC4781D}" SchemaVersion="103">
 	<SoundcasterSessions>
-		<WorkUnit Name="Default Work Unit" ID="{AC3577D3-7A2E-445E-8C3F-DC08EBC4781D}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{AC3577D3-7A2E-445E-8C3F-DC08EBC4781D}" PersistMode="Standalone">
+			<ChildrenList>
+				<SoundcasterSession Name="menu_e_inicio" ID="{068E62A5-CBB2-4DB6-86CB-4DF1B6E86177}">
+					<ModuleList>
+						<Module>
+							<ObjectRef Name="menu_musica_inicio" ID="{DBF122D9-679B-49F3-B349-3C76244401B3}" WorkUnitID="{F9C73B0E-830A-43F9-974D-FD47F06368F0}"/>
+							<Position X="0" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="pausa_salida" ID="{0C348B29-6AB5-4ECF-87C4-0D40A81D32B8}" WorkUnitID="{F9C73B0E-830A-43F9-974D-FD47F06368F0}"/>
+							<Position X="0" Y="1"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="arana_lanza_tela" ID="{C543ECAB-1B9A-44A3-B9FC-4F34B9D2DF0B}" WorkUnitID="{F9C73B0E-830A-43F9-974D-FD47F06368F0}"/>
+							<Position X="0" Y="2"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="pilar_alarma_caida" ID="{8A0F4FCA-7935-4FA6-9BD3-B8ED4A6555FF}" WorkUnitID="{F9C73B0E-830A-43F9-974D-FD47F06368F0}"/>
+							<Position X="0" Y="3"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="menu_click_play" ID="{5EADD777-89F4-407C-8A3F-F71124A9FFCB}" WorkUnitID="{F9C73B0E-830A-43F9-974D-FD47F06368F0}"/>
+							<Position X="1" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="player_lanza_aguja" ID="{3F8CE6A3-AB6B-4CBE-B204-F52C7C048C8F}" WorkUnitID="{F9C73B0E-830A-43F9-974D-FD47F06368F0}"/>
+							<Position X="1" Y="1"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="telarana_abre" ID="{75BB155A-A501-4F78-BEB5-E4661B4BB23C}" WorkUnitID="{F9C73B0E-830A-43F9-974D-FD47F06368F0}"/>
+							<Position X="1" Y="2"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="pilar_desaparece" ID="{580CB6DF-94C5-4085-A3EF-BEE836EA7249}" WorkUnitID="{F9C73B0E-830A-43F9-974D-FD47F06368F0}"/>
+							<Position X="1" Y="3"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="loading_spacebar" ID="{83D6F01F-4E63-4AB5-9CE7-4F2E35857062}" WorkUnitID="{F9C73B0E-830A-43F9-974D-FD47F06368F0}"/>
+							<Position X="2" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="player_recibe_dano" ID="{17FA0275-77C9-4136-86D4-AE32B91BD52E}" WorkUnitID="{F9C73B0E-830A-43F9-974D-FD47F06368F0}"/>
+							<Position X="2" Y="1"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="arana_salta" ID="{6667C797-B683-4A23-AA01-269979BCEAFA}" WorkUnitID="{F9C73B0E-830A-43F9-974D-FD47F06368F0}"/>
+							<Position X="2" Y="2"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="partida_musica02_enemigos" ID="{6710C306-0235-4DE8-988B-6DA7F5C2553E}" WorkUnitID="{F9C73B0E-830A-43F9-974D-FD47F06368F0}"/>
+							<Position X="3" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="player_salto" ID="{3ED4F2E3-A409-46CE-A7D4-A288FC94A23E}" WorkUnitID="{F9C73B0E-830A-43F9-974D-FD47F06368F0}"/>
+							<Position X="3" Y="1"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="arana_recibe_dano" ID="{EDFD7D9E-B561-446F-99EE-B2D6E60956EB}" WorkUnitID="{F9C73B0E-830A-43F9-974D-FD47F06368F0}"/>
+							<Position X="3" Y="2"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="pausa_entrada" ID="{5030EF32-BCAB-45DE-9FBF-0B4412C1292B}" WorkUnitID="{F9C73B0E-830A-43F9-974D-FD47F06368F0}"/>
+							<Position X="4" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="player_muere" ID="{0653F29C-7E72-44B8-AF82-EB19EFA98D7B}" WorkUnitID="{F9C73B0E-830A-43F9-974D-FD47F06368F0}"/>
+							<Position X="4" Y="1"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="arana_muere" ID="{9D26E57F-C0B0-4471-8562-748FC608CFCC}" WorkUnitID="{F9C73B0E-830A-43F9-974D-FD47F06368F0}"/>
+							<Position X="4" Y="2"/>
+						</Module>
+					</ModuleList>
+					<RTPCValueList ShowAll="true">
+						<RTPCValue>
+							<GameParameterRef Name="SS_Air_Turbulence" ID="{EDA87B19-73AA-40A0-9F19-2073606DB710}"/>
+							<Value>6</Value>
+						</RTPCValue>
+						<RTPCValue>
+							<GameParameterRef Name="Playback_Rate" ID="{28387EE3-C13A-4316-B9C3-DB5C521624AF}"/>
+							<Value>1</Value>
+						</RTPCValue>
+						<RTPCValue>
+							<GameParameterRef Name="SS_Air_Month" ID="{09E2B445-C4A3-447F-B3CA-818A1D925EF7}"/>
+							<Value>6</Value>
+						</RTPCValue>
+						<RTPCValue>
+							<GameParameterRef Name="RPM" ID="{9112AA05-F577-44FD-9F4E-4424158129E6}"/>
+							<Value>0</Value>
+						</RTPCValue>
+						<RTPCValue>
+							<GameParameterRef Name="SS_Air_RPM" ID="{A34890AB-B9D5-4526-A64D-5290C43EF2DC}"/>
+							<Value>50</Value>
+						</RTPCValue>
+						<RTPCValue>
+							<GameParameterRef Name="SS_Air_Fury" ID="{A2AE79DC-CA3A-46BA-9652-9986C322A87B}"/>
+							<Value>50</Value>
+						</RTPCValue>
+						<RTPCValue>
+							<GameParameterRef Name="SS_Air_Size" ID="{1329EBEF-A193-472E-A38C-64668B494879}"/>
+							<Value>50</Value>
+						</RTPCValue>
+						<RTPCValue>
+							<GameParameterRef Name="SS_Air_Storm" ID="{E93F8CDB-06D1-4737-ACAF-7CD44BBED783}"/>
+							<Value>75</Value>
+						</RTPCValue>
+						<RTPCValue>
+							<GameParameterRef Name="SS_Air_Presence" ID="{E3B7811A-7B2F-490F-B44F-5FE51B468041}"/>
+							<Value>75</Value>
+						</RTPCValue>
+						<RTPCValue>
+							<GameParameterRef Name="SS_Air_TimeOfDay" ID="{536FA72C-8C7E-4C8B-AE03-EF34FDADC314}"/>
+							<Value>6</Value>
+						</RTPCValue>
+						<RTPCValue>
+							<GameParameterRef Name="SS_Air_Freefall" ID="{2F2DFE37-4F9E-4D94-83D8-53CCA39781AD}"/>
+							<Value>75</Value>
+						</RTPCValue>
+						<RTPCValue>
+							<GameParameterRef Name="SS_Air_Fear" ID="{F72E0659-4346-4E1C-A1B1-DAB46A05101E}"/>
+							<Value>50</Value>
+						</RTPCValue>
+					</RTPCValueList>
+					<CurrentStateList ShowAll="true"/>
+					<CurrentSwitchList ShowAll="true"/>
+				</SoundcasterSession>
+			</ChildrenList>
+		</WorkUnit>
 	</SoundcasterSessions>
 </WwiseDocument>

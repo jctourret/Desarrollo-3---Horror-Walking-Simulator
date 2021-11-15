@@ -10,7 +10,8 @@ public class ScenesLoaderHandler : MonoBehaviour
     static string sceneFrom;
     static string sceneToLoad;
 
-    public Slider fillSlider;
+    public Image fillImage;
+
     public float minimumTime = 5f;
 
     public string textLoading = "Loading";
@@ -79,7 +80,7 @@ public class ScenesLoaderHandler : MonoBehaviour
     void UpdateBar(float value)
     {
         float progress = Mathf.Clamp01(value / 0.9f);
-        fillSlider.value = progress;
+        fillImage.fillAmount = progress;
 
         timer += Time.deltaTime;
 

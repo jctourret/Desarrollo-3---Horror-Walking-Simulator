@@ -62,6 +62,8 @@ public class BossStats : MonoBehaviour, IDamageable
 
         AkSoundEngine.PostEvent("boss_muere", gameObject);
 
+        AkSoundEngine.PostEvent("partida_musica06_victoria", gameObject);
+
         alive = false;
 
         LoaderManager.Get().SpawnBasicItem(this.transform.position);

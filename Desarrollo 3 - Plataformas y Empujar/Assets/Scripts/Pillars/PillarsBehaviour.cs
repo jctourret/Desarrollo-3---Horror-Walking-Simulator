@@ -96,6 +96,8 @@ public class PillarsBehaviour : Pillar
         {
             if(timerToDestroy == false)
             {
+                AkSoundEngine.PostEvent("pilar_alarma_caida", gameObject);
+
                 timer = destroyTime;
                 timerToDestroy = true;
 

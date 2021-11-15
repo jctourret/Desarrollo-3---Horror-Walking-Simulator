@@ -59,6 +59,8 @@ public class BossPillarBehaviour : Pillar
     {
         if (other.transform.tag == "Player")
         {
+            AkSoundEngine.PostEvent("partida_musica04_pre_boss", gameObject);
+
             this.transform.GetComponent<BoxCollider>().enabled = false;
 
             UIplayerToken.Invoke();
@@ -69,6 +71,8 @@ public class BossPillarBehaviour : Pillar
 
     public override void StartCollapse()
     {
+        AkSoundEngine.PostEvent("partida_musica04_boss", gameObject);
+
         StartCoroutine(WaitTime());
         OnPillarUp?.Invoke();
     }

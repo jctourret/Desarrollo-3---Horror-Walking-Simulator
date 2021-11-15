@@ -11,7 +11,7 @@
 	<StreamedFiles/>
 	<MediaFilesNotInAnyBank/>
 	<SoundBanks>
-		<SoundBank Id="626013394" Language="SFX" Hash="1879884182">
+		<SoundBank Id="626013394" Language="SFX" Hash="757499675">
 			<ObjectPath>\SoundBanks\Default Work Unit\Main_SoundBank_01</ObjectPath>
 			<ShortName>Main_SoundBank_01</ShortName>
 			<Path>Main_SoundBank_01.bnk</Path>
@@ -57,7 +57,7 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="2865332534" Name="arana_salta" ObjectPath="\Events\Default Work Unit\arana_salta" DurationType="OneShot" DurationMin="0.336909" DurationMax="0.336909">
+				<Event Id="2865332534" Name="arana_salta" ObjectPath="\Events\Default Work Unit\arana_salta" DurationType="OneShot" DurationMin="0.367402" DurationMax="0.367402">
 					<IncludedMemoryFiles>
 						<File Id="545974155" Language="SFX">
 							<ShortName>footsteps - jump carpet trainers - 03.wav</ShortName>
@@ -78,19 +78,12 @@
 				<Event Id="1678430690" Name="boss_susurros_alto" ObjectPath="\Events\Default Work Unit\boss_susurros_alto" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
 				<Event Id="680289928" Name="boss_susurros_bajo" ObjectPath="\Events\Default Work Unit\boss_susurros_bajo" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
 				<Event Id="1206968796" Name="boss_susurros_medio" ObjectPath="\Events\Default Work Unit\boss_susurros_medio" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
-				<Event Id="1532439224" Name="loading_musica" ObjectPath="\Events\Default Work Unit\loading_musica" DurationType="Infinite">
-					<IncludedMemoryFiles>
-						<File Id="865565707" Language="SFX">
-							<ShortName>AAIA 08 Atmos Tonal Stuttery Granular Ringing Drone.wav</ShortName>
-							<Path>SFX/AAIA 08 Atmos Tonal Stuttery Granular Ringing Drone_3252F24B.wem</Path>
-						</File>
-					</IncludedMemoryFiles>
-				</Event>
+				<Event Id="1532439224" Name="loading_musica" ObjectPath="\Events\Default Work Unit\loading_musica" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
 				<Event Id="1066270731" Name="loading_spacebar" ObjectPath="\Events\Default Work Unit\loading_spacebar" DurationType="Infinite">
 					<IncludedMemoryFiles>
 						<File Id="390603775" Language="SFX">
 							<ShortName>InterfaceGlitchInteractionData-32.wav</ShortName>
-							<Path>SFX/InterfaceGlitchInteractionData-32_B48AFBA8.wem</Path>
+							<Path>SFX/InterfaceGlitchInteractionData-32_0B3BB1B8.wem</Path>
 						</File>
 						<File Id="999355718" Language="SFX">
 							<ShortName>The Nightmare Before Christmas Soundtrack 17 To the Rescue.wav</ShortName>
@@ -126,7 +119,7 @@
 						</File>
 						<File Id="865565707" Language="SFX">
 							<ShortName>AAIA 08 Atmos Tonal Stuttery Granular Ringing Drone.wav</ShortName>
-							<Path>SFX/AAIA 08 Atmos Tonal Stuttery Granular Ringing Drone_3252F24B.wem</Path>
+							<Path>SFX/AAIA 08 Atmos Tonal Stuttery Granular Ringing Drone_7D95E320.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -143,19 +136,12 @@
 				<Event Id="3448971764" Name="mono_frase1_welcome" ObjectPath="\Events\Default Work Unit\mono_frase1_welcome" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
 				<Event Id="3610367627" Name="mono_frase2_compra" ObjectPath="\Events\Default Work Unit\mono_frase2_compra" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
 				<Event Id="1098363591" Name="mono_frase3_despedida" ObjectPath="\Events\Default Work Unit\mono_frase3_despedida" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
-				<Event Id="3558374396" Name="partida_musica01_inicio" ObjectPath="\Events\Default Work Unit\partida_musica01_inicio" DurationType="Infinite">
-					<IncludedMemoryFiles>
-						<File Id="999355718" Language="SFX">
-							<ShortName>The Nightmare Before Christmas Soundtrack 17 To the Rescue.wav</ShortName>
-							<Path>SFX/The Nightmare Before Christmas Soundtrack 17 To the Rescue_5E88A415.wem</Path>
-						</File>
-					</IncludedMemoryFiles>
-				</Event>
+				<Event Id="3558374396" Name="partida_musica01_inicio" ObjectPath="\Events\Default Work Unit\partida_musica01_inicio" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
 				<Event Id="3887727709" Name="partida_musica02_enemigos" ObjectPath="\Events\Default Work Unit\partida_musica02_enemigos" DurationType="Infinite">
 					<IncludedMemoryFiles>
 						<File Id="11626267" Language="SFX">
 							<ShortName>The Nightmare Before Christmas Soundtrack 17 To the Rescue.wav</ShortName>
-							<Path>SFX/The Nightmare Before Christmas Soundtrack 17 To the Rescue_98C02196.wem</Path>
+							<Path>SFX/The Nightmare Before Christmas Soundtrack 17 To the Rescue_A352DF8B.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -172,7 +158,7 @@
 						</File>
 						<File Id="865565707" Language="SFX">
 							<ShortName>AAIA 08 Atmos Tonal Stuttery Granular Ringing Drone.wav</ShortName>
-							<Path>SFX/AAIA 08 Atmos Tonal Stuttery Granular Ringing Drone_3252F24B.wem</Path>
+							<Path>SFX/AAIA 08 Atmos Tonal Stuttery Granular Ringing Drone_7D95E320.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -250,11 +236,11 @@
 					<IncludedMemoryFiles>
 						<File Id="265484928" Language="SFX">
 							<ShortName>Scream,Female,Late Twenties,Classic.wav</ShortName>
-							<Path>SFX/Scream,Female,Late Twenties,Classic_075B51F1.wem</Path>
+							<Path>SFX/Scream,Female,Late Twenties,Classic_29B6EDE7.wem</Path>
 						</File>
 						<File Id="1069148861" Language="SFX">
 							<ShortName>Downer With Drone.wav</ShortName>
-							<Path>SFX/Downer With Drone_814CD79B.wem</Path>
+							<Path>SFX/Downer With Drone_2BA28672.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -262,39 +248,39 @@
 					<IncludedMemoryFiles>
 						<File Id="293079254" Language="SFX">
 							<ShortName>paso_personaje_08_v1.wav</ShortName>
-							<Path>SFX/paso_personaje_08_v1_B3ECFF1F.wem</Path>
+							<Path>SFX/paso_personaje_08_v1_2715D8DD.wem</Path>
 						</File>
 						<File Id="297702866" Language="SFX">
 							<ShortName>paso_personaje_01_v1.wav</ShortName>
-							<Path>SFX/paso_personaje_01_v1_DD27EC84.wem</Path>
+							<Path>SFX/paso_personaje_01_v1_4F28025F.wem</Path>
 						</File>
 						<File Id="330122768" Language="SFX">
 							<ShortName>paso_personaje_06_v1.wav</ShortName>
-							<Path>SFX/paso_personaje_06_v1_B120D7D6.wem</Path>
+							<Path>SFX/paso_personaje_06_v1_F4275782.wem</Path>
 						</File>
 						<File Id="557317516" Language="SFX">
 							<ShortName>paso_personaje_05_v1.wav</ShortName>
-							<Path>SFX/paso_personaje_05_v1_9D67B80A.wem</Path>
+							<Path>SFX/paso_personaje_05_v1_224BBA55.wem</Path>
 						</File>
 						<File Id="625218915" Language="SFX">
 							<ShortName>paso_personaje_03_v1.wav</ShortName>
-							<Path>SFX/paso_personaje_03_v1_C283C6E5.wem</Path>
+							<Path>SFX/paso_personaje_03_v1_D266632D.wem</Path>
 						</File>
 						<File Id="631171849" Language="SFX">
 							<ShortName>paso_personaje_02_v1.wav</ShortName>
-							<Path>SFX/paso_personaje_02_v1_127DCD08.wem</Path>
+							<Path>SFX/paso_personaje_02_v1_C98A6606.wem</Path>
 						</File>
 						<File Id="888477466" Language="SFX">
 							<ShortName>paso_personaje_09_v1.wav</ShortName>
-							<Path>SFX/paso_personaje_09_v1_20EA98F5.wem</Path>
+							<Path>SFX/paso_personaje_09_v1_0E0D6BD7.wem</Path>
 						</File>
 						<File Id="914498966" Language="SFX">
 							<ShortName>paso_personaje_07_v1.wav</ShortName>
-							<Path>SFX/paso_personaje_07_v1_1CC1299E.wem</Path>
+							<Path>SFX/paso_personaje_07_v1_EF643863.wem</Path>
 						</File>
 						<File Id="976685486" Language="SFX">
 							<ShortName>paso_personaje_04_v1.wav</ShortName>
-							<Path>SFX/paso_personaje_04_v1_55BE5E81.wem</Path>
+							<Path>SFX/paso_personaje_04_v1_07BB8A0A.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -344,7 +330,7 @@
 					<IncludedMemoryFiles>
 						<File Id="255765847" Language="SFX">
 							<ShortName>Umbrella Open, Close edit 01.wav</ShortName>
-							<Path>SFX/Umbrella Open, Close edit 01_3954EF3E.wem</Path>
+							<Path>SFX/Umbrella Open, Close edit 01_EC2C8268.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>

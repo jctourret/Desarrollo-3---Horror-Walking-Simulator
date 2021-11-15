@@ -109,7 +109,7 @@ public class PlayerMovement : MonoBehaviour
                 animator.SetFloat("Horizontal",move.x);
                 animator.SetFloat("Vertical",move.z);
 
-                AkSoundEngine.PostEvent("player_pasos", gameObject);
+                //AkSoundEngine.PostEvent("player_pasos", gameObject);
             }
 
             controller.Move(move * Time.deltaTime * currentSpeed);
