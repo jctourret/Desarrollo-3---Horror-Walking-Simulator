@@ -4,9 +4,12 @@ using UnityEngine;
 public class ThrowNeedle : MonoBehaviour
 {
     public GameObject needleObj;
+    Animator animator;
 
     [Range(0,15)]
     public float throwForce = 10f;
+    Quaternion needleRotation;
+    Vector3 needleForce;
 
     [Header("Directions of Axis")]
     public Vector3[] rotations = new Vector3[4];
@@ -29,6 +32,7 @@ public class ThrowNeedle : MonoBehaviour
     private void Start()
     {
         ableToShoot = true;
+        animator = GetComponentInChildren<Animator>();
     }
 
     private void Update()
@@ -44,32 +48,36 @@ public class ThrowNeedle : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.UpArrow))
             {
-                var go = Instantiate(needleObj, this.transform.position, Quaternion.Euler(rotations[0]));
-                go.GetComponent<Rigidbody>().AddForce(Vector3.forward * throwForce * multiplierForce, ForceMode.Force);
-                StartCoroutine(LoadNeedle());
-
+                needleForce = (Vector3.forward * throwForce * multiplierForce);
+                needleRotation = Quaternion.Euler(rotations[0]);
+                animator.SetTrigger("Attack");
             }
             else if (Input.GetKeyDown(KeyCode.RightArrow))
             {
-                var go = Instantiate(needleObj, this.transform.position, Quaternion.Euler(rotations[1]));
-                go.GetComponent<Rigidbody>().AddForce(Vector3.right * throwForce * multiplierForce, ForceMode.Force);
-                StartCoroutine(LoadNeedle());
-
+                needleForce = (Vector3.right * throwForce * multiplierForce);
+                needleRotation = Quaternion.Euler(rotations[1]);
+                animator.SetTrigger("Attack");
             }
             else if (Input.GetKeyDown(KeyCode.DownArrow))
             {
-                var go = Instantiate(needleObj, this.transform.position, Quaternion.Euler(rotations[2]));
-                go.GetComponent<Rigidbody>().AddForce(-Vector3.forward * throwForce * multiplierForce, ForceMode.Force);
-                StartCoroutine(LoadNeedle());
-
+                needleForce = (Vector3.down * throwForce * multiplierForce);
+                needleRotation = Quaternion.Euler(rotations[2]);
+                animator.SetTrigger("Attack");
             }
             else if (Input.GetKeyDown(KeyCode.LeftArrow))
             {
-                var go = Instantiate(needleObj, this.transform.position, Quaternion.Euler(rotations[3]));
-                go.GetComponent<Rigidbody>().AddForce(-Vector3.right * throwForce * multiplierForce, ForceMode.Force);
-                StartCoroutine(LoadNeedle());
+                needleForce = (Vector3.left * throwForce * multiplierForce);
+                needleRotation = Quaternion.Euler(rotations[3]);
+                animator.SetTrigger("Attack");
             }
         }
+    }
+
+    public void SpawnNeedle()
+    {
+        var go = Instantiate(needleObj, this.transform.position,needleRotation);
+        go.GetComponent<Rigidbody>().AddForce(needleForce, ForceMode.Force);
+        StartCoroutine(LoadNeedle());
     }
 
     IEnumerator LoadNeedle()

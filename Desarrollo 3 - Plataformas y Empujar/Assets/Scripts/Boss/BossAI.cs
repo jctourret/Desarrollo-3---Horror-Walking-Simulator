@@ -12,6 +12,7 @@ public class BossAI : EnemyAI
     [SerializeField] float meleeConeAngle = 45;
 
     private float meleeCooldownTimer = 0;
+    Vector3 startTargetLocation;
 
     void Update()
     {
@@ -56,12 +57,6 @@ public class BossAI : EnemyAI
 
     IEnumerator Swing(GameObject target)
     {
-        //float startTime = Time.time;
-        //while (Time.time < startTime + meleeDelay)
-        //{
-        //    yield return null;
-        //}
-
         Vector3 startTargetLocation = target.transform.position - transform.position;
 
         yield return new WaitForSeconds(meleeDelay); // Usando WaitForSeconds se ve mas simple y prolijo
@@ -85,11 +80,13 @@ public class BossAI : EnemyAI
     }
 
     // ------------------------------------------
+    public void Aim()
+    {
+        startTargetLocation = target.transform.position - transform.position;
+    }
 
     public void SwingEvent()
     {
-        Vector3 startTargetLocation = target.transform.position - transform.position;
-
         float angle = Vector3.SignedAngle(startTargetLocation, target.transform.position - transform.position, Vector3.up);
         float distante = Vector3.Distance(transform.position, target.transform.position);
 

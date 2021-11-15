@@ -139,11 +139,6 @@ public class PlayerMovement : MonoBehaviour
                 animator.SetBool("Falling", false);
             }
             controller.Move(playerVelocity * Time.deltaTime);
-
-            if (Input.GetKeyDown(KeyCode.LeftShift))
-            {
-                StartCoroutine(Dash(move));
-            }
         }
     }
 
@@ -169,21 +164,6 @@ public class PlayerMovement : MonoBehaviour
 
     public void ActivatePlayer()
     {
-        controllable = true;
-    }
-
-    IEnumerator Dash(Vector3 movement)
-    {
-        float startTime = Time.time;
-
-        controllable = false;
-
-        while (Time.time< startTime + dashTime)
-        {
-            controller.Move(movement*Time.deltaTime*currentSpeed* 2);
-            yield return null;
-        }
-
         controllable = true;
     }
 

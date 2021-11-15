@@ -12,6 +12,11 @@ public class ChaserSpiderAttack : MonoBehaviour
         behaviour = GetComponentInParent<ChaserSpiderAI>();
     }
 
+    public void Aim()
+    {
+        behaviour.Aim();
+    }
+
     public void Bite()
     {
         behaviour.BiteEvent();
