@@ -29,6 +29,8 @@ public class Special_ItemReward : Collectable
                     Destroy(this.gameObject);
                     break;
             }
+
+            AkSoundEngine.PostEvent("player_recoje_item", gameObject);
         }
     }
 

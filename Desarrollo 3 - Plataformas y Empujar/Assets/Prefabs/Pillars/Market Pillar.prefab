@@ -4712,6 +4712,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: Market Slot
       objectReference: {fileID: 0}
+    - target: {fileID: 7222039243167793536, guid: 33d8cdc6d74ee514dbae3265d39746c6,
+        type: 3}
+      propertyPath: triggerList.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7222039243167793536, guid: 33d8cdc6d74ee514dbae3265d39746c6,
+        type: 3}
+      propertyPath: data.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: b5a2d666e16976449b278ea371c0cd2e,
+        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 33d8cdc6d74ee514dbae3265d39746c6, type: 3}
 --- !u!4 &2078645207484947456 stripped
@@ -4787,6 +4798,12 @@ PrefabInstance:
       propertyPath: m_Name
       value: Market Slot (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 7222039243167793536, guid: 33d8cdc6d74ee514dbae3265d39746c6,
+        type: 3}
+      propertyPath: data.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: b5a2d666e16976449b278ea371c0cd2e,
+        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 33d8cdc6d74ee514dbae3265d39746c6, type: 3}
 --- !u!4 &2207903188660822525 stripped
@@ -4937,6 +4954,12 @@ PrefabInstance:
       propertyPath: m_Name
       value: Market Slot (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 7222039243167793536, guid: 33d8cdc6d74ee514dbae3265d39746c6,
+        type: 3}
+      propertyPath: data.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: b5a2d666e16976449b278ea371c0cd2e,
+        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 33d8cdc6d74ee514dbae3265d39746c6, type: 3}
 --- !u!4 &505114380789333801 stripped

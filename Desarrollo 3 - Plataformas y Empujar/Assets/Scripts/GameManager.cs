@@ -1,26 +1,14 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.SceneManagement;
-
-public class GameManager : MonoBehaviour
+﻿public class GameManager : MonoBehaviourSingleton<GameManager>
 {
+    private bool firstEncounter = false;
 
-
-    private void OnEnable()
+    public void FirstEncounter()
     {
-        
+        if (!firstEncounter)
+        {
+            firstEncounter = true;
 
+            AkSoundEngine.PostEvent("partida_musica02_enemigos", gameObject);
+        }
     }
-
-    private void OnDisable()
-    {
-        
-    }
-
-    public void ToMainMenu()
-    {
-        SceneManager.LoadScene("Main Menu");
-    }
-
 }

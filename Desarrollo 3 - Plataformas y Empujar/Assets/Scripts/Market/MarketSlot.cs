@@ -46,6 +46,8 @@ public class MarketSlot : MonoBehaviour
         {
             if (stateObject == StateObject.Available)
             {
+                AkSoundEngine.PostEvent("mercado_precio_aparece", gameObject);
+
                 UIposter.SetActive(true);
                 inRange = true;
             }
@@ -60,6 +62,8 @@ public class MarketSlot : MonoBehaviour
             {
                 if(PlayerStats.GetPlayerMoney() >= itemMarket.Cost)
                 {
+                    AkSoundEngine.PostEvent("mercado_compra_item", gameObject);
+
                     PayItem(itemMarket.Cost);
 
                     EnableItem(itemMarket.Id);

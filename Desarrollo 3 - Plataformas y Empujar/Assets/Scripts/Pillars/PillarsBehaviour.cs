@@ -53,6 +53,8 @@ public class PillarsBehaviour : Pillar
     {
         if (other.transform.tag == "Player")
         {
+            GameManager.Get().FirstEncounter();
+
             StartCoroutine(InitializeCollapse());
 
             this.transform.GetComponent<BoxCollider>().enabled = false;

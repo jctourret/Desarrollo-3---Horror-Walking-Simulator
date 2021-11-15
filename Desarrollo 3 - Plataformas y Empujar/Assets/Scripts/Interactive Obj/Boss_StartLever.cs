@@ -48,6 +48,8 @@ public class Boss_StartLever : MonoBehaviour
                 stateObject = StateObject.Open;
                 UIposter.SetActive(false);
                 animator.SetTrigger("Open");
+
+                AkSoundEngine.PostEvent("player_presiona_tuerca", gameObject);
             }
         }
     }

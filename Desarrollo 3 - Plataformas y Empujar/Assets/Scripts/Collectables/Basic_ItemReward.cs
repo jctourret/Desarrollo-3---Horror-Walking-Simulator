@@ -33,7 +33,7 @@ public class Basic_ItemReward : Collectable
                     break;
             }
 
-            AkSoundEngine.PostEvent("recoge_botones", gameObject);
+            AkSoundEngine.PostEvent("player_recoje_item", gameObject);
         }
     }
 }
