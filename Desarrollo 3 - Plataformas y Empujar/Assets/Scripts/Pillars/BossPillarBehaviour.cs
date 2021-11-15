@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using System;
 
 public class BossPillarBehaviour : Pillar
@@ -22,6 +20,8 @@ public class BossPillarBehaviour : Pillar
     public override void Start()
     {
         base.Start();
+
+        AkSoundEngine.PostEvent("pilar_final_aparece", gameObject);
 
         foreach (var light in nightLights)
         {

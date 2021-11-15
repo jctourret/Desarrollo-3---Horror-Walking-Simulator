@@ -23,6 +23,8 @@ public class ChaserSpiderAI : EnemyAI
             {
                 if (!hasAttacked)
                 {
+                    AkSoundEngine.PostEvent("arana_lanza_tela", gameObject);
+
                     StartCoroutine(Bite(target));
                     hasAttacked = true;
                 }

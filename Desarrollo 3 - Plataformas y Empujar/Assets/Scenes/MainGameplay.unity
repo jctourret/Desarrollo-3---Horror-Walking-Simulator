@@ -241,41 +241,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 175916143614632852}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &35690586
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 35690585}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ad56231f54cd0724998f372d5c96ceaf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  triggerList: 
-  useOtherObject: 0
-  actionOnEventType: 0
-  curveInterpolation: 4
-  enableActionOnEvent: 0
-  data:
-    idInternal: 0
-    valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: 8475062baeea4394e9be8af5fffcdc18,
-      type: 2}
-  useCallbacks: 0
-  Callbacks: []
-  playingId: 0
-  soundEmitterObject: {fileID: 0}
-  transitionDuration: 0
-  eventIdInternal: 0
-  valueGuidInternal: 
-  m_callbackDataInternal: {fileID: 0}
-  MultiPositionType: 1
-  multiPositionTypeLabel: 0
-  attenuationSphereColor: {r: 1, g: 0, b: 0, a: 0.1}
-  LargeModePositions: []
-  multiPositionArray: []
 --- !u!4 &35690589 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 175916143355190072, guid: aa69266d657d4c94a8b9d9878dcbcd85,
@@ -2010,7 +1975,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6261fc06097adc2418ec150d617a1860, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  triggerList: ae8d9d44
+  triggerList: f7e1664c
   useOtherObject: 0
   data:
     idInternal: 0
@@ -3627,14 +3592,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1680261173}
     m_Modifications:
-    - target: {fileID: 35690593, guid: aa69266d657d4c94a8b9d9878dcbcd85, type: 3}
-      propertyPath: triggerList.Array.size
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 35690593, guid: aa69266d657d4c94a8b9d9878dcbcd85, type: 3}
-      propertyPath: triggerList.Array.data[0]
-      value: 1281810935
-      objectReference: {fileID: 0}
     - target: {fileID: 175916143355190072, guid: aa69266d657d4c94a8b9d9878dcbcd85,
         type: 3}
       propertyPath: m_RootOrder
@@ -3694,11 +3651,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Player Controller
-      objectReference: {fileID: 0}
-    - target: {fileID: 5033640583357927425, guid: aa69266d657d4c94a8b9d9878dcbcd85,
-        type: 3}
-      propertyPath: triggerList.Array.size
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: aa69266d657d4c94a8b9d9878dcbcd85, type: 3}

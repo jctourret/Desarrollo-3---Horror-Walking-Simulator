@@ -28,6 +28,8 @@ public class PillarsBehaviour : Pillar
     {
         base.Start();
 
+        AkSoundEngine.PostEvent("pilar_aparece", gameObject);
+
         timer = waitTime;
     }
 

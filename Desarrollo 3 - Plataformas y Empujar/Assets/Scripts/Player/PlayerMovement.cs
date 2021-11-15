@@ -51,7 +51,9 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
         MoveInput();
+
         OnPlayerMove?.Invoke(transform.position);
+
         CheckFallDeath();
     }   
 
@@ -62,12 +64,9 @@ public class PlayerMovement : MonoBehaviour
         if (transform.position.y < fallDeath && controllable)
         {
             OnPlayerFallDeath?.Invoke();
-            AkSoundEngine.PostEvent("caida_personaje", gameObject);
+            AkSoundEngine.PostEvent("player_cae_de_pilar", gameObject);
 
             player.TakeDamage(player.GetLives());
-
-            //gameObject.SetActive(false);
-            //Destroy(gameObject);
         }
     }
 
@@ -82,7 +81,7 @@ public class PlayerMovement : MonoBehaviour
             if (inAir)
             {
                 inAir = false;
-                AkSoundEngine.PostEvent("aterriza_personaje", gameObject);
+                AkSoundEngine.PostEvent("player_aterriza", gameObject);
             }
         }
         else
@@ -100,13 +99,15 @@ public class PlayerMovement : MonoBehaviour
 
             if(magnitude < 0.001)
             {
-                animator.SetFloat("lastDirY",move.z);
+                animator.SetFloat("lastDirY", move.z);
                 animator.SetFloat("lastDirX", move.x);
             }
             else
             {
                 animator.SetFloat("Horizontal",move.x);
                 animator.SetFloat("Vertical",move.z);
+
+                AkSoundEngine.PostEvent("player_pasos", gameObject);
             }
 
             controller.Move(move * Time.deltaTime * currentSpeed);
@@ -116,9 +117,12 @@ public class PlayerMovement : MonoBehaviour
             {
                 gameObject.transform.forward = move;
             }
+
             if (Input.GetButtonDown("Jump") && isGrounded)
             {
                 playerVelocity.y += Mathf.Sqrt(maxJumpHeight * -3.0f * gravity); // Que es el 3?
+
+                AkSoundEngine.PostEvent("player_salto", gameObject);
             }
 
             animator.SetBool("IsGrounded", isGrounded);

@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b963fa7c47c5264cb1e3dcb68fbcedd, type: 3}
+  m_Name: C543ECAB-1B9A-44A3-B9FC-4F34B9D2DF0B
+  m_EditorClassIdentifier: 
+  objectName: arana_lanza_tela
+  id: 2579479616
+  guid: C543ECAB-1B9A-44A3-B9FC-4F34B9D2DF0B

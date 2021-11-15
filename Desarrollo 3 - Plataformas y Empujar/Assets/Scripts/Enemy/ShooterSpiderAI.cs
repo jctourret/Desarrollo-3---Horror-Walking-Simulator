@@ -24,6 +24,8 @@ public class ShooterSpiderAI : EnemyAI
             {
                 if (!hasAttacked)
                 {
+                    AkSoundEngine.PostEvent("arana_lanza_tela", gameObject);
+
                     GameObject go = Instantiate(projectile, shotPoint.position, Quaternion.identity, null);
 
                     Rigidbody rb = go.GetComponent<Rigidbody>();

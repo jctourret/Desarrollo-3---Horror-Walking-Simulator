@@ -3259,6 +3259,7 @@ GameObject:
   - component: {fileID: 8861819755572737329}
   - component: {fileID: 73338383136491749}
   - component: {fileID: 5046603134481099502}
+  - component: {fileID: -7182978755383158577}
   m_Layer: 0
   m_Name: Pillar
   m_TagString: Untagged
@@ -3398,6 +3399,41 @@ MonoBehaviour:
     idInternal: 0
     valueGuidInternal: 
     WwiseObjectReference: {fileID: 11400000, guid: ba0e43483033b3a4ba58a02e12442715,
+      type: 2}
+  useCallbacks: 0
+  Callbacks: []
+  playingId: 0
+  soundEmitterObject: {fileID: 0}
+  transitionDuration: 0
+  eventIdInternal: 0
+  valueGuidInternal: 
+  m_callbackDataInternal: {fileID: 0}
+  MultiPositionType: 1
+  multiPositionTypeLabel: 0
+  attenuationSphereColor: {r: 1, g: 0, b: 0, a: 0.1}
+  LargeModePositions: []
+  multiPositionArray: []
+--- !u!114 &-7182978755383158577
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 993539792361210758}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad56231f54cd0724998f372d5c96ceaf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerList: 
+  useOtherObject: 0
+  actionOnEventType: 0
+  curveInterpolation: 4
+  enableActionOnEvent: 0
+  data:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 0230d000fdec7f1488a2ada978e74b3e,
       type: 2}
   useCallbacks: 0
   Callbacks: []
@@ -3661,15 +3697,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ce8fa7452d5c52141b874b5ade01b2f8, type: 3}
---- !u!1 &1118059175470299096 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 99043026689393392, guid: ce8fa7452d5c52141b874b5ade01b2f8,
-    type: 3}
-  m_PrefabInstance: {fileID: 1070726408269526312}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1118059175470299092 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 99043026689393404, guid: ce8fa7452d5c52141b874b5ade01b2f8,
+    type: 3}
+  m_PrefabInstance: {fileID: 1070726408269526312}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1118059175470299096 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 99043026689393392, guid: ce8fa7452d5c52141b874b5ade01b2f8,
     type: 3}
   m_PrefabInstance: {fileID: 1070726408269526312}
   m_PrefabAsset: {fileID: 0}

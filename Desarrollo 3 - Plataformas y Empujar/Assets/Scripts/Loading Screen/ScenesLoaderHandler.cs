@@ -68,6 +68,8 @@ public class ScenesLoaderHandler : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space) && continueScene == true)
         {
+            AkSoundEngine.PostEvent("loading_spacebar", gameObject);
+
             operation.allowSceneActivation = true;
         }
     }

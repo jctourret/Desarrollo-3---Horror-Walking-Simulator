@@ -34,7 +34,9 @@ public class JumperSpiderAI : EnemyAI
                 }
                 else
                 {
-                    Vector3 jumpDirection = target.transform.position - transform.position;
+                    AkSoundEngine.PostEvent("arana_salta", gameObject);
+
+                    Vector3 jumpDirection = transform.position - target.transform.position;
                     Vector3 jumpTarget = jumpDirection.normalized * jumpDistance;
 
                     rbody.velocity = initialVelocity(transform.position, jumpTarget, jumpHeight);

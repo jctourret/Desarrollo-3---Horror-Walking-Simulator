@@ -6,8 +6,11 @@ class StartLever : InteractiveObject
 
     public void ActivateLever()
     {
-        AkSoundEngine.PostEvent("palanca_torre1", gameObject);
+        AkSoundEngine.PostEvent("player_tira_palanca", gameObject);
+    }
 
-        ActivateObject.Invoke();
+    public void StartGame()
+    {
+        ActivateObject?.Invoke();
     }
 }

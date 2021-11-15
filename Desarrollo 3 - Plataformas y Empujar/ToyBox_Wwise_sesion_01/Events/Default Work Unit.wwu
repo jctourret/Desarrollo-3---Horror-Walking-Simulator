@@ -207,7 +207,7 @@
 					</ChildrenList>
 				</Event>
 				<Event Name="boss_movimiento" ID="{4A2D7198-377A-4117-9DBD-E0DAAAED7B75}"/>
-				<Event Name="player_recibe_dano" ID="{17FA0275-77C9-4136-86D4-AE32B91BD52E}">
+				<Event Name="pl" ID="{17FA0275-77C9-4136-86D4-AE32B91BD52E}">
 					<ChildrenList>
 						<Action Name="" ID="{3864E0C7-2C64-47FD-84D5-44845A0A0229}" ShortID="398563644">
 							<ReferenceList>

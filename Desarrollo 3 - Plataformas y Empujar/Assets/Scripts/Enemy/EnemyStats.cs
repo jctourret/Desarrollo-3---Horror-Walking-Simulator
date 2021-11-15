@@ -21,7 +21,7 @@ public class EnemyStats : MonoBehaviour, IDamageable
         if (life <= 0)
             Eliminated();
         else
-            AkSoundEngine.PostEvent("recibe_dano", gameObject);
+            AkSoundEngine.PostEvent("arana_recibe_dano", gameObject);
     }
 
     public void Eliminated()
@@ -36,7 +36,7 @@ public class EnemyStats : MonoBehaviour, IDamageable
 
         // <-- Acá se llama a la animacion de muerte
 
-        AkSoundEngine.PostEvent("muere_araña", gameObject);
+        AkSoundEngine.PostEvent("arana_muere", gameObject);
 
         alive = false;
 

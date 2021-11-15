@@ -33,16 +33,9 @@ public class Pillar : MonoBehaviour
 
     //===============================================
 
-    //public virtual void Awake()
-    //{
-    //    animator = GetComponent<Animator>();
-    //}
-
     public virtual void Start()
     {
         pillarState = PillarState.MoveUp;
-
-        AkSoundEngine.PostEvent("aparece_torre", gameObject);
     }
 
     //===============================================
@@ -60,8 +53,11 @@ public class Pillar : MonoBehaviour
     public virtual IEnumerator WaitTime()
     {
         yield return new WaitForSeconds(delayTime);
-        AkSoundEngine.PostEvent("alarma_caida_torre", gameObject);
+
+        //AkSoundEngine.PostEvent("pilar_alarma_caida", gameObject);
+        
         timer = destroyTime;
+
         pillarState = PillarState.waiting;
     }
 
@@ -73,8 +69,11 @@ public class Pillar : MonoBehaviour
     public virtual IEnumerator MoveDownPillar()
     {
         animator.SetTrigger("Change");
-        AkSoundEngine.PostEvent("desaparece_torre", gameObject);
+
+        AkSoundEngine.PostEvent("pilar_desaparece", gameObject);
+
         yield return new WaitForSeconds(delayTime);
+        
         Destroy(this.gameObject);
     }
 

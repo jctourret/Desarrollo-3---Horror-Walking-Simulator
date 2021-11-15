@@ -106,6 +106,8 @@ public class PlayerStats : MonoBehaviour, IDamageable
     {
         if (lives < maxLives)
         {
+            AkSoundEngine.PostEvent("player_gana_vida", gameObject);
+
             lives += score;
             OnPlayerEarnLive?.Invoke(score);
             return true;
@@ -119,7 +121,9 @@ public class PlayerStats : MonoBehaviour, IDamageable
         {
             lives = lives - damage;
             OnPlayerDamaged?.Invoke(damage);
+
             Eliminated();
+            
             invulnerable = true;
             StartCoroutine(invulnerabilityTimer());
         }
@@ -129,17 +133,15 @@ public class PlayerStats : MonoBehaviour, IDamageable
     {
         if (lives <= 0)
         {
-            AkSoundEngine.PostEvent("muere_personaje", gameObject);
+            AkSoundEngine.PostEvent("player_muere", gameObject);
+            OnPlayerDamageDeath?.Invoke();
+
             //Destroy(gameObject);
             //gameObject.SetActive(false);
-            OnPlayerDamageDeath?.Invoke();
         }
         else
         {
-            if(lives < (maxLives / 2))
-                AkSoundEngine.PostEvent("impacto_enemigo", gameObject);
-            else
-                AkSoundEngine.SetRTPCValue("Player_dañado", lives);
+            AkSoundEngine.PostEvent("player_recibe_dano", gameObject);
         }
     }
 
@@ -148,10 +150,12 @@ public class PlayerStats : MonoBehaviour, IDamageable
         float elapsed = 0.0f;
         float flickerTimer = 0.0f;
         Color originalColor = rend.color; 
+
         while (elapsed < invDuration)
         {
             elapsed += Time.deltaTime;
             flickerTimer += Time.deltaTime;
+
             if(flickerTimer > invDuration/flickers)
             {
                 if (rend.color == originalColor)
@@ -164,8 +168,10 @@ public class PlayerStats : MonoBehaviour, IDamageable
                 }
                 flickerTimer = 0.0f;
             }
+
             yield return null;
         }
+
         rend.color = originalColor;
         invulnerable = false;
     }

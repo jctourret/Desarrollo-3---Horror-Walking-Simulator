@@ -22,6 +22,8 @@ public class BossStats : MonoBehaviour, IDamageable
         actualLife = maxLife;
 
         SetLifeBar?.Invoke(maxLife, actualLife);
+
+        AkSoundEngine.PostEvent("boss_frase01", gameObject);
     }
 
     public void TakeDamage(int damage)
@@ -31,9 +33,19 @@ public class BossStats : MonoBehaviour, IDamageable
         SetLifeBar?.Invoke(maxLife, actualLife);
 
         if (actualLife <= 0)
+        {
             Eliminated();
+        }
         else
-            AkSoundEngine.PostEvent("recibe_dano", gameObject);
+        {
+            AkSoundEngine.PostEvent("boss_recibe_dano", gameObject);
+
+            if(actualLife % 10 == 0)
+            {
+                AkSoundEngine.PostEvent("boss_risas", gameObject);
+            }
+
+        }
     }
 
     public void Eliminated()
@@ -48,7 +60,7 @@ public class BossStats : MonoBehaviour, IDamageable
 
         // <-- Acá se llama a la animacion de muerte
 
-        AkSoundEngine.PostEvent("muere_araña", gameObject);
+        AkSoundEngine.PostEvent("boss_muere", gameObject);
 
         alive = false;
 

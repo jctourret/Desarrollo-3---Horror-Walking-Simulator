@@ -74,7 +74,7 @@ public class ThrowNeedle : MonoBehaviour
 
     IEnumerator LoadNeedle()
     {
-        AkSoundEngine.PostEvent("lanza_aguja", gameObject);
+        AkSoundEngine.PostEvent("player_lanza_aguja", gameObject);
 
         ableToShoot = false;
 

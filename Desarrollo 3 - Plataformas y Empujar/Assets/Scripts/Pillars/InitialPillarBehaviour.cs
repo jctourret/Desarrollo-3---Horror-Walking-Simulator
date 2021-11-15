@@ -12,7 +12,9 @@ public class InitialPillarBehaviour : Pillar
     public override void Start()
     {
         base.Start();
-        
+
+        AkSoundEngine.PostEvent("pilar_aparece", gameObject);
+
         foreach (var light in nightLights)
         {
             light.GetComponent<NightLight_Behaviour>().SetIntensityOfLight(false, destroyTime);

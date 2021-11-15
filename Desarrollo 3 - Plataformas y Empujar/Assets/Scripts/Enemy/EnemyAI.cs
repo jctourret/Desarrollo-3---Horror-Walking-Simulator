@@ -38,6 +38,8 @@ public class EnemyAI : MonoBehaviour
         animator.SetFloat("Horizontal",agent.velocity.x);
         animator.SetFloat("Vertical", agent.velocity.z);
         animator.SetFloat("Magnitude",agent.velocity.magnitude);
+
+        AkSoundEngine.PostEvent("arana_pasos", gameObject);
     }
 
     private void LateUpdate()
