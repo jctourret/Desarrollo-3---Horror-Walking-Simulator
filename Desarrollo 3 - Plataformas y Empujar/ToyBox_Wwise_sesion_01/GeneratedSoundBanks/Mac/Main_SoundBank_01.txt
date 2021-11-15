@@ -1,47 +1,108 @@
 Event	ID	Name			Wwise Object Path	Notes
-	201916069	aterriza_personaje			\Default Work Unit\aterriza_personaje	
-	394898390	menu_inicio			\Default Work Unit\menu_inicio	
-	618057445	palanca_torre1			\Default Work Unit\palanca_torre1	
-	649159425	aparece_torre			\Default Work Unit\aparece_torre	
-	659343135	pasos_personaje			\Default Work Unit\pasos_personaje	
-	763444324	recibe_dano			\Default Work Unit\recibe_dano	
-	1294526122	aparicion_trampas			\Default Work Unit\aparicion_trampas	
-	1412811295	muere_arana			\Default Work Unit\muere_arana	
-	1550559233	muere_personaje			\Default Work Unit\muere_personaje	
-	1663865597	recoge_botones			\Default Work Unit\recoge_botones	
-	1972438757	muere_boss			\Default Work Unit\muere_boss	
-	2313578751	musica_partida			\Default Work Unit\musica_partida	
-	2547179148	interface_menu			\Default Work Unit\interface_menu	
-	2691954849	alarma_caida_torre			\Default Work Unit\alarma_caida_torre	
-	2693817449	salto_personajes			\Default Work Unit\salto_personajes	
-	2768271749	impacto_enemigo			\Default Work Unit\impacto_enemigo	
-	3090377257	presencia_boss			\Default Work Unit\presencia_boss	
-	3686195039	desaparece_torre			\Default Work Unit\desaparece_torre	
-	3984214485	caida_personaje			\Default Work Unit\caida_personaje	
-	4004036222	lanza_aguja			\Default Work Unit\lanza_aguja	
-	4236031371	nivel_superado			\Default Work Unit\nivel_superado	
-	4257584934	impacto_boss			\Default Work Unit\impacto_boss	
+	211920	trampa_bolas_aparece			\Default Work Unit\trampa_bolas_aparece	
+	219842956	boss_frase02			\Default Work Unit\boss_frase02	
+	219842957	boss_frase03			\Default Work Unit\boss_frase03	
+	219842959	boss_frase01			\Default Work Unit\boss_frase01	
+	298156071	player_cae_de_pilar			\Default Work Unit\player_cae_de_pilar	
+	331275946	boss_movimiento			\Default Work Unit\boss_movimiento	
+	398807103	player_aterriza			\Default Work Unit\player_aterriza	
+	408916994	player_frase04			\Default Work Unit\player_frase04	
+	408916995	player_frase05			\Default Work Unit\player_frase05	
+	408916996	player_frase02			\Default Work Unit\player_frase02	
+	408916997	player_frase03			\Default Work Unit\player_frase03	
+	408916999	player_frase01			\Default Work Unit\player_frase01	
+	415597511	mercado_precio_aparece			\Default Work Unit\mercado_precio_aparece	
+	680289928	boss_susurros_bajo			\Default Work Unit\boss_susurros_bajo	
+	773398702	menu_click_play			\Default Work Unit\menu_click_play	
+	838855874	partida_musica05_boss			\Default Work Unit\partida_musica05_boss	
+	1006187470	trampa_cruces_aparece			\Default Work Unit\trampa_cruces_aparece	
+	1066270731	loading_spacebar			\Default Work Unit\loading_spacebar	
+	1098363591	mono_frase3_despedida			\Default Work Unit\mono_frase3_despedida	
+	1206968796	boss_susurros_medio			\Default Work Unit\boss_susurros_medio	
+	1243730667	player_muere			\Default Work Unit\player_muere	
+	1532439224	loading_musica			\Default Work Unit\loading_musica	
+	1534908072	player_recibe_dano			\Default Work Unit\player_recibe_dano	
+	1616249325	pausa_entrada			\Default Work Unit\pausa_entrada	
+	1635977115	partida_musica04_pre_boss			\Default Work Unit\partida_musica04_pre_boss	
+	1678430690	boss_susurros_alto			\Default Work Unit\boss_susurros_alto	
+	1684269639	boss_ataca_cuchillo			\Default Work Unit\boss_ataca_cuchillo	
+	1794040761	boss_risas			\Default Work Unit\boss_risas	
+	1808050466	telarana_abre			\Default Work Unit\telarana_abre	
+	1927992137	ascensor_sube			\Default Work Unit\ascensor_sube	
+	2072538013	arana_pasos			\Default Work Unit\arana_pasos	
+	2118655527	arana_muere			\Default Work Unit\arana_muere	
+	2476112787	player_gana_vida			\Default Work Unit\player_gana_vida	
+	2533691747	boss_muere			\Default Work Unit\boss_muere	
+	2579479616	arana_lanza_tela			\Default Work Unit\arana_lanza_tela	
+	2583799496	menu_click_exit			\Default Work Unit\menu_click_exit	
+	2606238242	player_supera_nivel			\Default Work Unit\player_supera_nivel	
+	2656333385	menu_musica_inicio			\Default Work Unit\menu_musica_inicio	
+	2801762941	mercado_compra_item			\Default Work Unit\mercado_compra_item	
+	2865332534	arana_salta			\Default Work Unit\arana_salta	
+	2963201918	partida_musica03_mercado			\Default Work Unit\partida_musica03_mercado	
+	3034072942	pilar_final_aparece			\Default Work Unit\pilar_final_aparece	
+	3091682631	player_presiona_tuerca			\Default Work Unit\player_presiona_tuerca	
+	3166472456	player_tira_palanca			\Default Work Unit\player_tira_palanca	
+	3302510416	boss_recibe_dano			\Default Work Unit\boss_recibe_dano	
+	3351082618	player_lanza_aguja			\Default Work Unit\player_lanza_aguja	
+	3448971764	mono_frase1_welcome			\Default Work Unit\mono_frase1_welcome	
+	3558374396	partida_musica01_inicio			\Default Work Unit\partida_musica01_inicio	
+	3564661337	player_pasos			\Default Work Unit\player_pasos	
+	3610367627	mono_frase2_compra			\Default Work Unit\mono_frase2_compra	
+	3664923767	pilar_aparece			\Default Work Unit\pilar_aparece	
+	3725013726	ascensor_baja			\Default Work Unit\ascensor_baja	
+	3747419092	arana_recibe_dano			\Default Work Unit\arana_recibe_dano	
+	3863036383	partida_musica06_victoria			\Default Work Unit\partida_musica06_victoria	
+	3887727709	partida_musica02_enemigos			\Default Work Unit\partida_musica02_enemigos	
+	3951288628	player_salto			\Default Work Unit\player_salto	
+	3979446143	partida_musica07_pausa			\Default Work Unit\partida_musica07_pausa	
+	4012700044	menu_click_otro			\Default Work Unit\menu_click_otro	
+	4094045868	pausa_salida			\Default Work Unit\pausa_salida	
+	4177257821	pilar_alarma_caida			\Default Work Unit\pilar_alarma_caida	
+	4196076791	player_recoje_item			\Default Work Unit\player_recoje_item	
+	4227528439	pilar_desaparece			\Default Work Unit\pilar_desaparece	
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
-	32912149	lanza_aguja_v1	Z:\Volumes\HD 2TB\ToyBox Game Audio\05 Wwise\ToyBox Wwise 20211106\ToyBox_Wwise_sesion_01\.cache\Mac\SFX\lanza_aguja_v1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\lanza_aguja_v1		54290
-	214972885	impacto_a_enemigo_v1	Z:\Volumes\HD 2TB\ToyBox Game Audio\05 Wwise\ToyBox Wwise 20211106\ToyBox_Wwise_sesion_01\.cache\Mac\SFX\impacto_a_enemigo_v1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\impacto_a_enemigo_v1		21430
-	267307929	muere_arana_03_v1	Z:\Volumes\HD 2TB\ToyBox Game Audio\05 Wwise\ToyBox Wwise 20211106\ToyBox_Wwise_sesion_01\.cache\Mac\SFX\muere_arana_03_v1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\muere_arana\muere_arana_03_v1		43684
-	293079254	paso_personaje_08_v1	Z:\Volumes\HD 2TB\ToyBox Game Audio\05 Wwise\ToyBox Wwise 20211106\ToyBox_Wwise_sesion_01\.cache\Mac\SFX\paso_personaje_08_v1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\pasos_personaje\paso_personaje_08_v1		25536
-	297702866	paso_personaje_01_v1	Z:\Volumes\HD 2TB\ToyBox Game Audio\05 Wwise\ToyBox Wwise 20211106\ToyBox_Wwise_sesion_01\.cache\Mac\SFX\paso_personaje_01_v1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\pasos_personaje\paso_personaje_01_v1		32576
-	330122768	paso_personaje_06_v1	Z:\Volumes\HD 2TB\ToyBox Game Audio\05 Wwise\ToyBox Wwise 20211106\ToyBox_Wwise_sesion_01\.cache\Mac\SFX\paso_personaje_06_v1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\pasos_personaje\paso_personaje_06_v1		24384
-	376265599	muere_arana_01_v1	Z:\Volumes\HD 2TB\ToyBox Game Audio\05 Wwise\ToyBox Wwise 20211106\ToyBox_Wwise_sesion_01\.cache\Mac\SFX\muere_arana_01_v1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\muere_arana\muere_arana_01_v1		30342
-	529807827	aterriza_personaje_v1	Z:\Volumes\HD 2TB\ToyBox Game Audio\05 Wwise\ToyBox Wwise 20211106\ToyBox_Wwise_sesion_01\.cache\Mac\SFX\aterriza_personaje_v1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\aterriza_personaje_v1		29942
-	557317516	paso_personaje_05_v1	Z:\Volumes\HD 2TB\ToyBox Game Audio\05 Wwise\ToyBox Wwise 20211106\ToyBox_Wwise_sesion_01\.cache\Mac\SFX\paso_personaje_05_v1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\pasos_personaje\paso_personaje_05_v1		20544
-	592969696	desaparece_torre_v1	Z:\Volumes\HD 2TB\ToyBox Game Audio\05 Wwise\ToyBox Wwise 20211106\ToyBox_Wwise_sesion_01\.cache\Mac\SFX\desaparece_torre_v1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\desaparece_torre_v1		174656
-	625218915	paso_personaje_03_v1	Z:\Volumes\HD 2TB\ToyBox Game Audio\05 Wwise\ToyBox Wwise 20211106\ToyBox_Wwise_sesion_01\.cache\Mac\SFX\paso_personaje_03_v1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\pasos_personaje\paso_personaje_03_v1		26432
-	631171849	paso_personaje_02_v1	Z:\Volumes\HD 2TB\ToyBox Game Audio\05 Wwise\ToyBox Wwise 20211106\ToyBox_Wwise_sesion_01\.cache\Mac\SFX\paso_personaje_02_v1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\pasos_personaje\paso_personaje_02_v1		36864
-	788098474	recibe_dano_v1	Z:\Volumes\HD 2TB\ToyBox Game Audio\05 Wwise\ToyBox Wwise 20211106\ToyBox_Wwise_sesion_01\.cache\Mac\SFX\recibe_dano_v1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\recibe_dano_v1		113424
-	795560534	muere_arana_02_v1	Z:\Volumes\HD 2TB\ToyBox Game Audio\05 Wwise\ToyBox Wwise 20211106\ToyBox_Wwise_sesion_01\.cache\Mac\SFX\muere_arana_02_v1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\muere_arana\muere_arana_02_v1		31236
-	881692936	palanca_torre1_v1	Z:\Volumes\HD 2TB\ToyBox Game Audio\05 Wwise\ToyBox Wwise 20211106\ToyBox_Wwise_sesion_01\.cache\Mac\SFX\palanca_torre1_v1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\palanca_torre1_v1		147520
-	888477466	paso_personaje_09_v1	Z:\Volumes\HD 2TB\ToyBox Game Audio\05 Wwise\ToyBox Wwise 20211106\ToyBox_Wwise_sesion_01\.cache\Mac\SFX\paso_personaje_09_v1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\pasos_personaje\paso_personaje_09_v1		23872
-	897208615	recoge_botones_02_v1	Z:\Volumes\HD 2TB\ToyBox Game Audio\05 Wwise\ToyBox Wwise 20211106\ToyBox_Wwise_sesion_01\.cache\Mac\SFX\recoge_botones_02_v1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\recoge_botones\recoge_botones_02_v1		41858
-	900190173	aparece_torre_v1	Z:\Volumes\HD 2TB\ToyBox Game Audio\05 Wwise\ToyBox Wwise 20211106\ToyBox_Wwise_sesion_01\.cache\Mac\SFX\aparece_torre_v1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\aparece_torre_v1		210558
-	914498966	paso_personaje_07_v1	Z:\Volumes\HD 2TB\ToyBox Game Audio\05 Wwise\ToyBox Wwise 20211106\ToyBox_Wwise_sesion_01\.cache\Mac\SFX\paso_personaje_07_v1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\pasos_personaje\paso_personaje_07_v1		28480
-	976685486	paso_personaje_04_v1	Z:\Volumes\HD 2TB\ToyBox Game Audio\05 Wwise\ToyBox Wwise 20211106\ToyBox_Wwise_sesion_01\.cache\Mac\SFX\paso_personaje_04_v1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\pasos_personaje\paso_personaje_04_v1		22482
-	1006839415	recoge_botones_01_v1	Z:\Volumes\HD 2TB\ToyBox Game Audio\05 Wwise\ToyBox Wwise 20211106\ToyBox_Wwise_sesion_01\.cache\Mac\SFX\recoge_botones_01_v1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\recoge_botones\recoge_botones_01_v1		39462
+	11626267	Mx02_To the Rescue_enemigos	Z:\Volumes\HD 2TB\ToyBox Game Audio\05 Wwise\ToyBox Wwise 20211106\ToyBox_Wwise_sesion_01\.cache\Mac\SFX\The Nightmare Before Christmas Soundtrack 17 To the Rescue_98C02196.wem		\Actor-Mixer Hierarchy\Default Work Unit\Musica temp\Mx02_To the Rescue_enemigos		30432956
+	32912149	lanza_aguja_v1	Z:\Volumes\HD 2TB\ToyBox Game Audio\05 Wwise\ToyBox Wwise 20211106\ToyBox_Wwise_sesion_01\.cache\Mac\SFX\lanza_aguja_v1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\player sonidos\lanza_aguja_v1		54290
+	206833650	pausa_salida	Z:\Volumes\HD 2TB\ToyBox Game Audio\05 Wwise\ToyBox Wwise 20211106\ToyBox_Wwise_sesion_01\.cache\Mac\SFX\IMPACT METAL Scratchy Short Punch_03_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\interface_sonidos\pausa_salida		283840
+	214972885	arana_recibe_dano	Z:\Volumes\HD 2TB\ToyBox Game Audio\05 Wwise\ToyBox Wwise 20211106\ToyBox_Wwise_sesion_01\.cache\Mac\SFX\impacto_a_enemigo_v1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\arana_sonidos\arana_recibe_dano		21430
+	229450914	pausa_entrada	Z:\Volumes\HD 2TB\ToyBox Game Audio\05 Wwise\ToyBox Wwise 20211106\ToyBox_Wwise_sesion_01\.cache\Mac\SFX\IMPACT METAL Short Slam_03_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\interface_sonidos\pausa_entrada		343164
+	255765847	telarana_abre	Z:\Volumes\HD 2TB\ToyBox Game Audio\05 Wwise\ToyBox Wwise 20211106\ToyBox_Wwise_sesion_01\.cache\Mac\SFX\Umbrella Open, Close edit 01_3954EF3E.wem		\Actor-Mixer Hierarchy\Default Work Unit\arana_sonidos\telarana_abre		96736
+	265484928	player_muere_grito	Z:\Volumes\HD 2TB\ToyBox Game Audio\05 Wwise\ToyBox Wwise 20211106\ToyBox_Wwise_sesion_01\.cache\Mac\SFX\Scream,Female,Late Twenties,Classic_075B51F1.wem		\Actor-Mixer Hierarchy\Default Work Unit\player sonidos\player_muere_grito		465312
+	267307929	muere_arana_03_v1	Z:\Volumes\HD 2TB\ToyBox Game Audio\05 Wwise\ToyBox Wwise 20211106\ToyBox_Wwise_sesion_01\.cache\Mac\SFX\muere_arana_03_v1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\arana_sonidos\arana_muere\arana_muere_chillido\muere_arana_03_v1		43684
+	293079254	paso_personaje_08_v1	Z:\Volumes\HD 2TB\ToyBox Game Audio\05 Wwise\ToyBox Wwise 20211106\ToyBox_Wwise_sesion_01\.cache\Mac\SFX\paso_personaje_08_v1_B3ECFF1F.wem		\Actor-Mixer Hierarchy\Default Work Unit\player sonidos\pasos_personaje\paso_personaje_08_v1		16590
+	297702866	paso_personaje_01_v1	Z:\Volumes\HD 2TB\ToyBox Game Audio\05 Wwise\ToyBox Wwise 20211106\ToyBox_Wwise_sesion_01\.cache\Mac\SFX\paso_personaje_01_v1_DD27EC84.wem		\Actor-Mixer Hierarchy\Default Work Unit\player sonidos\pasos_personaje\paso_personaje_01_v1		12100
+	307916117	37 Woman Screams #3_ Short, Piercing	Z:\Volumes\HD 2TB\ToyBox Game Audio\05 Wwise\ToyBox Wwise 20211106\ToyBox_Wwise_sesion_01\.cache\Mac\SFX\37 Woman Screams #3_ Short, Piercing_69C20282.wem		\Actor-Mixer Hierarchy\Default Work Unit\player sonidos\player_recibe_dano\37 Woman Screams #3_ Short, Piercing		240416
+	324930682	player_cae_de_pilar	Z:\Volumes\HD 2TB\ToyBox Game Audio\05 Wwise\ToyBox Wwise 20211106\ToyBox_Wwise_sesion_01\.cache\Mac\SFX\41 Woman Screams 7_Three Ext_D77944C6.wem		\Actor-Mixer Hierarchy\Default Work Unit\player sonidos\player_cae_de_pilar		460168
+	330122768	paso_personaje_06_v1	Z:\Volumes\HD 2TB\ToyBox Game Audio\05 Wwise\ToyBox Wwise 20211106\ToyBox_Wwise_sesion_01\.cache\Mac\SFX\paso_personaje_06_v1_B120D7D6.wem		\Actor-Mixer Hierarchy\Default Work Unit\player sonidos\pasos_personaje\paso_personaje_06_v1		14660
+	376265599	muere_arana_01_v1	Z:\Volumes\HD 2TB\ToyBox Game Audio\05 Wwise\ToyBox Wwise 20211106\ToyBox_Wwise_sesion_01\.cache\Mac\SFX\muere_arana_01_v1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\arana_sonidos\arana_muere\arana_muere_chillido\muere_arana_01_v1		30342
+	390603775	InterfaceGlitchInteractionData-32	Z:\Volumes\HD 2TB\ToyBox Game Audio\05 Wwise\ToyBox Wwise 20211106\ToyBox_Wwise_sesion_01\.cache\Mac\SFX\InterfaceGlitchInteractionData-32_B48AFBA8.wem		\Actor-Mixer Hierarchy\Default Work Unit\interface_sonidos\InterfaceGlitchInteractionData-32		52210
+	475906640	menu_click	Z:\Volumes\HD 2TB\ToyBox Game Audio\05 Wwise\ToyBox Wwise 20211106\ToyBox_Wwise_sesion_01\.cache\Mac\SFX\PM_FSSF2_USER_INTERFACE_SIMPLE_56_8D360D1F.wem		\Actor-Mixer Hierarchy\Default Work Unit\interface_sonidos\menu_click		28522
+	529334834	arana_muere_gemido	Z:\Volumes\HD 2TB\ToyBox Game Audio\05 Wwise\ToyBox Wwise 20211106\ToyBox_Wwise_sesion_01\.cache\Mac\SFX\TOYS Squeaky Chicken, Noise, One Long Squeal, Low 02_CA19293A.wem		\Actor-Mixer Hierarchy\Default Work Unit\arana_sonidos\arana_muere\arana_muere_gemido		40100
+	529807827	aterriza_personaje_v1	Z:\Volumes\HD 2TB\ToyBox Game Audio\05 Wwise\ToyBox Wwise 20211106\ToyBox_Wwise_sesion_01\.cache\Mac\SFX\aterriza_personaje_v1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\player sonidos\aterriza_personaje_v1		29942
+	545974155	arana_salto	Z:\Volumes\HD 2TB\ToyBox Game Audio\05 Wwise\ToyBox Wwise 20211106\ToyBox_Wwise_sesion_01\.cache\Mac\SFX\footsteps - jump carpet trainers - 03_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\arana_sonidos\arana_salto		30592
+	557317516	paso_personaje_05_v1	Z:\Volumes\HD 2TB\ToyBox Game Audio\05 Wwise\ToyBox Wwise 20211106\ToyBox_Wwise_sesion_01\.cache\Mac\SFX\paso_personaje_05_v1_9D67B80A.wem		\Actor-Mixer Hierarchy\Default Work Unit\player sonidos\pasos_personaje\paso_personaje_05_v1		14018
+	592969696	desaparece_torre_v1	Z:\Volumes\HD 2TB\ToyBox Game Audio\05 Wwise\ToyBox Wwise 20211106\ToyBox_Wwise_sesion_01\.cache\Mac\SFX\desaparece_torre_v1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\pilares_sonidos\desaparece_torre_v1		174656
+	606173844	Baby Crying Sounds Like Siren sfx	Z:\Volumes\HD 2TB\ToyBox Game Audio\05 Wwise\ToyBox Wwise 20211106\ToyBox_Wwise_sesion_01\.cache\Mac\SFX\Baby Crying Sounds Like Siren sfx_AAD32A20.wem		\Actor-Mixer Hierarchy\Default Work Unit\pilares_sonidos\Baby Crying Sounds Like Siren sfx		427766
+	622032513	player_gana_vida	Z:\Volumes\HD 2TB\ToyBox Game Audio\05 Wwise\ToyBox Wwise 20211106\ToyBox_Wwise_sesion_01\.cache\Mac\SFX\InterfaceBleepGlitch-11_86E61193.wem		\Actor-Mixer Hierarchy\Default Work Unit\player sonidos\player_gana_vida		38806
+	625218915	paso_personaje_03_v1	Z:\Volumes\HD 2TB\ToyBox Game Audio\05 Wwise\ToyBox Wwise 20211106\ToyBox_Wwise_sesion_01\.cache\Mac\SFX\paso_personaje_03_v1_C283C6E5.wem		\Actor-Mixer Hierarchy\Default Work Unit\player sonidos\pasos_personaje\paso_personaje_03_v1		15108
+	631171849	paso_personaje_02_v1	Z:\Volumes\HD 2TB\ToyBox Game Audio\05 Wwise\ToyBox Wwise 20211106\ToyBox_Wwise_sesion_01\.cache\Mac\SFX\paso_personaje_02_v1_127DCD08.wem		\Actor-Mixer Hierarchy\Default Work Unit\player sonidos\pasos_personaje\paso_personaje_02_v1		17270
+	788098474	recibe_dano_v1	Z:\Volumes\HD 2TB\ToyBox Game Audio\05 Wwise\ToyBox Wwise 20211106\ToyBox_Wwise_sesion_01\.cache\Mac\SFX\recibe_dano_v1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\player sonidos\player_recibe_dano\recibe_dano_v1		113424
+	795560534	muere_arana_02_v1	Z:\Volumes\HD 2TB\ToyBox Game Audio\05 Wwise\ToyBox Wwise 20211106\ToyBox_Wwise_sesion_01\.cache\Mac\SFX\muere_arana_02_v1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\arana_sonidos\arana_muere\arana_muere_chillido\muere_arana_02_v1		31236
+	841905526	salto_personaje_v1	Z:\Volumes\HD 2TB\ToyBox Game Audio\05 Wwise\ToyBox Wwise 20211106\ToyBox_Wwise_sesion_01\.cache\Mac\SFX\salto_personaje_v1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\player sonidos\salto_personaje_v1		114006
+	849407497	fx-error-10	Z:\Volumes\HD 2TB\ToyBox Game Audio\05 Wwise\ToyBox Wwise 20211106\ToyBox_Wwise_sesion_01\.cache\Mac\SFX\fx-error-10_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\interface_sonidos\fx-error-10		74048
+	865565707	AAIA 08 Atmos Tonal Stuttery Granular Ringing Drone	Z:\Volumes\HD 2TB\ToyBox Game Audio\05 Wwise\ToyBox Wwise 20211106\ToyBox_Wwise_sesion_01\.cache\Mac\SFX\AAIA 08 Atmos Tonal Stuttery Granular Ringing Drone_3252F24B.wem		\Actor-Mixer Hierarchy\Default Work Unit\Musica temp\AAIA 08 Atmos Tonal Stuttery Granular Ringing Drone		10150920
+	881692936	palanca_torre1_v1	Z:\Volumes\HD 2TB\ToyBox Game Audio\05 Wwise\ToyBox Wwise 20211106\ToyBox_Wwise_sesion_01\.cache\Mac\SFX\palanca_torre1_v1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\player sonidos\palanca_torre1_v1		147520
+	888477466	paso_personaje_09_v1	Z:\Volumes\HD 2TB\ToyBox Game Audio\05 Wwise\ToyBox Wwise 20211106\ToyBox_Wwise_sesion_01\.cache\Mac\SFX\paso_personaje_09_v1_20EA98F5.wem		\Actor-Mixer Hierarchy\Default Work Unit\player sonidos\pasos_personaje\paso_personaje_09_v1		13718
+	897208615	recoge_botones_02_v1	Z:\Volumes\HD 2TB\ToyBox Game Audio\05 Wwise\ToyBox Wwise 20211106\ToyBox_Wwise_sesion_01\.cache\Mac\SFX\recoge_botones_02_v1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\player sonidos\recoge_botones\recoge_botones_02_v1		41858
+	900190173	aparece_torre_v1	Z:\Volumes\HD 2TB\ToyBox Game Audio\05 Wwise\ToyBox Wwise 20211106\ToyBox_Wwise_sesion_01\.cache\Mac\SFX\aparece_torre_v1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\pilares_sonidos\aparece_torre_v1		210558
+	914498966	paso_personaje_07_v1	Z:\Volumes\HD 2TB\ToyBox Game Audio\05 Wwise\ToyBox Wwise 20211106\ToyBox_Wwise_sesion_01\.cache\Mac\SFX\paso_personaje_07_v1_1CC1299E.wem		\Actor-Mixer Hierarchy\Default Work Unit\player sonidos\pasos_personaje\paso_personaje_07_v1		15276
+	926330151	Mx_To the Rescue_menu	Z:\Volumes\HD 2TB\ToyBox Game Audio\05 Wwise\ToyBox Wwise 20211106\ToyBox_Wwise_sesion_01\.cache\Mac\SFX\The Nightmare Before Christmas Soundtrack 17 To the Rescue_70FC7BC1.wem		\Actor-Mixer Hierarchy\Default Work Unit\Musica temp\Mx_To the Rescue_menu		2770516
+	976685486	paso_personaje_04_v1	Z:\Volumes\HD 2TB\ToyBox Game Audio\05 Wwise\ToyBox Wwise 20211106\ToyBox_Wwise_sesion_01\.cache\Mac\SFX\paso_personaje_04_v1_55BE5E81.wem		\Actor-Mixer Hierarchy\Default Work Unit\player sonidos\pasos_personaje\paso_personaje_04_v1		15252
+	999355718	Mx01_To the Rescue_inicio	Z:\Volumes\HD 2TB\ToyBox Game Audio\05 Wwise\ToyBox Wwise 20211106\ToyBox_Wwise_sesion_01\.cache\Mac\SFX\The Nightmare Before Christmas Soundtrack 17 To the Rescue_5E88A415.wem		\Actor-Mixer Hierarchy\Default Work Unit\Musica temp\Mx01_To the Rescue_inicio		5276356
+	1006839415	recoge_botones_01_v1	Z:\Volumes\HD 2TB\ToyBox Game Audio\05 Wwise\ToyBox Wwise 20211106\ToyBox_Wwise_sesion_01\.cache\Mac\SFX\recoge_botones_01_v1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\player sonidos\recoge_botones\recoge_botones_01_v1		39462
+	1031863894	PM_LB_DESIGNED_GRAB_BLOCK_THROW_7	Z:\Volumes\HD 2TB\ToyBox Game Audio\05 Wwise\ToyBox Wwise 20211106\ToyBox_Wwise_sesion_01\.cache\Mac\SFX\PM_LB_DESIGNED_GRAB_BLOCK_THROW_7_331D251E.wem		\Actor-Mixer Hierarchy\Default Work Unit\arana_sonidos\arana_lanza_tela\PM_LB_DESIGNED_GRAB_BLOCK_THROW_7		54964
+	1032583291	PM_LB_SOURCE_PUNCH_SMACK_LETTUCE_WITHCONTACTMIC_ENHANCED_MKH8040_16	Z:\Volumes\HD 2TB\ToyBox Game Audio\05 Wwise\ToyBox Wwise 20211106\ToyBox_Wwise_sesion_01\.cache\Mac\SFX\PM_LB_SOURCE_PUNCH_SMACK_LETTUCE_WITHCONTACTMIC_ENHANCED_MKH8040_16_DF1C46A0.wem		\Actor-Mixer Hierarchy\Default Work Unit\arana_sonidos\arana_lanza_tela\PM_LB_SOURCE_PUNCH_SMACK_LETTUCE_WITHCONTACTMIC_ENHANCED_MKH8040_16		39862
+	1069148861	player_muere_downer	Z:\Volumes\HD 2TB\ToyBox Game Audio\05 Wwise\ToyBox Wwise 20211106\ToyBox_Wwise_sesion_01\.cache\Mac\SFX\Downer With Drone_814CD79B.wem		\Actor-Mixer Hierarchy\Default Work Unit\player sonidos\player_muere_downer		918580
 

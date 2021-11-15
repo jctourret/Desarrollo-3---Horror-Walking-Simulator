@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b963fa7c47c5264cb1e3dcb68fbcedd, type: 3}
   m_Name: 3ED4F2E3-A409-46CE-A7D4-A288FC94A23E
   m_EditorClassIdentifier: 
-  objectName: salto_personajes
-  id: 2693817449
+  objectName: player_salto
+  id: 3951288628
   guid: 3ED4F2E3-A409-46CE-A7D4-A288FC94A23E

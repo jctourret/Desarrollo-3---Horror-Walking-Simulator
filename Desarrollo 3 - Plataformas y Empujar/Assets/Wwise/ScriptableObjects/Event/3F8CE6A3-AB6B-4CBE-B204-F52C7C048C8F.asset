@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b963fa7c47c5264cb1e3dcb68fbcedd, type: 3}
   m_Name: 3F8CE6A3-AB6B-4CBE-B204-F52C7C048C8F
   m_EditorClassIdentifier: 
-  objectName: lanza_aguja
-  id: 4004036222
+  objectName: player_lanza_aguja
+  id: 3351082618
   guid: 3F8CE6A3-AB6B-4CBE-B204-F52C7C048C8F

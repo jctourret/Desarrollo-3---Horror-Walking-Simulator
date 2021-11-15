@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b963fa7c47c5264cb1e3dcb68fbcedd, type: 3}
   m_Name: 580CB6DF-94C5-4085-A3EF-BEE836EA7249
   m_EditorClassIdentifier: 
-  objectName: desaparece_torre
-  id: 3686195039
+  objectName: pilar_desaparece
+  id: 4227528439
   guid: 580CB6DF-94C5-4085-A3EF-BEE836EA7249

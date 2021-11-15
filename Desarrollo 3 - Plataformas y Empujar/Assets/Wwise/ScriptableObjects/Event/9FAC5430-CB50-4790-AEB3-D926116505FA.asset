@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b963fa7c47c5264cb1e3dcb68fbcedd, type: 3}
   m_Name: 9FAC5430-CB50-4790-AEB3-D926116505FA
   m_EditorClassIdentifier: 
-  objectName: aparece_torre
-  id: 649159425
+  objectName: pilar_aparece
+  id: 3664923767
   guid: 9FAC5430-CB50-4790-AEB3-D926116505FA

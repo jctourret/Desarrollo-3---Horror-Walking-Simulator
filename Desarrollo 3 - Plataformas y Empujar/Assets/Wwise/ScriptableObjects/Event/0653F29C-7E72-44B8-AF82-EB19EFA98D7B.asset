@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b963fa7c47c5264cb1e3dcb68fbcedd, type: 3}
   m_Name: 0653F29C-7E72-44B8-AF82-EB19EFA98D7B
   m_EditorClassIdentifier: 
-  objectName: muere_personaje
-  id: 1550559233
+  objectName: player_muere
+  id: 1243730667
   guid: 0653F29C-7E72-44B8-AF82-EB19EFA98D7B

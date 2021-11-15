@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b963fa7c47c5264cb1e3dcb68fbcedd, type: 3}
   m_Name: CD987F27-7D2E-4A82-B3F7-3DB7F857CEC8
   m_EditorClassIdentifier: 
-  objectName: pasos_personaje
-  id: 659343135
+  objectName: player_pasos
+  id: 3564661337
   guid: CD987F27-7D2E-4A82-B3F7-3DB7F857CEC8

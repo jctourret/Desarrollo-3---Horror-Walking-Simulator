@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b963fa7c47c5264cb1e3dcb68fbcedd, type: 3}
   m_Name: 9D26E57F-C0B0-4471-8562-748FC608CFCC
   m_EditorClassIdentifier: 
-  objectName: muere_arana
-  id: 1412811295
+  objectName: arana_muere
+  id: 2118655527
   guid: 9D26E57F-C0B0-4471-8562-748FC608CFCC

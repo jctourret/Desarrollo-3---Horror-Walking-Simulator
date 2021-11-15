@@ -9,7 +9,7 @@ public class UI_PauseController : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetButtonDown(escapeKey))//Input.GetAxisRaw(escapeKey) >= 1)
+        if (Input.GetButtonDown(escapeKey))
         {
             if (!isPaused)
                 StartPause();
@@ -22,6 +22,8 @@ public class UI_PauseController : MonoBehaviour
 
     public void StartPause()
     {
+        AkSoundEngine.PostEvent("Pausa_entrada", gameObject);
+
         Time.timeScale = 0f;
 
         pauseLayer.SetActive(true);
@@ -29,6 +31,8 @@ public class UI_PauseController : MonoBehaviour
 
     public void ClosePause()
     {
+        AkSoundEngine.PostEvent("Pausa_salida", gameObject);
+
         Time.timeScale = 1f;
 
         pauseLayer.SetActive(false);
