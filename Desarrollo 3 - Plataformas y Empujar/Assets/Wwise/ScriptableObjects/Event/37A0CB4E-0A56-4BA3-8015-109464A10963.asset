@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b963fa7c47c5264cb1e3dcb68fbcedd, type: 3}
   m_Name: 37A0CB4E-0A56-4BA3-8015-109464A10963
   m_EditorClassIdentifier: 
-  objectName: recoge_botones
-  id: 1663865597
+  objectName: player_recoje_item
+  id: 4196076791
   guid: 37A0CB4E-0A56-4BA3-8015-109464A10963

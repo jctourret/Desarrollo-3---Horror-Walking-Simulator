@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b963fa7c47c5264cb1e3dcb68fbcedd, type: 3}
   m_Name: 17FA0275-77C9-4136-86D4-AE32B91BD52E
   m_EditorClassIdentifier: 
-  objectName: recibe_dano
-  id: 763444324
+  objectName: player_recibe_dano
+  id: 1534908072
   guid: 17FA0275-77C9-4136-86D4-AE32B91BD52E

@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b963fa7c47c5264cb1e3dcb68fbcedd, type: 3}
   m_Name: EDFD7D9E-B561-446F-99EE-B2D6E60956EB
   m_EditorClassIdentifier: 
-  objectName: impacto_enemigo
-  id: 2768271749
+  objectName: arana_recibe_dano
+  id: 3747419092
   guid: EDFD7D9E-B561-446F-99EE-B2D6E60956EB

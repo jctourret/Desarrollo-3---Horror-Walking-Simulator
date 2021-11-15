@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b963fa7c47c5264cb1e3dcb68fbcedd, type: 3}
   m_Name: 005E94E7-D086-4598-8B63-FE959A241034
   m_EditorClassIdentifier: 
-  objectName: aterriza_personaje
-  id: 201916069
+  objectName: player_aterriza
+  id: 398807103
   guid: 005E94E7-D086-4598-8B63-FE959A241034

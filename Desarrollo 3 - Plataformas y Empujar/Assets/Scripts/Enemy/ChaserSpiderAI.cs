@@ -1,5 +1,4 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class ChaserSpiderAI : EnemyAI
@@ -8,11 +7,11 @@ public class ChaserSpiderAI : EnemyAI
     [SerializeField] int damage = 1;
     [SerializeField] float meleeDelay = 1;
     [SerializeField] float meleeCooldown = 1;
-    [SerializeField] float meleeCooldownTimer;
     [SerializeField] float meleeRange = 3;
     [SerializeField] float meleeConeAngle = 45;
 
-    // Update is called once per frame
+    private float meleeCooldownTimer = 0;
+
     void Update()
     {
         float distance;
@@ -35,6 +34,7 @@ public class ChaserSpiderAI : EnemyAI
                     agent.SetDestination(target.transform.position);
                 }
             }
+
             if (hasAttacked)
             {
                 if (meleeCooldownTimer < meleeCooldown)
@@ -53,19 +53,48 @@ public class ChaserSpiderAI : EnemyAI
 
     IEnumerator Bite(GameObject target)
     {
-        float startTime = Time.time;
+        //float startTime = Time.time;
+        //while (Time.time < startTime + meleeDelay)
+        //{
+        //    yield return null;
+        //}
 
         Vector3 startTargetLocation = target.transform.position - transform.position;
-        while (Time.time < startTime + meleeDelay)
-        {
-            yield return null;
-        }
+
+        yield return new WaitForSeconds(meleeDelay); // Usando WaitForSeconds se ve mas simple y prolijo
+
         float angle = Vector3.SignedAngle(startTargetLocation, target.transform.position - transform.position, Vector3.up);
         float distante = Vector3.Distance(transform.position, target.transform.position);
+
         if (angle < 0)
         {
             angle += 360;
         }
+        
+        if (angle <= meleeConeAngle && distante <= meleeRange)
+        {
+            IDamageable damageable = target.GetComponent<IDamageable>();
+            if (damageable != null)
+            {
+                damageable.TakeDamage(damage);
+            }
+        }
+    }
+
+    // ------------------------------------------
+
+    public void BiteEvent()
+    {
+        Vector3 startTargetLocation = target.transform.position - transform.position;
+
+        float angle = Vector3.SignedAngle(startTargetLocation, target.transform.position - transform.position, Vector3.up);
+        float distante = Vector3.Distance(transform.position, target.transform.position);
+
+        if (angle < 0)
+        {
+            angle += 360;
+        }
+
         if (angle <= meleeConeAngle && distante <= meleeRange)
         {
             IDamageable damageable = target.GetComponent<IDamageable>();

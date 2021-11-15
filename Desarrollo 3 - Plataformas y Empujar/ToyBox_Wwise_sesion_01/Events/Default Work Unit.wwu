@@ -3,8 +3,18 @@
 	<Events>
 		<WorkUnit Name="Default Work Unit" ID="{F9C73B0E-830A-43F9-974D-FD47F06368F0}" PersistMode="Standalone">
 			<ChildrenList>
-				<Event Name="alarma_caida_torre" ID="{8A0F4FCA-7935-4FA6-9BD3-B8ED4A6555FF}"/>
-				<Event Name="aparece_torre" ID="{9FAC5430-CB50-4790-AEB3-D926116505FA}">
+				<Event Name="pilar_alarma_caida" ID="{8A0F4FCA-7935-4FA6-9BD3-B8ED4A6555FF}">
+					<ChildrenList>
+						<Action Name="" ID="{154D0CDD-C6B4-44F7-A11F-D0BEA30160FA}" ShortID="829140712">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Baby Crying Sounds Like Siren sfx" ID="{DD05EDA2-CFBB-4644-A0E5-68BB04D8CAD3}" WorkUnitID="{0068F637-75D2-4DCF-A442-34947F9C8869}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="pilar_aparece" ID="{9FAC5430-CB50-4790-AEB3-D926116505FA}">
 					<ChildrenList>
 						<Action Name="" ID="{2D3F55C3-2F25-4D1D-9503-7C5424D15084}" ShortID="175388583">
 							<ReferenceList>
@@ -15,8 +25,8 @@
 						</Action>
 					</ChildrenList>
 				</Event>
-				<Event Name="aparicion_trampas" ID="{C7D661BA-9D91-4379-AFD0-0C265FC9D0A0}"/>
-				<Event Name="aterriza_personaje" ID="{005E94E7-D086-4598-8B63-FE959A241034}">
+				<Event Name="trampa_cruces_aparece" ID="{C7D661BA-9D91-4379-AFD0-0C265FC9D0A0}"/>
+				<Event Name="player_aterriza" ID="{005E94E7-D086-4598-8B63-FE959A241034}">
 					<ChildrenList>
 						<Action Name="" ID="{AE2204F5-89D3-44AA-AC82-D21E6623E492}" ShortID="965399237">
 							<ReferenceList>
@@ -27,8 +37,18 @@
 						</Action>
 					</ChildrenList>
 				</Event>
-				<Event Name="caida_personaje" ID="{5696C2CF-32FF-4A0E-8A19-BC03611D596F}"/>
-				<Event Name="desaparece_torre" ID="{580CB6DF-94C5-4085-A3EF-BEE836EA7249}">
+				<Event Name="player_cae_de_pilar" ID="{5696C2CF-32FF-4A0E-8A19-BC03611D596F}">
+					<ChildrenList>
+						<Action Name="" ID="{365E98F6-0943-42AB-86DD-A9CA1279BC7F}" ShortID="254799187">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="player_cae_de_pilar" ID="{10508C71-729C-4F83-8BF1-DBD83AE51D5C}" WorkUnitID="{0068F637-75D2-4DCF-A442-34947F9C8869}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="pilar_desaparece" ID="{580CB6DF-94C5-4085-A3EF-BEE836EA7249}">
 					<ChildrenList>
 						<Action Name="" ID="{46E0A047-DA77-4E5C-94BB-9C4E9DC57F18}" ShortID="138204552">
 							<ReferenceList>
@@ -39,20 +59,58 @@
 						</Action>
 					</ChildrenList>
 				</Event>
-				<Event Name="impacto_boss" ID="{C03CE9BD-0AF7-40B1-A550-2C7E0BB63D70}"/>
-				<Event Name="impacto_enemigo" ID="{EDFD7D9E-B561-446F-99EE-B2D6E60956EB}">
+				<Event Name="boss_recibe_dano" ID="{C03CE9BD-0AF7-40B1-A550-2C7E0BB63D70}"/>
+				<Event Name="arana_recibe_dano" ID="{EDFD7D9E-B561-446F-99EE-B2D6E60956EB}">
 					<ChildrenList>
 						<Action Name="" ID="{B922CC0A-6696-4FE7-8FE7-A4AF81A3CC90}" ShortID="399953460">
 							<ReferenceList>
 								<Reference Name="Target">
-									<ObjectRef Name="impacto_a_enemigo_v1" ID="{7A840B79-CDEF-4B42-82B7-07CAD5DE6478}" WorkUnitID="{0068F637-75D2-4DCF-A442-34947F9C8869}"/>
+									<ObjectRef Name="arana_recibe_dano" ID="{7A840B79-CDEF-4B42-82B7-07CAD5DE6478}" WorkUnitID="{0068F637-75D2-4DCF-A442-34947F9C8869}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
 					</ChildrenList>
 				</Event>
-				<Event Name="interface_menu" ID="{5EADD777-89F4-407C-8A3F-F71124A9FFCB}"/>
-				<Event Name="lanza_aguja" ID="{3F8CE6A3-AB6B-4CBE-B204-F52C7C048C8F}">
+				<Event Name="menu_click_play" ID="{5EADD777-89F4-407C-8A3F-F71124A9FFCB}">
+					<ChildrenList>
+						<Action Name="" ID="{5B4D1223-1A9B-46EA-9CB7-5C1C624BD294}" ShortID="545221340">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="menu_click" ID="{92AC9FB9-483E-4689-B1F2-64876952F6B3}" WorkUnitID="{0068F637-75D2-4DCF-A442-34947F9C8869}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{E7A4FAEC-96FE-4CA5-A1AA-9AA9DA2600AB}" ShortID="224695204">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="menu_click_02" ID="{FA45BDE4-4B25-442C-B16B-3B8D4BBE12C8}" WorkUnitID="{0068F637-75D2-4DCF-A442-34947F9C8869}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{7F35D3DD-7DDA-42CE-9E83-44A8D82987C1}" ShortID="265012307">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+								<Property Name="FadeTime" Type="Real64" Value="1.5"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Mx_To the Rescue_menu" ID="{E8AB0938-AB5E-4E15-AE95-15FC2BCD7885}" WorkUnitID="{0068F637-75D2-4DCF-A442-34947F9C8869}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{F43ACDFC-5FBD-4244-85BE-E1A95173A20B}" ShortID="294744002">
+							<PropertyList>
+								<Property Name="FadeTime" Type="Real64" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="AAIA 08 Atmos Tonal Stuttery Granular Ringing Drone" ID="{0F9B9063-87E5-446C-B1AD-1FADEE5422E6}" WorkUnitID="{0068F637-75D2-4DCF-A442-34947F9C8869}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="player_lanza_aguja" ID="{3F8CE6A3-AB6B-4CBE-B204-F52C7C048C8F}">
 					<ChildrenList>
 						<Action Name="" ID="{BE8D87B4-8CA7-493E-864A-FDDC2EA43BC7}" ShortID="213280191">
 							<ReferenceList>
@@ -63,12 +121,70 @@
 						</Action>
 					</ChildrenList>
 				</Event>
-				<Event Name="menu_inicio" ID="{DBF122D9-679B-49F3-B349-3C76244401B3}"/>
-				<Event Name="muere_boss" ID="{DD7C6599-1029-4AD8-8797-7254D0CE3219}"/>
-				<Event Name="muere_personaje" ID="{0653F29C-7E72-44B8-AF82-EB19EFA98D7B}"/>
-				<Event Name="musica_partida" ID="{6710C306-0235-4DE8-988B-6DA7F5C2553E}"/>
-				<Event Name="nivel_superado" ID="{DB91280B-60D2-4A14-B8D2-F4BE9429C5D4}"/>
-				<Event Name="palanca_torre1" ID="{93D22A15-4786-4D44-8A3B-11C7B9FFA373}">
+				<Event Name="menu_musica_inicio" ID="{DBF122D9-679B-49F3-B349-3C76244401B3}">
+					<ChildrenList>
+						<Action Name="" ID="{FFF16033-723C-4ADA-BA31-8BED5F4B3909}" ShortID="921466814">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Mx_To the Rescue_menu" ID="{E8AB0938-AB5E-4E15-AE95-15FC2BCD7885}" WorkUnitID="{0068F637-75D2-4DCF-A442-34947F9C8869}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="boss_muere" ID="{DD7C6599-1029-4AD8-8797-7254D0CE3219}"/>
+				<Event Name="player_muere" ID="{0653F29C-7E72-44B8-AF82-EB19EFA98D7B}">
+					<ChildrenList>
+						<Action Name="" ID="{5E9FF688-6FAC-4E78-9531-E96A9676C394}" ShortID="907115813">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="3"/>
+								<Property Name="FadeTime" Type="Real64" Value="0.5"/>
+							</PropertyList>
+							<ReferenceList/>
+						</Action>
+						<Action Name="" ID="{90C7FFDE-52C9-45BE-84B9-2353581F3684}" ShortID="1013448196">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="player_muere_grito" ID="{4471D9C1-A4FD-4EA1-9C86-CB7616F059A5}" WorkUnitID="{0068F637-75D2-4DCF-A442-34947F9C8869}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{5CC45449-A41B-47AA-9A73-FB2FBBD16E12}" ShortID="1027546192">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="player_muere_downer" ID="{EDFCD1D8-79E9-4F82-A842-BFF416C3095B}" WorkUnitID="{0068F637-75D2-4DCF-A442-34947F9C8869}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="partida_musica02_enemigos" ID="{6710C306-0235-4DE8-988B-6DA7F5C2553E}">
+					<ChildrenList>
+						<Action Name="" ID="{CF6436F9-20C3-4D5F-A602-8844755A7A00}" ShortID="1018190891">
+							<PropertyList>
+								<Property Name="FadeTime" Type="Real64" Value="0.5"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Mx02_To the Rescue_enemigos" ID="{7F1F2FA9-3A1C-4255-96A1-93045653F31A}" WorkUnitID="{0068F637-75D2-4DCF-A442-34947F9C8869}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{C069B154-045E-41A7-B903-973C74B99B4B}" ShortID="25408183">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+								<Property Name="FadeTime" Type="Real64" Value="0.5"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Mx01_To the Rescue_inicio" ID="{8A0FDEA1-7D98-440D-B612-89066634A504}" WorkUnitID="{0068F637-75D2-4DCF-A442-34947F9C8869}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="player_supera_nivel" ID="{DB91280B-60D2-4A14-B8D2-F4BE9429C5D4}"/>
+				<Event Name="player_tira_palanca" ID="{93D22A15-4786-4D44-8A3B-11C7B9FFA373}">
 					<ChildrenList>
 						<Action Name="" ID="{3C21358E-F793-436E-A847-D4C80DDE5D98}" ShortID="809158631">
 							<ReferenceList>
@@ -79,7 +195,7 @@
 						</Action>
 					</ChildrenList>
 				</Event>
-				<Event Name="pasos_personaje" ID="{CD987F27-7D2E-4A82-B3F7-3DB7F857CEC8}">
+				<Event Name="player_pasos" ID="{CD987F27-7D2E-4A82-B3F7-3DB7F857CEC8}">
 					<ChildrenList>
 						<Action Name="" ID="{2FC7515E-8B08-4F89-A8B9-8309593C3F68}" ShortID="88869771">
 							<ReferenceList>
@@ -90,19 +206,19 @@
 						</Action>
 					</ChildrenList>
 				</Event>
-				<Event Name="presencia_boss" ID="{4A2D7198-377A-4117-9DBD-E0DAAAED7B75}"/>
-				<Event Name="recibe_dano" ID="{17FA0275-77C9-4136-86D4-AE32B91BD52E}">
+				<Event Name="boss_movimiento" ID="{4A2D7198-377A-4117-9DBD-E0DAAAED7B75}"/>
+				<Event Name="player_recibe_dano" ID="{17FA0275-77C9-4136-86D4-AE32B91BD52E}">
 					<ChildrenList>
-						<Action Name="" ID="{09A45A80-E86D-41FA-AAC5-E45AA5074B0F}" ShortID="694220726">
+						<Action Name="" ID="{3864E0C7-2C64-47FD-84D5-44845A0A0229}" ShortID="398563644">
 							<ReferenceList>
 								<Reference Name="Target">
-									<ObjectRef Name="recibe_dano_v1" ID="{BE5144A0-7F93-4461-93D0-94A90B049F9C}" WorkUnitID="{0068F637-75D2-4DCF-A442-34947F9C8869}"/>
+									<ObjectRef Name="player_recibe_dano" ID="{6E9D2609-A15E-42CD-AB16-764977BD93B8}" WorkUnitID="{0068F637-75D2-4DCF-A442-34947F9C8869}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
 					</ChildrenList>
 				</Event>
-				<Event Name="recoge_botones" ID="{37A0CB4E-0A56-4BA3-8015-109464A10963}">
+				<Event Name="player_recoje_item" ID="{37A0CB4E-0A56-4BA3-8015-109464A10963}">
 					<ChildrenList>
 						<Action Name="" ID="{6BBD3644-3FAF-482D-8D8F-C1B2DB3BA064}" ShortID="116228031">
 							<ReferenceList>
@@ -113,23 +229,255 @@
 						</Action>
 					</ChildrenList>
 				</Event>
-				<Event Name="salto_personajes" ID="{3ED4F2E3-A409-46CE-A7D4-A288FC94A23E}">
+				<Event Name="player_salto" ID="{3ED4F2E3-A409-46CE-A7D4-A288FC94A23E}">
 					<ChildrenList>
-						<Action Name="" ID="{5F9C09B6-0302-48D9-A00A-C0E46D3B62F2}" ShortID="333034486">
+						<Action Name="" ID="{056220CC-2670-4F1E-A19C-80B590FE9194}" ShortID="589586149">
 							<ReferenceList>
 								<Reference Name="Target">
-									<ObjectRef Name="salto_personaje_v1" ID="{07661A69-C867-4F6C-B444-E2C6E47C7386}" WorkUnitID="{0068F637-75D2-4DCF-A442-34947F9C8869}"/>
+									<ObjectRef Name="salto_personaje_v1" ID="{333E4040-49F6-481F-8909-AFDB45BCBD67}" WorkUnitID="{0068F637-75D2-4DCF-A442-34947F9C8869}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
 					</ChildrenList>
 				</Event>
-				<Event Name="muere_arana" ID="{9D26E57F-C0B0-4471-8562-748FC608CFCC}">
+				<Event Name="arana_muere" ID="{9D26E57F-C0B0-4471-8562-748FC608CFCC}">
 					<ChildrenList>
-						<Action Name="" ID="{17F4038E-4788-4909-BBEC-CA0A620E03F7}" ShortID="623162570">
+						<Action Name="" ID="{4D61E1E9-E1F4-431B-9C1A-ABE3B2E5C143}" ShortID="778723193">
 							<ReferenceList>
 								<Reference Name="Target">
-									<ObjectRef Name="muere_arana" ID="{80483BC5-7833-428C-AE93-BCEA4EFE67E5}" WorkUnitID="{0068F637-75D2-4DCF-A442-34947F9C8869}"/>
+									<ObjectRef Name="arana_muere" ID="{03A1E6B5-6ECB-41BE-961A-E095291FD262}" WorkUnitID="{0068F637-75D2-4DCF-A442-34947F9C8869}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="menu_click_exit" ID="{70147393-D6A7-4166-8218-86BAC61B424B}">
+					<ChildrenList>
+						<Action Name="" ID="{689E1899-BA41-4D5C-AC18-35534466ABE7}" ShortID="48735257">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="fx-error-10" ID="{C0054057-523C-4301-8E15-607CAFCA2112}" WorkUnitID="{0068F637-75D2-4DCF-A442-34947F9C8869}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{C4CEC811-E297-4DCE-812E-7633B10D054C}" ShortID="887721074">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="menu_click" ID="{92AC9FB9-483E-4689-B1F2-64876952F6B3}" WorkUnitID="{0068F637-75D2-4DCF-A442-34947F9C8869}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="menu_click_otro" ID="{0530431E-0BE3-4A4A-AF6D-78FF5F02EB6C}">
+					<ChildrenList>
+						<Action Name="" ID="{D05EC299-2501-4C84-BE0A-B3CF5D3180A2}" ShortID="524902854">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="menu_click_01" ID="{6D2B64F8-1105-44C1-A041-A0BA15030168}" WorkUnitID="{0068F637-75D2-4DCF-A442-34947F9C8869}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="partida_musica01_inicio" ID="{236A7FB7-A3D8-4597-9433-A069B2C51A49}">
+					<ChildrenList>
+						<Action Name="" ID="{3ED4950B-6C5A-4FE4-8F84-0B614D95F79D}" ShortID="579959765">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Mx01_To the Rescue_inicio" ID="{8A0FDEA1-7D98-440D-B612-89066634A504}" WorkUnitID="{0068F637-75D2-4DCF-A442-34947F9C8869}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="loading_musica" ID="{301E1490-6091-43A0-8A48-3E2BF0A32A7E}">
+					<ChildrenList>
+						<Action Name="" ID="{A3F9D818-05EE-4840-914F-6E080F94682E}" ShortID="15834973">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="AAIA 08 Atmos Tonal Stuttery Granular Ringing Drone" ID="{0F9B9063-87E5-446C-B1AD-1FADEE5422E6}" WorkUnitID="{0068F637-75D2-4DCF-A442-34947F9C8869}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="loading_spacebar" ID="{83D6F01F-4E63-4AB5-9CE7-4F2E35857062}">
+					<ChildrenList>
+						<Action Name="" ID="{D0F23347-CE57-4724-997D-669F9CA420F2}" ShortID="43892867">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="InterfaceGlitchInteractionData-32" ID="{88E73973-ED0E-4087-8C04-F41C77A17B1F}" WorkUnitID="{0068F637-75D2-4DCF-A442-34947F9C8869}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{5A8C3C9E-2A9B-4F14-9385-FCEB95EAC01F}" ShortID="279986503">
+							<PropertyList>
+								<Property Name="FadeTime" Type="Real64" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Mx01_To the Rescue_inicio" ID="{8A0FDEA1-7D98-440D-B612-89066634A504}" WorkUnitID="{0068F637-75D2-4DCF-A442-34947F9C8869}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{379FB392-29A7-4521-A5C8-08327C26D536}" ShortID="845730347">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+								<Property Name="FadeTime" Type="Real64" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="AAIA 08 Atmos Tonal Stuttery Granular Ringing Drone" ID="{0F9B9063-87E5-446C-B1AD-1FADEE5422E6}" WorkUnitID="{0068F637-75D2-4DCF-A442-34947F9C8869}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="partida_musica03_mercado" ID="{E03605B1-833C-4921-B1C1-DD5F9FBA93A7}"/>
+				<Event Name="partida_musica04_pre_boss" ID="{93AE08D0-5B41-42FE-BABD-FB6A15D3BD1E}"/>
+				<Event Name="partida_musica05_boss" ID="{A10FD17F-14FD-44F8-B079-3DECCE46E932}"/>
+				<Event Name="partida_musica06_victoria" ID="{44DD5A2A-5390-4923-A9A7-112AAC0D1BE2}"/>
+				<Event Name="partida_musica07_pausa" ID="{64EA5B39-6571-4C31-B37B-312C551AD1E2}"/>
+				<Event Name="arana_pasos" ID="{7BE70EF5-EEC2-47BC-8CCD-7B8A660528AD}"/>
+				<Event Name="arana_lanza_tela" ID="{C543ECAB-1B9A-44A3-B9FC-4F34B9D2DF0B}">
+					<ChildrenList>
+						<Action Name="" ID="{29A955C9-14B3-4534-8C5A-E24A45E90707}" ShortID="842605225">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="arana_lanza_tela" ID="{D4FFD763-8887-4909-BB5F-80909D70E27C}" WorkUnitID="{0068F637-75D2-4DCF-A442-34947F9C8869}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{9EE41179-5E34-4037-A4B3-BAED3A915FDE}" ShortID="211205428">
+							<PropertyList>
+								<Property Name="Inclusion" Type="bool">
+									<ValueList>
+										<Value>False</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="PM_LB_SOURCE_PUNCH_SMACK_LETTUCE_WITHCONTACTMIC_ENHANCED_MKH8040_16" ID="{3B918759-E539-4DBA-891A-7D8B536A2B5D}" WorkUnitID="{0068F637-75D2-4DCF-A442-34947F9C8869}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="arana_salta" ID="{6667C797-B683-4A23-AA01-269979BCEAFA}">
+					<ChildrenList>
+						<Action Name="" ID="{FC79B888-51C5-476B-AB45-DB47D6373B1E}" ShortID="855598562">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="arana_salto" ID="{DAAF6B8E-59E9-42EB-8EED-D200FA6900A9}" WorkUnitID="{0068F637-75D2-4DCF-A442-34947F9C8869}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="telarana_abre" ID="{75BB155A-A501-4F78-BEB5-E4661B4BB23C}">
+					<ChildrenList>
+						<Action Name="" ID="{DC1EF3D1-CB31-4BBD-AE75-5DC40B5EDA92}" ShortID="33663985">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="telarana_abre" ID="{EC1A0D31-A7B4-4C45-A824-96A035230C86}" WorkUnitID="{0068F637-75D2-4DCF-A442-34947F9C8869}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="mono_frase1_welcome" ID="{4128C784-A70F-4255-9911-5606AED3D486}"/>
+				<Event Name="mono_frase2_compra" ID="{4897C570-F022-4DEC-B53E-DC3CEBE4BFD0}"/>
+				<Event Name="mono_frase3_despedida" ID="{56DE2A41-18D8-4068-8E20-862D5C6A1D13}"/>
+				<Event Name="mercado_compra_item" ID="{C6873561-C890-4CCC-8CD2-AD6B9C6C6D75}"/>
+				<Event Name="mercado_precio_aparece" ID="{62082EB8-2380-4410-8A41-28236DABEC86}"/>
+				<Event Name="trampa_bolas_aparece" ID="{F8347866-3D47-485F-85F9-A77D06211EA8}"/>
+				<Event Name="pilar_final_aparece" ID="{E177E0DA-A635-4736-8517-9AFF4BF1585A}"/>
+				<Event Name="player_presiona_tuerca" ID="{941C0205-1723-4DB4-BADA-C7E2B1FB3AD5}"/>
+				<Event Name="player_gana_vida" ID="{8A781114-97DC-4A93-B8B1-A3909A4E1E87}">
+					<ChildrenList>
+						<Action Name="" ID="{775BB14B-FCF5-4ED3-B22D-47F45FD02CAD}" ShortID="1048533102">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="player_gana_vida" ID="{C2010A1E-D198-4AC2-BAF1-AF913421C8EE}" WorkUnitID="{0068F637-75D2-4DCF-A442-34947F9C8869}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="ascensor_baja" ID="{2E72EC8A-59CC-47D5-8428-A94B3B6919D9}"/>
+				<Event Name="ascensor_sube" ID="{422D9CC2-2AAD-4DD0-BBAA-31AE568056AE}"/>
+				<Event Name="boss_risas" ID="{F0AABFB0-1FF5-49A4-BB35-4DBBBCEE5978}"/>
+				<Event Name="boss_susurros_bajo" ID="{3659A6A8-6377-4962-98A0-1EDABC8491FB}"/>
+				<Event Name="boss_susurros_medio" ID="{2C9E66A2-7AAE-45DC-89B4-00DF4F719279}"/>
+				<Event Name="boss_susurros_alto" ID="{E67C7AA5-16B7-4EF2-9B89-01CDDF597F00}"/>
+				<Event Name="boss_frase01" ID="{8281B72B-6614-4DD1-880B-2E8D697D9F6F}"/>
+				<Event Name="boss_frase02" ID="{F754EBC9-161E-4C85-A87B-D35982632BDF}"/>
+				<Event Name="boss_frase03" ID="{2AE8C80C-47B8-473B-996F-0E56DEE017BB}"/>
+				<Event Name="player_frase01" ID="{A1A73841-9AEA-4A05-9186-78E00895F268}"/>
+				<Event Name="player_frase02" ID="{FFCA67A5-9307-48C9-8933-FB717021C1B2}"/>
+				<Event Name="player_frase03" ID="{36F9B7BA-C3FC-46CB-A08F-F7CD4FD46805}"/>
+				<Event Name="player_frase04" ID="{92E730F2-7D19-4238-ABDD-3D81DD88B29F}"/>
+				<Event Name="player_frase05" ID="{8D42418C-CF9D-4C03-B8FD-68CD71744757}"/>
+				<Event Name="boss_ataca_cuchillo" ID="{ED4932AB-9DCE-459B-8CA9-0E9C94FB1029}"/>
+				<Event Name="pausa_entrada" ID="{5030EF32-BCAB-45DE-9FBF-0B4412C1292B}">
+					<ChildrenList>
+						<Action Name="" ID="{3F980B95-2212-46DD-A241-A285F698C192}" ShortID="465106355">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="pausa_entrada" ID="{A4B150C0-3FE0-40F7-BA53-3E80682F108A}" WorkUnitID="{0068F637-75D2-4DCF-A442-34947F9C8869}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{102AD55A-51D4-4E37-B236-3A3E760F4817}" ShortID="939370907">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="7"/>
+								<Property Name="FadeTime" Type="Real64" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Mx02_To the Rescue_enemigos" ID="{7F1F2FA9-3A1C-4255-96A1-93045653F31A}" WorkUnitID="{0068F637-75D2-4DCF-A442-34947F9C8869}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{6E9D1557-4EAB-4714-8584-32E7354DF206}" ShortID="597619133">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="AAIA 08 Atmos Tonal Stuttery Granular Ringing Drone" ID="{0F9B9063-87E5-446C-B1AD-1FADEE5422E6}" WorkUnitID="{0068F637-75D2-4DCF-A442-34947F9C8869}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="pausa_salida" ID="{0C348B29-6AB5-4ECF-87C4-0D40A81D32B8}">
+					<ChildrenList>
+						<Action Name="" ID="{C25D2C25-6E12-4F80-AB11-433B84C82358}" ShortID="514405963">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="pausa_salida" ID="{69A10006-C33B-4BEB-BB19-D69E617F6C5C}" WorkUnitID="{0068F637-75D2-4DCF-A442-34947F9C8869}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{9694AFF8-BB6C-4DEA-B820-6E0E8178C0FA}" ShortID="193874773">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+								<Property Name="FadeTime" Type="Real64" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="AAIA 08 Atmos Tonal Stuttery Granular Ringing Drone" ID="{0F9B9063-87E5-446C-B1AD-1FADEE5422E6}" WorkUnitID="{0068F637-75D2-4DCF-A442-34947F9C8869}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{3F4605F3-7BCC-4A39-A626-1E7DC52E999A}" ShortID="570002936">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="9"/>
+								<Property Name="FadeTime" Type="Real64" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Mx02_To the Rescue_enemigos" ID="{7F1F2FA9-3A1C-4255-96A1-93045653F31A}" WorkUnitID="{0068F637-75D2-4DCF-A442-34947F9C8869}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>

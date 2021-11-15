@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b963fa7c47c5264cb1e3dcb68fbcedd, type: 3}
   m_Name: 93D22A15-4786-4D44-8A3B-11C7B9FFA373
   m_EditorClassIdentifier: 
-  objectName: palanca_torre1
-  id: 618057445
+  objectName: player_tira_palanca
+  id: 3166472456
   guid: 93D22A15-4786-4D44-8A3B-11C7B9FFA373

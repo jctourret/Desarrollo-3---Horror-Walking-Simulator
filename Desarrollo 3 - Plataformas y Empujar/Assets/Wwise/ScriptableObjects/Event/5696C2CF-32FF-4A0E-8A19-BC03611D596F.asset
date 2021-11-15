@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b963fa7c47c5264cb1e3dcb68fbcedd, type: 3}
   m_Name: 5696C2CF-32FF-4A0E-8A19-BC03611D596F
   m_EditorClassIdentifier: 
-  objectName: caida_personaje
-  id: 3984214485
+  objectName: player_cae_de_pilar
+  id: 298156071
   guid: 5696C2CF-32FF-4A0E-8A19-BC03611D596F
