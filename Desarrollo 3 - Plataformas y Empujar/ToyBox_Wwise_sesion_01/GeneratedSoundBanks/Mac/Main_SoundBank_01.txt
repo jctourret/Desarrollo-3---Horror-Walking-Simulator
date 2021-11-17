@@ -57,14 +57,23 @@ Event	ID	Name			Wwise Object Path	Notes
 	3951288628	player_salto			\Default Work Unit\player_salto	
 	3979446143	partida_musica07_pausa			\Default Work Unit\partida_musica07_pausa	
 	4012700044	menu_click_otro			\Default Work Unit\menu_click_otro	
+	4033927831	partida_click_replay			\Default Work Unit\partida_click_replay	
 	4094045868	pausa_salida			\Default Work Unit\pausa_salida	
 	4177257821	pilar_alarma_caida			\Default Work Unit\pilar_alarma_caida	
 	4196076791	player_recoje_item			\Default Work Unit\player_recoje_item	
 	4227528439	pilar_desaparece			\Default Work Unit\pilar_desaparece	
 
+Effect plug-ins	ID	Name	Type				Notes
+	1232017842	LR_Slap_with_CrossFeed	Wwise Stereo Delay			
+	3851006675	Secret_message_Distant	Wwise Harmonizer			
+
+Source plug-ins	ID	Name	Type		Wwise Object Path	Notes
+	448015340	Wwise Silence	Wwise Silence		\Actor-Mixer Hierarchy\Default Work Unit\player sonidos\player_scream_warrior\silencio\Wwise Silence	
+
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	11626267	Mx02_To the Rescue_enemigos	Z:\Volumes\HD 2TB\ToyBox Game Audio\05 Wwise\ToyBox Wwise 20211106\ToyBox_Wwise_sesion_01\.cache\Mac\SFX\The Nightmare Before Christmas Soundtrack 17 To the Rescue_A352DF8B.wem		\Actor-Mixer Hierarchy\Default Work Unit\Musica temp\Mx02_To the Rescue_enemigos		30014412
 	32912149	lanza_aguja_v1	Z:\Volumes\HD 2TB\ToyBox Game Audio\05 Wwise\ToyBox Wwise 20211106\ToyBox_Wwise_sesion_01\.cache\Mac\SFX\lanza_aguja_v1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\player sonidos\lanza_aguja_v1		54290
+	176059350	Warrior Scream	Z:\Volumes\HD 2TB\ToyBox Game Audio\05 Wwise\ToyBox Wwise 20211106\ToyBox_Wwise_sesion_01\.cache\Mac\SFX\Female Warrior 3 Scream, Battle, War, Cry, Fight, Shout 3_8FDFE612.wem		\Actor-Mixer Hierarchy\Default Work Unit\player sonidos\player_scream_warrior\Warrior Scream		75328
 	206833650	pausa_salida	Z:\Volumes\HD 2TB\ToyBox Game Audio\05 Wwise\ToyBox Wwise 20211106\ToyBox_Wwise_sesion_01\.cache\Mac\SFX\IMPACT METAL Scratchy Short Punch_03_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\interface_sonidos\pausa_salida		283840
 	214972885	arana_recibe_dano	Z:\Volumes\HD 2TB\ToyBox Game Audio\05 Wwise\ToyBox Wwise 20211106\ToyBox_Wwise_sesion_01\.cache\Mac\SFX\impacto_a_enemigo_v1_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\arana_sonidos\arana_recibe_dano		21430
 	229450914	pausa_entrada	Z:\Volumes\HD 2TB\ToyBox Game Audio\05 Wwise\ToyBox Wwise 20211106\ToyBox_Wwise_sesion_01\.cache\Mac\SFX\IMPACT METAL Short Slam_03_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\interface_sonidos\pausa_entrada		343164

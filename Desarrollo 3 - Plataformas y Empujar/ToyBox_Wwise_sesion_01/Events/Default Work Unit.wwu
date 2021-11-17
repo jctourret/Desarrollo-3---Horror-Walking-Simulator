@@ -46,6 +46,14 @@
 								</Reference>
 							</ReferenceList>
 						</Action>
+						<Action Name="" ID="{2DAC7BC4-71F5-4845-90BF-8BEA8B388D81}" ShortID="66443394">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="3"/>
+								<Property Name="FadeTime" Type="Real64" Value="1.5"/>
+								<Property Name="Scope" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList/>
+						</Action>
 					</ChildrenList>
 				</Event>
 				<Event Name="pilar_desaparece" ID="{580CB6DF-94C5-4085-A3EF-BEE836EA7249}">
@@ -84,6 +92,18 @@
 				</Event>
 				<Event Name="menu_click_play" ID="{5EADD777-89F4-407C-8A3F-F71124A9FFCB}">
 					<ChildrenList>
+						<Action Name="" ID="{7F35D3DD-7DDA-42CE-9E83-44A8D82987C1}" ShortID="265012307">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+								<Property Name="FadeTime" Type="Real64" Value="1.5"/>
+								<Property Name="Scope" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Mx_To the Rescue_menu" ID="{E8AB0938-AB5E-4E15-AE95-15FC2BCD7885}" WorkUnitID="{0068F637-75D2-4DCF-A442-34947F9C8869}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
 						<Action Name="" ID="{5B4D1223-1A9B-46EA-9CB7-5C1C624BD294}" ShortID="545221340">
 							<ReferenceList>
 								<Reference Name="Target">
@@ -95,17 +115,6 @@
 							<ReferenceList>
 								<Reference Name="Target">
 									<ObjectRef Name="menu_click_02" ID="{FA45BDE4-4B25-442C-B16B-3B8D4BBE12C8}" WorkUnitID="{0068F637-75D2-4DCF-A442-34947F9C8869}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-						<Action Name="" ID="{7F35D3DD-7DDA-42CE-9E83-44A8D82987C1}" ShortID="265012307">
-							<PropertyList>
-								<Property Name="ActionType" Type="int16" Value="2"/>
-								<Property Name="FadeTime" Type="Real64" Value="1.5"/>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="Mx_To the Rescue_menu" ID="{E8AB0938-AB5E-4E15-AE95-15FC2BCD7885}" WorkUnitID="{0068F637-75D2-4DCF-A442-34947F9C8869}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
@@ -130,6 +139,16 @@
 								</Reference>
 							</ReferenceList>
 						</Action>
+						<Action Name="" ID="{FC771AD1-836E-48DB-8DCA-EF6A6A2F3F2A}" ShortID="453924710">
+							<PropertyList>
+								<Property Name="Probability" Type="Real64" Value="33"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="player_scream_warrior" ID="{5CA6C8D3-39FC-432F-B31C-AD4D6B9CBC43}" WorkUnitID="{0068F637-75D2-4DCF-A442-34947F9C8869}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
 					</ChildrenList>
 				</Event>
 				<Event Name="menu_musica_inicio" ID="{DBF122D9-679B-49F3-B349-3C76244401B3}">
@@ -137,6 +156,7 @@
 						<Action Name="" ID="{B999BE9F-C150-43BB-99B3-3D00500AA87F}" ShortID="951453898">
 							<PropertyList>
 								<Property Name="ActionType" Type="int16" Value="3"/>
+								<Property Name="Scope" Type="int16" Value="1"/>
 							</PropertyList>
 							<ReferenceList/>
 						</Action>
@@ -156,6 +176,7 @@
 							<PropertyList>
 								<Property Name="ActionType" Type="int16" Value="3"/>
 								<Property Name="FadeTime" Type="Real64" Value="0.5"/>
+								<Property Name="Scope" Type="int16" Value="1"/>
 							</PropertyList>
 							<ReferenceList/>
 						</Action>
@@ -191,6 +212,7 @@
 							<PropertyList>
 								<Property Name="ActionType" Type="int16" Value="2"/>
 								<Property Name="FadeTime" Type="Real64" Value="1"/>
+								<Property Name="Scope" Type="int16" Value="1"/>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
@@ -214,6 +236,16 @@
 				</Event>
 				<Event Name="player_pasos" ID="{CD987F27-7D2E-4A82-B3F7-3DB7F857CEC8}">
 					<ChildrenList>
+						<Action Name="" ID="{2AF981D1-AD7A-49CC-A0F8-8CE174D6B4B7}" ShortID="593816195">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="pasos_personaje" ID="{69D7B720-B4E5-4880-9A14-99BCCDB71A06}" WorkUnitID="{0068F637-75D2-4DCF-A442-34947F9C8869}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
 						<Action Name="" ID="{2FC7515E-8B08-4F89-A8B9-8309593C3F68}" ShortID="88869771">
 							<ReferenceList>
 								<Reference Name="Target">
@@ -322,6 +354,7 @@
 							<PropertyList>
 								<Property Name="ActionType" Type="int16" Value="2"/>
 								<Property Name="FadeTime" Type="Real64" Value="1.5"/>
+								<Property Name="Scope" Type="int16" Value="1"/>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
@@ -429,18 +462,21 @@
 						</Action>
 						<Action Name="" ID="{102AD55A-51D4-4E37-B236-3A3E760F4817}" ShortID="939370907">
 							<PropertyList>
-								<Property Name="ActionType" Type="int16" Value="7"/>
+								<Property Name="ActionType" Type="int16" Value="8"/>
 								<Property Name="FadeTime" Type="Real64" Value="1"/>
+								<Property Name="Scope" Type="int16" Value="1"/>
 							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="Mx02_To the Rescue_enemigos" ID="{7F1F2FA9-3A1C-4255-96A1-93045653F31A}" WorkUnitID="{0068F637-75D2-4DCF-A442-34947F9C8869}"/>
-								</Reference>
-							</ReferenceList>
+							<ReferenceList/>
 						</Action>
 						<Action Name="" ID="{C5DDDEC3-6154-4D47-B8E9-904B7424AE43}" ShortID="937263093">
 							<PropertyList>
 								<Property Name="ActionType" Type="int16" Value="7"/>
+								<Property Name="Inclusion" Type="bool">
+									<ValueList>
+										<Value>False</Value>
+									</ValueList>
+								</Property>
+								<Property Name="Scope" Type="int16" Value="1"/>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
@@ -470,6 +506,7 @@
 							<PropertyList>
 								<Property Name="ActionType" Type="int16" Value="2"/>
 								<Property Name="FadeTime" Type="Real64" Value="1"/>
+								<Property Name="Scope" Type="int16" Value="1"/>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
@@ -479,22 +516,50 @@
 						</Action>
 						<Action Name="" ID="{3F4605F3-7BCC-4A39-A626-1E7DC52E999A}" ShortID="570002936">
 							<PropertyList>
-								<Property Name="ActionType" Type="int16" Value="9"/>
+								<Property Name="ActionType" Type="int16" Value="10"/>
 								<Property Name="FadeTime" Type="Real64" Value="1"/>
+								<Property Name="Scope" Type="int16" Value="1"/>
 							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="Mx02_To the Rescue_enemigos" ID="{7F1F2FA9-3A1C-4255-96A1-93045653F31A}" WorkUnitID="{0068F637-75D2-4DCF-A442-34947F9C8869}"/>
-								</Reference>
-							</ReferenceList>
+							<ReferenceList/>
 						</Action>
 						<Action Name="" ID="{80D20F9F-BDEB-48D3-86B8-6C7DD3C3EEA1}" ShortID="535411379">
 							<PropertyList>
 								<Property Name="ActionType" Type="int16" Value="9"/>
+								<Property Name="Inclusion" Type="bool">
+									<ValueList>
+										<Value>False</Value>
+									</ValueList>
+								</Property>
+								<Property Name="Scope" Type="int16" Value="1"/>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
 									<ObjectRef Name="Mx01_To the Rescue_inicio" ID="{8A0FDEA1-7D98-440D-B612-89066634A504}" WorkUnitID="{0068F637-75D2-4DCF-A442-34947F9C8869}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="partida_click_replay" ID="{6E46DAEC-46FB-465B-B830-DB7CFBC60B08}">
+					<ChildrenList>
+						<Action Name="" ID="{F22DDB67-552C-47F5-BEFE-470EAB827C54}" ShortID="865923593">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="3"/>
+								<Property Name="Scope" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList/>
+						</Action>
+						<Action Name="" ID="{A2AE5779-A4EE-4B47-97C1-9F433928BBAD}" ShortID="287812767">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Mx01_To the Rescue_inicio" ID="{8A0FDEA1-7D98-440D-B612-89066634A504}" WorkUnitID="{0068F637-75D2-4DCF-A442-34947F9C8869}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{9049A957-B5DB-435C-85CC-8F5E19BD19AD}" ShortID="884312756">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="menu_click_01" ID="{6D2B64F8-1105-44C1-A041-A0BA15030168}" WorkUnitID="{0068F637-75D2-4DCF-A442-34947F9C8869}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>

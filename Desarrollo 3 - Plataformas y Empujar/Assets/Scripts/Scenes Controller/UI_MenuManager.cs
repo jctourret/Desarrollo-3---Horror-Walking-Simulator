@@ -24,6 +24,13 @@ public class UI_MenuManager : MonoBehaviour
         SceneManager.LoadScene(scene);
     }
 
+    public void RestartGame(string scene)
+    {
+        AkSoundEngine.PostEvent("partida_click_replay", gameObject);
+
+        SceneManager.LoadScene(scene);
+    }
+
     public void ChangeLayer(string name)
     {
 

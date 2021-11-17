@@ -11,7 +11,7 @@
 	<StreamedFiles/>
 	<MediaFilesNotInAnyBank/>
 	<SoundBanks>
-		<SoundBank Id="626013394" Language="SFX" Hash="757499675">
+		<SoundBank Id="626013394" Language="SFX" Hash="1370412879">
 			<ObjectPath>\SoundBanks\Default Work Unit\Main_SoundBank_01</ObjectPath>
 			<ShortName>Main_SoundBank_01</ShortName>
 			<Path>Main_SoundBank_01.bnk</Path>
@@ -136,6 +136,18 @@
 				<Event Id="3448971764" Name="mono_frase1_welcome" ObjectPath="\Events\Default Work Unit\mono_frase1_welcome" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
 				<Event Id="3610367627" Name="mono_frase2_compra" ObjectPath="\Events\Default Work Unit\mono_frase2_compra" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
 				<Event Id="1098363591" Name="mono_frase3_despedida" ObjectPath="\Events\Default Work Unit\mono_frase3_despedida" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="4033927831" Name="partida_click_replay" ObjectPath="\Events\Default Work Unit\partida_click_replay" DurationType="Infinite">
+					<IncludedMemoryFiles>
+						<File Id="475906640" Language="SFX">
+							<ShortName>PM_FSSF2_USER_INTERFACE_SIMPLE_56.wav</ShortName>
+							<Path>SFX/PM_FSSF2_USER_INTERFACE_SIMPLE_56_8D360D1F.wem</Path>
+						</File>
+						<File Id="999355718" Language="SFX">
+							<ShortName>The Nightmare Before Christmas Soundtrack 17 To the Rescue.wav</ShortName>
+							<Path>SFX/The Nightmare Before Christmas Soundtrack 17 To the Rescue_5E88A415.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
 				<Event Id="3558374396" Name="partida_musica01_inicio" ObjectPath="\Events\Default Work Unit\partida_musica01_inicio" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
 				<Event Id="3887727709" Name="partida_musica02_enemigos" ObjectPath="\Events\Default Work Unit\partida_musica02_enemigos" DurationType="Infinite">
 					<IncludedMemoryFiles>
@@ -195,7 +207,7 @@
 					</IncludedMemoryFiles>
 				</Event>
 				<Event Id="3034072942" Name="pilar_final_aparece" ObjectPath="\Events\Default Work Unit\pilar_final_aparece" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
-				<Event Id="398807103" Name="player_aterriza" ObjectPath="\Events\Default Work Unit\player_aterriza" DurationType="OneShot" DurationMin="0.311229" DurationMax="0.311229">
+				<Event Id="398807103" Name="player_aterriza" ObjectPath="\Events\Default Work Unit\player_aterriza" DurationType="OneShot" DurationMin="0.293592" DurationMax="0.339790">
 					<IncludedMemoryFiles>
 						<File Id="529807827" Language="SFX">
 							<ShortName>aterriza_personaje_v1.wav</ShortName>
@@ -224,11 +236,15 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="3351082618" Name="player_lanza_aguja" ObjectPath="\Events\Default Work Unit\player_lanza_aguja" DurationType="OneShot" DurationMin="0.564854" DurationMax="0.564854">
+				<Event Id="3351082618" Name="player_lanza_aguja" ObjectPath="\Events\Default Work Unit\player_lanza_aguja" DurationType="OneShot" DurationMin="0.467364" DurationMax="0.682681">
 					<IncludedMemoryFiles>
 						<File Id="32912149" Language="SFX">
 							<ShortName>lanza_aguja_v1.wav</ShortName>
 							<Path>SFX/lanza_aguja_v1_10C4C929.wem</Path>
+						</File>
+						<File Id="176059350" Language="SFX">
+							<ShortName>Female Warrior 3 Scream, Battle, War, Cry, Fight, Shout 3.wav</ShortName>
+							<Path>SFX/Female Warrior 3 Scream, Battle, War, Cry, Fight, Shout 3_8FDFE612.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -338,7 +354,7 @@
 				<Event Id="1006187470" Name="trampa_cruces_aparece" ObjectPath="\Events\Default Work Unit\trampa_cruces_aparece" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
 			</IncludedEvents>
 		</SoundBank>
-		<SoundBank Id="1355168291" Language="SFX" Hash="3556334649">
+		<SoundBank Id="1355168291" Language="SFX" Hash="1791592312">
 			<ObjectPath>Init</ObjectPath>
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>

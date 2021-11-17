@@ -1,6 +1,11 @@
-﻿public class GameManager : MonoBehaviourSingleton<GameManager>
+﻿public class GameManager : MB_SingletonDestroy<GameManager>
 {
     private bool firstEncounter = false;
+
+    public void Start()
+    {
+        firstEncounter = false;
+    }
 
     public void FirstEncounter()
     {

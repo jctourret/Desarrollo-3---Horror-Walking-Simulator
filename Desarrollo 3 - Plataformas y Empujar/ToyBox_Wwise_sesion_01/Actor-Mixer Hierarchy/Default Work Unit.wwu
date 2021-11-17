@@ -389,6 +389,26 @@
 					</ReferenceList>
 					<ChildrenList>
 						<Sound Name="lanza_aguja_v1" ID="{EBAE1AF7-070D-4011-9383-093F0D658EFC}" ShortID="732435552">
+							<PropertyList>
+								<Property Name="Pitch" Type="int32">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{9D7E4BDC-60B1-4FB6-9FD1-5C29849EB508}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Max" Type="Real64" Value="328"/>
+													<Property Name="Min" Type="Real64" Value="-328"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-11</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4DDCC0E9-8918-4EF8-AD11-22C68F85E755}"/>
@@ -435,6 +455,36 @@
 							</ActiveSourceList>
 						</Sound>
 						<Sound Name="aterriza_personaje_v1" ID="{95B385D3-0509-45C5-A361-B3C20BDD6620}" ShortID="251606014">
+							<PropertyList>
+								<Property Name="Pitch" Type="int32">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{3D81774F-8F09-4700-ACE2-BFABDDACC67C}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Max" Type="Real64" Value="101"/>
+													<Property Name="Min" Type="Real64" Value="-152"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-8</Value>
+									</ValueList>
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{5C2C7429-32E3-433C-BB21-EAF9D558E5BA}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Min" Type="Real64" Value="-2"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4DDCC0E9-8918-4EF8-AD11-22C68F85E755}"/>
@@ -518,6 +568,8 @@
 						</RandomSequenceContainer>
 						<RandomSequenceContainer Name="pasos_personaje" ID="{69D7B720-B4E5-4880-9A14-99BCCDB71A06}" ShortID="570495868">
 							<PropertyList>
+								<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
+								<Property Name="RandomAvoidRepeatingCount" Type="int32" Value="2"/>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
 										<Value>-5</Value>
@@ -839,6 +891,18 @@
 							</ActiveSourceList>
 						</Sound>
 						<Sound Name="salto_personaje_v1" ID="{333E4040-49F6-481F-8909-AFDB45BCBD67}" ShortID="338832954">
+							<PropertyList>
+								<Property Name="Lowpass" Type="int16">
+									<ValueList>
+										<Value>31</Value>
+									</ValueList>
+								</Property>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-6</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4DDCC0E9-8918-4EF8-AD11-22C68F85E755}"/>
@@ -1067,6 +1131,97 @@
 								<ActiveSource Name="Downer With Drone" ID="{16816218-1F8E-41D0-881C-9EF989B36485}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
+						<RandomSequenceContainer Name="player_scream_warrior" ID="{5CA6C8D3-39FC-432F-B31C-AD4D6B9CBC43}" ShortID="881339191">
+							<PropertyList>
+								<Property Name="RandomOrSequence" Type="int16" Value="0"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4DDCC0E9-8918-4EF8-AD11-22C68F85E755}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E8FBD65D-B603-4940-A021-75BCF3D47498}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="Warrior Scream" ID="{C298F386-558D-4CD4-AC03-A6E329DF0C54}" ShortID="585435343">
+									<PropertyList>
+										<Property Name="Pitch" Type="int32">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{2C760B04-A4B2-4991-BBA6-2AA1640EF7DB}">
+														<PropertyList>
+															<Property Name="Enabled" Type="bool" Value="True"/>
+															<Property Name="Max" Type="Real64" Value="101"/>
+															<Property Name="Min" Type="Real64" Value="-126"/>
+														</PropertyList>
+													</Modifier>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-11</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4DDCC0E9-8918-4EF8-AD11-22C68F85E755}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E8FBD65D-B603-4940-A021-75BCF3D47498}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Female Warrior 3 Scream, Battle, War, Cry, Fight, Shout 3" ID="{FC068A0B-4D3B-453D-86D3-E91B75F850E4}">
+											<PropertyList>
+												<Property Name="FadeInDuration" Type="Real64" Value="0.0206569258905852"/>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.0558675950222646"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.0262906329516539"/>
+												<Property Name="TrimEnd" Type="Real64" Value="0.418302749284351"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>Female Warrior 3 Scream, Battle, War, Cry, Fight, Shout 3.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="176059350"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ObjectLists/>
+									<ActiveSourceList>
+										<ActiveSource Name="Female Warrior 3 Scream, Battle, War, Cry, Fight, Shout 3" ID="{FC068A0B-4D3B-453D-86D3-E91B75F850E4}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="silencio" ID="{92A5DEED-D1C0-4F5C-94EA-B9FA17DFCF2A}" ShortID="674726140">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4DDCC0E9-8918-4EF8-AD11-22C68F85E755}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E8FBD65D-B603-4940-A021-75BCF3D47498}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<SourcePlugin Name="Wwise Silence" ID="{F74ECAEE-739C-47C9-850D-AD75A1DF00DF}" ShortID="448015340" PluginName="Wwise Silence" CompanyID="0" PluginID="101">
+											<PropertyList>
+												<Property Name="Length" Type="Real32" Value="0.2"/>
+											</PropertyList>
+											<Language>SFX</Language>
+										</SourcePlugin>
+									</ChildrenList>
+									<ObjectLists/>
+									<ActiveSourceList>
+										<ActiveSource Name="Wwise Silence" ID="{F74ECAEE-739C-47C9-850D-AD75A1DF00DF}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+							<ObjectLists/>
+							<Playlist>
+								<ItemRef Name="Warrior Scream" ID="{C298F386-558D-4CD4-AC03-A6E329DF0C54}"/>
+							</Playlist>
+						</RandomSequenceContainer>
 					</ChildrenList>
 					<ObjectLists/>
 				</ActorMixer>
@@ -1134,15 +1289,27 @@
 										<Value>21</Value>
 									</ValueList>
 								</Property>
+								<Property Name="OverrideEffect" Type="bool" Value="True"/>
+								<Property Name="Pitch" Type="int32">
+									<ValueList>
+										<Value>-400</Value>
+									</ValueList>
+								</Property>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
-										<Value>-22</Value>
+										<Value>-27</Value>
 									</ValueList>
 								</Property>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4DDCC0E9-8918-4EF8-AD11-22C68F85E755}"/>
+								</Reference>
+								<Reference Name="Effect0" PluginName="Wwise Harmonizer" CompanyID="0" PluginID="138" PluginType="3">
+									<ObjectRef Name="Secret_message_Distant" ID="{54C3F2D2-6B8D-4873-A383-2F6F7189C076}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
+								</Reference>
+								<Reference Name="Effect1" PluginName="Wwise Stereo Delay" CompanyID="0" PluginID="135" PluginType="3">
+									<ObjectRef Name="LR_Slap_with_CrossFeed" ID="{30319A92-C5AC-437A-9864-430059762933}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
 								</Reference>
 								<Reference Name="OutputBus">
 									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E8FBD65D-B603-4940-A021-75BCF3D47498}"/>

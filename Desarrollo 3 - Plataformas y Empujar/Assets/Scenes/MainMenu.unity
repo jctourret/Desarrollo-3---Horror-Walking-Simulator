@@ -2227,8 +2227,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "SOUND & MUSIC:\n\nSebasti\xE1n Mi\xF1o\nJoaqu\xEDn Otero\nAndr\xE9s Monta\xF1a
-    Duret\n\nSOFTWARE TESTERS\n\nPablo Santagiuliana\nJuan Alvarez\nSebasti\xE1n
+  m_text: "SOUND & MUSIC:\n\nAndr\xE9s Monta\xF1a Duret\nSebasti\xE1n Mi\xF1o\nJoaqu\xEDn
+    Otero\n\nSOFTWARE TESTERS\n\nPablo Santagiuliana\nJuan Alvarez\nSebasti\xE1n
     Carrizo Rodas\n\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 66c00dc07a89ab448be727fd3faec75c, type: 2}

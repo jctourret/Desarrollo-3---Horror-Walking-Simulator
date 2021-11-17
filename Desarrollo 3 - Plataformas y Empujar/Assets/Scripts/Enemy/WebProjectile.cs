@@ -34,6 +34,9 @@ public class WebProjectile : MonoBehaviour
         if(collision.collider.gameObject.tag == "Terrain")
         {
             GameObject go = Instantiate(trap,transform.position, Quaternion.identity, collision.collider.transform);
+
+            AkSoundEngine.PostEvent("telarana_abre", gameObject);
+
             Destroy(gameObject);
         }
     }
