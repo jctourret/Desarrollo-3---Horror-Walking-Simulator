@@ -58,6 +58,7 @@ public class CameraBehaviour : MonoBehaviour
     {
         Vector3 originalPos = transform.localPosition;
         float elapsed = 0.0f;
+
         while (elapsed < duration)
         {
             elapsed += Time.deltaTime;
@@ -67,6 +68,7 @@ public class CameraBehaviour : MonoBehaviour
             transform.localPosition = originalPos + new Vector3(x, y, 0.0f);
             yield return null;
         }
+
         cameraShaking = false;
         transform.localPosition = originalPos;
     }

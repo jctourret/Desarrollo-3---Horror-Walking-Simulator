@@ -136,7 +136,7 @@ public class PlayerStats : MonoBehaviour, IDamageable
             AkSoundEngine.PostEvent("player_muere", gameObject);
             OnPlayerDamageDeath?.Invoke();
 
-            gameObject.SetActive(false);
+            //gameObject.SetActive(false);
             //Destroy(gameObject);
         }
         else
