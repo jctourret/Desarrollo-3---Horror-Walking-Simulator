@@ -20,14 +20,15 @@ public class NeedleBehaviour : MonoBehaviour
     private void OnCollisionEnter(Collision collision)
     {
         this.transform.parent = collision.transform;
-        this.transform.GetComponent<BoxCollider>().enabled = false;
-
+        BoxCollider needleCol = transform.GetComponent<BoxCollider>();
+        needleCol.enabled = false;
         StartCoroutine(StopNeedle());
-
-        if (collision.transform.GetComponent<IDamageable>() != null)
-            collision.transform.GetComponent<IDamageable>().TakeDamage(damage);
+        IDamageable damaged = collision.transform.GetComponentInChildren<IDamageable>();
+        if (damaged != null)
+            damaged.TakeDamage(damage);
         else
             Debug.Log("No detecta al objetivo");
+
     }
 
     IEnumerator StopNeedle()

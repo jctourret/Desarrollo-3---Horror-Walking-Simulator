@@ -8,7 +8,7 @@ public class EnemyStats : MonoBehaviour, IDamageable
 
     private void Start()
     {
-        animator = GetComponentInChildren<Animator>();
+        animator = transform.parent.GetComponentInChildren<Animator>();
     }
 
     //==================================
@@ -17,6 +17,7 @@ public class EnemyStats : MonoBehaviour, IDamageable
     {
         life -= damage;
         animator.SetTrigger("Damaged");
+
         Debug.LogError("Estoy recibiendo daño");
         if (life <= 0)
             Eliminated();

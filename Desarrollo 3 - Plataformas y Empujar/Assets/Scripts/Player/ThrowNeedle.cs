@@ -60,7 +60,7 @@ public class ThrowNeedle : MonoBehaviour
             }
             else if (Input.GetKeyDown(KeyCode.DownArrow))
             {
-                needleForce = (-Vector3.forward * throwForce * multiplierForce);
+                needleForce = (Vector3.back * throwForce * multiplierForce);
                 needleRotation = Quaternion.Euler(rotations[2]);
                 animator.SetTrigger("Attack");
             }

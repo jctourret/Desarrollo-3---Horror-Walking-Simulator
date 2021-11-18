@@ -11,7 +11,6 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] float currentSpeed = 10f;
     [SerializeField] float normalSpeed = 10f;
     [SerializeField] float minSpeed = 2;
-    [SerializeField] private float dashTime = 1.5f;
     [SerializeField] private Vector3 playerVelocity;
 
     private bool isSlowed;

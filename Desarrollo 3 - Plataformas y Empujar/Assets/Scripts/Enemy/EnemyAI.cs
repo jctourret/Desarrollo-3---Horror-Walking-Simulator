@@ -28,7 +28,7 @@ public class EnemyAI : MonoBehaviour
         agent = GetComponent<NavMeshAgent>();
         animator = GetComponentInChildren<Animator>();
         coll = GetComponentInChildren<Collider>();
-        coll.isTrigger = true;
+        //coll.isTrigger = true;
         rbody.isKinematic = true;
         OnEnemySpawn?.Invoke(gameObject);
     }
