@@ -27,7 +27,7 @@ public class BossAI : EnemyAI
                 {
                     AkSoundEngine.PostEvent("boss_ataca_cuchillo", gameObject);
 
-                    StartCoroutine(Swing(target));
+                    StartCoroutine(Attack(target));
                     hasAttacked = true;
                 }
             }
@@ -55,28 +55,13 @@ public class BossAI : EnemyAI
     }
 
 
-    IEnumerator Swing(GameObject target)
+    IEnumerator Attack(GameObject target)
     {
-        Vector3 startTargetLocation = target.transform.position - transform.position;
+        Aim();
 
         yield return new WaitForSeconds(meleeDelay); // Usando WaitForSeconds se ve mas simple y prolijo
 
-        float angle = Vector3.SignedAngle(startTargetLocation, target.transform.position - transform.position, Vector3.up);
-        float distante = Vector3.Distance(transform.position, target.transform.position);
-
-        if (angle < 0)
-        {
-            angle += 360;
-        }
-
-        if (angle <= meleeConeAngle && distante <= meleeRange)
-        {
-            IDamageable damageable = target.GetComponent<IDamageable>();
-            if (damageable != null)
-            {
-                damageable.TakeDamage(damage);
-            }
-        }
+        Swing();
     }
 
     // ------------------------------------------
@@ -85,7 +70,7 @@ public class BossAI : EnemyAI
         startTargetLocation = target.transform.position - transform.position;
     }
 
-    public void SwingEvent()
+    public void Swing()
     {
         float angle = Vector3.SignedAngle(startTargetLocation, target.transform.position - transform.position, Vector3.up);
         float distante = Vector3.Distance(transform.position, target.transform.position);

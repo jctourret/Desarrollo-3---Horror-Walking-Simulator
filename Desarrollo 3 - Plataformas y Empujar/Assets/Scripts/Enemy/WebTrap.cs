@@ -14,6 +14,7 @@ public class WebTrap : MonoBehaviour
         if (currentTarget != null)
         {
             currentTarget.Slow(slowStrength);
+            Debug.Log(gameObject.name + " has been stepped on.");
         }
     }
 
@@ -25,6 +26,7 @@ public class WebTrap : MonoBehaviour
             {
                 currentTarget.unSlow(slowStrength);
                 currentTarget = null;
+                Debug.Log(gameObject.name + " has been exited.");
             }
         }
     }

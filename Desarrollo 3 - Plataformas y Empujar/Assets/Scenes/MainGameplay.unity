@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 0.4
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.077727266, g: 0.021745946, b: 0.01004276, a: 0.4}
+  m_IndirectSpecularColor: {r: 0.07750175, g: 0.02174907, b: 0.00991747, a: 0.4}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -163,7 +163,7 @@ MonoBehaviour:
   pillarsBeforeMerket: 0
   finalPillar: {fileID: 119948029761666875, guid: 7157eed61947fa74fab1f025b469015a,
     type: 3}
-  pillarsBeforeFinal: 11
+  pillarsBeforeFinal: 2
   numerationPillars: 0
 --- !u!4 &4676792
 Transform:
@@ -221,7 +221,7 @@ MonoBehaviour:
   m_OverrideVoxelSize: 0
   m_VoxelSize: 0.16666667
   m_BuildHeightMesh: 0
-  m_NavMeshData: {fileID: 23800000, guid: e5e35c7122e17bb47a8dc34d8b87197c, type: 2}
+  m_NavMeshData: {fileID: 23800000, guid: c4b86fca6b6148b47a40b51e8e86f9fb, type: 2}
 --- !u!1 &35690585 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 175916143355190076, guid: aa69266d657d4c94a8b9d9878dcbcd85,

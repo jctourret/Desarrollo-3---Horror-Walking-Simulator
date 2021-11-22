@@ -4,7 +4,7 @@ using UnityEngine;
 public class SpawnEnemies : MonoBehaviour
 {
     [SerializeField]
-    List<EnemyAndPoint> toSpawn;
+    protected List<EnemyAndPoint> toSpawn;
     public List<EnemyAI> enemiesSpawned;
 
     private void OnTriggerEnter(Collider other)

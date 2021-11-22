@@ -109,7 +109,6 @@ public class PillarsBehaviour : Pillar
 
                 if(!specialRoom)
                     room.GetComponentInChildren<SpawnEnemies>().EnemiesInRoomFall();
-                
                 StartCoroutine(MoveDownPillar());
             }
         }

@@ -24,7 +24,6 @@ public class PlayerMovement : MonoBehaviour
 
     [Header("Jump Variables")]
     [SerializeField] private float maxJumpHeight;
-
     [SerializeField] private int lastDirection;
 
     [Header("Interaction")]
@@ -124,7 +123,6 @@ public class PlayerMovement : MonoBehaviour
             if (Input.GetButtonDown("Jump") && isGrounded)
             {
                 playerVelocity.y += Mathf.Sqrt(maxJumpHeight * -3.0f * gravity); // Que es el 3?
-
                 AkSoundEngine.PostEvent("player_salto", gameObject);
             }
 
@@ -133,17 +131,18 @@ public class PlayerMovement : MonoBehaviour
 
             if (playerVelocity.y < 0)
             {
-                animator.SetBool("Jumping", false);
                 animator.SetBool("Falling", true);
+                animator.SetBool("Jumping", false);
             }
             else
             {
-                animator.SetBool("Jumping", true);
                 animator.SetBool("Falling", false);
+                animator.SetBool("Jumping", true);
             }
             controller.Move(playerVelocity * Time.deltaTime);
         }
     }
+
 
     public void Slow(float slowStrength)
     {
@@ -151,6 +150,7 @@ public class PlayerMovement : MonoBehaviour
         {
             currentSpeed -= slowStrength;
             isSlowed = true;
+            Debug.Log(gameObject.name + "is slowed");
         }
     }
 
@@ -160,6 +160,7 @@ public class PlayerMovement : MonoBehaviour
         {
             currentSpeed += slowStrength;
             isSlowed = false;
+            Debug.Log(gameObject.name + "is no longer slowed");
         }
     }
 

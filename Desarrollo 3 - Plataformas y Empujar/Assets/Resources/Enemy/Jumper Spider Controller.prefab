@@ -51,7 +51,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 1
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 80
   m_CollisionDetection: 0
 --- !u!114 &911384526809165170
 MonoBehaviour:
@@ -71,11 +71,12 @@ MonoBehaviour:
   targetInAttackRange: 0
   target: {fileID: 0}
   jumpHeight: 3
-  jumpDistance: 2
-  attackRadius: 2
+  jumpDistance: 6
+  attackRadius: 3
   jumpCooldown: 1
   jumpCooldownTimer: 0
   damage: 1
+  isGrounded: 0
 --- !u!114 &8680622096739496446
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -168,7 +169,6 @@ MonoBehaviour:
   attenuationSphereColor: {r: 1, g: 0, b: 0, a: 0.1}
   LargeModePositions: []
   multiPositionArray: []
-  isGrounded: 0
 --- !u!1 &3126916607659635049
 GameObject:
   m_ObjectHideFlags: 0

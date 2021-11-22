@@ -13,9 +13,16 @@ public class JumperSpiderAI : EnemyAI
     [SerializeField] int damage = 1;
 
     [SerializeField] bool isGrounded;
+    bool ignoreFirst = true;
+    bool attack;
+    Vector3 launchVelocity;
+    Vector3 jumpTarget;
+    Vector3 startingPos;
+    float radiusLandingOffset = 0.5f;
 
     private void Start()
     {
+        startingPos = transform.position;
         rbody.isKinematic = false;
     }
 
@@ -30,22 +37,34 @@ public class JumperSpiderAI : EnemyAI
             {
                 if (distance <= jumpDistance)
                 {
-                    rbody.velocity = initialVelocity(transform.position, target.transform.position, jumpHeight);
+                    AkSoundEngine.PostEvent("arana_salta", gameObject);
+                    Vector3 landingOffset = transform.position - target.transform.position;
+                    landingOffset = landingOffset.normalized * radiusLandingOffset;
+                    launchVelocity = initialVelocity(transform.position, target.transform.position + landingOffset, jumpHeight);
+                    attack = true;
                 }
                 else
                 {
                     AkSoundEngine.PostEvent("arana_salta", gameObject);
 
-                    Vector3 jumpDirection = transform.position - target.transform.position;
-                    Vector3 jumpTarget = jumpDirection.normalized * jumpDistance;
+                    Vector3 jumpDirection = target.transform.position - transform.position;
+                    jumpTarget = transform.position + (jumpDirection.normalized * jumpDistance);
 
-                    rbody.velocity = initialVelocity(transform.position, jumpTarget, jumpHeight);
+                    launchVelocity = initialVelocity(transform.position, jumpTarget, jumpHeight);
+                    attack = true;
                 }
             }
         }
         DetectLanding();
     }
-
+    private void FixedUpdate()
+    {
+        if (attack)
+        {
+            rbody.velocity = launchVelocity;
+            attack = false;
+        }
+    }
     void DetectLanding()
     {
         if (isGrounded)
@@ -64,25 +83,24 @@ public class JumperSpiderAI : EnemyAI
 
     void JumpAttack()
     {
-        RaycastHit[] hit = Physics.SphereCastAll(transform.position, attackRadius, Vector3.zero, 1.0f,LayerMask.GetMask("Enemy"));
-
-        for(int i = 0; i < hit.Length; i++)
+        if (Vector3.Distance(transform.position, target.transform.position)<attackRadius)
         {
-            IDamageable damageable = hit[i].collider.GetComponent<IDamageable>();
-            if (damageable != null && hit[i].collider.tag == "Player")
-            {
-                damageable.TakeDamage(damage);
-            }
+            target.GetComponent<IDamageable>().TakeDamage(damage);
         }
+        hasAttacked = true;
     }
 
     private void OnCollisionEnter(Collision collision)
     {
-        if(collision.collider.tag == "Terrain")
+        if(collision.collider.tag == "Terrain" && !ignoreFirst)
         {
             isGrounded = true;
             rbody.velocity = Vector3.zero;
             JumpAttack();
+        }
+        else if (ignoreFirst)
+        {
+            ignoreFirst = false;
         }
     }
 
@@ -112,6 +130,5 @@ public class JumperSpiderAI : EnemyAI
 
     private void OnDrawGizmos()
     {
-        Gizmos.DrawRay(transform.position, Vector3.down);
     }
 }
