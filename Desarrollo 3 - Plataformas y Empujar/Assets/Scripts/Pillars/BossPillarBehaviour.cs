@@ -71,7 +71,7 @@ public class BossPillarBehaviour : Pillar
 
     public override void StartCollapse()
     {
-        AkSoundEngine.PostEvent("partida_musica04_boss", gameObject);
+        AkSoundEngine.PostEvent("partida_musica05_boss", gameObject);
 
         StartCoroutine(WaitTime());
         OnPillarUp?.Invoke();
