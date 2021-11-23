@@ -21,16 +21,17 @@ public class Special_ItemReward : Collectable
             switch (rewardType)
             {
                 case RewardType.MaxLifeReward:
+                    AkSoundEngine.PostEvent("player_recoje_item", gameObject);
                     other.transform.GetComponentInParent<PlayerStats>().EarnMaxLives(earnScore, earnLive);
                     Destroy(this.gameObject);
                     break;
                 
                 case RewardType.Other:
+                    AkSoundEngine.PostEvent("player_recoje_item", gameObject);
                     Destroy(this.gameObject);
                     break;
             }
 
-            AkSoundEngine.PostEvent("player_recoje_item", gameObject);
         }
     }
 

@@ -141,6 +141,7 @@ MonoBehaviour:
   anim: {fileID: 8042834974981159846}
   timeToActivate: 0.5
   activeTime: 2
+  soundEventName: trampa_bolas_aparece
 --- !u!1 &8042834974981159841
 GameObject:
   m_ObjectHideFlags: 0

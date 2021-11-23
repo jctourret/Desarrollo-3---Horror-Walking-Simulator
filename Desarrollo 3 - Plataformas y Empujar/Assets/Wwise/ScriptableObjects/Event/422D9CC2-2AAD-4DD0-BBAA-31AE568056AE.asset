@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b963fa7c47c5264cb1e3dcb68fbcedd, type: 3}
   m_Name: 422D9CC2-2AAD-4DD0-BBAA-31AE568056AE
   m_EditorClassIdentifier: 
-  objectName: ascensor_sube
-  id: 1927992137
+  objectName: ascensor_palanca_victoria
+  id: 46127608
   guid: 422D9CC2-2AAD-4DD0-BBAA-31AE568056AE

@@ -64,6 +64,8 @@ public class PlayerMovement : MonoBehaviour
             OnPlayerFallDeath?.Invoke();
             AkSoundEngine.PostEvent("player_cae_de_pilar", gameObject);
 
+            PlayerStats.OnPlayerDamageDeath?.Invoke();
+
             gameObject.SetActive(false);
 
             controllable = false;

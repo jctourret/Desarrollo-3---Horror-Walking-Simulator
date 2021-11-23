@@ -1,5 +1,4 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class ActivateTrap : MonoBehaviour
@@ -8,6 +7,7 @@ public class ActivateTrap : MonoBehaviour
 
     public float timeToActivate = 1f;
     public float activeTime = 2f;
+    public string soundEventName = "Missing Sound";
 
     bool isActive = false;
     float time = 0f;
@@ -39,6 +39,8 @@ public class ActivateTrap : MonoBehaviour
     IEnumerator CallHideTrap(bool state)
     {
         yield return new WaitForSeconds(timeToActivate);
+
+        AkSoundEngine.PostEvent(soundEventName, gameObject);
 
         anim.SetTrigger("Activate");
         isActive = state;

@@ -23,17 +23,17 @@ public class Basic_ItemReward : Collectable
                 case RewardType.LifeReward:
                     if (other.transform.GetComponentInParent<PlayerStats>().EarnLive(earnScore))
                     {
+                        AkSoundEngine.PostEvent("player_recoje_item", gameObject);
                         Destroy(this.gameObject);
                     }
                     break;
 
                 case RewardType.MoneyReward:
+                    AkSoundEngine.PostEvent("player_recoje_item", gameObject);
                     EarnMoney(earnScore);
                     Destroy(this.gameObject);
                     break;
             }
-
-            AkSoundEngine.PostEvent("player_recoje_item", gameObject);
         }
     }
 }

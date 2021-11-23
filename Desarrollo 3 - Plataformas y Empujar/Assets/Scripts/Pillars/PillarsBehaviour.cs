@@ -53,7 +53,7 @@ public class PillarsBehaviour : Pillar
     {
         if (other.transform.tag == "Player")
         {
-            GameManager.Get().FirstEncounter();
+            SoundManager.Get().FirstEncounter();
 
             StartCoroutine(InitializeCollapse());
 
@@ -96,7 +96,10 @@ public class PillarsBehaviour : Pillar
         {
             if(timerToDestroy == false)
             {
-                AkSoundEngine.PostEvent("pilar_alarma_caida", gameObject);
+                if(specialRoom)
+                    AkSoundEngine.PostEvent("mono_frase3_despedida", gameObject);
+                else
+                    AkSoundEngine.PostEvent("pilar_alarma_caida", gameObject);
 
                 timer = destroyTime;
                 timerToDestroy = true;

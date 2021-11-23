@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="Windows" BasePlatform="Windows" SchemaVersion="12" SoundbankVersion="140">
 	<RootPaths>
-		<ProjectRoot>/Users/highmacintosh/Library/Application Support/Wwise2019/Bottles/Wwise2019x64/dosdevices/z:/Volumes/HD 2TB/ToyBox Game Audio/05 Wwise/ToyBox Wwise 20211106/ToyBox_Wwise_sesion_01/</ProjectRoot>
-		<SourceFilesRoot>/Users/highmacintosh/Library/Application Support/Wwise2019/Bottles/Wwise2019x64/dosdevices/z:/Volumes/HD 2TB/ToyBox Game Audio/05 Wwise/ToyBox Wwise 20211106/ToyBox_Wwise_sesion_01/.cache/Windows/</SourceFilesRoot>
-		<SoundBanksRoot>/Users/highmacintosh/Library/Application Support/Wwise2019/Bottles/Wwise2019x64/dosdevices/z:/Volumes/HD 2TB/ToyBox Game Audio/05 Wwise/ToyBox Wwise 20211106/ToyBox_Wwise_sesion_01/GeneratedSoundBanks/Windows/</SoundBanksRoot>
+		<ProjectRoot>/Users/highmacintosh/Library/Application Support/Wwise2019/Bottles/Wwise2019x64/dosdevices/z:/Volumes/HD 2TB/ToyBox Game Audio/06 Repositorios/ToyBox_Wwise_main_20211118_01/ToyBox_Wwise_sesion_01/</ProjectRoot>
+		<SourceFilesRoot>/Users/highmacintosh/Library/Application Support/Wwise2019/Bottles/Wwise2019x64/dosdevices/z:/Volumes/HD 2TB/ToyBox Game Audio/06 Repositorios/ToyBox_Wwise_main_20211118_01/ToyBox_Wwise_sesion_01/.cache/Windows/</SourceFilesRoot>
+		<SoundBanksRoot>/Users/highmacintosh/Library/Application Support/Wwise2019/Bottles/Wwise2019x64/dosdevices/z:/Volumes/HD 2TB/ToyBox Game Audio/06 Repositorios/ToyBox_Wwise_main_20211118_01/ToyBox_Wwise_sesion_01/GeneratedSoundBanks/Windows/</SoundBanksRoot>
 		<ExternalSourcesInputFile></ExternalSourcesInputFile>
-		<ExternalSourcesOutputRoot>/Users/highmacintosh/Library/Application Support/Wwise2019/Bottles/Wwise2019x64/dosdevices/z:/Volumes/HD 2TB/ToyBox Game Audio/05 Wwise/ToyBox Wwise 20211106/ToyBox_Wwise_sesion_01/GeneratedSoundBanks/Windows</ExternalSourcesOutputRoot>
+		<ExternalSourcesOutputRoot>/Users/highmacintosh/Library/Application Support/Wwise2019/Bottles/Wwise2019x64/dosdevices/z:/Volumes/HD 2TB/ToyBox Game Audio/06 Repositorios/ToyBox_Wwise_main_20211118_01/ToyBox_Wwise_sesion_01/GeneratedSoundBanks/Windows</ExternalSourcesOutputRoot>
 	</RootPaths>
 	<DialogueEvents/>
 	<StreamedFiles/>
 	<MediaFilesNotInAnyBank/>
 	<SoundBanks>
-		<SoundBank Id="626013394" Language="SFX" Hash="1370412879">
+		<SoundBank Id="626013394" Language="SFX" Hash="4174156583">
 			<ObjectPath>\SoundBanks\Default Work Unit\Main_SoundBank_01</ObjectPath>
 			<ShortName>Main_SoundBank_01</ShortName>
 			<Path>Main_SoundBank_01.bnk</Path>
@@ -20,40 +20,52 @@
 					<IncludedMemoryFiles>
 						<File Id="1031863894" Language="SFX">
 							<ShortName>PM_LB_DESIGNED_GRAB_BLOCK_THROW_7.wav</ShortName>
-							<Path>SFX/PM_LB_DESIGNED_GRAB_BLOCK_THROW_7_331D251E.wem</Path>
+							<Path>SFX/PM_LB_DESIGNED_GRAB_BLOCK_THROW_7_EEC0C96E.wem</Path>
 						</File>
 						<File Id="1032583291" Language="SFX">
 							<ShortName>PM_LB_SOURCE_PUNCH_SMACK_LETTUCE_WITHCONTACTMIC_ENHANCED_MKH8040_16.wav</ShortName>
-							<Path>SFX/PM_LB_SOURCE_PUNCH_SMACK_LETTUCE_WITHCONTACTMIC_ENHANCED_MKH8040_16_DF1C46A0.wem</Path>
+							<Path>SFX/PM_LB_SOURCE_PUNCH_SMACK_LETTUCE_WITHCONTACTMIC_ENHANCED_MKH8040_16_04743FB0.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="2118655527" Name="arana_muere" ObjectPath="\Events\Default Work Unit\arana_muere" DurationType="OneShot" DurationMin="0.516446" DurationMax="0.572477">
+				<Event Id="2118655527" Name="arana_muere" ObjectPath="\Events\Default Work Unit\arana_muere" DurationType="OneShot" DurationMin="0.993135" DurationMax="1.486270">
 					<IncludedMemoryFiles>
-						<File Id="267307929" Language="SFX">
-							<ShortName>muere_arana_03_v1.wav</ShortName>
-							<Path>SFX/muere_arana_03_v1_10C4C929.wem</Path>
+						<File Id="91770389" Language="SFX">
+							<ShortName>muere_arana_01_v2.wav</ShortName>
+							<Path>SFX/muere_arana_01_v2_D8C07C79.wem</Path>
 						</File>
-						<File Id="376265599" Language="SFX">
-							<ShortName>muere_arana_01_v1.wav</ShortName>
-							<Path>SFX/muere_arana_01_v1_10C4C929.wem</Path>
+						<File Id="116286746" Language="SFX">
+							<ShortName>CORO-cm_033.wav</ShortName>
+							<Path>SFX/CORO-cm_033_D8C07C79.wem</Path>
+						</File>
+						<File Id="158945708" Language="SFX">
+							<ShortName>CORO-cm_035.wav</ShortName>
+							<Path>SFX/CORO-cm_035_D8C07C79.wem</Path>
 						</File>
 						<File Id="529334834" Language="SFX">
 							<ShortName>TOYS Squeaky Chicken, Noise, One Long Squeal, Low 02.wav</ShortName>
-							<Path>SFX/TOYS Squeaky Chicken, Noise, One Long Squeal, Low 02_CA19293A.wem</Path>
+							<Path>SFX/TOYS Squeaky Chicken, Noise, One Long Squeal, Low 02_AB5B4A2A.wem</Path>
 						</File>
-						<File Id="795560534" Language="SFX">
-							<ShortName>muere_arana_02_v1.wav</ShortName>
-							<Path>SFX/muere_arana_02_v1_10C4C929.wem</Path>
+						<File Id="816093116" Language="SFX">
+							<ShortName>CORO-cm_036.wav</ShortName>
+							<Path>SFX/CORO-cm_036_D8C07C79.wem</Path>
+						</File>
+						<File Id="861361774" Language="SFX">
+							<ShortName>CORO-cm_087.wav</ShortName>
+							<Path>SFX/CORO-cm_087_D8C07C79.wem</Path>
+						</File>
+						<File Id="1057865327" Language="SFX">
+							<ShortName>CORO-cm_086.wav</ShortName>
+							<Path>SFX/CORO-cm_086_D8C07C79.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
 				<Event Id="2072538013" Name="arana_pasos" ObjectPath="\Events\Default Work Unit\arana_pasos" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
-				<Event Id="3747419092" Name="arana_recibe_dano" ObjectPath="\Events\Default Work Unit\arana_recibe_dano" DurationType="OneShot" DurationMin="0.222563" DurationMax="0.222563">
+				<Event Id="3747419092" Name="arana_recibe_dano" ObjectPath="\Events\Default Work Unit\arana_recibe_dano" DurationType="OneShot" DurationMin="0.314619" DurationMax="0.314619">
 					<IncludedMemoryFiles>
-						<File Id="214972885" Language="SFX">
-							<ShortName>impacto_a_enemigo_v1.wav</ShortName>
-							<Path>SFX/impacto_a_enemigo_v1_10C4C929.wem</Path>
+						<File Id="738594664" Language="SFX">
+							<ShortName>impacto_a_enemigo_v2.wav</ShortName>
+							<Path>SFX/impacto_a_enemigo_v2_0B668A1C.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -61,19 +73,82 @@
 					<IncludedMemoryFiles>
 						<File Id="545974155" Language="SFX">
 							<ShortName>footsteps - jump carpet trainers - 03.wav</ShortName>
-							<Path>SFX/footsteps - jump carpet trainers - 03_10C4C929.wem</Path>
+							<Path>SFX/footsteps - jump carpet trainers - 03_D8C07C79.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="3725013726" Name="ascensor_baja" ObjectPath="\Events\Default Work Unit\ascensor_baja" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
-				<Event Id="1927992137" Name="ascensor_sube" ObjectPath="\Events\Default Work Unit\ascensor_sube" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
-				<Event Id="1684269639" Name="boss_ataca_cuchillo" ObjectPath="\Events\Default Work Unit\boss_ataca_cuchillo" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="3725013726" Name="ascensor_baja" ObjectPath="\Events\Default Work Unit\ascensor_baja" DurationType="OneShot" DurationMin="2.398850" DurationMax="2.398850">
+					<IncludedMemoryFiles>
+						<File Id="605966174" Language="SFX">
+							<ShortName>Coolspring_Power_Museum_Gas_Engine_slide_click_metal_machine_gear_gears_crank_rhythmic_clack_grind_motion.wav</ShortName>
+							<Path>SFX/Coolspring_Power_Museum_Gas_Engine_slide_click_metal_machine_gear_gears_crank_rhythmic_clack_grind_motion_7E162784.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="46127608" Name="ascensor_palanca_victoria" ObjectPath="\Events\Default Work Unit\ascensor_palanca_victoria" DurationType="OneShot" DurationMin="4.605273" DurationMax="4.605273">
+					<IncludedMemoryFiles>
+						<File Id="524676025" Language="SFX">
+							<ShortName>Victory sound effect.wav</ShortName>
+							<Path>SFX/Victory sound effect_A51853FE.wem</Path>
+						</File>
+						<File Id="881692936" Language="SFX">
+							<ShortName>palanca_torre1_v1.wav</ShortName>
+							<Path>SFX/palanca_torre1_v1_C070A447.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="1684269639" Name="boss_ataca_cuchillo" ObjectPath="\Events\Default Work Unit\boss_ataca_cuchillo" DurationType="OneShot" DurationMin="2.672022" DurationMax="2.672022">
+					<IncludedMemoryFiles>
+						<File Id="544991644" Language="SFX">
+							<ShortName>boss_ataca_cuchillo_03.wav</ShortName>
+							<Path>SFX/boss_ataca_cuchillo_03_D8C07C79.wem</Path>
+						</File>
+						<File Id="578528328" Language="SFX">
+							<ShortName>Laugh,Male,Thirties,Evil,Cackle,Wheeze.wav</ShortName>
+							<Path>SFX/Laugh,Male,Thirties,Evil,Cackle,Wheeze_D4980580.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
 				<Event Id="219842959" Name="boss_frase01" ObjectPath="\Events\Default Work Unit\boss_frase01" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
 				<Event Id="219842956" Name="boss_frase02" ObjectPath="\Events\Default Work Unit\boss_frase02" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
 				<Event Id="219842957" Name="boss_frase03" ObjectPath="\Events\Default Work Unit\boss_frase03" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
 				<Event Id="331275946" Name="boss_movimiento" ObjectPath="\Events\Default Work Unit\boss_movimiento" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
-				<Event Id="2533691747" Name="boss_muere" ObjectPath="\Events\Default Work Unit\boss_muere" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
-				<Event Id="3302510416" Name="boss_recibe_dano" ObjectPath="\Events\Default Work Unit\boss_recibe_dano" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="2533691747" Name="boss_muere" ObjectPath="\Events\Default Work Unit\boss_muere" DurationType="Infinite">
+					<IncludedMemoryFiles>
+						<File Id="10501535" Language="SFX">
+							<ShortName>CORO-cm_061.wav</ShortName>
+							<Path>SFX/CORO-cm_061_D8C07C79.wem</Path>
+						</File>
+						<File Id="56073203" Language="SFX">
+							<ShortName>Mx preBoss ref.wav</ShortName>
+							<Path>SFX/Mx preBoss ref_83C43F05.wem</Path>
+						</File>
+						<File Id="265919654" Language="SFX">
+							<ShortName>CORO-cm_060.wav</ShortName>
+							<Path>SFX/CORO-cm_060_D8C07C79.wem</Path>
+						</File>
+						<File Id="862830681" Language="SFX">
+							<ShortName>boss_muere_growl.wav</ShortName>
+							<Path>SFX/boss_muere_growl_42B98566.wem</Path>
+						</File>
+						<File Id="926393112" Language="SFX">
+							<ShortName>Boomer FX 02.wav</ShortName>
+							<Path>SFX/Boomer FX 02_BF9C30F5.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="3302510416" Name="boss_recibe_dano" ObjectPath="\Events\Default Work Unit\boss_recibe_dano" DurationType="OneShot" DurationMin="1.375776" DurationMax="1.375776">
+					<IncludedMemoryFiles>
+						<File Id="398834310" Language="SFX">
+							<ShortName>Laugh,Male,Thirties,Evil,Deep,Diabolical,Ho,Single.wav</ShortName>
+							<Path>SFX/Laugh,Male,Thirties,Evil,Deep,Diabolical,Ho,Single_2B5909C6.wem</Path>
+						</File>
+						<File Id="1049206125" Language="SFX">
+							<ShortName>Gloop Hit 05.wav</ShortName>
+							<Path>SFX/Gloop Hit 05_A556CF5F.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
 				<Event Id="1794040761" Name="boss_risas" ObjectPath="\Events\Default Work Unit\boss_risas" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
 				<Event Id="1678430690" Name="boss_susurros_alto" ObjectPath="\Events\Default Work Unit\boss_susurros_alto" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
 				<Event Id="680289928" Name="boss_susurros_bajo" ObjectPath="\Events\Default Work Unit\boss_susurros_bajo" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
@@ -83,11 +158,23 @@
 					<IncludedMemoryFiles>
 						<File Id="390603775" Language="SFX">
 							<ShortName>InterfaceGlitchInteractionData-32.wav</ShortName>
-							<Path>SFX/InterfaceGlitchInteractionData-32_0B3BB1B8.wem</Path>
+							<Path>SFX/InterfaceGlitchInteractionData-32_12599D88.wem</Path>
+						</File>
+						<File Id="575368993" Language="SFX">
+							<ShortName>CORO-cm_066.wav</ShortName>
+							<Path>SFX/CORO-cm_066_D8C07C79.wem</Path>
+						</File>
+						<File Id="682313123" Language="SFX">
+							<ShortName>CORO-cm_067.wav</ShortName>
+							<Path>SFX/CORO-cm_067_D8C07C79.wem</Path>
+						</File>
+						<File Id="958327469" Language="SFX">
+							<ShortName>CORO-cm_068.wav</ShortName>
+							<Path>SFX/CORO-cm_068_D8C07C79.wem</Path>
 						</File>
 						<File Id="999355718" Language="SFX">
 							<ShortName>The Nightmare Before Christmas Soundtrack 17 To the Rescue.wav</ShortName>
-							<Path>SFX/The Nightmare Before Christmas Soundtrack 17 To the Rescue_5E88A415.wem</Path>
+							<Path>SFX/The Nightmare Before Christmas Soundtrack 17 To the Rescue_95B84065.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -95,11 +182,11 @@
 					<IncludedMemoryFiles>
 						<File Id="475906640" Language="SFX">
 							<ShortName>PM_FSSF2_USER_INTERFACE_SIMPLE_56.wav</ShortName>
-							<Path>SFX/PM_FSSF2_USER_INTERFACE_SIMPLE_56_8D360D1F.wem</Path>
+							<Path>SFX/PM_FSSF2_USER_INTERFACE_SIMPLE_56_4360C4AF.wem</Path>
 						</File>
 						<File Id="849407497" Language="SFX">
 							<ShortName>fx-error-10.wav</ShortName>
-							<Path>SFX/fx-error-10_10C4C929.wem</Path>
+							<Path>SFX/fx-error-10_D8C07C79.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -107,7 +194,7 @@
 					<IncludedMemoryFiles>
 						<File Id="475906640" Language="SFX">
 							<ShortName>PM_FSSF2_USER_INTERFACE_SIMPLE_56.wav</ShortName>
-							<Path>SFX/PM_FSSF2_USER_INTERFACE_SIMPLE_56_8D360D1F.wem</Path>
+							<Path>SFX/PM_FSSF2_USER_INTERFACE_SIMPLE_56_4360C4AF.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -115,50 +202,100 @@
 					<IncludedMemoryFiles>
 						<File Id="475906640" Language="SFX">
 							<ShortName>PM_FSSF2_USER_INTERFACE_SIMPLE_56.wav</ShortName>
-							<Path>SFX/PM_FSSF2_USER_INTERFACE_SIMPLE_56_8D360D1F.wem</Path>
+							<Path>SFX/PM_FSSF2_USER_INTERFACE_SIMPLE_56_4360C4AF.wem</Path>
 						</File>
 						<File Id="865565707" Language="SFX">
 							<ShortName>AAIA 08 Atmos Tonal Stuttery Granular Ringing Drone.wav</ShortName>
-							<Path>SFX/AAIA 08 Atmos Tonal Stuttery Granular Ringing Drone_7D95E320.wem</Path>
+							<Path>SFX/AAIA 08 Atmos Tonal Stuttery Granular Ringing Drone_235F1D30.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
 				<Event Id="2656333385" Name="menu_musica_inicio" ObjectPath="\Events\Default Work Unit\menu_musica_inicio" DurationType="Infinite">
 					<IncludedMemoryFiles>
-						<File Id="926330151" Language="SFX">
-							<ShortName>The Nightmare Before Christmas Soundtrack 17 To the Rescue.wav</ShortName>
-							<Path>SFX/The Nightmare Before Christmas Soundtrack 17 To the Rescue_70FC7BC1.wem</Path>
+						<File Id="27943999" Language="SFX">
+							<ShortName>TB_Menu_full_v1.wav</ShortName>
+							<Path>SFX/TB_Menu_full_v1_88054FB3.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
 				<Event Id="2801762941" Name="mercado_compra_item" ObjectPath="\Events\Default Work Unit\mercado_compra_item" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
 				<Event Id="415597511" Name="mercado_precio_aparece" ObjectPath="\Events\Default Work Unit\mercado_precio_aparece" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
-				<Event Id="3448971764" Name="mono_frase1_welcome" ObjectPath="\Events\Default Work Unit\mono_frase1_welcome" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="3448971764" Name="mono_frase1_welcome" ObjectPath="\Events\Default Work Unit\mono_frase1_welcome" DurationType="OneShot" DurationMin="4.299724" DurationMax="4.299724">
+					<IncludedMemoryFiles>
+						<File Id="222454458" Language="SFX">
+							<ShortName>monkey_toy_sfx01.wav</ShortName>
+							<Path>SFX/monkey_toy_sfx01_C9F22A1C.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
 				<Event Id="3610367627" Name="mono_frase2_compra" ObjectPath="\Events\Default Work Unit\mono_frase2_compra" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
 				<Event Id="1098363591" Name="mono_frase3_despedida" ObjectPath="\Events\Default Work Unit\mono_frase3_despedida" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
 				<Event Id="4033927831" Name="partida_click_replay" ObjectPath="\Events\Default Work Unit\partida_click_replay" DurationType="Infinite">
 					<IncludedMemoryFiles>
 						<File Id="475906640" Language="SFX">
 							<ShortName>PM_FSSF2_USER_INTERFACE_SIMPLE_56.wav</ShortName>
-							<Path>SFX/PM_FSSF2_USER_INTERFACE_SIMPLE_56_8D360D1F.wem</Path>
+							<Path>SFX/PM_FSSF2_USER_INTERFACE_SIMPLE_56_4360C4AF.wem</Path>
 						</File>
 						<File Id="999355718" Language="SFX">
 							<ShortName>The Nightmare Before Christmas Soundtrack 17 To the Rescue.wav</ShortName>
-							<Path>SFX/The Nightmare Before Christmas Soundtrack 17 To the Rescue_5E88A415.wem</Path>
+							<Path>SFX/The Nightmare Before Christmas Soundtrack 17 To the Rescue_95B84065.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
 				<Event Id="3558374396" Name="partida_musica01_inicio" ObjectPath="\Events\Default Work Unit\partida_musica01_inicio" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
 				<Event Id="3887727709" Name="partida_musica02_enemigos" ObjectPath="\Events\Default Work Unit\partida_musica02_enemigos" DurationType="Infinite">
 					<IncludedMemoryFiles>
-						<File Id="11626267" Language="SFX">
-							<ShortName>The Nightmare Before Christmas Soundtrack 17 To the Rescue.wav</ShortName>
-							<Path>SFX/The Nightmare Before Christmas Soundtrack 17 To the Rescue_A352DF8B.wem</Path>
+						<File Id="222340320" Language="SFX">
+							<ShortName>CORO-cm_094.wav</ShortName>
+							<Path>SFX/CORO-cm_094_D8C07C79.wem</Path>
+						</File>
+						<File Id="363261517" Language="SFX">
+							<ShortName>CORO-cm_0112.wav</ShortName>
+							<Path>SFX/CORO-cm_0112_D8C07C79.wem</Path>
+						</File>
+						<File Id="497185826" Language="SFX">
+							<ShortName>TB_gameplay_v1.1.wav</ShortName>
+							<Path>SFX/TB_gameplay_v1.1_0762CC47.wem</Path>
+						</File>
+						<File Id="650788473" Language="SFX">
+							<ShortName>CORO-cm_091.wav</ShortName>
+							<Path>SFX/CORO-cm_091_D8C07C79.wem</Path>
+						</File>
+						<File Id="1025504591" Language="SFX">
+							<ShortName>CORO-cm_096.wav</ShortName>
+							<Path>SFX/CORO-cm_096_D8C07C79.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="2963201918" Name="partida_musica03_mercado" ObjectPath="\Events\Default Work Unit\partida_musica03_mercado" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
-				<Event Id="1635977115" Name="partida_musica04_pre_boss" ObjectPath="\Events\Default Work Unit\partida_musica04_pre_boss" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="1546759916" Name="partida_musica03_mercado_IN" ObjectPath="\Events\Default Work Unit\partida_musica03_mercado_IN" DurationType="Infinite">
+					<IncludedMemoryFiles>
+						<File Id="527978422" Language="SFX">
+							<ShortName>piano ref para mercado.wav</ShortName>
+							<Path>SFX/piano ref para mercado_A4995F03.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="354901387" Name="partida_musica03_mercado_OUT" ObjectPath="\Events\Default Work Unit\partida_musica03_mercado_OUT" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="1635977115" Name="partida_musica04_pre_boss" ObjectPath="\Events\Default Work Unit\partida_musica04_pre_boss" DurationType="Infinite">
+					<IncludedMemoryFiles>
+						<File Id="108432978" Language="SFX">
+							<ShortName>CORO-cm_052.wav</ShortName>
+							<Path>SFX/CORO-cm_052_D8C07C79.wem</Path>
+						</File>
+						<File Id="157701206" Language="SFX">
+							<ShortName>CORO-cm_054.wav</ShortName>
+							<Path>SFX/CORO-cm_054_D8C07C79.wem</Path>
+						</File>
+						<File Id="642497657" Language="SFX">
+							<ShortName>CORO-cm_053.wav</ShortName>
+							<Path>SFX/CORO-cm_053_D8C07C79.wem</Path>
+						</File>
+						<File Id="930799098" Language="SFX">
+							<ShortName>Mx preBoss ref.wav</ShortName>
+							<Path>SFX/Mx preBoss ref_9501C1C3.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
 				<Event Id="838855874" Name="partida_musica05_boss" ObjectPath="\Events\Default Work Unit\partida_musica05_boss" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
 				<Event Id="3863036383" Name="partida_musica06_victoria" ObjectPath="\Events\Default Work Unit\partida_musica06_victoria" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
 				<Event Id="3979446143" Name="partida_musica07_pausa" ObjectPath="\Events\Default Work Unit\partida_musica07_pausa" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
@@ -166,11 +303,11 @@
 					<IncludedMemoryFiles>
 						<File Id="229450914" Language="SFX">
 							<ShortName>IMPACT METAL Short Slam_03.wav</ShortName>
-							<Path>SFX/IMPACT METAL Short Slam_03_10C4C929.wem</Path>
+							<Path>SFX/IMPACT METAL Short Slam_03_D8C07C79.wem</Path>
 						</File>
 						<File Id="865565707" Language="SFX">
 							<ShortName>AAIA 08 Atmos Tonal Stuttery Granular Ringing Drone.wav</ShortName>
-							<Path>SFX/AAIA 08 Atmos Tonal Stuttery Granular Ringing Drone_7D95E320.wem</Path>
+							<Path>SFX/AAIA 08 Atmos Tonal Stuttery Granular Ringing Drone_235F1D30.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -178,7 +315,7 @@
 					<IncludedMemoryFiles>
 						<File Id="206833650" Language="SFX">
 							<ShortName>IMPACT METAL Scratchy Short Punch_03.wav</ShortName>
-							<Path>SFX/IMPACT METAL Scratchy Short Punch_03_10C4C929.wem</Path>
+							<Path>SFX/IMPACT METAL Scratchy Short Punch_03_D8C07C79.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -186,32 +323,39 @@
 					<IncludedMemoryFiles>
 						<File Id="606173844" Language="SFX">
 							<ShortName>Baby Crying Sounds Like Siren sfx.wav</ShortName>
-							<Path>SFX/Baby Crying Sounds Like Siren sfx_AAD32A20.wem</Path>
+							<Path>SFX/Baby Crying Sounds Like Siren sfx_A1B53130.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
 				<Event Id="3664923767" Name="pilar_aparece" ObjectPath="\Events\Default Work Unit\pilar_aparece" DurationType="OneShot" DurationMin="2.192646" DurationMax="2.192646">
 					<IncludedMemoryFiles>
-						<File Id="900190173" Language="SFX">
-							<ShortName>aparece_torre_v1.wav</ShortName>
-							<Path>SFX/aparece_torre_v1_10C4C929.wem</Path>
+						<File Id="652463567" Language="SFX">
+							<ShortName>aparece_torre_v2.wav</ShortName>
+							<Path>SFX/aparece_torre_v2_D8C07C79.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="4227528439" Name="pilar_desaparece" ObjectPath="\Events\Default Work Unit\pilar_desaparece" DurationType="OneShot" DurationMin="1.818667" DurationMax="1.818667">
+				<Event Id="4227528439" Name="pilar_desaparece" ObjectPath="\Events\Default Work Unit\pilar_desaparece" DurationType="OneShot" DurationMin="1.825333" DurationMax="1.825333">
 					<IncludedMemoryFiles>
-						<File Id="592969696" Language="SFX">
-							<ShortName>desaparece_torre_v1.wav</ShortName>
-							<Path>SFX/desaparece_torre_v1_10C4C929.wem</Path>
+						<File Id="39143061" Language="SFX">
+							<ShortName>desaparece_torre_v2.wav</ShortName>
+							<Path>SFX/desaparece_torre_v2_D8C07C79.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="3034072942" Name="pilar_final_aparece" ObjectPath="\Events\Default Work Unit\pilar_final_aparece" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="3034072942" Name="pilar_final_aparece" ObjectPath="\Events\Default Work Unit\pilar_final_aparece" DurationType="OneShot" DurationMin="1.500000" DurationMax="1.500000">
+					<IncludedMemoryFiles>
+						<File Id="377192695" Language="SFX">
+							<ShortName>plataforma final.wav</ShortName>
+							<Path>SFX/plataforma final_D8C07C79.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
 				<Event Id="398807103" Name="player_aterriza" ObjectPath="\Events\Default Work Unit\player_aterriza" DurationType="OneShot" DurationMin="0.293592" DurationMax="0.339790">
 					<IncludedMemoryFiles>
 						<File Id="529807827" Language="SFX">
 							<ShortName>aterriza_personaje_v1.wav</ShortName>
-							<Path>SFX/aterriza_personaje_v1_10C4C929.wem</Path>
+							<Path>SFX/aterriza_personaje_v1_D8C07C79.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -219,7 +363,7 @@
 					<IncludedMemoryFiles>
 						<File Id="324930682" Language="SFX">
 							<ShortName>41 Woman Screams 7_Three Ext.wav</ShortName>
-							<Path>SFX/41 Woman Screams 7_Three Ext_D77944C6.wem</Path>
+							<Path>SFX/41 Woman Screams 7_Three Ext_3852BFD6.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -232,19 +376,19 @@
 					<IncludedMemoryFiles>
 						<File Id="622032513" Language="SFX">
 							<ShortName>InterfaceBleepGlitch-11.wav</ShortName>
-							<Path>SFX/InterfaceBleepGlitch-11_86E61193.wem</Path>
+							<Path>SFX/InterfaceBleepGlitch-11_E4FCF2E3.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="3351082618" Name="player_lanza_aguja" ObjectPath="\Events\Default Work Unit\player_lanza_aguja" DurationType="OneShot" DurationMin="0.467364" DurationMax="0.682681">
+				<Event Id="3351082618" Name="player_lanza_aguja" ObjectPath="\Events\Default Work Unit\player_lanza_aguja" DurationType="OneShot" DurationMin="0.553263" DurationMax="0.621734">
 					<IncludedMemoryFiles>
-						<File Id="32912149" Language="SFX">
-							<ShortName>lanza_aguja_v1.wav</ShortName>
-							<Path>SFX/lanza_aguja_v1_10C4C929.wem</Path>
-						</File>
 						<File Id="176059350" Language="SFX">
 							<ShortName>Female Warrior 3 Scream, Battle, War, Cry, Fight, Shout 3.wav</ShortName>
-							<Path>SFX/Female Warrior 3 Scream, Battle, War, Cry, Fight, Shout 3_8FDFE612.wem</Path>
+							<Path>SFX/Female Warrior 3 Scream, Battle, War, Cry, Fight, Shout 3_820F4B9C.wem</Path>
+						</File>
+						<File Id="304819016" Language="SFX">
+							<ShortName>lanza_aguja_v2.wav</ShortName>
+							<Path>SFX/lanza_aguja_v2_D8C07C79.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -252,64 +396,55 @@
 					<IncludedMemoryFiles>
 						<File Id="265484928" Language="SFX">
 							<ShortName>Scream,Female,Late Twenties,Classic.wav</ShortName>
-							<Path>SFX/Scream,Female,Late Twenties,Classic_29B6EDE7.wem</Path>
+							<Path>SFX/Scream,Female,Late Twenties,Classic_00671AD7.wem</Path>
 						</File>
 						<File Id="1069148861" Language="SFX">
 							<ShortName>Downer With Drone.wav</ShortName>
-							<Path>SFX/Downer With Drone_2BA28672.wem</Path>
+							<Path>SFX/Downer With Drone_0CEDAE42.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
 				<Event Id="3564661337" Name="player_pasos" ObjectPath="\Events\Default Work Unit\player_pasos" DurationType="OneShot" DurationMin="0.125384" DurationMax="0.179230">
 					<IncludedMemoryFiles>
-						<File Id="293079254" Language="SFX">
-							<ShortName>paso_personaje_08_v1.wav</ShortName>
-							<Path>SFX/paso_personaje_08_v1_2715D8DD.wem</Path>
-						</File>
 						<File Id="297702866" Language="SFX">
 							<ShortName>paso_personaje_01_v1.wav</ShortName>
-							<Path>SFX/paso_personaje_01_v1_4F28025F.wem</Path>
+							<Path>SFX/paso_personaje_01_v1_AFC0276F.wem</Path>
 						</File>
 						<File Id="330122768" Language="SFX">
 							<ShortName>paso_personaje_06_v1.wav</ShortName>
-							<Path>SFX/paso_personaje_06_v1_F4275782.wem</Path>
+							<Path>SFX/paso_personaje_06_v1_A3B65232.wem</Path>
 						</File>
 						<File Id="557317516" Language="SFX">
 							<ShortName>paso_personaje_05_v1.wav</ShortName>
-							<Path>SFX/paso_personaje_05_v1_224BBA55.wem</Path>
+							<Path>SFX/paso_personaje_05_v1_98DFDC25.wem</Path>
 						</File>
 						<File Id="625218915" Language="SFX">
 							<ShortName>paso_personaje_03_v1.wav</ShortName>
-							<Path>SFX/paso_personaje_03_v1_D266632D.wem</Path>
+							<Path>SFX/paso_personaje_03_v1_78520E5D.wem</Path>
 						</File>
 						<File Id="631171849" Language="SFX">
 							<ShortName>paso_personaje_02_v1.wav</ShortName>
-							<Path>SFX/paso_personaje_02_v1_C98A6606.wem</Path>
-						</File>
-						<File Id="888477466" Language="SFX">
-							<ShortName>paso_personaje_09_v1.wav</ShortName>
-							<Path>SFX/paso_personaje_09_v1_0E0D6BD7.wem</Path>
+							<Path>SFX/paso_personaje_02_v1_A9148416.wem</Path>
 						</File>
 						<File Id="914498966" Language="SFX">
 							<ShortName>paso_personaje_07_v1.wav</ShortName>
-							<Path>SFX/paso_personaje_07_v1_EF643863.wem</Path>
+							<Path>SFX/paso_personaje_07_v1_00A93BF3.wem</Path>
 						</File>
 						<File Id="976685486" Language="SFX">
 							<ShortName>paso_personaje_04_v1.wav</ShortName>
-							<Path>SFX/paso_personaje_04_v1_07BB8A0A.wem</Path>
+							<Path>SFX/paso_personaje_04_v1_154A1EBA.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="3091682631" Name="player_presiona_tuerca" ObjectPath="\Events\Default Work Unit\player_presiona_tuerca" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
 				<Event Id="1534908072" Name="player_recibe_dano" ObjectPath="\Events\Default Work Unit\player_recibe_dano" DurationType="OneShot" DurationMin="1.251837" DurationMax="1.251837">
 					<IncludedMemoryFiles>
+						<File Id="296198149" Language="SFX">
+							<ShortName>recibe_dano_v2.wav</ShortName>
+							<Path>SFX/recibe_dano_v2_D8C07C79.wem</Path>
+						</File>
 						<File Id="307916117" Language="SFX">
 							<ShortName>37 Woman Screams #3_ Short, Piercing.wav</ShortName>
-							<Path>SFX/37 Woman Screams #3_ Short, Piercing_69C20282.wem</Path>
-						</File>
-						<File Id="788098474" Language="SFX">
-							<ShortName>recibe_dano_v1.wav</ShortName>
-							<Path>SFX/recibe_dano_v1_10C4C929.wem</Path>
+							<Path>SFX/37 Woman Screams #3_ Short, Piercing_40438BF2.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -317,11 +452,11 @@
 					<IncludedMemoryFiles>
 						<File Id="897208615" Language="SFX">
 							<ShortName>recoge_botones_02_v1.wav</ShortName>
-							<Path>SFX/recoge_botones_02_v1_10C4C929.wem</Path>
+							<Path>SFX/recoge_botones_02_v1_D8C07C79.wem</Path>
 						</File>
 						<File Id="1006839415" Language="SFX">
 							<ShortName>recoge_botones_01_v1.wav</ShortName>
-							<Path>SFX/recoge_botones_01_v1_10C4C929.wem</Path>
+							<Path>SFX/recoge_botones_01_v1_D8C07C79.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -329,16 +464,48 @@
 					<IncludedMemoryFiles>
 						<File Id="841905526" Language="SFX">
 							<ShortName>salto_personaje_v1.wav</ShortName>
-							<Path>SFX/salto_personaje_v1_10C4C929.wem</Path>
+							<Path>SFX/salto_personaje_v1_D8C07C79.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
 				<Event Id="2606238242" Name="player_supera_nivel" ObjectPath="\Events\Default Work Unit\player_supera_nivel" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
-				<Event Id="3166472456" Name="player_tira_palanca" ObjectPath="\Events\Default Work Unit\player_tira_palanca" DurationType="OneShot" DurationMin="1.536000" DurationMax="1.536000">
+				<Event Id="3166472456" Name="player_tira_palanca" ObjectPath="\Events\Default Work Unit\player_tira_palanca" DurationType="OneShot" DurationMin="2.679432" DurationMax="3.161594">
 					<IncludedMemoryFiles>
+						<File Id="447796446" Language="SFX">
+							<ShortName>CORO-cm_025_wow.wav</ShortName>
+							<Path>SFX/CORO-cm_025_wow_D8C07C79.wem</Path>
+						</File>
 						<File Id="881692936" Language="SFX">
 							<ShortName>palanca_torre1_v1.wav</ShortName>
-							<Path>SFX/palanca_torre1_v1_10C4C929.wem</Path>
+							<Path>SFX/palanca_torre1_v1_C070A447.wem</Path>
+						</File>
+						<File Id="1058335931" Language="SFX">
+							<ShortName>CORO-cm_028.wav</ShortName>
+							<Path>SFX/CORO-cm_028_D8C07C79.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="2265628356" Name="player_tira_palanca_boss" ObjectPath="\Events\Default Work Unit\player_tira_palanca_boss" DurationType="Infinite">
+					<IncludedMemoryFiles>
+						<File Id="204006537" Language="SFX">
+							<ShortName>CORO-cm_045.wav</ShortName>
+							<Path>SFX/CORO-cm_045_D8C07C79.wem</Path>
+						</File>
+						<File Id="369429336" Language="SFX">
+							<ShortName>Epic Dark Boss Theme.wav</ShortName>
+							<Path>SFX/Epic Dark Boss Theme_5CFDFB84.wem</Path>
+						</File>
+						<File Id="578528328" Language="SFX">
+							<ShortName>Laugh,Male,Thirties,Evil,Cackle,Wheeze.wav</ShortName>
+							<Path>SFX/Laugh,Male,Thirties,Evil,Cackle,Wheeze_D4980580.wem</Path>
+						</File>
+						<File Id="696349633" Language="SFX">
+							<ShortName>CORO-cm_049.wav</ShortName>
+							<Path>SFX/CORO-cm_049_D8C07C79.wem</Path>
+						</File>
+						<File Id="712915354" Language="SFX">
+							<ShortName>Air-Compressor_05.wav</ShortName>
+							<Path>SFX/Air-Compressor_05_0BD67FCF.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -346,15 +513,37 @@
 					<IncludedMemoryFiles>
 						<File Id="255765847" Language="SFX">
 							<ShortName>Umbrella Open, Close edit 01.wav</ShortName>
-							<Path>SFX/Umbrella Open, Close edit 01_EC2C8268.wem</Path>
+							<Path>SFX/Umbrella Open, Close edit 01_0C6C63F8.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="211920" Name="trampa_bolas_aparece" ObjectPath="\Events\Default Work Unit\trampa_bolas_aparece" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
-				<Event Id="1006187470" Name="trampa_cruces_aparece" ObjectPath="\Events\Default Work Unit\trampa_cruces_aparece" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="211920" Name="trampa_bolas_aparece" ObjectPath="\Events\Default Work Unit\trampa_bolas_aparece" DurationType="OneShot" DurationMin="1.130687" DurationMax="1.130687">
+					<IncludedMemoryFiles>
+						<File Id="236413968" Language="SFX">
+							<ShortName>Boing Box Short Hit 10.wav</ShortName>
+							<Path>SFX/Boing Box Short Hit 10_DD86B342.wem</Path>
+						</File>
+						<File Id="781788751" Language="SFX">
+							<ShortName>aparece_torre_v2.wav</ShortName>
+							<Path>SFX/aparece_torre_v2_F6626517.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
+				<Event Id="1006187470" Name="trampa_cruces_aparece" ObjectPath="\Events\Default Work Unit\trampa_cruces_aparece" DurationType="OneShot" DurationMin="1.378313" DurationMax="1.378313">
+					<IncludedMemoryFiles>
+						<File Id="489427744" Language="SFX">
+							<ShortName>trampa_agujas.wav</ShortName>
+							<Path>SFX/trampa_agujas_3383D129.wem</Path>
+						</File>
+						<File Id="781788751" Language="SFX">
+							<ShortName>aparece_torre_v2.wav</ShortName>
+							<Path>SFX/aparece_torre_v2_F6626517.wem</Path>
+						</File>
+					</IncludedMemoryFiles>
+				</Event>
 			</IncludedEvents>
 		</SoundBank>
-		<SoundBank Id="1355168291" Language="SFX" Hash="367630891">
+		<SoundBank Id="1355168291" Language="SFX" Hash="3105094939">
 			<ObjectPath>Init</ObjectPath>
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>

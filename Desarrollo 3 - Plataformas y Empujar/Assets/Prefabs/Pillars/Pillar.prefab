@@ -3363,7 +3363,7 @@ MonoBehaviour:
   data:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: 2f74163540d3ed746be9f5770fae2dac,
+    WwiseObjectReference: {fileID: 11400000, guid: 0bd69117348701e418930fc8066e41e5,
       type: 2}
   useCallbacks: 0
   Callbacks: []
@@ -3398,7 +3398,7 @@ MonoBehaviour:
   data:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: ba0e43483033b3a4ba58a02e12442715,
+    WwiseObjectReference: {fileID: 11400000, guid: 0bd69117348701e418930fc8066e41e5,
       type: 2}
   useCallbacks: 0
   Callbacks: []
@@ -3433,7 +3433,7 @@ MonoBehaviour:
   data:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: 0230d000fdec7f1488a2ada978e74b3e,
+    WwiseObjectReference: {fileID: 11400000, guid: 0bd69117348701e418930fc8066e41e5,
       type: 2}
   useCallbacks: 0
   Callbacks: []
@@ -3540,7 +3540,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   smoothSpeed: 0.5
+  offset: {x: 0, y: 16, z: -17.5}
   isACommonPillar: 1
+  musicType: 0
   cam: {fileID: 0}
 --- !u!1001 &870104651422262463
 PrefabInstance:

@@ -12,7 +12,7 @@ class FinalLever : InteractiveObject
 
     public void MoveElevator()
     {
-        AkSoundEngine.PostEvent("ascensor_sube", gameObject);
+        AkSoundEngine.PostEvent("ascensor_palanca_victoria", gameObject);
 
         stair.SetTrigger("Up");
     }

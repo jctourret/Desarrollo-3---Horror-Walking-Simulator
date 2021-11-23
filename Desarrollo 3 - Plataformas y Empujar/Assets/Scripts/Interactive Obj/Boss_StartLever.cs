@@ -49,7 +49,7 @@ public class Boss_StartLever : MonoBehaviour
                 UIposter.SetActive(false);
                 animator.SetTrigger("Open");
 
-                AkSoundEngine.PostEvent("player_presiona_tuerca", gameObject);
+                AkSoundEngine.PostEvent("player_tira_palanca_boss", gameObject);
             }
         }
     }

@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 2552755304074349493}
   - component: {fileID: 5162898298877308952}
   - component: {fileID: 2613566002059367429}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Toy_Box_Box_Body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -89,7 +89,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2114164808694355021}
   - component: {fileID: 4119737162128280815}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Toy_Box_Box_Body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -218,7 +218,7 @@ GameObject:
   - component: {fileID: 8265915256014324110}
   - component: {fileID: 3604006402041795920}
   - component: {fileID: 2637944420783861799}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Hinges_Toy_Box
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -297,7 +297,7 @@ GameObject:
   - component: {fileID: 68766838882996363}
   - component: {fileID: 6439747228275442042}
   - component: {fileID: 8430174474957516789}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Toy_Box_Box_Lid
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -374,7 +374,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5415211430771792279}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Pivot Wooden Top
   m_TagString: Untagged
   m_Icon: {fileID: 0}

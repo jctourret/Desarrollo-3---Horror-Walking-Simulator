@@ -19,13 +19,36 @@
 						<Action Name="" ID="{2D3F55C3-2F25-4D1D-9503-7C5424D15084}" ShortID="175388583">
 							<ReferenceList>
 								<Reference Name="Target">
-									<ObjectRef Name="aparece_torre_v1" ID="{9225B3EB-BBFC-421C-9799-8CD0276A3EB4}" WorkUnitID="{0068F637-75D2-4DCF-A442-34947F9C8869}"/>
+									<ObjectRef Name="aparece_torre_v2" ID="{8070BCEC-5320-4768-9125-B8DCC4D23694}" WorkUnitID="{0068F637-75D2-4DCF-A442-34947F9C8869}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
 					</ChildrenList>
 				</Event>
-				<Event Name="trampa_cruces_aparece" ID="{C7D661BA-9D91-4379-AFD0-0C265FC9D0A0}"/>
+				<Event Name="trampa_cruces_aparece" ID="{C7D661BA-9D91-4379-AFD0-0C265FC9D0A0}">
+					<ChildrenList>
+						<Action Name="" ID="{F934E0EF-D090-4A4E-B3E9-B2B912431A2B}" ShortID="459860414">
+							<PropertyList>
+								<Property Name="Delay" Type="Real64" Value="0.5"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="trampa_agujas" ID="{7368279F-8007-4BD6-BCA7-A1D972B457A4}" WorkUnitID="{0068F637-75D2-4DCF-A442-34947F9C8869}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{BEC199E0-2FB4-4341-848C-7A4A8D945FD7}" ShortID="427960732">
+							<PropertyList>
+								<Property Name="Delay" Type="Real64" Value="0.5"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="rumble_corto" ID="{6D3AE9BE-237C-4A1C-9448-93092A726D9D}" WorkUnitID="{0068F637-75D2-4DCF-A442-34947F9C8869}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 				<Event Name="player_aterriza" ID="{005E94E7-D086-4598-8B63-FE959A241034}">
 					<ChildrenList>
 						<Action Name="" ID="{AE2204F5-89D3-44AA-AC82-D21E6623E492}" ShortID="965399237">
@@ -72,19 +95,40 @@
 						<Action Name="" ID="{46E0A047-DA77-4E5C-94BB-9C4E9DC57F18}" ShortID="138204552">
 							<ReferenceList>
 								<Reference Name="Target">
-									<ObjectRef Name="desaparece_torre_v1" ID="{7A96E510-3186-4322-B8D3-9732B656E513}" WorkUnitID="{0068F637-75D2-4DCF-A442-34947F9C8869}"/>
+									<ObjectRef Name="desaparece_torre_v2" ID="{0162E947-E1C1-46CD-AB63-96D026387DD9}" WorkUnitID="{0068F637-75D2-4DCF-A442-34947F9C8869}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
 					</ChildrenList>
 				</Event>
-				<Event Name="boss_recibe_dano" ID="{C03CE9BD-0AF7-40B1-A550-2C7E0BB63D70}"/>
+				<Event Name="boss_recibe_dano" ID="{C03CE9BD-0AF7-40B1-A550-2C7E0BB63D70}">
+					<ChildrenList>
+						<Action Name="" ID="{298C1595-5DFA-424C-BC70-72AE83C16881}" ShortID="637453852">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+								<Property Name="FadeTime" Type="Real64" Value="0.5"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="boss_recibe_dano" ID="{B0B161AB-E87C-4E4B-BB43-0A571D50DC7E}" WorkUnitID="{0068F637-75D2-4DCF-A442-34947F9C8869}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{8D52A6D6-0BB1-4949-A28F-9C88C17A7E71}" ShortID="184727089">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="boss_recibe_dano" ID="{B0B161AB-E87C-4E4B-BB43-0A571D50DC7E}" WorkUnitID="{0068F637-75D2-4DCF-A442-34947F9C8869}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 				<Event Name="arana_recibe_dano" ID="{EDFD7D9E-B561-446F-99EE-B2D6E60956EB}">
 					<ChildrenList>
 						<Action Name="" ID="{B922CC0A-6696-4FE7-8FE7-A4AF81A3CC90}" ShortID="399953460">
 							<ReferenceList>
 								<Reference Name="Target">
-									<ObjectRef Name="arana_recibe_dano" ID="{7A840B79-CDEF-4B42-82B7-07CAD5DE6478}" WorkUnitID="{0068F637-75D2-4DCF-A442-34947F9C8869}"/>
+									<ObjectRef Name="arana_recibe_dano_v2" ID="{583E8E94-D76C-4A24-BCE6-194400D9D052}" WorkUnitID="{0068F637-75D2-4DCF-A442-34947F9C8869}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
@@ -100,7 +144,7 @@
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
-									<ObjectRef Name="Mx_To the Rescue_menu" ID="{E8AB0938-AB5E-4E15-AE95-15FC2BCD7885}" WorkUnitID="{0068F637-75D2-4DCF-A442-34947F9C8869}"/>
+									<ObjectRef Name="TB_Menu_full_v1" ID="{7362B60F-F2AC-4663-9BFD-78A7A07C8107}" WorkUnitID="{0068F637-75D2-4DCF-A442-34947F9C8869}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
@@ -135,13 +179,13 @@
 						<Action Name="" ID="{BE8D87B4-8CA7-493E-864A-FDDC2EA43BC7}" ShortID="213280191">
 							<ReferenceList>
 								<Reference Name="Target">
-									<ObjectRef Name="lanza_aguja_v1" ID="{EBAE1AF7-070D-4011-9383-093F0D658EFC}" WorkUnitID="{0068F637-75D2-4DCF-A442-34947F9C8869}"/>
+									<ObjectRef Name="lanza_aguja_v2" ID="{89389C03-6642-48D8-9834-E0737DD31CDC}" WorkUnitID="{0068F637-75D2-4DCF-A442-34947F9C8869}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
 						<Action Name="" ID="{FC771AD1-836E-48DB-8DCA-EF6A6A2F3F2A}" ShortID="453924710">
 							<PropertyList>
-								<Property Name="Probability" Type="Real64" Value="33"/>
+								<Property Name="Probability" Type="Real64" Value="18"/>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
@@ -156,6 +200,7 @@
 						<Action Name="" ID="{B999BE9F-C150-43BB-99B3-3D00500AA87F}" ShortID="951453898">
 							<PropertyList>
 								<Property Name="ActionType" Type="int16" Value="3"/>
+								<Property Name="FadeTime" Type="Real64" Value="1"/>
 								<Property Name="Scope" Type="int16" Value="1"/>
 							</PropertyList>
 							<ReferenceList/>
@@ -163,13 +208,54 @@
 						<Action Name="" ID="{FFF16033-723C-4ADA-BA31-8BED5F4B3909}" ShortID="921466814">
 							<ReferenceList>
 								<Reference Name="Target">
-									<ObjectRef Name="Mx_To the Rescue_menu" ID="{E8AB0938-AB5E-4E15-AE95-15FC2BCD7885}" WorkUnitID="{0068F637-75D2-4DCF-A442-34947F9C8869}"/>
+									<ObjectRef Name="TB_Menu_full_v1" ID="{7362B60F-F2AC-4663-9BFD-78A7A07C8107}" WorkUnitID="{0068F637-75D2-4DCF-A442-34947F9C8869}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
 					</ChildrenList>
 				</Event>
-				<Event Name="boss_muere" ID="{DD7C6599-1029-4AD8-8797-7254D0CE3219}"/>
+				<Event Name="boss_muere" ID="{DD7C6599-1029-4AD8-8797-7254D0CE3219}">
+					<ChildrenList>
+						<Action Name="" ID="{0718BFB9-DEA1-4C0D-840F-AA8EE5E0298F}" ShortID="1066968631">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="3"/>
+								<Property Name="FadeTime" Type="Real64" Value="1.5"/>
+								<Property Name="Scope" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList/>
+						</Action>
+						<Action Name="" ID="{4B5E56F1-3028-45D8-AC5B-496201C42589}" ShortID="605651204">
+							<PropertyList>
+								<Property Name="Delay" Type="Real64" Value="0.1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="boss_muere" ID="{8672AE21-6D7D-4A30-AF37-3E791D2233A5}" WorkUnitID="{0068F637-75D2-4DCF-A442-34947F9C8869}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{531680BF-CD25-4002-9149-FAE0E3A6FB76}" ShortID="1005362846">
+							<PropertyList>
+								<Property Name="Delay" Type="Real64" Value="2.2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="player_frase_easy" ID="{44D45863-E475-49FF-9B83-3862B80A2A0A}" WorkUnitID="{0068F637-75D2-4DCF-A442-34947F9C8869}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{BD90311E-BF51-4F5C-A6B6-8263659D5FD6}" ShortID="70565314">
+							<PropertyList>
+								<Property Name="Delay" Type="Real64" Value="2.5"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Mx postBoss ref_01" ID="{08D4CED7-DCB1-4EB5-9628-2751043EB70C}" WorkUnitID="{0068F637-75D2-4DCF-A442-34947F9C8869}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 				<Event Name="player_muere" ID="{0653F29C-7E72-44B8-AF82-EB19EFA98D7B}">
 					<ChildrenList>
 						<Action Name="" ID="{5E9FF688-6FAC-4E78-9531-E96A9676C394}" ShortID="907115813">
@@ -204,7 +290,7 @@
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
-									<ObjectRef Name="Mx02_To the Rescue_enemigos" ID="{7F1F2FA9-3A1C-4255-96A1-93045653F31A}" WorkUnitID="{0068F637-75D2-4DCF-A442-34947F9C8869}"/>
+									<ObjectRef Name="TB_gameplay_v1_1" ID="{FC4A75C5-7728-4768-8870-E285B0DDC4B8}" WorkUnitID="{0068F637-75D2-4DCF-A442-34947F9C8869}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
@@ -220,6 +306,13 @@
 								</Reference>
 							</ReferenceList>
 						</Action>
+						<Action Name="" ID="{0097251B-D6B6-4552-9D56-43D27DD57F92}" ShortID="618247928">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="player_frase_creepy" ID="{D5C12CCF-0819-4BF2-A0ED-27D8914E35AF}" WorkUnitID="{0068F637-75D2-4DCF-A442-34947F9C8869}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
 					</ChildrenList>
 				</Event>
 				<Event Name="player_supera_nivel" ID="{DB91280B-60D2-4A14-B8D2-F4BE9429C5D4}"/>
@@ -229,6 +322,16 @@
 							<ReferenceList>
 								<Reference Name="Target">
 									<ObjectRef Name="palanca_torre1_v1" ID="{403A06DE-6E6C-46B8-8237-D630594F1A93}" WorkUnitID="{0068F637-75D2-4DCF-A442-34947F9C8869}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{FFD67975-2830-4C82-86FF-F866D4151D07}" ShortID="678958330">
+							<PropertyList>
+								<Property Name="Delay" Type="Real64" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="player_frase_wow" ID="{D2EFFF93-2F10-4700-8F13-344E2F2BDE63}" WorkUnitID="{0068F637-75D2-4DCF-A442-34947F9C8869}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
@@ -298,6 +401,17 @@
 								</Reference>
 							</ReferenceList>
 						</Action>
+						<Action Name="" ID="{F5D27C39-94F0-4B18-87D1-B5107F47FF80}" ShortID="311349280">
+							<PropertyList>
+								<Property Name="Delay" Type="Real64" Value="0.5"/>
+								<Property Name="Probability" Type="Real64" Value="47"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="player_frase_done" ID="{01BF56D9-D52B-41E4-AC9C-E28D0076518C}" WorkUnitID="{0068F637-75D2-4DCF-A442-34947F9C8869}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
 					</ChildrenList>
 				</Event>
 				<Event Name="menu_click_exit" ID="{70147393-D6A7-4166-8218-86BAC61B424B}">
@@ -362,10 +476,78 @@
 								</Reference>
 							</ReferenceList>
 						</Action>
+						<Action Name="" ID="{2512845F-FBD3-4470-AFD1-4B85403523C2}" ShortID="1032694384">
+							<PropertyList>
+								<Property Name="Delay" Type="Real64" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="player_frase_yeii" ID="{326AA5B0-1B41-4B41-ABC3-0FE52E928DC6}" WorkUnitID="{0068F637-75D2-4DCF-A442-34947F9C8869}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
 					</ChildrenList>
 				</Event>
-				<Event Name="partida_musica03_mercado" ID="{E03605B1-833C-4921-B1C1-DD5F9FBA93A7}"/>
-				<Event Name="partida_musica04_pre_boss" ID="{93AE08D0-5B41-42FE-BABD-FB6A15D3BD1E}"/>
+				<Event Name="partida_musica03_mercado_IN" ID="{E03605B1-833C-4921-B1C1-DD5F9FBA93A7}">
+					<ChildrenList>
+						<Action Name="" ID="{676AB147-EB56-4E0B-8095-65742239F4B9}" ShortID="478775039">
+							<PropertyList>
+								<Property Name="FadeTime" Type="Real64" Value="1.5"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="piano ref para mercado" ID="{72F6CD7A-06A9-42FB-A4CE-7A138DC14B5F}" WorkUnitID="{0068F637-75D2-4DCF-A442-34947F9C8869}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{D28E1F70-72C0-49D4-9A86-138E90875580}" ShortID="482443307">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="7"/>
+								<Property Name="FadeOutCurve" Type="int16" Value="7"/>
+								<Property Name="FadeTime" Type="Real64" Value="1.5"/>
+								<Property Name="Scope" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="TB_gameplay_v1_1" ID="{FC4A75C5-7728-4768-8870-E285B0DDC4B8}" WorkUnitID="{0068F637-75D2-4DCF-A442-34947F9C8869}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="partida_musica04_pre_boss" ID="{93AE08D0-5B41-42FE-BABD-FB6A15D3BD1E}">
+					<ChildrenList>
+						<Action Name="" ID="{1AFDB9C4-020D-4893-9F51-A9E4FC8D325E}" ShortID="482882134">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+								<Property Name="FadeTime" Type="Real64" Value="1.5"/>
+								<Property Name="Scope" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="TB_gameplay_v1_1" ID="{FC4A75C5-7728-4768-8870-E285B0DDC4B8}" WorkUnitID="{0068F637-75D2-4DCF-A442-34947F9C8869}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{E7B5CC25-1E09-4ED9-B1C6-C4969C0F9087}" ShortID="2664269">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Mx preBoss ref" ID="{13F01736-BD8E-4D3F-BE05-AF600B40C8E7}" WorkUnitID="{0068F637-75D2-4DCF-A442-34947F9C8869}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{A563331C-C82B-4265-BD13-0B399D288C04}" ShortID="1027265372">
+							<PropertyList>
+								<Property Name="Delay" Type="Real64" Value="3"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="player_frase_scary" ID="{2E6BF438-830F-4A9B-ABE9-982584F61198}" WorkUnitID="{0068F637-75D2-4DCF-A442-34947F9C8869}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 				<Event Name="partida_musica05_boss" ID="{A10FD17F-14FD-44F8-B079-3DECCE46E932}"/>
 				<Event Name="partida_musica06_victoria" ID="{44DD5A2A-5390-4923-A9A7-112AAC0D1BE2}"/>
 				<Event Name="partida_musica07_pausa" ID="{64EA5B39-6571-4C31-B37B-312C551AD1E2}"/>
@@ -417,14 +599,108 @@
 						</Action>
 					</ChildrenList>
 				</Event>
-				<Event Name="mono_frase1_welcome" ID="{4128C784-A70F-4255-9911-5606AED3D486}"/>
+				<Event Name="mono_frase1_welcome" ID="{4128C784-A70F-4255-9911-5606AED3D486}">
+					<ChildrenList>
+						<Action Name="" ID="{FF9D4A24-296C-4929-B09D-8E2AAC2C0876}" ShortID="252647494">
+							<PropertyList>
+								<Property Name="Delay" Type="Real64" Value="1.2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="monkey_toy_sfx01" ID="{F71A39DD-6749-4AF5-8884-1CDBADD3FE56}" WorkUnitID="{0068F637-75D2-4DCF-A442-34947F9C8869}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 				<Event Name="mono_frase2_compra" ID="{4897C570-F022-4DEC-B53E-DC3CEBE4BFD0}"/>
 				<Event Name="mono_frase3_despedida" ID="{56DE2A41-18D8-4068-8E20-862D5C6A1D13}"/>
 				<Event Name="mercado_compra_item" ID="{C6873561-C890-4CCC-8CD2-AD6B9C6C6D75}"/>
 				<Event Name="mercado_precio_aparece" ID="{62082EB8-2380-4410-8A41-28236DABEC86}"/>
-				<Event Name="trampa_bolas_aparece" ID="{F8347866-3D47-485F-85F9-A77D06211EA8}"/>
-				<Event Name="pilar_final_aparece" ID="{E177E0DA-A635-4736-8517-9AFF4BF1585A}"/>
-				<Event Name="player_presiona_tuerca" ID="{941C0205-1723-4DB4-BADA-C7E2B1FB3AD5}"/>
+				<Event Name="trampa_bolas_aparece" ID="{F8347866-3D47-485F-85F9-A77D06211EA8}">
+					<ChildrenList>
+						<Action Name="" ID="{37541606-8C96-4D7F-BB88-7AA0648245F8}" ShortID="983541485">
+							<PropertyList>
+								<Property Name="Delay" Type="Real64" Value="0.5"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="trampa_bola" ID="{CD25F0B6-1857-4E06-9141-DC843C59CF94}" WorkUnitID="{0068F637-75D2-4DCF-A442-34947F9C8869}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{E3C1B3FC-663C-4F98-BE33-C9544989689B}" ShortID="366816624">
+							<PropertyList>
+								<Property Name="Delay" Type="Real64" Value="0.3"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="rumble_corto" ID="{6D3AE9BE-237C-4A1C-9448-93092A726D9D}" WorkUnitID="{0068F637-75D2-4DCF-A442-34947F9C8869}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="pilar_final_aparece" ID="{E177E0DA-A635-4736-8517-9AFF4BF1585A}">
+					<ChildrenList>
+						<Action Name="" ID="{5869800D-D08D-4E1E-A0F0-FCD5C91AE441}" ShortID="1019215922">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="plataforma final" ID="{75A81836-31C7-410F-A888-67FAD8A4969E}" WorkUnitID="{0068F637-75D2-4DCF-A442-34947F9C8869}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="player_tira_palanca_boss" ID="{941C0205-1723-4DB4-BADA-C7E2B1FB3AD5}">
+					<ChildrenList>
+						<Action Name="" ID="{BF2D99F9-91D4-49FF-AA06-D51C2F8C9DD3}" ShortID="789743791">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="3"/>
+								<Property Name="FadeTime" Type="Real64" Value="1.5"/>
+								<Property Name="Scope" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList/>
+						</Action>
+						<Action Name="" ID="{38F140CE-A4F9-4891-86A2-FD1615AA62F5}" ShortID="873206927">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="palanca_boss" ID="{10EE0DAA-97A8-45DE-8EC5-CBCBC997A56F}" WorkUnitID="{0068F637-75D2-4DCF-A442-34947F9C8869}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{AC498590-1B82-482A-B9A6-9066105C4A10}" ShortID="246505839">
+							<PropertyList>
+								<Property Name="Delay" Type="Real64" Value="1.5"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Epic Dark Boss Theme" ID="{AADF1359-8122-40B7-98D0-344C947C21A5}" WorkUnitID="{0068F637-75D2-4DCF-A442-34947F9C8869}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{D1715D87-6B94-4163-BF23-06B43D3D6F2E}" ShortID="594774899">
+							<PropertyList>
+								<Property Name="Delay" Type="Real64" Value="0.6"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="boss_risas" ID="{23AA89A7-D4B4-462A-8E42-55083E0D1A49}" WorkUnitID="{0068F637-75D2-4DCF-A442-34947F9C8869}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{6F6C871F-D8A1-4742-9D44-79B08FA90704}" ShortID="796237149">
+							<PropertyList>
+								<Property Name="Delay" Type="Real64" Value="3.5"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="player_frase_stopme" ID="{27F35ADF-997A-4228-8963-1F986F3A6EDD}" WorkUnitID="{0068F637-75D2-4DCF-A442-34947F9C8869}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 				<Event Name="player_gana_vida" ID="{8A781114-97DC-4A93-B8B1-A3909A4E1E87}">
 					<ChildrenList>
 						<Action Name="" ID="{775BB14B-FCF5-4ED3-B22D-47F45FD02CAD}" ShortID="1048533102">
@@ -436,8 +712,61 @@
 						</Action>
 					</ChildrenList>
 				</Event>
-				<Event Name="ascensor_baja" ID="{2E72EC8A-59CC-47D5-8428-A94B3B6919D9}"/>
-				<Event Name="ascensor_sube" ID="{422D9CC2-2AAD-4DD0-BBAA-31AE568056AE}"/>
+				<Event Name="ascensor_baja" ID="{2E72EC8A-59CC-47D5-8428-A94B3B6919D9}">
+					<ChildrenList>
+						<Action Name="" ID="{283CC0A6-98B7-4662-8562-38642BAD5253}" ShortID="829775195">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="ascensor temp" ID="{7619A80C-3E46-48F0-A506-49E8CB8291C5}" WorkUnitID="{0068F637-75D2-4DCF-A442-34947F9C8869}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="ascensor_palanca_victoria" ID="{422D9CC2-2AAD-4DD0-BBAA-31AE568056AE}">
+					<ChildrenList>
+						<Action Name="" ID="{22427A25-C576-4F2B-9DD8-D019F855855A}" ShortID="300103290">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="3"/>
+								<Property Name="FadeTime" Type="Real64" Value="1.5"/>
+								<Property Name="Scope" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList/>
+						</Action>
+						<Action Name="" ID="{1B8723B0-4F12-4453-AC04-71680144FD65}" ShortID="826201341">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="palanca_torre1_v1" ID="{403A06DE-6E6C-46B8-8237-D630594F1A93}" WorkUnitID="{0068F637-75D2-4DCF-A442-34947F9C8869}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{20083DB5-9B25-4D41-BE37-C4D23A9EC865}" ShortID="676342987">
+							<PropertyList>
+								<Property Name="Delay" Type="Real64" Value="1"/>
+								<Property Name="Inclusion" Type="bool">
+									<ValueList>
+										<Value>False</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="ascensor temp" ID="{7619A80C-3E46-48F0-A506-49E8CB8291C5}" WorkUnitID="{0068F637-75D2-4DCF-A442-34947F9C8869}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{6CD7DA12-291E-44DB-AFCC-31B1AF08B9C8}" ShortID="848450599">
+							<PropertyList>
+								<Property Name="Delay" Type="Real64" Value="0.4"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Victory sound effect" ID="{FA75300A-6B1F-4C6D-8410-DC6B874ED7DB}" WorkUnitID="{0068F637-75D2-4DCF-A442-34947F9C8869}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 				<Event Name="boss_risas" ID="{F0AABFB0-1FF5-49A4-BB35-4DBBBCEE5978}"/>
 				<Event Name="boss_susurros_bajo" ID="{3659A6A8-6377-4962-98A0-1EDABC8491FB}"/>
 				<Event Name="boss_susurros_medio" ID="{2C9E66A2-7AAE-45DC-89B4-00DF4F719279}"/>
@@ -450,7 +779,24 @@
 				<Event Name="player_frase03" ID="{36F9B7BA-C3FC-46CB-A08F-F7CD4FD46805}"/>
 				<Event Name="player_frase04" ID="{92E730F2-7D19-4238-ABDD-3D81DD88B29F}"/>
 				<Event Name="player_frase05" ID="{8D42418C-CF9D-4C03-B8FD-68CD71744757}"/>
-				<Event Name="boss_ataca_cuchillo" ID="{ED4932AB-9DCE-459B-8CA9-0E9C94FB1029}"/>
+				<Event Name="boss_ataca_cuchillo" ID="{ED4932AB-9DCE-459B-8CA9-0E9C94FB1029}">
+					<ChildrenList>
+						<Action Name="" ID="{EB0F7A19-A728-49AD-ADBE-60A09538C721}" ShortID="701290845">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="boss_ataca_cuchillo_03" ID="{CC52A59F-1B00-4126-86DC-AE708208B783}" WorkUnitID="{0068F637-75D2-4DCF-A442-34947F9C8869}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{17687FA7-DA25-49CF-BA14-4F7D8C6D80BB}" ShortID="330784920">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="boss_risas" ID="{23AA89A7-D4B4-462A-8E42-55083E0D1A49}" WorkUnitID="{0068F637-75D2-4DCF-A442-34947F9C8869}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 				<Event Name="pausa_entrada" ID="{5030EF32-BCAB-45DE-9FBF-0B4412C1292B}">
 					<ChildrenList>
 						<Action Name="" ID="{3F980B95-2212-46DD-A241-A285F698C192}" ShortID="465106355">
@@ -560,6 +906,35 @@
 							<ReferenceList>
 								<Reference Name="Target">
 									<ObjectRef Name="menu_click_01" ID="{6D2B64F8-1105-44C1-A041-A0BA15030168}" WorkUnitID="{0068F637-75D2-4DCF-A442-34947F9C8869}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="partida_musica03_mercado_OUT" ID="{68680E42-2D6B-4875-93DC-E87190013D80}">
+					<ChildrenList>
+						<Action Name="" ID="{29458595-D580-4B68-B460-BC1B9CB9ACF6}" ShortID="739730940">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+								<Property Name="FadeOutCurve" Type="int16" Value="6"/>
+								<Property Name="FadeTime" Type="Real64" Value="1.5"/>
+								<Property Name="Scope" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="piano ref para mercado" ID="{72F6CD7A-06A9-42FB-A4CE-7A138DC14B5F}" WorkUnitID="{0068F637-75D2-4DCF-A442-34947F9C8869}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{187F8381-9E6F-484E-A873-F465CF450754}" ShortID="1027242171">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="9"/>
+								<Property Name="FadeTime" Type="Real64" Value="1"/>
+								<Property Name="Scope" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="TB_gameplay_v1_1" ID="{FC4A75C5-7728-4768-8870-E285B0DDC4B8}" WorkUnitID="{0068F637-75D2-4DCF-A442-34947F9C8869}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>

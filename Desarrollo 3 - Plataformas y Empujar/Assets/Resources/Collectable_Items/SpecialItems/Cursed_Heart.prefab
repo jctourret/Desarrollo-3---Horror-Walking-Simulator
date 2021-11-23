@@ -137,7 +137,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   jumpDirection: {x: -0.5, y: 2, z: 0}
-  jumpForce: 100
+  jumpForce: 150
   y_fallLimit: -30
   rewardType: 0
   earnScore: 2

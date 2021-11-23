@@ -6941,7 +6941,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   smoothSpeed: 0.05
+  offset: {x: 0, y: 16, z: -17.5}
   isACommonPillar: 1
+  musicType: 0
   cam: {fileID: 0}
 --- !u!1 &8769043800638637118
 GameObject:

@@ -6,10 +6,22 @@ public class UI_PauseController : MonoBehaviour
     public GameObject pauseLayer;
 
     bool isPaused = false;
+    bool hableToPause = true;
+
+
+    private void OnEnable()
+    {
+        PlayerStats.OnPlayerDamageDeath += PlayerIsDeath;
+    }
+
+    private void OnDisable()
+    {
+        PlayerStats.OnPlayerDamageDeath -= PlayerIsDeath;        
+    }
 
     private void Update()
     {
-        if (Input.GetButtonDown(escapeKey))
+        if (Input.GetButtonDown(escapeKey) && hableToPause)
         {
             if (!isPaused)
                 StartPause();
@@ -38,4 +50,10 @@ public class UI_PauseController : MonoBehaviour
         pauseLayer.SetActive(false);
     }
 
+    // -----------------------
+
+    public void PlayerIsDeath()
+    {
+        hableToPause = false;
+    }
 }

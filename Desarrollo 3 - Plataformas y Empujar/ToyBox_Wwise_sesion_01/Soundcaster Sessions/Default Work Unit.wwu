@@ -10,68 +10,128 @@
 							<Position X="0" Y="0"/>
 						</Module>
 						<Module>
-							<ObjectRef Name="pausa_salida" ID="{0C348B29-6AB5-4ECF-87C4-0D40A81D32B8}" WorkUnitID="{F9C73B0E-830A-43F9-974D-FD47F06368F0}"/>
+							<ObjectRef Name="pilar_alarma_caida" ID="{8A0F4FCA-7935-4FA6-9BD3-B8ED4A6555FF}" WorkUnitID="{F9C73B0E-830A-43F9-974D-FD47F06368F0}"/>
 							<Position X="0" Y="1"/>
 						</Module>
 						<Module>
-							<ObjectRef Name="arana_lanza_tela" ID="{C543ECAB-1B9A-44A3-B9FC-4F34B9D2DF0B}" WorkUnitID="{F9C73B0E-830A-43F9-974D-FD47F06368F0}"/>
+							<ObjectRef Name="player_lanza_aguja" ID="{3F8CE6A3-AB6B-4CBE-B204-F52C7C048C8F}" WorkUnitID="{F9C73B0E-830A-43F9-974D-FD47F06368F0}"/>
 							<Position X="0" Y="2"/>
 						</Module>
 						<Module>
-							<ObjectRef Name="pilar_alarma_caida" ID="{8A0F4FCA-7935-4FA6-9BD3-B8ED4A6555FF}" WorkUnitID="{F9C73B0E-830A-43F9-974D-FD47F06368F0}"/>
+							<ObjectRef Name="arana_lanza_tela" ID="{C543ECAB-1B9A-44A3-B9FC-4F34B9D2DF0B}" WorkUnitID="{F9C73B0E-830A-43F9-974D-FD47F06368F0}"/>
 							<Position X="0" Y="3"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="partida_musica03_mercado_IN" ID="{E03605B1-833C-4921-B1C1-DD5F9FBA93A7}" WorkUnitID="{F9C73B0E-830A-43F9-974D-FD47F06368F0}"/>
+							<Position X="0" Y="4"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="player_frase03" ID="{36F9B7BA-C3FC-46CB-A08F-F7CD4FD46805}" WorkUnitID="{F9C73B0E-830A-43F9-974D-FD47F06368F0}"/>
+							<Position X="0" Y="5"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="ascensor_baja" ID="{2E72EC8A-59CC-47D5-8428-A94B3B6919D9}" WorkUnitID="{F9C73B0E-830A-43F9-974D-FD47F06368F0}"/>
+							<Position X="0" Y="6"/>
 						</Module>
 						<Module>
 							<ObjectRef Name="menu_click_play" ID="{5EADD777-89F4-407C-8A3F-F71124A9FFCB}" WorkUnitID="{F9C73B0E-830A-43F9-974D-FD47F06368F0}"/>
 							<Position X="1" Y="0"/>
 						</Module>
 						<Module>
-							<ObjectRef Name="player_lanza_aguja" ID="{3F8CE6A3-AB6B-4CBE-B204-F52C7C048C8F}" WorkUnitID="{F9C73B0E-830A-43F9-974D-FD47F06368F0}"/>
+							<ObjectRef Name="pilar_desaparece" ID="{580CB6DF-94C5-4085-A3EF-BEE836EA7249}" WorkUnitID="{F9C73B0E-830A-43F9-974D-FD47F06368F0}"/>
 							<Position X="1" Y="1"/>
 						</Module>
 						<Module>
-							<ObjectRef Name="telarana_abre" ID="{75BB155A-A501-4F78-BEB5-E4661B4BB23C}" WorkUnitID="{F9C73B0E-830A-43F9-974D-FD47F06368F0}"/>
+							<ObjectRef Name="player_recibe_dano" ID="{17FA0275-77C9-4136-86D4-AE32B91BD52E}" WorkUnitID="{F9C73B0E-830A-43F9-974D-FD47F06368F0}"/>
 							<Position X="1" Y="2"/>
 						</Module>
 						<Module>
-							<ObjectRef Name="pilar_desaparece" ID="{580CB6DF-94C5-4085-A3EF-BEE836EA7249}" WorkUnitID="{F9C73B0E-830A-43F9-974D-FD47F06368F0}"/>
+							<ObjectRef Name="telarana_abre" ID="{75BB155A-A501-4F78-BEB5-E4661B4BB23C}" WorkUnitID="{F9C73B0E-830A-43F9-974D-FD47F06368F0}"/>
 							<Position X="1" Y="3"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="mono_frase1_welcome" ID="{4128C784-A70F-4255-9911-5606AED3D486}" WorkUnitID="{F9C73B0E-830A-43F9-974D-FD47F06368F0}"/>
+							<Position X="1" Y="4"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="boss_ataca_cuchillo" ID="{ED4932AB-9DCE-459B-8CA9-0E9C94FB1029}" WorkUnitID="{F9C73B0E-830A-43F9-974D-FD47F06368F0}"/>
+							<Position X="1" Y="5"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="ascensor_palanca_victoria" ID="{422D9CC2-2AAD-4DD0-BBAA-31AE568056AE}" WorkUnitID="{F9C73B0E-830A-43F9-974D-FD47F06368F0}"/>
+							<Position X="1" Y="6"/>
 						</Module>
 						<Module>
 							<ObjectRef Name="loading_spacebar" ID="{83D6F01F-4E63-4AB5-9CE7-4F2E35857062}" WorkUnitID="{F9C73B0E-830A-43F9-974D-FD47F06368F0}"/>
 							<Position X="2" Y="0"/>
 						</Module>
 						<Module>
-							<ObjectRef Name="player_recibe_dano" ID="{17FA0275-77C9-4136-86D4-AE32B91BD52E}" WorkUnitID="{F9C73B0E-830A-43F9-974D-FD47F06368F0}"/>
+							<ObjectRef Name="partida_musica02_enemigos" ID="{6710C306-0235-4DE8-988B-6DA7F5C2553E}" WorkUnitID="{F9C73B0E-830A-43F9-974D-FD47F06368F0}"/>
 							<Position X="2" Y="1"/>
 						</Module>
 						<Module>
-							<ObjectRef Name="arana_salta" ID="{6667C797-B683-4A23-AA01-269979BCEAFA}" WorkUnitID="{F9C73B0E-830A-43F9-974D-FD47F06368F0}"/>
+							<ObjectRef Name="player_salto" ID="{3ED4F2E3-A409-46CE-A7D4-A288FC94A23E}" WorkUnitID="{F9C73B0E-830A-43F9-974D-FD47F06368F0}"/>
 							<Position X="2" Y="2"/>
 						</Module>
 						<Module>
-							<ObjectRef Name="partida_musica02_enemigos" ID="{6710C306-0235-4DE8-988B-6DA7F5C2553E}" WorkUnitID="{F9C73B0E-830A-43F9-974D-FD47F06368F0}"/>
+							<ObjectRef Name="arana_salta" ID="{6667C797-B683-4A23-AA01-269979BCEAFA}" WorkUnitID="{F9C73B0E-830A-43F9-974D-FD47F06368F0}"/>
+							<Position X="2" Y="3"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="partida_musica03_mercado_OUT" ID="{68680E42-2D6B-4875-93DC-E87190013D80}" WorkUnitID="{F9C73B0E-830A-43F9-974D-FD47F06368F0}"/>
+							<Position X="2" Y="4"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="boss_recibe_dano" ID="{C03CE9BD-0AF7-40B1-A550-2C7E0BB63D70}" WorkUnitID="{F9C73B0E-830A-43F9-974D-FD47F06368F0}"/>
+							<Position X="2" Y="5"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="player_tira_palanca" ID="{93D22A15-4786-4D44-8A3B-11C7B9FFA373}" WorkUnitID="{F9C73B0E-830A-43F9-974D-FD47F06368F0}"/>
 							<Position X="3" Y="0"/>
 						</Module>
 						<Module>
-							<ObjectRef Name="player_salto" ID="{3ED4F2E3-A409-46CE-A7D4-A288FC94A23E}" WorkUnitID="{F9C73B0E-830A-43F9-974D-FD47F06368F0}"/>
+							<ObjectRef Name="pausa_entrada" ID="{5030EF32-BCAB-45DE-9FBF-0B4412C1292B}" WorkUnitID="{F9C73B0E-830A-43F9-974D-FD47F06368F0}"/>
 							<Position X="3" Y="1"/>
 						</Module>
 						<Module>
-							<ObjectRef Name="arana_recibe_dano" ID="{EDFD7D9E-B561-446F-99EE-B2D6E60956EB}" WorkUnitID="{F9C73B0E-830A-43F9-974D-FD47F06368F0}"/>
+							<ObjectRef Name="trampa_cruces_aparece" ID="{C7D661BA-9D91-4379-AFD0-0C265FC9D0A0}" WorkUnitID="{F9C73B0E-830A-43F9-974D-FD47F06368F0}"/>
 							<Position X="3" Y="2"/>
 						</Module>
 						<Module>
-							<ObjectRef Name="pausa_entrada" ID="{5030EF32-BCAB-45DE-9FBF-0B4412C1292B}" WorkUnitID="{F9C73B0E-830A-43F9-974D-FD47F06368F0}"/>
+							<ObjectRef Name="arana_recibe_dano" ID="{EDFD7D9E-B561-446F-99EE-B2D6E60956EB}" WorkUnitID="{F9C73B0E-830A-43F9-974D-FD47F06368F0}"/>
+							<Position X="3" Y="3"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="partida_musica04_pre_boss" ID="{93AE08D0-5B41-42FE-BABD-FB6A15D3BD1E}" WorkUnitID="{F9C73B0E-830A-43F9-974D-FD47F06368F0}"/>
+							<Position X="3" Y="4"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="boss_muere" ID="{DD7C6599-1029-4AD8-8797-7254D0CE3219}" WorkUnitID="{F9C73B0E-830A-43F9-974D-FD47F06368F0}"/>
+							<Position X="3" Y="5"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="pilar_aparece" ID="{9FAC5430-CB50-4790-AEB3-D926116505FA}" WorkUnitID="{F9C73B0E-830A-43F9-974D-FD47F06368F0}"/>
 							<Position X="4" Y="0"/>
 						</Module>
 						<Module>
-							<ObjectRef Name="player_muere" ID="{0653F29C-7E72-44B8-AF82-EB19EFA98D7B}" WorkUnitID="{F9C73B0E-830A-43F9-974D-FD47F06368F0}"/>
+							<ObjectRef Name="pausa_salida" ID="{0C348B29-6AB5-4ECF-87C4-0D40A81D32B8}" WorkUnitID="{F9C73B0E-830A-43F9-974D-FD47F06368F0}"/>
 							<Position X="4" Y="1"/>
 						</Module>
 						<Module>
-							<ObjectRef Name="arana_muere" ID="{9D26E57F-C0B0-4471-8562-748FC608CFCC}" WorkUnitID="{F9C73B0E-830A-43F9-974D-FD47F06368F0}"/>
+							<ObjectRef Name="trampa_bolas_aparece" ID="{F8347866-3D47-485F-85F9-A77D06211EA8}" WorkUnitID="{F9C73B0E-830A-43F9-974D-FD47F06368F0}"/>
 							<Position X="4" Y="2"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="arana_muere" ID="{9D26E57F-C0B0-4471-8562-748FC608CFCC}" WorkUnitID="{F9C73B0E-830A-43F9-974D-FD47F06368F0}"/>
+							<Position X="4" Y="3"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="player_tira_palanca_boss" ID="{941C0205-1723-4DB4-BADA-C7E2B1FB3AD5}" WorkUnitID="{F9C73B0E-830A-43F9-974D-FD47F06368F0}"/>
+							<Position X="4" Y="4"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="player_muere" ID="{0653F29C-7E72-44B8-AF82-EB19EFA98D7B}" WorkUnitID="{F9C73B0E-830A-43F9-974D-FD47F06368F0}"/>
+							<Position X="4" Y="5"/>
 						</Module>
 					</ModuleList>
 					<RTPCValueList ShowAll="true">

@@ -5,14 +5,13 @@ using System;
 
 public class CallCameraTrigger : MonoBehaviour
 {
-
     [Range(0, 2)]
     public float smoothSpeed = 0.125f;
+    public Vector3 offset;
 
-    public bool isACommonPillar = true;
-    Vector3 offset;
+    public SoundManager.MusicState musicType; // Se usa para seleccionar el tipo de musica que va a sonar cuando se entra en collider
 
-    public Camera cam;
+    [HideInInspector] public Camera cam;
 
     //=============================================
 
@@ -26,23 +25,13 @@ public class CallCameraTrigger : MonoBehaviour
         CameraBehaviour.OnSendCamera -= GetCamera;
     }
 
-    private void Start()
-    {
-        if (isACommonPillar)
-        {
-            offset = CameraBehaviour.cameraOfsett;
-        }
-        else
-        {
-            offset = CameraBehaviour.cameraBossOfsett;
-        }
-    }
-
     private void OnTriggerEnter(Collider other)
     {
         if (other.transform.tag == "Player")
         {
             StartCoroutine(MoveCamera());
+
+            SoundManager.Get().ChangeMainMusic(musicType);
         }
     }
 

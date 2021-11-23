@@ -6,12 +6,6 @@ public class CameraBehaviour : MonoBehaviour
 {
     public static Action<Camera> OnSendCamera;
 
-    [SerializeField] Vector3 commonOfsett;
-    [SerializeField] Vector3 bossOfsett;
-
-    public static Vector3 cameraOfsett;
-    public static Vector3 cameraBossOfsett;
-
     [Header("Screen Shake")]
     [SerializeField] float duration;
     [SerializeField] float magnitude;
@@ -23,9 +17,6 @@ public class CameraBehaviour : MonoBehaviour
 
     private void Awake()
     {
-        cameraOfsett = commonOfsett;
-        cameraBossOfsett = bossOfsett;
-
         cam = this.transform.GetComponent<Camera>();
     }
 

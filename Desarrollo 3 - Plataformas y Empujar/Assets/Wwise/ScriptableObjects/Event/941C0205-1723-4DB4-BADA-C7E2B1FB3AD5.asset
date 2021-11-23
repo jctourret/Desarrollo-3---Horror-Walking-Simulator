@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b963fa7c47c5264cb1e3dcb68fbcedd, type: 3}
   m_Name: 941C0205-1723-4DB4-BADA-C7E2B1FB3AD5
   m_EditorClassIdentifier: 
-  objectName: player_presiona_tuerca
-  id: 3091682631
+  objectName: player_tira_palanca_boss
+  id: 2265628356
   guid: 941C0205-1723-4DB4-BADA-C7E2B1FB3AD5

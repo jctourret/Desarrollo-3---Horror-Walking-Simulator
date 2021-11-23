@@ -62,13 +62,13 @@ public class MarketSlot : MonoBehaviour
             {
                 if(PlayerStats.GetPlayerMoney() >= itemMarket.Cost)
                 {
+                    AkSoundEngine.PostEvent("mono_frase2_compra", gameObject);
                     AkSoundEngine.PostEvent("mercado_compra_item", gameObject);
 
                     PayItem(itemMarket.Cost);
 
                     EnableItem(itemMarket.Id);
                     // Acá tengo que llamar al item en especifico y activarle las cosas, solo a ese item.
-
 
                     stateObject = StateObject.Open;
                     UIposter.SetActive(false);
