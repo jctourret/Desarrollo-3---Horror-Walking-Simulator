@@ -18,7 +18,7 @@ public class EnemyStats : MonoBehaviour, IDamageable
         life -= damage;
         animator.SetTrigger("Damaged");
 
-        Debug.LogError("Estoy recibiendo daño");
+        //Debug.LogError("Estoy recibiendo daño");
         if (life <= 0)
             Eliminated();
         else
@@ -32,10 +32,9 @@ public class EnemyStats : MonoBehaviour, IDamageable
         if (!alive)
         {
             Debug.LogError("Eliminacion incorrecta de ARAÑA: EnemyStats.cs");
+            Destroy(this.transform.parent.gameObject);
             return;
         }
-
-        // <-- Acá se llama a la animacion de muerte
 
         AkSoundEngine.PostEvent("arana_muere", gameObject);
 

@@ -4,6 +4,7 @@ using System;
 public class Boss_StartLever : MonoBehaviour
 {
     public static Action ActivateObject;
+    public static Action ActivateFight;
 
     public enum StateObject
     {
@@ -15,7 +16,7 @@ public class Boss_StartLever : MonoBehaviour
 
     public StateObject stateObject;
 
-    public SpawnEnemies spawnEnemies;
+    //public SpawnEnemies spawnEnemies;
 
     Animator animator;
     bool inRange = false;
@@ -70,6 +71,7 @@ public class Boss_StartLever : MonoBehaviour
     {
         ActivateObject?.Invoke();
 
-        spawnEnemies.Spawn();
+        ActivateFight?.Invoke();
+        //spawnEnemies.Spawn();
     }
 }

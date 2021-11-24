@@ -3,6 +3,7 @@ using UnityEngine;
 
 public class SpawnEnemies : MonoBehaviour
 {
+    [Header("Enemy And Point")]
     [SerializeField]
     protected List<EnemyAndPoint> toSpawn;
     public List<EnemyAI> enemiesSpawned;

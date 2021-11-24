@@ -4,6 +4,7 @@ using System;
 public class BossStats : MonoBehaviour, IDamageable
 {
     public static Action<int, int> SetLifeBar;
+    public static Action ActivateDeath;
 
     public GameObject lifeBarPref;
 
@@ -57,6 +58,8 @@ public class BossStats : MonoBehaviour, IDamageable
             Debug.LogError("Eliminacion incorrecta de BOSS: BossStats.cs");
             return;
         }
+
+        ActivateDeath?.Invoke();
 
         // <-- Acá se llama a la animacion de muerte
 
