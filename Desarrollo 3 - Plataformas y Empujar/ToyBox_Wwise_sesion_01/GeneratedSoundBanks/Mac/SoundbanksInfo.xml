@@ -11,7 +11,7 @@
 	<StreamedFiles/>
 	<MediaFilesNotInAnyBank/>
 	<SoundBanks>
-		<SoundBank Id="626013394" Language="SFX" Hash="4174156583">
+		<SoundBank Id="626013394" Language="SFX" Hash="2447496943">
 			<ObjectPath>\SoundBanks\Default Work Unit\Main_SoundBank_01</ObjectPath>
 			<ShortName>Main_SoundBank_01</ShortName>
 			<Path>Main_SoundBank_01.bnk</Path>
@@ -61,11 +61,11 @@
 					</IncludedMemoryFiles>
 				</Event>
 				<Event Id="2072538013" Name="arana_pasos" ObjectPath="\Events\Default Work Unit\arana_pasos" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
-				<Event Id="3747419092" Name="arana_recibe_dano" ObjectPath="\Events\Default Work Unit\arana_recibe_dano" DurationType="OneShot" DurationMin="0.314619" DurationMax="0.314619">
+				<Event Id="3747419092" Name="arana_recibe_dano" ObjectPath="\Events\Default Work Unit\arana_recibe_dano" DurationType="OneShot" DurationMin="0.214725" DurationMax="0.223585">
 					<IncludedMemoryFiles>
 						<File Id="738594664" Language="SFX">
 							<ShortName>impacto_a_enemigo_v2.wav</ShortName>
-							<Path>SFX/impacto_a_enemigo_v2_0B668A1C.wem</Path>
+							<Path>SFX/impacto_a_enemigo_v2_11865E9D.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -89,7 +89,7 @@
 					<IncludedMemoryFiles>
 						<File Id="524676025" Language="SFX">
 							<ShortName>Victory sound effect.wav</ShortName>
-							<Path>SFX/Victory sound effect_A51853FE.wem</Path>
+							<Path>SFX/Victory sound effect_D3605555.wem</Path>
 						</File>
 						<File Id="881692936" Language="SFX">
 							<ShortName>palanca_torre1_v1.wav</ShortName>
@@ -121,7 +121,7 @@
 						</File>
 						<File Id="56073203" Language="SFX">
 							<ShortName>Mx preBoss ref.wav</ShortName>
-							<Path>SFX/Mx preBoss ref_83C43F05.wem</Path>
+							<Path>SFX/Mx preBoss ref_70A791BB.wem</Path>
 						</File>
 						<File Id="265919654" Language="SFX">
 							<ShortName>CORO-cm_060.wav</ShortName>
@@ -267,11 +267,11 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="1546759916" Name="partida_musica03_mercado_IN" ObjectPath="\Events\Default Work Unit\partida_musica03_mercado_IN" DurationType="Infinite">
+				<Event Id="1546759916" Name="partida_musica03_mercado_IN" ObjectPath="\Events\Default Work Unit\partida_musica03_mercado_IN" DurationType="OneShot" DurationMin="77.142860" DurationMax="77.142860">
 					<IncludedMemoryFiles>
-						<File Id="527978422" Language="SFX">
-							<ShortName>piano ref para mercado.wav</ShortName>
-							<Path>SFX/piano ref para mercado_A4995F03.wem</Path>
+						<File Id="511803677" Language="SFX">
+							<ShortName>TB_Market_v1.wav</ShortName>
+							<Path>SFX/TB_Market_v1_D8C07C79.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -319,11 +319,11 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="4177257821" Name="pilar_alarma_caida" ObjectPath="\Events\Default Work Unit\pilar_alarma_caida" DurationType="Infinite">
+				<Event Id="4177257821" Name="pilar_alarma_caida" ObjectPath="\Events\Default Work Unit\pilar_alarma_caida" DurationType="OneShot" DurationMin="6.896548" DurationMax="6.896548">
 					<IncludedMemoryFiles>
 						<File Id="606173844" Language="SFX">
 							<ShortName>Baby Crying Sounds Like Siren sfx.wav</ShortName>
-							<Path>SFX/Baby Crying Sounds Like Siren sfx_A1B53130.wem</Path>
+							<Path>SFX/Baby Crying Sounds Like Siren sfx_83E16B29.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -343,7 +343,7 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="3034072942" Name="pilar_final_aparece" ObjectPath="\Events\Default Work Unit\pilar_final_aparece" DurationType="OneShot" DurationMin="1.500000" DurationMax="1.500000">
+				<Event Id="3034072942" Name="pilar_final_aparece" ObjectPath="\Events\Default Work Unit\pilar_final_aparece" DurationType="OneShot" DurationMin="2.500000" DurationMax="2.500000">
 					<IncludedMemoryFiles>
 						<File Id="377192695" Language="SFX">
 							<ShortName>plataforma final.wav</ShortName>
@@ -359,11 +359,15 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="298156071" Name="player_cae_de_pilar" ObjectPath="\Events\Default Work Unit\player_cae_de_pilar" DurationType="OneShot" DurationMin="2.396377" DurationMax="2.396377">
+				<Event Id="298156071" Name="player_cae_de_pilar" ObjectPath="\Events\Default Work Unit\player_cae_de_pilar" DurationType="OneShot" DurationMin="7.080163" DurationMax="7.080163">
 					<IncludedMemoryFiles>
 						<File Id="324930682" Language="SFX">
 							<ShortName>41 Woman Screams 7_Three Ext.wav</ShortName>
 							<Path>SFX/41 Woman Screams 7_Three Ext_3852BFD6.wem</Path>
+						</File>
+						<File Id="904630200" Language="SFX">
+							<ShortName>TB_player Death_v1.wav</ShortName>
+							<Path>SFX/TB_player Death_v1_1C296E94.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -392,15 +396,19 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="1243730667" Name="player_muere" ObjectPath="\Events\Default Work Unit\player_muere" DurationType="OneShot" DurationMin="5.207015" DurationMax="5.207015">
+				<Event Id="1243730667" Name="player_muere" ObjectPath="\Events\Default Work Unit\player_muere" DurationType="OneShot" DurationMin="7.080163" DurationMax="7.080163">
 					<IncludedMemoryFiles>
 						<File Id="265484928" Language="SFX">
 							<ShortName>Scream,Female,Late Twenties,Classic.wav</ShortName>
 							<Path>SFX/Scream,Female,Late Twenties,Classic_00671AD7.wem</Path>
 						</File>
+						<File Id="904630200" Language="SFX">
+							<ShortName>TB_player Death_v1.wav</ShortName>
+							<Path>SFX/TB_player Death_v1_1C296E94.wem</Path>
+						</File>
 						<File Id="1069148861" Language="SFX">
 							<ShortName>Downer With Drone.wav</ShortName>
-							<Path>SFX/Downer With Drone_0CEDAE42.wem</Path>
+							<Path>SFX/Downer With Drone_531C6946.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -505,7 +513,7 @@
 						</File>
 						<File Id="712915354" Language="SFX">
 							<ShortName>Air-Compressor_05.wav</ShortName>
-							<Path>SFX/Air-Compressor_05_0BD67FCF.wem</Path>
+							<Path>SFX/Air-Compressor_05_819D093B.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -517,7 +525,7 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="211920" Name="trampa_bolas_aparece" ObjectPath="\Events\Default Work Unit\trampa_bolas_aparece" DurationType="OneShot" DurationMin="1.130687" DurationMax="1.130687">
+				<Event Id="211920" Name="trampa_bolas_aparece" ObjectPath="\Events\Default Work Unit\trampa_bolas_aparece" DurationType="OneShot" DurationMin="1.105695" DurationMax="1.241403">
 					<IncludedMemoryFiles>
 						<File Id="236413968" Language="SFX">
 							<ShortName>Boing Box Short Hit 10.wav</ShortName>
@@ -525,11 +533,11 @@
 						</File>
 						<File Id="781788751" Language="SFX">
 							<ShortName>aparece_torre_v2.wav</ShortName>
-							<Path>SFX/aparece_torre_v2_F6626517.wem</Path>
+							<Path>SFX/aparece_torre_v2_0295B65F.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="1006187470" Name="trampa_cruces_aparece" ObjectPath="\Events\Default Work Unit\trampa_cruces_aparece" DurationType="OneShot" DurationMin="1.378313" DurationMax="1.378313">
+				<Event Id="1006187470" Name="trampa_cruces_aparece" ObjectPath="\Events\Default Work Unit\trampa_cruces_aparece" DurationType="OneShot" DurationMin="1.358252" DurationMax="1.393666">
 					<IncludedMemoryFiles>
 						<File Id="489427744" Language="SFX">
 							<ShortName>trampa_agujas.wav</ShortName>
@@ -537,7 +545,7 @@
 						</File>
 						<File Id="781788751" Language="SFX">
 							<ShortName>aparece_torre_v2.wav</ShortName>
-							<Path>SFX/aparece_torre_v2_F6626517.wem</Path>
+							<Path>SFX/aparece_torre_v2_0295B65F.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>

@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class JumperSpiderAI : EnemyAI
 {
@@ -26,11 +24,10 @@ public class JumperSpiderAI : EnemyAI
         rbody.isKinematic = false;
     }
 
-    // Update is called once per frame
     void Update()
     {
         float distance;
-        if (target != null)
+        if (target != null && isDead == false)
         {
             distance = Vector3.Distance(transform.position, target.transform.position);
             if (!hasAttacked && isGrounded)

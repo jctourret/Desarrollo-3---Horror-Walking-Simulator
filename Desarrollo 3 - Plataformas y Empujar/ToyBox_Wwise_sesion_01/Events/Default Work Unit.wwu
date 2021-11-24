@@ -62,13 +62,6 @@
 				</Event>
 				<Event Name="player_cae_de_pilar" ID="{5696C2CF-32FF-4A0E-8A19-BC03611D596F}">
 					<ChildrenList>
-						<Action Name="" ID="{365E98F6-0943-42AB-86DD-A9CA1279BC7F}" ShortID="254799187">
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="player_cae_de_pilar" ID="{10508C71-729C-4F83-8BF1-DBD83AE51D5C}" WorkUnitID="{0068F637-75D2-4DCF-A442-34947F9C8869}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
 						<Action Name="" ID="{2DAC7BC4-71F5-4845-90BF-8BEA8B388D81}" ShortID="66443394">
 							<PropertyList>
 								<Property Name="ActionType" Type="int16" Value="3"/>
@@ -76,6 +69,20 @@
 								<Property Name="Scope" Type="int16" Value="1"/>
 							</PropertyList>
 							<ReferenceList/>
+						</Action>
+						<Action Name="" ID="{365E98F6-0943-42AB-86DD-A9CA1279BC7F}" ShortID="254799187">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="player_cae_de_pilar" ID="{10508C71-729C-4F83-8BF1-DBD83AE51D5C}" WorkUnitID="{0068F637-75D2-4DCF-A442-34947F9C8869}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{A01D414E-91D4-45A6-89B2-58797650BA7A}" ShortID="425081382">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="TB_player Death_v1" ID="{CE20C579-341F-4937-A9B1-D39F9674D011}" WorkUnitID="{0068F637-75D2-4DCF-A442-34947F9C8869}"/>
+								</Reference>
+							</ReferenceList>
 						</Action>
 					</ChildrenList>
 				</Event>
@@ -277,6 +284,13 @@
 							<ReferenceList>
 								<Reference Name="Target">
 									<ObjectRef Name="player_muere_downer" ID="{EDFCD1D8-79E9-4F82-A842-BFF416C3095B}" WorkUnitID="{0068F637-75D2-4DCF-A442-34947F9C8869}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{60A57B44-4321-4B3B-BB4F-144D40051EEE}" ShortID="813044611">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="TB_player Death_v1" ID="{CE20C579-341F-4937-A9B1-D39F9674D011}" WorkUnitID="{0068F637-75D2-4DCF-A442-34947F9C8869}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
@@ -496,7 +510,7 @@
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
-									<ObjectRef Name="piano ref para mercado" ID="{72F6CD7A-06A9-42FB-A4CE-7A138DC14B5F}" WorkUnitID="{0068F637-75D2-4DCF-A442-34947F9C8869}"/>
+									<ObjectRef Name="TB_Market_v1" ID="{162DFCFF-918B-49C3-88E5-E1C92CFAC629}" WorkUnitID="{0068F637-75D2-4DCF-A442-34947F9C8869}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
@@ -644,6 +658,9 @@
 				<Event Name="pilar_final_aparece" ID="{E177E0DA-A635-4736-8517-9AFF4BF1585A}">
 					<ChildrenList>
 						<Action Name="" ID="{5869800D-D08D-4E1E-A0F0-FCD5C91AE441}" ShortID="1019215922">
+							<PropertyList>
+								<Property Name="Delay" Type="Real64" Value="1"/>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
 									<ObjectRef Name="plataforma final" ID="{75A81836-31C7-410F-A888-67FAD8A4969E}" WorkUnitID="{0068F637-75D2-4DCF-A442-34947F9C8869}"/>
@@ -922,7 +939,7 @@
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
-									<ObjectRef Name="piano ref para mercado" ID="{72F6CD7A-06A9-42FB-A4CE-7A138DC14B5F}" WorkUnitID="{0068F637-75D2-4DCF-A442-34947F9C8869}"/>
+									<ObjectRef Name="TB_Market_v1" ID="{162DFCFF-918B-49C3-88E5-E1C92CFAC629}" WorkUnitID="{0068F637-75D2-4DCF-A442-34947F9C8869}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>

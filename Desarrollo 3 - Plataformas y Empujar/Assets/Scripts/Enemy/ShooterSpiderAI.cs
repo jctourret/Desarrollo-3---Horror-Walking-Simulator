@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class ShooterSpiderAI : EnemyAI
 {
@@ -12,11 +10,11 @@ public class ShooterSpiderAI : EnemyAI
 
     [SerializeField] GameObject projectile;
     [SerializeField] Transform shotPoint;
-    // Update is called once per frame
+
     void Update()
     {
         float distance;
-        if (target != null)
+        if (target != null && isDead == false)
         {
             distance = Vector3.Distance(transform.position, target.transform.position);
 

@@ -3,12 +3,16 @@
 public class EnemyStats : MonoBehaviour, IDamageable
 {
     public int life = 10;
-    Animator animator;
-    bool alive = true;
 
-    private void Start()
+    private Animator animator;
+    private bool alive = true;
+
+    private EnemyAI enemyAI;
+
+    private void Awake()
     {
         animator = transform.parent.GetComponentInChildren<Animator>();
+        enemyAI = transform.parent.GetComponentInChildren<EnemyAI>();
     }
 
     //==================================
@@ -18,7 +22,6 @@ public class EnemyStats : MonoBehaviour, IDamageable
         life -= damage;
         animator.SetTrigger("Damaged");
 
-        //Debug.LogError("Estoy recibiendo daño");
         if (life <= 0)
             Eliminated();
         else
@@ -27,27 +30,32 @@ public class EnemyStats : MonoBehaviour, IDamageable
 
     public void Eliminated()
     {
-        //this.transform.GetComponent<Collider>().enabled = false; //El jefe NO TIENE un boxCollider, tiene un capsuleCollider
-
         if (!alive)
         {
             Debug.LogError("Eliminacion incorrecta de ARAÑA: EnemyStats.cs");
-            Destroy(this.transform.parent.gameObject);
             return;
         }
+        else
+        {
+            GetComponent<Collider>().enabled = false;
 
-        AkSoundEngine.PostEvent("arana_muere", gameObject);
+            enemyAI.KillSpider(true);
 
-        alive = false;
+            animator.SetTrigger("IsDead");
 
-        LoaderManager.Get().SpawnBasicItem(this.transform.position);
-        Destroy(this.transform.parent.gameObject); // Esta linea se tiene que eliminar cuando se tenga la animacion
+            AkSoundEngine.PostEvent("arana_muere", gameObject);
+
+            alive = false;
+
+            LoaderManager.Get().SpawnBasicItem(this.transform.position);
+            Destroy(this.transform.parent.gameObject, 5f);
+        }
     }
 
     //==================================
 
-    public void CallDeathAnimation()    // Esta funcion se va a llamar cuando se haga el final de la animacion de muerte
-    {
-        Destroy(this.gameObject);
-    }
+    //public void CallDeathAnimation()    // Esta funcion se va a llamar cuando se haga el final de la animacion de muerte
+    //{
+    //    Destroy(this.gameObject);
+    //}
 }

@@ -429,6 +429,19 @@
 						</Sound>
 						<Sound Name="arana_recibe_dano_v2" ID="{583E8E94-D76C-4A24-BCE6-194400D9D052}" ShortID="67745941">
 							<PropertyList>
+								<Property Name="Pitch" Type="int32">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{14AA3593-6228-4F8E-9847-1435E660C5AC}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Max" Type="Real64" Value="35"/>
+													<Property Name="Min" Type="Real64" Value="-35"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
 										<Value>-5</Value>
@@ -450,7 +463,7 @@
 										<Property Name="FadeOutDuration" Type="Real64" Value="0.0457482108778626"/>
 										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
 										<Property Name="TrimBegin" Type="Real64" Value="0.0353144083969465"/>
-										<Property Name="TrimEnd" Type="Real64" Value="0.349933683206107"/>
+										<Property Name="TrimEnd" Type="Real64" Value="0.254424260496183"/>
 									</PropertyList>
 									<Language>SFX</Language>
 									<AudioFile>impacto_a_enemigo_v2.wav</AudioFile>
@@ -1281,7 +1294,7 @@
 							<PropertyList>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
-										<Value>-14</Value>
+										<Value>-27</Value>
 									</ValueList>
 								</Property>
 							</PropertyList>
@@ -1296,8 +1309,10 @@
 							<ChildrenList>
 								<AudioFileSource Name="Downer With Drone" ID="{16816218-1F8E-41D0-881C-9EF989B36485}">
 									<PropertyList>
+										<Property Name="FadeInDuration" Type="Real64" Value="0.0168429892036071"/>
 										<Property Name="FadeOutDuration" Type="Real64" Value="2.92590432483426"/>
 										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimBegin" Type="Real64" Value="0.0393003081417498"/>
 										<Property Name="TrimEnd" Type="Real64" Value="5.20701476519361"/>
 									</PropertyList>
 									<Language>SFX</Language>
@@ -2368,7 +2383,6 @@
 					<ChildrenList>
 						<Sound Name="Baby Crying Sounds Like Siren sfx" ID="{DD05EDA2-CFBB-4644-A0E5-68BB04D8CAD3}" ShortID="907164278">
 							<PropertyList>
-								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
 								<Property Name="Lowpass" Type="int16">
 									<ValueList>
 										<Value>45</Value>
@@ -2408,7 +2422,7 @@
 							<ChildrenList>
 								<AudioFileSource Name="Baby Crying Sounds Like Siren sfx" ID="{CA4C9368-B749-4574-8110-36F34CE8E86A}">
 									<PropertyList>
-										<Property Name="CrossfadeDuration" Type="Real64" Value="491.935"/>
+										<Property Name="FadeOutDuration" Type="Real64" Value="0.332422841910301"/>
 										<Property Name="LoopBegin" Type="Real64" Value="3.64854338682037"/>
 										<Property Name="LoopEnd" Type="Real64" Value="8.29435529937166"/>
 										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
@@ -2436,7 +2450,7 @@
 								</Property>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
-										<Value>-15</Value>
+										<Value>-16</Value>
 									</ValueList>
 								</Property>
 							</PropertyList>
@@ -2466,7 +2480,7 @@
 							<PropertyList>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
-										<Value>-15</Value>
+										<Value>-16</Value>
 									</ValueList>
 								</Property>
 							</PropertyList>
@@ -2552,7 +2566,7 @@
 								</Property>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
-										<Value>-3</Value>
+										<Value>-7</Value>
 									</ValueList>
 								</Property>
 							</PropertyList>
@@ -2590,9 +2604,25 @@
 										<Value>37</Value>
 									</ValueList>
 								</Property>
+								<Property Name="Pitch" Type="int32">
+									<ValueList>
+										<Value>-130</Value>
+									</ValueList>
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{542106E1-3BD2-4655-A48A-E9D06B940B8C}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Max" Type="Real64" Value="200"/>
+													<Property Name="Min" Type="Real64" Value="-150"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
-										<Value>-14</Value>
+										<Value>-22</Value>
 									</ValueList>
 								</Property>
 							</PropertyList>
@@ -2627,24 +2657,30 @@
 						</Sound>
 						<Sound Name="trampa_agujas" ID="{7368279F-8007-4BD6-BCA7-A1D972B457A4}" ShortID="386927663">
 							<PropertyList>
-								<Property Name="Highpass" Type="int16">
-									<ValueList>
-										<Value>13</Value>
-									</ValueList>
-								</Property>
 								<Property Name="Lowpass" Type="int16">
 									<ValueList>
-										<Value>32</Value>
+										<Value>33</Value>
 									</ValueList>
 								</Property>
 								<Property Name="Pitch" Type="int32">
 									<ValueList>
-										<Value>-380</Value>
+										<Value>-400</Value>
 									</ValueList>
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{25A08675-04CD-4D3F-B100-AD6F2212C060}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Max" Type="Real64" Value="60"/>
+													<Property Name="Min" Type="Real64" Value="-10"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
 								</Property>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
-										<Value>-8</Value>
+										<Value>-11</Value>
 									</ValueList>
 								</Property>
 							</PropertyList>
@@ -2686,7 +2722,7 @@
 								</Property>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
-										<Value>-22</Value>
+										<Value>-24</Value>
 									</ValueList>
 								</Property>
 							</PropertyList>
@@ -2702,7 +2738,7 @@
 								<AudioFileSource Name="aparece_torre_v2" ID="{C1851212-690B-4E18-BEF7-01FE1178C662}">
 									<PropertyList>
 										<Property Name="FadeInDuration" Type="Real64" Value="0.0355677282124682"/>
-										<Property Name="FadeOutDuration" Type="Real64" Value="0.037659947519084"/>
+										<Property Name="FadeOutDuration" Type="Real64" Value="0.0857809915712468"/>
 										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
 										<Property Name="TrimBegin" Type="Real64" Value="0.384968352417303"/>
 										<Property Name="TrimEnd" Type="Real64" Value="0.721815660782442"/>
@@ -2943,6 +2979,11 @@
 						</Sound>
 						<Sound Name="piano ref para mercado" ID="{72F6CD7A-06A9-42FB-A4CE-7A138DC14B5F}" ShortID="376190792">
 							<PropertyList>
+								<Property Name="Inclusion" Type="bool">
+									<ValueList>
+										<Value>False</Value>
+									</ValueList>
+								</Property>
 								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
@@ -3063,7 +3104,7 @@
 								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
-										<Value>-8</Value>
+										<Value>-9</Value>
 									</ValueList>
 								</Property>
 							</PropertyList>
@@ -3204,10 +3245,21 @@
 						</Sound>
 						<Sound Name="TB_gameplay_v1_1" ID="{FC4A75C5-7728-4768-8870-E285B0DDC4B8}" ShortID="108445088">
 							<PropertyList>
+								<Property Name="Highpass" Type="int16">
+									<ValueList>
+										<Value>2</Value>
+									</ValueList>
+								</Property>
 								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+								<Property Name="Lowpass" Type="int16">
+									<ValueList>
+										<Value>20</Value>
+									</ValueList>
+								</Property>
+								<Property Name="OverridePositioning" Type="bool" Value="True"/>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
-										<Value>1</Value>
+										<Value>-2</Value>
 									</ValueList>
 								</Property>
 							</PropertyList>
@@ -3228,6 +3280,14 @@
 									</MediaIDList>
 								</AudioFileSource>
 							</ChildrenList>
+							<PositioningInfo>
+								<Panner Name="" ID="{24FFC6B2-D156-40C6-8AA7-77355D6FC861}">
+									<PropertyList>
+										<Property Name="PanX" Type="Real64" Value="-2.20934381900406E-14"/>
+										<Property Name="PanY" Type="Real64" Value="89.0595009596929"/>
+									</PropertyList>
+								</Panner>
+							</PositioningInfo>
 							<ObjectLists/>
 							<ActiveSourceList>
 								<ActiveSource Name="TB_gameplay_v1_1" ID="{2B7349BA-5463-4014-A6E6-DFFBE2C89760}" Platform="Linked"/>
@@ -3275,6 +3335,86 @@
 							<ObjectLists/>
 							<ActiveSourceList>
 								<ActiveSource Name="Mx preBoss ref" ID="{1AD35428-8AB8-4FA3-89DF-BD4B56978279}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="TB_Market_v1" ID="{162DFCFF-918B-49C3-88E5-E1C92CFAC629}" ShortID="54553046">
+							<PropertyList>
+								<Property Name="Highpass" Type="int16">
+									<ValueList>
+										<Value>54</Value>
+									</ValueList>
+								</Property>
+								<Property Name="Lowpass" Type="int16">
+									<ValueList>
+										<Value>42</Value>
+									</ValueList>
+								</Property>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-9</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4DDCC0E9-8918-4EF8-AD11-22C68F85E755}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E8FBD65D-B603-4940-A021-75BCF3D47498}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="TB_Market_v1" ID="{338B79E1-5EE2-409A-8B54-C06ACD4A3DFA}">
+									<Language>SFX</Language>
+									<AudioFile>TB_Market_v1.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="511803677"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="TB_Market_v1" ID="{338B79E1-5EE2-409A-8B54-C06ACD4A3DFA}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="TB_player Death_v1" ID="{CE20C579-341F-4937-A9B1-D39F9674D011}" ShortID="342886003">
+							<PropertyList>
+								<Property Name="Lowpass" Type="int16">
+									<ValueList>
+										<Value>5</Value>
+									</ValueList>
+								</Property>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-17</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4DDCC0E9-8918-4EF8-AD11-22C68F85E755}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E8FBD65D-B603-4940-A021-75BCF3D47498}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="TB_player Death_v1" ID="{AB1BFA39-8BBB-42C6-A463-18F51E6A6498}">
+									<PropertyList>
+										<Property Name="FadeOutDuration" Type="Real64" Value="2.30242814301293"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimEnd" Type="Real64" Value="7.08016299267799"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>TB_player Death_v1.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="904630200"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="TB_player Death_v1" ID="{AB1BFA39-8BBB-42C6-A463-18F51E6A6498}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
 					</ChildrenList>
