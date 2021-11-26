@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{F4E992FE-235D-4BDE-B9CE-D84FCC3C50D3}" SchemaVersion="103">
 	<MixingSessions>
-		<WorkUnit Name="Default Work Unit" ID="{F4E992FE-235D-4BDE-B9CE-D84FCC3C50D3}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{F4E992FE-235D-4BDE-B9CE-D84FCC3C50D3}" PersistMode="Standalone">
+			<ChildrenList>
+				<MixingSession Name="Buses" ID="{A3D0186E-BFA2-4823-AA9C-7D2CC5A33A71}">
+					<ObjectList>
+						<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E8FBD65D-B603-4940-A021-75BCF3D47498}"/>
+						<ObjectRef Name="Music" ID="{19FD7356-E847-4262-A161-949FBD5F4AC4}" WorkUnitID="{E8FBD65D-B603-4940-A021-75BCF3D47498}"/>
+						<ObjectRef Name="SFX" ID="{9EE3F1A8-A662-4781-BAAC-4841864EECA7}" WorkUnitID="{E8FBD65D-B603-4940-A021-75BCF3D47498}"/>
+						<ObjectRef Name="UI" ID="{A14F5D25-1312-4E7B-A6EE-2F0054444546}" WorkUnitID="{E8FBD65D-B603-4940-A021-75BCF3D47498}"/>
+					</ObjectList>
+				</MixingSession>
+			</ChildrenList>
+		</WorkUnit>
 	</MixingSessions>
 </WwiseDocument>

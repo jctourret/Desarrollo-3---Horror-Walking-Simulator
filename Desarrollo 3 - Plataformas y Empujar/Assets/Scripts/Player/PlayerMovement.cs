@@ -13,7 +13,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] float minSpeed = 2;
     [SerializeField] private Vector3 playerVelocity;
 
-    private bool isSlowed;
+    private bool isSlowed = false;
     private bool controllable;
     private bool isGrounded;
     private bool inAir = false;
@@ -143,7 +143,6 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-
     public void Slow(float slowStrength)
     {
         if(currentSpeed > minSpeed && !isSlowed)
@@ -173,15 +172,26 @@ public class PlayerMovement : MonoBehaviour
 
     public IEnumerator Slow(float slowStrength, float slowDuration)
     {
-        if (currentSpeed > minSpeed)
+        if(!isSlowed)
         {
-            currentSpeed -= slowStrength;
+            if (currentSpeed > minSpeed)
+            {
+                currentSpeed -= slowStrength;
+
+                isSlowed = true;
+            }
+
+            yield return new WaitForSeconds(slowDuration);
+            
+            if(currentSpeed < normalSpeed)
+            {
+                currentSpeed += slowStrength;
+
+                isSlowed = false;
+            }
         }
-        yield return new WaitForSeconds(slowDuration);
-        if(currentSpeed < normalSpeed)
-        {
-            currentSpeed += slowStrength;
-        }
+
+        yield return null;
     }
 
     //==============================================

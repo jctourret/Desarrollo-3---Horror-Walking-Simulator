@@ -16,7 +16,7 @@ public class ChaserSpiderAI : EnemyAI
     {
         base.Update();
         float distance;
-        if (target != null)
+        if (target != null && isDead == false)
         {
             distance = Vector3.Distance(transform.position, target.transform.position);
 

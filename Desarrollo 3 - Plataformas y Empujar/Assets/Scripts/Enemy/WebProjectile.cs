@@ -9,7 +9,7 @@ public class WebProjectile : MonoBehaviour
     [SerializeField] GameObject trap;
     [SerializeField] Vector3 velocity;
 
-    PlayerMovement target;
+    //PlayerMovement target;
     Rigidbody rb;
 
 
@@ -25,13 +25,14 @@ public class WebProjectile : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        target = collision.collider.gameObject.GetComponentInParent<PlayerMovement>();
+        PlayerMovement target = collision.collider.gameObject.GetComponentInParent<PlayerMovement>();
+        
         if(target != null)
         {
-            StartCoroutine(target.Slow(slowStrength,slowDuration));
+            StartCoroutine(target.Slow(slowStrength, slowDuration));
             Destroy(gameObject);
         }
-        if(collision.collider.gameObject.tag == "Terrain")
+        else if(collision.collider.gameObject.tag == "Terrain")
         {
             GameObject go = Instantiate(trap,transform.position, Quaternion.identity, collision.collider.transform);
 

@@ -66,8 +66,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ecf5d8f5485bb24b805d80925471963, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  slowStrength: 0
-  slowDuration: 0
+  slowStrength: 4
+  slowDuration: 1
   trap: {fileID: 6920915380642325316, guid: 07c309aad67ecf94da398e82efd3e664, type: 3}
   velocity: {x: 0, y: 0, z: 0}
 --- !u!135 &3821265864802868440

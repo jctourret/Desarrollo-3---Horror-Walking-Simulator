@@ -4,11 +4,112 @@
 		<WorkUnit Name="Default Work Unit" ID="{E8FBD65D-B603-4940-A021-75BCF3D47498}" PersistMode="Standalone">
 			<ChildrenList>
 				<Bus Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}">
+					<PropertyList>
+						<Property Name="Volume" Type="Real64">
+							<RTPCList>
+								<RTPC Name="" ID="{9725216F-DF5E-407C-984E-18E4BB4EB146}" ShortID="195048856">
+									<ReferenceList>
+										<Reference Name="ControlInput">
+											<ObjectRef Name="Master_volume" ID="{553E0C93-DD86-4F20-AD45-2A6719E2011D}" WorkUnitID="{3784F938-728F-4018-85C5-73F02111F664}"/>
+										</Reference>
+									</ReferenceList>
+									<Curve Name="" ID="{5A432AF5-F51F-45AB-8DF5-151E9EECFE87}">
+										<PropertyList>
+											<Property Name="Flags" Type="int32" Value="3"/>
+										</PropertyList>
+										<PointList>
+											<Point>
+												<XPos>0</XPos>
+												<YPos>-200</YPos>
+												<Flags>5</Flags>
+											</Point>
+											<Point>
+												<XPos>1</XPos>
+												<YPos>0</YPos>
+												<Flags>37</Flags>
+											</Point>
+										</PointList>
+									</Curve>
+								</RTPC>
+							</RTPCList>
+						</Property>
+					</PropertyList>
 					<ReferenceList>
 						<Reference Name="AudioDevice">
 							<ObjectRef Name="System" ID="{4EC01D66-B0C9-4367-9289-C714CCD0E373}" WorkUnitID="{7E364476-D823-4629-93FB-5DC731EE5BB3}"/>
 						</Reference>
 					</ReferenceList>
+					<ChildrenList>
+						<Bus Name="UI" ID="{A14F5D25-1312-4E7B-A6EE-2F0054444546}">
+							<ObjectLists/>
+						</Bus>
+						<Bus Name="Music" ID="{19FD7356-E847-4262-A161-949FBD5F4AC4}">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<RTPCList>
+										<RTPC Name="" ID="{83C4978C-94DA-4FB8-AF9D-EDE50CBF5C20}" ShortID="910785174">
+											<ReferenceList>
+												<Reference Name="ControlInput">
+													<ObjectRef Name="Music_volume" ID="{26D869E5-E0A8-43EE-BC3C-A1CA702C3E0A}" WorkUnitID="{3784F938-728F-4018-85C5-73F02111F664}"/>
+												</Reference>
+											</ReferenceList>
+											<Curve Name="" ID="{DEDF2D91-2FE8-4B2C-B5DD-81CAE2B9DAE0}">
+												<PropertyList>
+													<Property Name="Flags" Type="int32" Value="3"/>
+												</PropertyList>
+												<PointList>
+													<Point>
+														<XPos>0</XPos>
+														<YPos>-200</YPos>
+														<Flags>5</Flags>
+													</Point>
+													<Point>
+														<XPos>1</XPos>
+														<YPos>-0.20507</YPos>
+														<Flags>37</Flags>
+													</Point>
+												</PointList>
+											</Curve>
+										</RTPC>
+									</RTPCList>
+								</Property>
+							</PropertyList>
+							<ObjectLists/>
+						</Bus>
+						<Bus Name="SFX" ID="{9EE3F1A8-A662-4781-BAAC-4841864EECA7}">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<RTPCList>
+										<RTPC Name="" ID="{3846A9A9-8E84-4E4D-8126-0089C40F7B8C}" ShortID="437335152">
+											<ReferenceList>
+												<Reference Name="ControlInput">
+													<ObjectRef Name="Sfx_volume" ID="{82578DF9-CF82-4694-9BDC-036CD7FCEF53}" WorkUnitID="{3784F938-728F-4018-85C5-73F02111F664}"/>
+												</Reference>
+											</ReferenceList>
+											<Curve Name="" ID="{03AD3957-F825-4F01-8EE5-455E9AF74D8A}">
+												<PropertyList>
+													<Property Name="Flags" Type="int32" Value="3"/>
+												</PropertyList>
+												<PointList>
+													<Point>
+														<XPos>0</XPos>
+														<YPos>-200</YPos>
+														<Flags>5</Flags>
+													</Point>
+													<Point>
+														<XPos>1</XPos>
+														<YPos>-0</YPos>
+														<Flags>37</Flags>
+													</Point>
+												</PointList>
+											</Curve>
+										</RTPC>
+									</RTPCList>
+								</Property>
+							</PropertyList>
+							<ObjectLists/>
+						</Bus>
+					</ChildrenList>
 					<ObjectLists/>
 				</Bus>
 				<Bus Name="Motion Factory Bus" ID="{2AF9B9C6-6EF1-46E9-B5F2-E30C9E602C74}">

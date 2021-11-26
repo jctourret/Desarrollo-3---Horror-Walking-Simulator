@@ -31,7 +31,7 @@ public class JumperSpiderAI : EnemyAI
         animator.SetFloat("Horizontal", rbody.velocity.x);
         animator.SetFloat("Vertical", rbody.velocity.z);
         float distance;
-        if (target != null)
+        if (target != null && isDead == false)
         {
             distance = Vector3.Distance(transform.position, target.transform.position);
             if (!hasAttacked && isGrounded)

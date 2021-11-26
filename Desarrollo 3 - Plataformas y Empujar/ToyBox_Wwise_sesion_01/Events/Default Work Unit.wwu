@@ -327,6 +327,13 @@
 								</Reference>
 							</ReferenceList>
 						</Action>
+						<Action Name="" ID="{22C572E3-6A95-437B-8863-77BFC0329210}" ShortID="863071187">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="alma_whisper_1" ID="{0198981D-36A6-448C-94DC-D6835EA6A08B}" WorkUnitID="{0068F637-75D2-4DCF-A442-34947F9C8869}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
 					</ChildrenList>
 				</Event>
 				<Event Name="player_supera_nivel" ID="{DB91280B-60D2-4A14-B8D2-F4BE9429C5D4}"/>
@@ -659,11 +666,11 @@
 					<ChildrenList>
 						<Action Name="" ID="{5869800D-D08D-4E1E-A0F0-FCD5C91AE441}" ShortID="1019215922">
 							<PropertyList>
-								<Property Name="Delay" Type="Real64" Value="1"/>
+								<Property Name="Delay" Type="Real64" Value="0.5"/>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
-									<ObjectRef Name="plataforma final" ID="{75A81836-31C7-410F-A888-67FAD8A4969E}" WorkUnitID="{0068F637-75D2-4DCF-A442-34947F9C8869}"/>
+									<ObjectRef Name="pilar_final" ID="{7191CCFE-1058-4A13-AB7D-0B67AE53FC21}" WorkUnitID="{0068F637-75D2-4DCF-A442-34947F9C8869}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
@@ -680,6 +687,9 @@
 							<ReferenceList/>
 						</Action>
 						<Action Name="" ID="{38F140CE-A4F9-4891-86A2-FD1615AA62F5}" ShortID="873206927">
+							<PropertyList>
+								<Property Name="Delay" Type="Real64" Value="0.5"/>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
 									<ObjectRef Name="palanca_boss" ID="{10EE0DAA-97A8-45DE-8EC5-CBCBC997A56F}" WorkUnitID="{0068F637-75D2-4DCF-A442-34947F9C8869}"/>
@@ -692,13 +702,13 @@
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
-									<ObjectRef Name="Epic Dark Boss Theme" ID="{AADF1359-8122-40B7-98D0-344C947C21A5}" WorkUnitID="{0068F637-75D2-4DCF-A442-34947F9C8869}"/>
+									<ObjectRef Name="TB _Boss_fight_v1" ID="{8A428F06-91C5-4C94-A8F7-BA0C6A414D20}" WorkUnitID="{0068F637-75D2-4DCF-A442-34947F9C8869}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
 						<Action Name="" ID="{D1715D87-6B94-4163-BF23-06B43D3D6F2E}" ShortID="594774899">
 							<PropertyList>
-								<Property Name="Delay" Type="Real64" Value="0.6"/>
+								<Property Name="Delay" Type="Real64" Value="0.9"/>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
@@ -738,6 +748,13 @@
 								</Reference>
 							</ReferenceList>
 						</Action>
+						<Action Name="" ID="{39F08CC5-3905-433F-A5BC-820FBD9FC898}" ShortID="786397007">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="fx motor ascensor" ID="{5F9A0F5F-1DA5-4150-BF07-35F98206DED8}" WorkUnitID="{0068F637-75D2-4DCF-A442-34947F9C8869}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
 					</ChildrenList>
 				</Event>
 				<Event Name="ascensor_palanca_victoria" ID="{422D9CC2-2AAD-4DD0-BBAA-31AE568056AE}">
@@ -745,7 +762,7 @@
 						<Action Name="" ID="{22427A25-C576-4F2B-9DD8-D019F855855A}" ShortID="300103290">
 							<PropertyList>
 								<Property Name="ActionType" Type="int16" Value="3"/>
-								<Property Name="FadeTime" Type="Real64" Value="1.5"/>
+								<Property Name="FadeTime" Type="Real64" Value="0.5"/>
 								<Property Name="Scope" Type="int16" Value="1"/>
 							</PropertyList>
 							<ReferenceList/>
@@ -774,11 +791,11 @@
 						</Action>
 						<Action Name="" ID="{6CD7DA12-291E-44DB-AFCC-31B1AF08B9C8}" ShortID="848450599">
 							<PropertyList>
-								<Property Name="Delay" Type="Real64" Value="0.4"/>
+								<Property Name="Delay" Type="Real64" Value="0.3"/>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
-									<ObjectRef Name="Victory sound effect" ID="{FA75300A-6B1F-4C6D-8410-DC6B874ED7DB}" WorkUnitID="{0068F637-75D2-4DCF-A442-34947F9C8869}"/>
+									<ObjectRef Name="TB_triunfo_v1_2 short" ID="{1B5D6717-E63A-435C-864A-5CB6DBBE46DA}" WorkUnitID="{0068F637-75D2-4DCF-A442-34947F9C8869}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
@@ -957,6 +974,7 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="partida_susurros_tension" ID="{2ABA524D-CC65-4BCE-961C-FC5C33DDA9CF}"/>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

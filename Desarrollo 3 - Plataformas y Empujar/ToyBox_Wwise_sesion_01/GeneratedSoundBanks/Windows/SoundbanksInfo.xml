@@ -11,7 +11,7 @@
 	<StreamedFiles/>
 	<MediaFilesNotInAnyBank/>
 	<SoundBanks>
-		<SoundBank Id="626013394" Language="SFX" Hash="2447496943">
+		<SoundBank Id="626013394" Language="SFX" Hash="1199518926">
 			<ObjectPath>\SoundBanks\Default Work Unit\Main_SoundBank_01</ObjectPath>
 			<ShortName>Main_SoundBank_01</ShortName>
 			<Path>Main_SoundBank_01.bnk</Path>
@@ -65,7 +65,7 @@
 					<IncludedMemoryFiles>
 						<File Id="738594664" Language="SFX">
 							<ShortName>impacto_a_enemigo_v2.wav</ShortName>
-							<Path>SFX/impacto_a_enemigo_v2_11865E9D.wem</Path>
+							<Path>SFX/impacto_a_enemigo_v2_1552FED8.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -79,17 +79,21 @@
 				</Event>
 				<Event Id="3725013726" Name="ascensor_baja" ObjectPath="\Events\Default Work Unit\ascensor_baja" DurationType="OneShot" DurationMin="2.398850" DurationMax="2.398850">
 					<IncludedMemoryFiles>
+						<File Id="327554050" Language="SFX">
+							<ShortName>fx motor ascensor.wav</ShortName>
+							<Path>SFX/fx motor ascensor_22304856.wem</Path>
+						</File>
 						<File Id="605966174" Language="SFX">
 							<ShortName>Coolspring_Power_Museum_Gas_Engine_slide_click_metal_machine_gear_gears_crank_rhythmic_clack_grind_motion.wav</ShortName>
 							<Path>SFX/Coolspring_Power_Museum_Gas_Engine_slide_click_metal_machine_gear_gears_crank_rhythmic_clack_grind_motion_7E162784.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="46127608" Name="ascensor_palanca_victoria" ObjectPath="\Events\Default Work Unit\ascensor_palanca_victoria" DurationType="OneShot" DurationMin="4.605273" DurationMax="4.605273">
+				<Event Id="46127608" Name="ascensor_palanca_victoria" ObjectPath="\Events\Default Work Unit\ascensor_palanca_victoria" DurationType="OneShot" DurationMin="3.796183" DurationMax="3.796183">
 					<IncludedMemoryFiles>
-						<File Id="524676025" Language="SFX">
-							<ShortName>Victory sound effect.wav</ShortName>
-							<Path>SFX/Victory sound effect_D3605555.wem</Path>
+						<File Id="522262825" Language="SFX">
+							<ShortName>TB_triunfo_v1.2 short.wav</ShortName>
+							<Path>SFX/TB_triunfo_v1.2 short_9C611E29.wem</Path>
 						</File>
 						<File Id="881692936" Language="SFX">
 							<ShortName>palanca_torre1_v1.wav</ShortName>
@@ -137,7 +141,7 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="3302510416" Name="boss_recibe_dano" ObjectPath="\Events\Default Work Unit\boss_recibe_dano" DurationType="OneShot" DurationMin="1.375776" DurationMax="1.375776">
+				<Event Id="3302510416" Name="boss_recibe_dano" ObjectPath="\Events\Default Work Unit\boss_recibe_dano" DurationType="OneShot" DurationMin="1.440843" DurationMax="1.440843">
 					<IncludedMemoryFiles>
 						<File Id="398834310" Language="SFX">
 							<ShortName>Laugh,Male,Thirties,Evil,Deep,Diabolical,Ho,Single.wav</ShortName>
@@ -261,6 +265,10 @@
 							<ShortName>CORO-cm_091.wav</ShortName>
 							<Path>SFX/CORO-cm_091_D8C07C79.wem</Path>
 						</File>
+						<File Id="928630042" Language="SFX">
+							<ShortName>alma_whisper_1.wav</ShortName>
+							<Path>SFX/alma_whisper_1_C608C738.wem</Path>
+						</File>
 						<File Id="1025504591" Language="SFX">
 							<ShortName>CORO-cm_096.wav</ShortName>
 							<Path>SFX/CORO-cm_096_D8C07C79.wem</Path>
@@ -299,6 +307,7 @@
 				<Event Id="838855874" Name="partida_musica05_boss" ObjectPath="\Events\Default Work Unit\partida_musica05_boss" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
 				<Event Id="3863036383" Name="partida_musica06_victoria" ObjectPath="\Events\Default Work Unit\partida_musica06_victoria" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
 				<Event Id="3979446143" Name="partida_musica07_pausa" ObjectPath="\Events\Default Work Unit\partida_musica07_pausa" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="1934955208" Name="partida_susurros_tension" ObjectPath="\Events\Default Work Unit\partida_susurros_tension" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
 				<Event Id="1616249325" Name="pausa_entrada" ObjectPath="\Events\Default Work Unit\pausa_entrada" DurationType="Infinite">
 					<IncludedMemoryFiles>
 						<File Id="229450914" Language="SFX">
@@ -323,7 +332,7 @@
 					<IncludedMemoryFiles>
 						<File Id="606173844" Language="SFX">
 							<ShortName>Baby Crying Sounds Like Siren sfx.wav</ShortName>
-							<Path>SFX/Baby Crying Sounds Like Siren sfx_83E16B29.wem</Path>
+							<Path>SFX/Baby Crying Sounds Like Siren sfx_8CC6CDCD.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -343,11 +352,15 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="3034072942" Name="pilar_final_aparece" ObjectPath="\Events\Default Work Unit\pilar_final_aparece" DurationType="OneShot" DurationMin="2.500000" DurationMax="2.500000">
+				<Event Id="3034072942" Name="pilar_final_aparece" ObjectPath="\Events\Default Work Unit\pilar_final_aparece" DurationType="OneShot" DurationMin="2.746183" DurationMax="2.746183">
 					<IncludedMemoryFiles>
+						<File Id="78273467" Language="SFX">
+							<ShortName>desaparece_torre_v2.wav</ShortName>
+							<Path>SFX/desaparece_torre_v2_ACBF3E34.wem</Path>
+						</File>
 						<File Id="377192695" Language="SFX">
 							<ShortName>plataforma final.wav</ShortName>
-							<Path>SFX/plataforma final_D8C07C79.wem</Path>
+							<Path>SFX/plataforma final_0A0593E5.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -367,7 +380,7 @@
 						</File>
 						<File Id="904630200" Language="SFX">
 							<ShortName>TB_player Death_v1.wav</ShortName>
-							<Path>SFX/TB_player Death_v1_1C296E94.wem</Path>
+							<Path>SFX/TB_player Death_v1_00E1B2F8.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -404,11 +417,11 @@
 						</File>
 						<File Id="904630200" Language="SFX">
 							<ShortName>TB_player Death_v1.wav</ShortName>
-							<Path>SFX/TB_player Death_v1_1C296E94.wem</Path>
+							<Path>SFX/TB_player Death_v1_00E1B2F8.wem</Path>
 						</File>
 						<File Id="1069148861" Language="SFX">
 							<ShortName>Downer With Drone.wav</ShortName>
-							<Path>SFX/Downer With Drone_531C6946.wem</Path>
+							<Path>SFX/Downer With Drone_049CEC3C.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -499,10 +512,6 @@
 							<ShortName>CORO-cm_045.wav</ShortName>
 							<Path>SFX/CORO-cm_045_D8C07C79.wem</Path>
 						</File>
-						<File Id="369429336" Language="SFX">
-							<ShortName>Epic Dark Boss Theme.wav</ShortName>
-							<Path>SFX/Epic Dark Boss Theme_5CFDFB84.wem</Path>
-						</File>
 						<File Id="578528328" Language="SFX">
 							<ShortName>Laugh,Male,Thirties,Evil,Cackle,Wheeze.wav</ShortName>
 							<Path>SFX/Laugh,Male,Thirties,Evil,Cackle,Wheeze_D4980580.wem</Path>
@@ -514,6 +523,10 @@
 						<File Id="712915354" Language="SFX">
 							<ShortName>Air-Compressor_05.wav</ShortName>
 							<Path>SFX/Air-Compressor_05_819D093B.wem</Path>
+						</File>
+						<File Id="900214621" Language="SFX">
+							<ShortName>TB _Boss_fight_v1.wav</ShortName>
+							<Path>SFX/TB _Boss_fight_v1_7C2C7B45.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -533,7 +546,7 @@
 						</File>
 						<File Id="781788751" Language="SFX">
 							<ShortName>aparece_torre_v2.wav</ShortName>
-							<Path>SFX/aparece_torre_v2_0295B65F.wem</Path>
+							<Path>SFX/aparece_torre_v2_A5C38E19.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -545,16 +558,24 @@
 						</File>
 						<File Id="781788751" Language="SFX">
 							<ShortName>aparece_torre_v2.wav</ShortName>
-							<Path>SFX/aparece_torre_v2_0295B65F.wem</Path>
+							<Path>SFX/aparece_torre_v2_A5C38E19.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
 			</IncludedEvents>
+			<GameParameters>
+				<GameParameter Id="3772610614" Name="tension_susurros" ObjectPath="\Game Parameters\Default Work Unit\tension_susurros"/>
+			</GameParameters>
 		</SoundBank>
-		<SoundBank Id="1355168291" Language="SFX" Hash="3105094939">
+		<SoundBank Id="1355168291" Language="SFX" Hash="2783618014">
 			<ObjectPath>Init</ObjectPath>
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
+			<GameParameters>
+				<GameParameter Id="1006694123" Name="Music_volume" ObjectPath="\Game Parameters\Default Work Unit\Music_volume"/>
+				<GameParameter Id="1564184899" Name="Sfx_volume" ObjectPath="\Game Parameters\Default Work Unit\Sfx_volume"/>
+				<GameParameter Id="4179668880" Name="Master_volume" ObjectPath="\Game Parameters\Default Work Unit\Master_volume"/>
+			</GameParameters>
 		</SoundBank>
 	</SoundBanks>
 </SoundBanksInfo>

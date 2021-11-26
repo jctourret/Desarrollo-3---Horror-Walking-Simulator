@@ -15,6 +15,8 @@ public class EnemyAI : MonoBehaviour
     [SerializeField] protected bool hasAttacked;
     [SerializeField] bool targetInAttackRange;
 
+    protected bool isDead;
+
     public GameObject target;
     //======================================
 
@@ -83,5 +85,10 @@ public class EnemyAI : MonoBehaviour
         {
             rbody.isKinematic = false;
         }
+    }
+
+    public void KillSpider(bool state)
+    {
+        isDead = state;
     }
 }

@@ -4,6 +4,7 @@
 		<WorkUnit Name="Default Work Unit" ID="{C20C6EE4-3C5E-4A34-8AE5-267D649DEFB9}" PersistMode="Standalone">
 			<ChildrenList>
 				<Effect Name="New_Wwise_Parametric_EQ" ID="{E1311173-761B-4007-861C-AF0F366AF8BE}" PluginName="Wwise Parametric EQ" CompanyID="0" PluginID="105" PluginType="3"/>
+				<Effect Name="Time_Stretch" ID="{FA761668-2C8D-4423-BF54-1D2585EAB636}" PluginName="Wwise Time Stretch" CompanyID="0" PluginID="130" PluginType="3"/>
 			</ChildrenList>
 		</WorkUnit>
 	</Effects>
