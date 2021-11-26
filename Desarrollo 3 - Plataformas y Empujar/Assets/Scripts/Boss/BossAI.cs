@@ -14,8 +14,9 @@ public class BossAI : EnemyAI
     private float meleeCooldownTimer = 0;
     Vector3 startTargetLocation;
 
-    void Update()
+    new void Update()
     {
+        base.Update();
         float distance;
         if (target != null)
         {
@@ -38,7 +39,7 @@ public class BossAI : EnemyAI
                     agent.SetDestination(target.transform.position);
                 }
             }
-
+            
             if (hasAttacked)
             {
                 if (meleeCooldownTimer < meleeCooldown)
@@ -52,6 +53,10 @@ public class BossAI : EnemyAI
                 }
             }
         }
+
+        animator.SetFloat("Horizontal",agent.velocity.x);
+        animator.SetFloat("Vertical", agent.velocity.z);
+        animator.SetFloat("Magnitude", agent.velocity.magnitude);
     }
 
 

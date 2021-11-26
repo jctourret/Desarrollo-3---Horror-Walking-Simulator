@@ -1,4 +1,6 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
 
 public class JumperSpiderAI : EnemyAI
 {
@@ -15,19 +17,21 @@ public class JumperSpiderAI : EnemyAI
     bool attack;
     Vector3 launchVelocity;
     Vector3 jumpTarget;
-    Vector3 startingPos;
     float radiusLandingOffset = 0.5f;
 
     private void Start()
     {
-        startingPos = transform.position;
         rbody.isKinematic = false;
+        animator = GetComponentInChildren<Animator>();
     }
 
-    void Update()
+    // Update is called once per frame
+    new void Update()
     {
+        animator.SetFloat("Horizontal", rbody.velocity.x);
+        animator.SetFloat("Vertical", rbody.velocity.z);
         float distance;
-        if (target != null && isDead == false)
+        if (target != null)
         {
             distance = Vector3.Distance(transform.position, target.transform.position);
             if (!hasAttacked && isGrounded)
@@ -37,7 +41,8 @@ public class JumperSpiderAI : EnemyAI
                     AkSoundEngine.PostEvent("arana_salta", gameObject);
                     Vector3 landingOffset = transform.position - target.transform.position;
                     landingOffset = landingOffset.normalized * radiusLandingOffset;
-                    launchVelocity = initialVelocity(transform.position, target.transform.position + landingOffset, jumpHeight);
+                    landingOffset.y = 0.0f;
+                    launchVelocity = initialVelocity(transform.position, target.transform.position + landingOffset, jumpHeight + jumpTarget.y);
                     attack = true;
                 }
                 else
@@ -47,7 +52,11 @@ public class JumperSpiderAI : EnemyAI
                     Vector3 jumpDirection = target.transform.position - transform.position;
                     jumpTarget = transform.position + (jumpDirection.normalized * jumpDistance);
 
-                    launchVelocity = initialVelocity(transform.position, jumpTarget, jumpHeight);
+                    Vector3 landingOffset = transform.position - target.transform.position;
+                    landingOffset = landingOffset.normalized * radiusLandingOffset;
+                    landingOffset.y = 0.0f;
+
+                    launchVelocity = initialVelocity(transform.position, jumpTarget + landingOffset, jumpHeight + jumpTarget.y);
                     attack = true;
                 }
             }

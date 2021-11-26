@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using UnityEngine;
 
 public class ChaserSpiderAI : EnemyAI
 {
@@ -9,12 +10,13 @@ public class ChaserSpiderAI : EnemyAI
     [SerializeField] float meleeConeAngle = 45;
 
     private float meleeCooldownTimer = 0;
-    private Vector3 startTargetLocation;
+    Vector3 startTargetLocation;
 
-    void Update()
+    new void Update()
     {
+        base.Update();
         float distance;
-        if (target != null && isDead == false)
+        if (target != null)
         {
             distance = Vector3.Distance(transform.position, target.transform.position);
 

@@ -101,17 +101,15 @@ public class PlayerMovement : MonoBehaviour
             float magnitude = move.magnitude;
             animator.SetFloat("Magnitude", magnitude);
 
-            if(magnitude < 0.001)
+            if(magnitude < 0.01)
             {
-                animator.SetFloat("lastDirY", move.z);
                 animator.SetFloat("lastDirX", move.x);
+                animator.SetFloat("lastDirY", move.z);
             }
             else
             {
                 animator.SetFloat("Horizontal",move.x);
                 animator.SetFloat("Vertical",move.z);
-
-                //AkSoundEngine.PostEvent("player_pasos", gameObject);
             }
 
             controller.Move(move * Time.deltaTime * currentSpeed);

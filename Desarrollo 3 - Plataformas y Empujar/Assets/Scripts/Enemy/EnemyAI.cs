@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -6,18 +7,15 @@ public class EnemyAI : MonoBehaviour
 {
     public static Action<GameObject> OnEnemySpawn;
     public Camera cam;
-    public GameObject target;
+    protected NavMeshAgent agent;
+    protected Animator animator;
+    Collider coll;
 
     [SerializeField] protected Rigidbody rbody;
     [SerializeField] protected bool hasAttacked;
     [SerializeField] bool targetInAttackRange;
 
-    protected NavMeshAgent agent;
-    protected Animator animator;
-
-    protected bool isDead;
-
-    //Collider coll;
+    public GameObject target;
     //======================================
 
     private void Awake()
@@ -25,18 +23,17 @@ public class EnemyAI : MonoBehaviour
         rbody = GetComponent<Rigidbody>();
         
     }
-
     void Start()
     {
         agent = GetComponent<NavMeshAgent>();
         animator = GetComponentInChildren<Animator>();
-        //coll = GetComponentInChildren<Collider>();
+        coll = GetComponentInChildren<Collider>();
         //coll.isTrigger = true;
         rbody.isKinematic = true;
         OnEnemySpawn?.Invoke(gameObject);
     }
 
-    private void Update()
+    protected virtual void Update()
     {
         animator.SetFloat("Horizontal",agent.velocity.x);
         animator.SetFloat("Vertical", agent.velocity.z);
@@ -76,7 +73,6 @@ public class EnemyAI : MonoBehaviour
 
         return velocityY + velocityXZ;
     }
-
     public void Fall()
     {
         if(agent != null)
@@ -87,10 +83,5 @@ public class EnemyAI : MonoBehaviour
         {
             rbody.isKinematic = false;
         }
-    }
-
-    public void KillSpider(bool state)
-    {
-        isDead = state;
     }
 }
