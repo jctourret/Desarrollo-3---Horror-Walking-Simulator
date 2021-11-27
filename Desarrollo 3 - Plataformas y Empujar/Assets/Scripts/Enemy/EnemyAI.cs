@@ -16,6 +16,7 @@ public class EnemyAI : MonoBehaviour
     [SerializeField] bool targetInAttackRange;
 
     protected bool isDead;
+    bool lastDirRecorded = false;
 
     public GameObject target;
     //======================================
@@ -23,7 +24,6 @@ public class EnemyAI : MonoBehaviour
     private void Awake()
     {
         rbody = GetComponent<Rigidbody>();
-        
     }
     void Start()
     {
@@ -40,6 +40,22 @@ public class EnemyAI : MonoBehaviour
         animator.SetFloat("Horizontal",agent.velocity.x);
         animator.SetFloat("Vertical", agent.velocity.z);
         animator.SetFloat("Magnitude",agent.velocity.magnitude);
+
+        if (agent.velocity.magnitude < 0.1)
+        {
+            if (!lastDirRecorded)
+            {
+                animator.SetFloat("lastDirX", agent.velocity.x);
+                animator.SetFloat("lastDirY", agent.velocity.z);
+                lastDirRecorded = true;
+            }
+        }
+        else
+        {
+            animator.SetFloat("Horizontal", agent.velocity.x);
+            animator.SetFloat("Vertical", agent.velocity.z);
+            lastDirRecorded = false;
+        }
 
         AkSoundEngine.PostEvent("arana_pasos", gameObject);
     }

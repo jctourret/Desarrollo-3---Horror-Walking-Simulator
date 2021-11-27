@@ -17,6 +17,7 @@ public class PlayerMovement : MonoBehaviour
     private bool controllable;
     private bool isGrounded;
     private bool inAir = false;
+    bool lastDirRecorded = false;
 
     [Header("Gravity")]
     [SerializeField] private float gravity;
@@ -101,15 +102,20 @@ public class PlayerMovement : MonoBehaviour
             float magnitude = move.magnitude;
             animator.SetFloat("Magnitude", magnitude);
 
-            if(magnitude < 0.01)
+            if(magnitude < 0.1)
             {
-                animator.SetFloat("lastDirX", move.x);
-                animator.SetFloat("lastDirY", move.z);
+                if (!lastDirRecorded)
+                {
+                    animator.SetFloat("lastDirX", move.x);
+                    animator.SetFloat("lastDirY", move.z);
+                    lastDirRecorded = true;
+                }
             }
             else
             {
                 animator.SetFloat("Horizontal",move.x);
                 animator.SetFloat("Vertical",move.z);
+                lastDirRecorded = false;
             }
 
             controller.Move(move * Time.deltaTime * currentSpeed);

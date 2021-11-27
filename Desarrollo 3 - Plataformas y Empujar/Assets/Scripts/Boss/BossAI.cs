@@ -27,7 +27,7 @@ public class BossAI : EnemyAI
                 if (!hasAttacked)
                 {
                     AkSoundEngine.PostEvent("boss_ataca_cuchillo", gameObject);
-
+                    animator.SetTrigger("Attacking");
                     StartCoroutine(Attack(target));
                     hasAttacked = true;
                 }
