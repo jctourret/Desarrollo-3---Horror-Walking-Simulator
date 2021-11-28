@@ -469,9 +469,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29b604af4fe81c649917c61809883dbe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  stateObject: 1
   UIposter: {fileID: 839882845254796278}
-  stateObject: 0
-  spawnEnemies: {fileID: 0}
 --- !u!95 &8568731160863260628
 Animator:
   serializedVersion: 3

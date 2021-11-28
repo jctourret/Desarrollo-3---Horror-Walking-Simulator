@@ -12,21 +12,22 @@ public class BossAI : EnemyAI
     [SerializeField] float meleeConeAngle = 45;
 
     private float meleeCooldownTimer = 0;
-    Vector3 startTargetLocation;
+    private Vector3 startTargetLocation;
+    private bool isAttaking = false;
 
     new void Update()
     {
         base.Update();
         float distance;
+
         if (target != null)
         {
             distance = Vector3.Distance(transform.position, target.transform.position);
 
-            if (distance <= agent.stoppingDistance)
+            if (distance <= meleeRange)//agent.stoppingDistance)
             {
-                if (!hasAttacked)
+                if (!hasAttacked && !isAttaking)
                 {
-                    AkSoundEngine.PostEvent("boss_ataca_cuchillo", gameObject);
                     animator.SetTrigger("Attacking");
                     StartCoroutine(Attack(target));
                     hasAttacked = true;
@@ -40,7 +41,7 @@ public class BossAI : EnemyAI
                 }
             }
             
-            if (hasAttacked)
+            if (hasAttacked && !isAttaking)
             {
                 if (meleeCooldownTimer < meleeCooldown)
                 {
@@ -62,9 +63,13 @@ public class BossAI : EnemyAI
 
     IEnumerator Attack(GameObject target)
     {
+        isAttaking = true;
+
         Aim();
 
         yield return new WaitForSeconds(meleeDelay); // Usando WaitForSeconds se ve mas simple y prolijo
+
+        isAttaking = false;
 
         Swing();
     }
@@ -77,6 +82,8 @@ public class BossAI : EnemyAI
 
     public void Swing()
     {
+        AkSoundEngine.PostEvent("boss_ataca_cuchillo", gameObject);
+        
         float angle = Vector3.SignedAngle(startTargetLocation, target.transform.position - transform.position, Vector3.up);
         float distante = Vector3.Distance(transform.position, target.transform.position);
 
@@ -87,6 +94,7 @@ public class BossAI : EnemyAI
 
         if (angle <= meleeConeAngle && distante <= meleeRange)
         {
+            
             IDamageable damageable = target.GetComponent<IDamageable>();
             if (damageable != null)
             {

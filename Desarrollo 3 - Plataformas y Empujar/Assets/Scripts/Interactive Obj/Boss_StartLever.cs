@@ -1,77 +1,19 @@
-﻿using UnityEngine;
-using System;
+﻿using System;
 
-public class Boss_StartLever : MonoBehaviour
+class Boss_StartLever : InteractiveObject
 {
     public static Action ActivateObject;
     public static Action ActivateFight;
 
-    public enum StateObject
+    public void StartLever()
     {
-        Available,
-        Open
-    };
-
-    public GameObject UIposter;
-
-    public StateObject stateObject;
-
-    //public SpawnEnemies spawnEnemies;
-
-    Animator animator;
-    bool inRange = false;
-
-    //========================================
-
-    private void Start()
-    {
-        UIposter.SetActive(false);
-
-        animator = GetComponent<Animator>();
+        AkSoundEngine.PostEvent("player_tira_palanca_boss", gameObject);
     }
 
-    private void OnTriggerEnter(Collider other)
-    {
-        if (stateObject == StateObject.Available)
-        {
-            UIposter.SetActive(true);
-
-            inRange = true;
-        }
-    }
-
-    private void Update()
-    {
-        if (stateObject == StateObject.Available && inRange == true)
-        {
-            if (Input.GetKeyDown(KeyCode.E))
-            {
-                stateObject = StateObject.Open;
-                UIposter.SetActive(false);
-                animator.SetTrigger("Open");
-
-                AkSoundEngine.PostEvent("player_tira_palanca_boss", gameObject);
-            }
-        }
-    }
-
-    private void OnTriggerExit(Collider other)
-    {
-        if (stateObject == StateObject.Available)
-        {
-            UIposter.SetActive(false);
-
-            inRange = false;
-        }
-    }
-
-    //========================================
-
-    public void ActivateLever()
+    public void ActivateBossFight()
     {
         ActivateObject?.Invoke();
 
         ActivateFight?.Invoke();
-        //spawnEnemies.Spawn();
     }
 }

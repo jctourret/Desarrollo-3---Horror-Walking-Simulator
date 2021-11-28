@@ -39,7 +39,7 @@ public class EnemyStats : MonoBehaviour, IDamageable
         {
             alive = false;
 
-            GetComponent<Collider>().enabled = false;
+            GetComponent<Collider>().isTrigger = true;
 
             enemyAI.KillSpider(true);
 
