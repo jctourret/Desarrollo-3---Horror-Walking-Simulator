@@ -4,6 +4,8 @@ public class EnemyStats : MonoBehaviour, IDamageable
 {
     public int life = 10;
 
+    public GameObject spiderBloodPref;
+
     private Animator animator;
     private bool alive = true;
 
@@ -40,6 +42,11 @@ public class EnemyStats : MonoBehaviour, IDamageable
             alive = false;
 
             GetComponent<Collider>().isTrigger = true;
+
+            // Create particles:
+            GameObject blood = Instantiate(spiderBloodPref, this.transform.position, Quaternion.Euler(Vector3.up));
+            Destroy(blood, 5f);
+            // ----
 
             enemyAI.KillSpider(true);
 

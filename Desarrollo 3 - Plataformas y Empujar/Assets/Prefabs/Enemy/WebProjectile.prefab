@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 351309148659331547}
   - component: {fileID: 8962765723475109857}
   - component: {fileID: 9197574713207739949}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: WebProjectile
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -197,7 +197,7 @@ GameObject:
   m_Component:
   - component: {fileID: 549654424113564226}
   - component: {fileID: 8986507052324681473}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: Visual
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -62,6 +62,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   life: 3
+  spiderBloodPref: {fileID: 1665716702526640982, guid: 789741547be07384f9b1f8e312e1814c,
+    type: 3}
 --- !u!114 &1532633393815784409
 MonoBehaviour:
   m_ObjectHideFlags: 0
