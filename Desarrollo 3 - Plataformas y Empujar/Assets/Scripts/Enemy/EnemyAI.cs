@@ -1,30 +1,34 @@
 ﻿using System;
-using System.Collections;
 using UnityEngine;
 using UnityEngine.AI;
 
 public class EnemyAI : MonoBehaviour
 {
+    [Header("Enemi AI")]
     public static Action<GameObject> OnEnemySpawn;
     public Camera cam;
+
     protected NavMeshAgent agent;
     protected Animator animator;
-    Collider coll;
 
     [SerializeField] protected Rigidbody rbody;
     [SerializeField] protected bool hasAttacked;
     [SerializeField] bool targetInAttackRange;
+    [SerializeField] float fallLimitY = -20f;
+
+    public GameObject target;
 
     protected bool isDead;
     bool lastDirRecorded = false;
-
-    public GameObject target;
+    Collider coll;
+    
     //======================================
 
     private void Awake()
     {
         rbody = GetComponent<Rigidbody>();
     }
+
     void Start()
     {
         agent = GetComponent<NavMeshAgent>();
@@ -58,6 +62,8 @@ public class EnemyAI : MonoBehaviour
         }
 
         AkSoundEngine.PostEvent("arana_pasos", gameObject);
+
+        DeleteSpiderWhenFall();
     }
 
     private void LateUpdate()
@@ -72,6 +78,14 @@ public class EnemyAI : MonoBehaviour
     void GetCamera(Camera newCamera)
     {
         cam = newCamera;
+    }
+
+    void DeleteSpiderWhenFall()
+    {
+        if (this.transform.position.y <= fallLimitY)
+        {
+            Destroy(this.gameObject);
+        }
     }
 
     protected Vector3 initialVelocity(Vector3 origin, Vector3 target, float height)

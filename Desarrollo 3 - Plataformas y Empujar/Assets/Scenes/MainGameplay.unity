@@ -163,7 +163,7 @@ MonoBehaviour:
   pillarsBeforeMerket: 0
   finalPillar: {fileID: 119948029761666875, guid: 7157eed61947fa74fab1f025b469015a,
     type: 3}
-  pillarsBeforeFinal: 2
+  pillarsBeforeFinal: 11
   numerationPillars: 0
 --- !u!4 &4676792
 Transform:
@@ -1116,7 +1116,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &420812999
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1392,7 +1392,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &849787137
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2145,24 +2145,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!1 &1041613303 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4438618010551960324, guid: aa69266d657d4c94a8b9d9878dcbcd85,
-    type: 3}
-  m_PrefabInstance: {fileID: 175916143614632852}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1041613308
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1041613303}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: de2681996a70e9b4ea85723cdb0f3baf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!224 &1051959145
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3416,6 +3398,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1680261173}
     m_Modifications:
+    - target: {fileID: 1206531419, guid: aa69266d657d4c94a8b9d9878dcbcd85, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.38
+      objectReference: {fileID: 0}
     - target: {fileID: 175916143355190072, guid: aa69266d657d4c94a8b9d9878dcbcd85,
         type: 3}
       propertyPath: m_RootOrder
@@ -3476,8 +3462,7 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player Controller
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 5863007184200589550, guid: aa69266d657d4c94a8b9d9878dcbcd85, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: aa69266d657d4c94a8b9d9878dcbcd85, type: 3}
 --- !u!114 &175916143614632853 stripped
 MonoBehaviour:
