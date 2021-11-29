@@ -94,7 +94,7 @@ public class PlayerMovement : MonoBehaviour
             inAir = true;
         }
 
-        if (controllable)
+        if (controllable && !player.isDead)
         {
             Vector3 move = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
 

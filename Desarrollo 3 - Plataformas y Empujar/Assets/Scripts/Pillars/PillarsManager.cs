@@ -184,7 +184,7 @@ public class PillarsManager : MonoBehaviour
         switch (typeOfPillar)
         {
             case TypeOfPillars.FinalRoom:
-                var go = Instantiate(finalPillar, new Vector3(this.transform.position.x, pillar.transform.position.y, this.transform.position.z), Quaternion.Euler(Vector3.up * -45), parent);
+                var go = Instantiate(finalPillar, new Vector3(this.transform.position.x, 0, this.transform.position.z), Quaternion.Euler(Vector3.up * -45), parent);
                 go.transform.name = finalPillar.name;
                 go.GetComponentInChildren<CallCameraTrigger>().cam = cam;
                 break;

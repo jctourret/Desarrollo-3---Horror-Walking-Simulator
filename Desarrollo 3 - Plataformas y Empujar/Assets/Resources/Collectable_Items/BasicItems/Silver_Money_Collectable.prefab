@@ -124,7 +124,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   jumpDirection: {x: -0.5, y: 1.5, z: 0}
   jumpForce: 75
-  y_fallLimit: -30
+  y_fallLimit: -40
   rewardType: 1
   earnScore: 2
 --- !u!114 &2708040973429383450

@@ -5,6 +5,11 @@
 			<ChildrenList>
 				<Bus Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}">
 					<PropertyList>
+						<Property Name="BusVolume" Type="Real64">
+							<ValueList>
+								<Value>4</Value>
+							</ValueList>
+						</Property>
 						<Property Name="Volume" Type="Real64">
 							<RTPCList>
 								<RTPC Name="" ID="{9725216F-DF5E-407C-984E-18E4BB4EB146}" ShortID="195048856">
@@ -45,6 +50,11 @@
 						</Bus>
 						<Bus Name="Music" ID="{19FD7356-E847-4262-A161-949FBD5F4AC4}">
 							<PropertyList>
+								<Property Name="BusVolume" Type="Real64">
+									<ValueList>
+										<Value>4</Value>
+									</ValueList>
+								</Property>
 								<Property Name="Volume" Type="Real64">
 									<RTPCList>
 										<RTPC Name="" ID="{83C4978C-94DA-4FB8-AF9D-EDE50CBF5C20}" ShortID="910785174">
@@ -78,6 +88,11 @@
 						</Bus>
 						<Bus Name="SFX" ID="{9EE3F1A8-A662-4781-BAAC-4841864EECA7}">
 							<PropertyList>
+								<Property Name="BusVolume" Type="Real64">
+									<ValueList>
+										<Value>4</Value>
+									</ValueList>
+								</Property>
 								<Property Name="Volume" Type="Real64">
 									<RTPCList>
 										<RTPC Name="" ID="{3846A9A9-8E84-4E4D-8126-0089C40F7B8C}" ShortID="437335152">
@@ -98,7 +113,7 @@
 													</Point>
 													<Point>
 														<XPos>1</XPos>
-														<YPos>-0</YPos>
+														<YPos>0</YPos>
 														<Flags>37</Flags>
 													</Point>
 												</PointList>

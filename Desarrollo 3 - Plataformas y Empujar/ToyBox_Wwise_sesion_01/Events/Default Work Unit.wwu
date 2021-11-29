@@ -356,6 +356,13 @@
 								</Reference>
 							</ReferenceList>
 						</Action>
+						<Action Name="" ID="{DFCE0A0C-2CE7-4E05-9D26-6CB4ADA37A2B}" ShortID="222711815">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="fx motor ascensor_01" ID="{20EDBEB1-9826-485E-8819-DB1653955933}" WorkUnitID="{0068F637-75D2-4DCF-A442-34947F9C8869}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
 					</ChildrenList>
 				</Event>
 				<Event Name="player_pasos" ID="{CD987F27-7D2E-4A82-B3F7-3DB7F857CEC8}">
@@ -688,7 +695,7 @@
 						</Action>
 						<Action Name="" ID="{38F140CE-A4F9-4891-86A2-FD1615AA62F5}" ShortID="873206927">
 							<PropertyList>
-								<Property Name="Delay" Type="Real64" Value="0.5"/>
+								<Property Name="Delay" Type="Real64" Value="0.25"/>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
@@ -708,7 +715,7 @@
 						</Action>
 						<Action Name="" ID="{D1715D87-6B94-4163-BF23-06B43D3D6F2E}" ShortID="594774899">
 							<PropertyList>
-								<Property Name="Delay" Type="Real64" Value="0.9"/>
+								<Property Name="Delay" Type="Real64" Value="0.6"/>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
@@ -796,6 +803,13 @@
 							<ReferenceList>
 								<Reference Name="Target">
 									<ObjectRef Name="TB_triunfo_v1_2 short" ID="{1B5D6717-E63A-435C-864A-5CB6DBBE46DA}" WorkUnitID="{0068F637-75D2-4DCF-A442-34947F9C8869}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{2AC7CBDF-C016-43C3-A1DA-95C8B793A7D4}" ShortID="315908759">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="fx motor ascensor_01" ID="{20EDBEB1-9826-485E-8819-DB1653955933}" WorkUnitID="{0068F637-75D2-4DCF-A442-34947F9C8869}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>

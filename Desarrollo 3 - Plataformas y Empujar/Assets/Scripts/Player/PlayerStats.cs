@@ -27,6 +27,7 @@ public class PlayerStats : MonoBehaviour, IDamageable
     [SerializeField]
     int flickers = 3;
 
+    [HideInInspector] public bool isDead = false;
     SpriteRenderer rend;
 
     //=============================================
@@ -135,6 +136,8 @@ public class PlayerStats : MonoBehaviour, IDamageable
         {
             AkSoundEngine.PostEvent("player_muere", gameObject);
             OnPlayerDamageDeath?.Invoke();
+
+            isDead = true;
 
             //gameObject.SetActive(false);
             //Destroy(gameObject);

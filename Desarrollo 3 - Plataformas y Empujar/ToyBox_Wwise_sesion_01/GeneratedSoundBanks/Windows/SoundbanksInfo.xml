@@ -11,7 +11,7 @@
 	<StreamedFiles/>
 	<MediaFilesNotInAnyBank/>
 	<SoundBanks>
-		<SoundBank Id="626013394" Language="SFX" Hash="1199518926">
+		<SoundBank Id="626013394" Language="SFX" Hash="52159131">
 			<ObjectPath>\SoundBanks\Default Work Unit\Main_SoundBank_01</ObjectPath>
 			<ShortName>Main_SoundBank_01</ShortName>
 			<Path>Main_SoundBank_01.bnk</Path>
@@ -61,7 +61,7 @@
 					</IncludedMemoryFiles>
 				</Event>
 				<Event Id="2072538013" Name="arana_pasos" ObjectPath="\Events\Default Work Unit\arana_pasos" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
-				<Event Id="3747419092" Name="arana_recibe_dano" ObjectPath="\Events\Default Work Unit\arana_recibe_dano" DurationType="OneShot" DurationMin="0.214725" DurationMax="0.223585">
+				<Event Id="3747419092" Name="arana_recibe_dano" ObjectPath="\Events\Default Work Unit\arana_recibe_dano" DurationType="OneShot" DurationMin="0.206693" DurationMax="0.239217">
 					<IncludedMemoryFiles>
 						<File Id="738594664" Language="SFX">
 							<ShortName>impacto_a_enemigo_v2.wav</ShortName>
@@ -69,7 +69,7 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="2865332534" Name="arana_salta" ObjectPath="\Events\Default Work Unit\arana_salta" DurationType="OneShot" DurationMin="0.367402" DurationMax="0.367402">
+				<Event Id="2865332534" Name="arana_salta" ObjectPath="\Events\Default Work Unit\arana_salta" DurationType="OneShot" DurationMin="0.317449" DurationMax="0.425215">
 					<IncludedMemoryFiles>
 						<File Id="545974155" Language="SFX">
 							<ShortName>footsteps - jump carpet trainers - 03.wav</ShortName>
@@ -99,9 +99,13 @@
 							<ShortName>palanca_torre1_v1.wav</ShortName>
 							<Path>SFX/palanca_torre1_v1_C070A447.wem</Path>
 						</File>
+						<File Id="928140680" Language="SFX">
+							<ShortName>fx motor ascensor.wav</ShortName>
+							<Path>SFX/fx motor ascensor_F201362C.wem</Path>
+						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="1684269639" Name="boss_ataca_cuchillo" ObjectPath="\Events\Default Work Unit\boss_ataca_cuchillo" DurationType="OneShot" DurationMin="2.672022" DurationMax="2.672022">
+				<Event Id="1684269639" Name="boss_ataca_cuchillo" ObjectPath="\Events\Default Work Unit\boss_ataca_cuchillo" DurationType="OneShot" DurationMin="2.557260" DurationMax="2.791935">
 					<IncludedMemoryFiles>
 						<File Id="544991644" Language="SFX">
 							<ShortName>boss_ataca_cuchillo_03.wav</ShortName>
@@ -141,7 +145,7 @@
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
-				<Event Id="3302510416" Name="boss_recibe_dano" ObjectPath="\Events\Default Work Unit\boss_recibe_dano" DurationType="OneShot" DurationMin="1.440843" DurationMax="1.440843">
+				<Event Id="3302510416" Name="boss_recibe_dano" ObjectPath="\Events\Default Work Unit\boss_recibe_dano" DurationType="OneShot" DurationMin="1.300812" DurationMax="1.595947">
 					<IncludedMemoryFiles>
 						<File Id="398834310" Language="SFX">
 							<ShortName>Laugh,Male,Thirties,Evil,Deep,Diabolical,Ho,Single.wav</ShortName>
@@ -500,6 +504,10 @@
 							<ShortName>palanca_torre1_v1.wav</ShortName>
 							<Path>SFX/palanca_torre1_v1_C070A447.wem</Path>
 						</File>
+						<File Id="928140680" Language="SFX">
+							<ShortName>fx motor ascensor.wav</ShortName>
+							<Path>SFX/fx motor ascensor_F201362C.wem</Path>
+						</File>
 						<File Id="1058335931" Language="SFX">
 							<ShortName>CORO-cm_028.wav</ShortName>
 							<Path>SFX/CORO-cm_028_D8C07C79.wem</Path>
@@ -567,7 +575,7 @@
 				<GameParameter Id="3772610614" Name="tension_susurros" ObjectPath="\Game Parameters\Default Work Unit\tension_susurros"/>
 			</GameParameters>
 		</SoundBank>
-		<SoundBank Id="1355168291" Language="SFX" Hash="2783618014">
+		<SoundBank Id="1355168291" Language="SFX" Hash="1240765592">
 			<ObjectPath>Init</ObjectPath>
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>

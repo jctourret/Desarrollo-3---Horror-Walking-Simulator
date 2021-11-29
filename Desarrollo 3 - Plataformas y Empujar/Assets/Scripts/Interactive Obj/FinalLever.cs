@@ -14,14 +14,14 @@ class FinalLever : InteractiveObject
 
     public void ActivateLever()
     {
-        AkSoundEngine.PostEvent("player_tira_palanca", gameObject);
+        AkSoundEngine.PostEvent("ascensor_palanca_victoria", gameObject);
     }
 
     public void MoveElevator()
     {
         player.transform.parent = this.transform;
 
-        AkSoundEngine.PostEvent("ascensor_palanca_victoria", gameObject);
+        //AkSoundEngine.PostEvent("ascensor_palanca_victoria", gameObject);
 
         stair.SetTrigger("Up");
     }

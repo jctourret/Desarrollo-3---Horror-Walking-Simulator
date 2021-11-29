@@ -145,7 +145,7 @@
 						</RTPCValue>
 						<RTPCValue>
 							<GameParameterRef Name="Music_volume" ID="{26D869E5-E0A8-43EE-BC3C-A1CA702C3E0A}"/>
-							<Value>1</Value>
+							<Value>0.5</Value>
 						</RTPCValue>
 						<RTPCValue>
 							<GameParameterRef Name="SS_Air_Month" ID="{09E2B445-C4A3-447F-B3CA-818A1D925EF7}"/>
@@ -161,7 +161,7 @@
 						</RTPCValue>
 						<RTPCValue>
 							<GameParameterRef Name="Sfx_volume" ID="{82578DF9-CF82-4694-9BDC-036CD7FCEF53}"/>
-							<Value>0.581127733026467</Value>
+							<Value>0.51</Value>
 						</RTPCValue>
 						<RTPCValue>
 							<GameParameterRef Name="SS_Air_Fury" ID="{A2AE79DC-CA3A-46BA-9652-9986C322A87B}"/>
@@ -197,7 +197,7 @@
 						</RTPCValue>
 						<RTPCValue>
 							<GameParameterRef Name="Master_volume" ID="{553E0C93-DD86-4F20-AD45-2A6719E2011D}"/>
-							<Value>0.5</Value>
+							<Value>0.51</Value>
 						</RTPCValue>
 					</RTPCValueList>
 					<CurrentStateList ShowAll="true"/>

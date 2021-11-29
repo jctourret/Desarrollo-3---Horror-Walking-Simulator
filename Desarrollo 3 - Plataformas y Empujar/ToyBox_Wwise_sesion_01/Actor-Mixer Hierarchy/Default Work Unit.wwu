@@ -157,10 +157,21 @@
 									<ValueList>
 										<Value>-250</Value>
 									</ValueList>
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{A1EF8E7C-7CF6-4066-8636-50DC4765FFBE}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Max" Type="Real64" Value="253"/>
+													<Property Name="Min" Type="Real64" Value="-253"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
 								</Property>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
-										<Value>-2</Value>
+										<Value>-3</Value>
 									</ValueList>
 								</Property>
 							</PropertyList>
@@ -187,6 +198,21 @@
 							</ActiveSourceList>
 						</Sound>
 						<BlendContainer Name="arana_muere" ID="{03A1E6B5-6ECB-41BE-961A-E095291FD262}" ShortID="734721718">
+							<PropertyList>
+								<Property Name="Pitch" Type="int32">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{2C34064F-31E2-4270-8C25-63506162706B}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Max" Type="Real64" Value="76"/>
+													<Property Name="Min" Type="Real64" Value="-76"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4DDCC0E9-8918-4EF8-AD11-22C68F85E755}"/>
@@ -435,8 +461,8 @@
 											<Modifier Name="" ID="{14AA3593-6228-4F8E-9847-1435E660C5AC}">
 												<PropertyList>
 													<Property Name="Enabled" Type="bool" Value="True"/>
-													<Property Name="Max" Type="Real64" Value="35"/>
-													<Property Name="Min" Type="Real64" Value="-35"/>
+													<Property Name="Max" Type="Real64" Value="101"/>
+													<Property Name="Min" Type="Real64" Value="-152"/>
 												</PropertyList>
 											</Modifier>
 										</ModifierInfo>
@@ -553,7 +579,7 @@
 								</Property>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
-										<Value>-4</Value>
+										<Value>-6</Value>
 									</ValueList>
 								</Property>
 							</PropertyList>
@@ -1294,7 +1320,7 @@
 							<PropertyList>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
-										<Value>-27</Value>
+										<Value>-24</Value>
 									</ValueList>
 								</Property>
 							</PropertyList>
@@ -2897,6 +2923,48 @@
 								<ActiveSource Name="fx motor ascensor" ID="{14C32BAF-51E0-4282-903F-91AE9FB8CA70}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
+						<Sound Name="fx motor ascensor_01" ID="{20EDBEB1-9826-485E-8819-DB1653955933}" ShortID="469326850">
+							<PropertyList>
+								<Property Name="Pitch" Type="int32">
+									<ValueList>
+										<Value>-330</Value>
+									</ValueList>
+								</Property>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>4</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="conversion_main_01" ID="{CF3A7477-4B83-43D6-AD84-4CC2534FF633}" WorkUnitID="{4DDCC0E9-8918-4EF8-AD11-22C68F85E755}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="SFX" ID="{9EE3F1A8-A662-4781-BAAC-4841864EECA7}" WorkUnitID="{E8FBD65D-B603-4940-A021-75BCF3D47498}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="fx motor ascensor" ID="{AFE1FFEC-EA76-4A43-ACFD-00BFADD13B2B}">
+									<PropertyList>
+										<Property Name="FadeInDuration" Type="Real64" Value="0.188931297709924"/>
+										<Property Name="FadeOutDuration" Type="Real64" Value="0.148854961832061"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimBegin" Type="Real64" Value="0.400763358778626"/>
+										<Property Name="TrimEnd" Type="Real64" Value="1.06774809160306"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>fx motor ascensor.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="928140680"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="fx motor ascensor" ID="{AFE1FFEC-EA76-4A43-ACFD-00BFADD13B2B}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
 					</ChildrenList>
 					<ObjectLists/>
 				</ActorMixer>
@@ -4025,6 +4093,17 @@
 									<ValueList>
 										<Value>-830</Value>
 									</ValueList>
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{552E94AA-882A-4CE1-A8DF-EBFA56B234F8}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Max" Type="Real64" Value="76"/>
+													<Property Name="Min" Type="Real64" Value="-76"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
 								</Property>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
@@ -4063,6 +4142,13 @@
 						</Sound>
 						<BlendContainer Name="boss_recibe_dano" ID="{B0B161AB-E87C-4E4B-BB43-0A571D50DC7E}" ShortID="864276114">
 							<PropertyList>
+								<Property Name="Pitch" Type="int32">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{75EE9D61-AED7-44FB-8D64-431A8F1AB507}"/>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
 										<Value>-1</Value>
@@ -4084,10 +4170,21 @@
 											<ValueList>
 												<Value>-380</Value>
 											</ValueList>
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{E66A7362-9A8C-48ED-8FBD-940DF698FEAA}">
+														<PropertyList>
+															<Property Name="Enabled" Type="bool" Value="True"/>
+															<Property Name="Max" Type="Real64" Value="177"/>
+															<Property Name="Min" Type="Real64" Value="-177"/>
+														</PropertyList>
+													</Modifier>
+												</ModifierInfo>
+											</ModifierList>
 										</Property>
 										<Property Name="Volume" Type="Real64">
 											<ValueList>
-												<Value>-6</Value>
+												<Value>-5</Value>
 											</ValueList>
 										</Property>
 									</PropertyList>
@@ -4131,8 +4228,8 @@
 													<Modifier Name="" ID="{DB661875-F01B-44AC-9D01-F3C6C8C9CA71}">
 														<PropertyList>
 															<Property Name="Enabled" Type="bool" Value="True"/>
-															<Property Name="Max" Type="Real64" Value="126"/>
-															<Property Name="Min" Type="Real64" Value="-126"/>
+															<Property Name="Max" Type="Real64" Value="227"/>
+															<Property Name="Min" Type="Real64" Value="-227"/>
 														</PropertyList>
 													</Modifier>
 												</ModifierInfo>
