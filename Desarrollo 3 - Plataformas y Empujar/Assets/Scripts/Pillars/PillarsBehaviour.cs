@@ -111,7 +111,9 @@ public class PillarsBehaviour : Pillar
                 pillarState = PillarState.MoveDown;
 
                 if(!specialRoom)
+                {
                     room.GetComponentInChildren<SpawnEnemies>().EnemiesInRoomFall();
+                }
                 StartCoroutine(MoveDownPillar());
             }
         }
