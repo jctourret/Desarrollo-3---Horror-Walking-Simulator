@@ -49,8 +49,8 @@ public class EnemyAI : MonoBehaviour
         {
             if (!lastDirRecorded)
             {
-                animator.SetFloat("lastDirX", agent.velocity.x);
-                animator.SetFloat("lastDirY", agent.velocity.z);
+                animator.SetFloat("LastDirX", agent.velocity.x);
+                animator.SetFloat("LastDirY", agent.velocity.z);
                 lastDirRecorded = true;
             }
         }

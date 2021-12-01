@@ -163,7 +163,7 @@ MonoBehaviour:
   pillarsBeforeMerket: 0
   finalPillar: {fileID: 119948029761666875, guid: 7157eed61947fa74fab1f025b469015a,
     type: 3}
-  pillarsBeforeFinal: 11
+  pillarsBeforeFinal: 6
   numerationPillars: 0
 --- !u!4 &4676792
 Transform:
@@ -1645,7 +1645,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &919423040
 MonoBehaviour:
@@ -2957,7 +2957,7 @@ Transform:
   m_Children:
   - {fileID: 2039547173}
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1831356505
 GameObject:

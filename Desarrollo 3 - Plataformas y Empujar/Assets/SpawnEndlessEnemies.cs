@@ -79,7 +79,9 @@ public class SpawnEndlessEnemies : SpawnEnemies
     void SpawnBoss()
     {
         Vector3 enemyPosition = bossTransform.transform.position;
+        
         GameObject go = Instantiate(boss, enemyPosition, Quaternion.identity);
+
         go.GetComponent<EnemyAI>().target = EnemyManager.instance.player;
         go.GetComponent<EnemyAI>().cam = EnemyManager.instance.cam;
     }

@@ -54,7 +54,7 @@ public class EnemyStats : MonoBehaviour, IDamageable
 
             AkSoundEngine.PostEvent("arana_muere", gameObject);
 
-            Debug.LogWarning("arana_muere");
+            //Debug.LogWarning("arana_muere");
 
             LoaderManager.Get().SpawnBasicItem(this.transform.position);
             Destroy(this.transform.parent.gameObject, 5f);

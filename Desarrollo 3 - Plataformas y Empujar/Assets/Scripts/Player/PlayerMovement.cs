@@ -155,7 +155,7 @@ public class PlayerMovement : MonoBehaviour
         {
             currentSpeed -= slowStrength;
             isSlowed = true;
-            Debug.Log(gameObject.name + "is slowed");
+            //Debug.Log(gameObject.name + "is slowed");
         }
     }
 
@@ -165,7 +165,7 @@ public class PlayerMovement : MonoBehaviour
         {
             currentSpeed += slowStrength;
             isSlowed = false;
-            Debug.Log(gameObject.name + "is no longer slowed");
+            //Debug.Log(gameObject.name + "is no longer slowed");
         }
     }
 

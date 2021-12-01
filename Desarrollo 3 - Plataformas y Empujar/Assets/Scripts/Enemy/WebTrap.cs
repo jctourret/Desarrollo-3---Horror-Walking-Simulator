@@ -10,7 +10,7 @@ public class WebTrap : MonoBehaviour
         if (other.gameObject.GetComponentInParent<PlayerMovement>() != null)
         {
             other.gameObject.GetComponentInParent<PlayerMovement>().Slow(slowStrength);
-            Debug.Log(gameObject.name + " has been stepped on.");
+            //Debug.Log(gameObject.name + " has been stepped on.");
         }
     }
 
@@ -19,7 +19,7 @@ public class WebTrap : MonoBehaviour
         if (other.gameObject.GetComponentInParent<PlayerMovement>() != null)
         {
             other.gameObject.GetComponentInParent<PlayerMovement>().unSlow(slowStrength);
-            Debug.Log(gameObject.name + " has been exited.");
+            //Debug.Log(gameObject.name + " has been exited.");
         }
     }
 }
