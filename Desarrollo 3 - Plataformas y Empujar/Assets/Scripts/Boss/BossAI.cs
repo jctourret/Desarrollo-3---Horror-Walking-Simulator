@@ -20,7 +20,7 @@ public class BossAI : EnemyAI
         base.Update();
         float distance;
 
-        if (target != null)
+        if (agent != null && target != null)
         {
             distance = Vector3.Distance(transform.position, target.transform.position);
 

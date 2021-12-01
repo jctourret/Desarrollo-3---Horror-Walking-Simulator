@@ -30,6 +30,7 @@ public class JumperSpiderAI : EnemyAI
     {
         animator.SetFloat("Horizontal", rbody.velocity.x);
         animator.SetFloat("Vertical", rbody.velocity.z);
+        DeleteSpiderWhenFall();
         float distance;
         if (target != null && isDead == false)
         {

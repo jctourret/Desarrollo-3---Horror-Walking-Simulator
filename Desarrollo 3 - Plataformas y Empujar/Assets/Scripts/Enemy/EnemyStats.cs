@@ -34,7 +34,6 @@ public class EnemyStats : MonoBehaviour, IDamageable
     {
         if (!alive)
         {
-            Debug.LogError("Eliminacion incorrecta de ARAÑA: EnemyStats.cs");
             return;
         }
         else

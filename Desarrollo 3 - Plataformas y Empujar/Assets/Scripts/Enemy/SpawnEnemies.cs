@@ -7,15 +7,7 @@ public class SpawnEnemies : MonoBehaviour
     protected List<EnemyAndPoint> toSpawn;
     public List<EnemyAI> enemiesSpawned;
 
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.tag == "Player")
-        {
-            Spawn();
-            GetComponent<BoxCollider>().enabled = false;
-        }
-    }
-
+    
     public void Spawn()
     {        
         for (int i = 0; i < toSpawn.Count; i++)
@@ -26,6 +18,8 @@ public class SpawnEnemies : MonoBehaviour
             go.GetComponent<EnemyAI>().target = EnemyManager.instance.player;
             go.GetComponent<EnemyAI>().cam = EnemyManager.instance.cam;
         }
+        GetComponent<BoxCollider>().enabled = false;
+        Debug.Log("Enemies spawned");
     }
 
     public void EnemiesInRoomFall()

@@ -80,7 +80,10 @@ public class PillarsBehaviour : Pillar
     IEnumerator InitializeCollapse()
     {
         OnPillarUp?.Invoke();
-
+        if (!specialRoom)
+        {
+            room.GetComponentInChildren<SpawnEnemies>().Spawn();
+        }
         timer = waitTime;
         
         pillarState = PillarState.waiting;
@@ -109,11 +112,10 @@ public class PillarsBehaviour : Pillar
             else
             {
                 pillarState = PillarState.MoveDown;
-
                 if(!specialRoom)
                 {
                     room.GetComponentInChildren<SpawnEnemies>().EnemiesInRoomFall();
-                }
+                }   
                 StartCoroutine(MoveDownPillar());
             }
         }

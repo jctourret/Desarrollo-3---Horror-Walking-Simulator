@@ -80,7 +80,7 @@ public class EnemyAI : MonoBehaviour
         cam = newCamera;
     }
 
-    void DeleteSpiderWhenFall()
+    protected void DeleteSpiderWhenFall()
     {
         if (this.transform.position.y <= fallLimitY)
         {

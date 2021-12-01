@@ -17,7 +17,7 @@ public class ShooterSpiderAI : EnemyAI
     {
         base.Update();
         float distance;
-        if (target != null && isDead == false)
+        if (agent != null && target != null && isDead == false)
         {
             distance = Vector3.Distance(transform.position, target.transform.position);
 
@@ -31,7 +31,7 @@ public class ShooterSpiderAI : EnemyAI
 
                     Rigidbody rb = go.GetComponent<Rigidbody>();
 
-                    rb.velocity = initialVelocity(shotPoint.position, target.transform.position, shotHeight);
+                    rb.velocity = initialVelocity(shotPoint.position, target.transform.position, target.transform.position.y + shotHeight);
 
                     agent.isStopped = true;
                     hasAttacked = true;

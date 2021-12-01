@@ -25,10 +25,9 @@ public class NeedleBehaviour : MonoBehaviour
         StartCoroutine(StopNeedle());
         IDamageable damaged = collision.transform.GetComponentInChildren<IDamageable>();
         if (damaged != null)
+        {
             damaged.TakeDamage(damage);
-        else
-            Debug.Log("No detecta al objetivo");
-
+        }
     }
 
     IEnumerator StopNeedle()
