@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class LoaderManager : MB_SingletonDontDestroy<LoaderManager>
+public class LoaderManager : MB_SingletonDestroy<LoaderManager>
 {
     GameObject ItemsParent = null;
 

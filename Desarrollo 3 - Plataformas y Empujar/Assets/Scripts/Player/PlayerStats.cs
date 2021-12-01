@@ -12,7 +12,7 @@ public class PlayerStats : MonoBehaviour, IDamageable
 
     public static Action<int> ShowMoney;
 
-    [Header("Invincibility")]
+    //[Header("Invincibility")]
     [SerializeField] static int playerMoney = 0;
 
     [Header("Stats")]
@@ -31,6 +31,11 @@ public class PlayerStats : MonoBehaviour, IDamageable
     SpriteRenderer rend;
 
     //=============================================
+
+    private void Start()
+    {
+        playerMoney = 0;
+    }
 
     private void OnEnable()
     {

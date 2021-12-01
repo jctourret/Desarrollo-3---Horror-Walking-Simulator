@@ -27,8 +27,6 @@ public class UI_PauseController : MonoBehaviour
                 StartPause();
             else
                 ClosePause();
-            
-            isPaused = !isPaused;
         }
     }
 
@@ -39,6 +37,8 @@ public class UI_PauseController : MonoBehaviour
         Time.timeScale = 0f;
 
         pauseLayer.SetActive(true);
+
+        isPaused = true;
     }
 
     public void ClosePause()
@@ -48,6 +48,8 @@ public class UI_PauseController : MonoBehaviour
         Time.timeScale = 1f;
 
         pauseLayer.SetActive(false);
+
+        isPaused = false;
     }
 
     // -----------------------

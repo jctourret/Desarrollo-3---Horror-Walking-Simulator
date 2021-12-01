@@ -30,7 +30,7 @@ public class SpawnEnemies : MonoBehaviour
 
     public void EnemiesInRoomFall()
     {
-        for (int i = 0; i < enemiesSpawned.Count; i++)
+        for (int i = 0; i < enemiesSpawned.Count - 1; i++)
         {
             enemiesSpawned[i].Fall();
         }
