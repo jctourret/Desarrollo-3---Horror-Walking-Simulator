@@ -24,7 +24,7 @@ TagManager:
   - ShortObstacle
   - TallObstacle
   - Enemy_Bullet
-  - 
+  - Ignore_NavMesh
   - 
   - 
   - 
