@@ -1232,6 +1232,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4675646218294455108, guid: 764c482c00eae0c4ba587aff9d6f52ab,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4675646219425940914, guid: 764c482c00eae0c4ba587aff9d6f52ab,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.02
+      objectReference: {fileID: 0}
+    - target: {fileID: 4675646219425940914, guid: 764c482c00eae0c4ba587aff9d6f52ab,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -0
+      objectReference: {fileID: 0}
     - target: {fileID: 8068702543234126549, guid: 764c482c00eae0c4ba587aff9d6f52ab,
         type: 3}
       propertyPath: stair

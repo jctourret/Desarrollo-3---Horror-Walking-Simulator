@@ -15,6 +15,8 @@ class FinalLever : InteractiveObject
     public void ActivateLever()
     {
         AkSoundEngine.PostEvent("ascensor_palanca_victoria", gameObject);
+
+        stair.SetTrigger("CloseDoor");
     }
 
     public void MoveElevator()
