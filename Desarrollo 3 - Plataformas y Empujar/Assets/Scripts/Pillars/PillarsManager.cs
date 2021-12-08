@@ -38,7 +38,7 @@ public class PillarsManager : MonoBehaviour
         Right   // Z axis -
     };
 
-    SpawnDirection spawnDirection;
+    SpawnDirection lastSpawnDirection;
 
     enum TypeOfPillars
     {
@@ -123,84 +123,11 @@ public class PillarsManager : MonoBehaviour
 
     void CallOtherPillar()
     {
-        Vector3 newPosition;
-        float scale = 0f;
-
-        // ---
-
         NumbersOfPillars();
 
-        // ---
+        SetPositionOfPillar();
 
-        spawnDirection = SelectDirection();
-
-        switch (typeOfPillar)
-        {
-            case TypeOfPillars.InitialRoom:
-                scale = initialPillar.GetComponent<Pillar>().GetPillarScale();
-                typeOfPillar = TypeOfPillars.CommonRoom;
-                break;
-
-            case TypeOfPillars.FinalRoom:
-                scale = finalPillar.GetComponent<Pillar>().GetPillarScale();
-                break;
-
-            default:
-                scale = pillar.GetComponent<Pillar>().GetPillarScale();
-                break;
-        }
-
-        // ---
-
-        // new Vecto3 (1.0.1) * scale
-        // new pos = vectorscale + listaDeOffsets[spawnDirection]
-        // newpos.x = vectorScale.x * Mathf.sign(listaDeOffset[spawndirection].x) + listaDeOffset[spawndirection].x
-
-        switch (spawnDirection)
-        {
-            case SpawnDirection.Up:
-                newPosition = new Vector3(scale + distBetweenPillars, 0, scale + distBetweenPillars); 
-                this.transform.position = this.transform.position + newPosition;                
-                break;
-
-            case SpawnDirection.Down:
-                newPosition = new Vector3(-scale - distBetweenPillars, 0, -scale - distBetweenPillars);
-                this.transform.position = this.transform.position + newPosition;
-                break;
-
-            case SpawnDirection.Left:
-                newPosition = new Vector3(-scale - distBetweenPillars, 0, scale + distBetweenPillars);
-                this.transform.position = this.transform.position + newPosition;
-                break;
-
-            case SpawnDirection.Right:
-                newPosition = new Vector3(scale + distBetweenPillars, 0, -scale - distBetweenPillars);
-                this.transform.position = this.transform.position + newPosition;
-                break;
-        }
-
-        // ---
-
-        switch (typeOfPillar)
-        {
-            case TypeOfPillars.FinalRoom:
-                var go = Instantiate(finalPillar, new Vector3(this.transform.position.x, 0, this.transform.position.z), Quaternion.Euler(Vector3.up * -45), parent);
-                go.transform.name = finalPillar.name;
-                go.GetComponentInChildren<CallCameraTrigger>().cam = cam;
-                break;
-
-            case TypeOfPillars.MarketRoom:
-                var go2 = Instantiate(marketPillar, new Vector3(this.transform.position.x, pillar.transform.position.y, this.transform.position.z), Quaternion.Euler(Vector3.up * -45), parent);
-                go2.transform.name = marketPillar.name + "-" + (numerationPillars + 1).ToString();
-                go2.GetComponentInChildren<CallCameraTrigger>().cam = cam;
-                break;
-
-            case TypeOfPillars.CommonRoom:
-                var go3 = Instantiate(pillar, new Vector3(this.transform.position.x, pillar.transform.position.y, this.transform.position.z), Quaternion.Euler(Vector3.up * -45), parent);
-                go3.transform.name = pillar.name + "-" + (numerationPillars + 1).ToString();
-                go3.GetComponentInChildren<CallCameraTrigger>().cam = cam;
-                break;
-        }
+        CreatePillar();
     }
 
     void BakeMesh()
@@ -211,41 +138,90 @@ public class PillarsManager : MonoBehaviour
 
     //===========================================
 
+    float ReturnPillarScale()
+    {
+        if (typeOfPillar == TypeOfPillars.InitialRoom)
+        {
+            typeOfPillar = TypeOfPillars.CommonRoom;
+            return initialPillar.GetComponent<Pillar>().GetPillarScale();
+        }
+        else if (typeOfPillar == TypeOfPillars.FinalRoom)
+        {
+            return finalPillar.GetComponent<Pillar>().GetPillarScale();
+        }
+        else
+        {
+            return pillar.GetComponent<Pillar>().GetPillarScale();
+        }
+    }
+
+    void SetPositionOfPillar()
+    {
+        Vector3 newPosition = Vector3.zero;
+        float scale = ReturnPillarScale();
+
+        lastSpawnDirection = SelectDirection();
+
+        if (lastSpawnDirection == SpawnDirection.Up)
+            newPosition = new Vector3(scale + distBetweenPillars, 0, scale + distBetweenPillars);
+        else if (lastSpawnDirection == SpawnDirection.Down)
+            newPosition = new Vector3(-scale - distBetweenPillars, 0, -scale - distBetweenPillars);
+        else if (lastSpawnDirection == SpawnDirection.Left)
+            newPosition = new Vector3(-scale - distBetweenPillars, 0, scale + distBetweenPillars);
+        else if (lastSpawnDirection == SpawnDirection.Right)
+            newPosition = new Vector3(scale + distBetweenPillars, 0, -scale - distBetweenPillars);
+
+        this.transform.position = this.transform.position + newPosition;
+    }
+
+    void CreatePillar()
+    {
+        GameObject pref = null;
+
+        if (typeOfPillar == TypeOfPillars.FinalRoom)
+        {
+            pref = finalPillar;
+        }
+        else if(typeOfPillar == TypeOfPillars.MarketRoom)
+        {
+            pref = marketPillar;
+        }
+        else if(typeOfPillar == TypeOfPillars.CommonRoom)
+        {
+            pref = pillar;
+        }
+
+        var go = Instantiate(pref, new Vector3(this.transform.position.x, 0, this.transform.position.z), Quaternion.Euler(Vector3.up * -45), parent);
+        go.transform.name = pref.name + "-" + (numerationPillars + 1).ToString();
+        go.GetComponentInChildren<CallCameraTrigger>().cam = cam;
+    }
+
+
     SpawnDirection SelectDirection()
     {
         int rand = UnityEngine.Random.Range(0, 4);
 
         SpawnDirection direction = (SpawnDirection)rand;
 
-        switch (direction)
+        // Estos if's son utilizados para evitar que se vuelva a elegir la direccion opuesta en la que se estuvo anteriormente
+        // para evitar "volver hacia atras" con los pilares que se van generando y evitando que se quede estancado repitiendo muchas
+        // veces eligiendo los mismos y nunca "avanzando".
+
+        if (direction == SpawnDirection.Up && lastSpawnDirection == SpawnDirection.Down)
         {
-            case SpawnDirection.Up:
-                if (spawnDirection == SpawnDirection.Down)
-                {
-                    direction = SpawnDirection.Down;
-                }
-                break;
-
-            case SpawnDirection.Down:
-                if (spawnDirection == SpawnDirection.Up)
-                {
-                    direction = SpawnDirection.Up;
-                }
-                break;
-
-            case SpawnDirection.Left:
-                if (spawnDirection == SpawnDirection.Right)
-                {
-                    direction = SpawnDirection.Right;
-                }
-                break;
-
-            case SpawnDirection.Right:
-                if (spawnDirection == SpawnDirection.Left)
-                {
-                    direction = SpawnDirection.Left;
-                }
-                break;
+            direction = SpawnDirection.Down;
+        }
+        else if (direction == SpawnDirection.Down && lastSpawnDirection == SpawnDirection.Up)
+        {
+            direction = SpawnDirection.Up;
+        }
+        else if (direction == SpawnDirection.Left && lastSpawnDirection == SpawnDirection.Right)
+        {
+            direction = SpawnDirection.Right;
+        }
+        else if (direction == SpawnDirection.Right && lastSpawnDirection == SpawnDirection.Left)
+        {
+            direction = SpawnDirection.Left;
         }
 
         return direction;

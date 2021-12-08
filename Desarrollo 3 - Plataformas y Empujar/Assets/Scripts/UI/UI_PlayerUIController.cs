@@ -57,20 +57,9 @@ public class UI_PlayerUIController : MonoBehaviour
         {
             if (i % 2 == 0)
             {
-                var emptyH = Instantiate(emptyHeart, new Vector3(initialPosition, 0, 0), Quaternion.identity) as GameObject;
-                emptyH.transform.SetParent(this.transform, false);
-                emptyH.transform.name = "Empty Heart " + (i / 2);
+                CreateNewHeart(i / 2);
 
-                listOfEmptyHearts.Add(emptyH);
-
-                var fullH = Instantiate(fullHeart, new Vector3(initialPosition, 0, 0), Quaternion.identity) as GameObject;
-                fullH.transform.SetParent(this.transform, false);
-                fullH.transform.name = "Full Heart " + (i / 2);
-
-                listOfHearts.Add(fullH);
                 lastHeartActive = listOfHearts.Count;
-
-                initialPosition += distaceBettweenHearts;
             }
         }
     }
@@ -98,22 +87,9 @@ public class UI_PlayerUIController : MonoBehaviour
     {
         for (int i = 0; i < max; i++)
         {
-            var emptyH = Instantiate(emptyHeart, new Vector3(initialPosition, 0, 0), Quaternion.identity) as GameObject;
-            emptyH.transform.SetParent(this.transform, false);
-
-            listOfEmptyHearts.Add(emptyH);
-
-            var fullH = Instantiate(fullHeart, new Vector3(initialPosition, 0, 0), Quaternion.identity) as GameObject;
-            fullH.transform.SetParent(this.transform, false);
-
-            listOfHearts.Add(fullH);
-
-            emptyH.transform.name = "Empty Heart " + lastHeartActive;
-            fullH.transform.name = "Full Heart " + lastHeartActive;
+            CreateNewHeart(lastHeartActive);
 
             listOfHearts[listOfHearts.Count - 1].SetActive(false);
-
-            initialPosition += distaceBettweenHearts;
         }
     }
 
@@ -170,5 +146,27 @@ public class UI_PlayerUIController : MonoBehaviour
     public void AddCoins(int value)
     {
         coinsText.text = value.ToString();
+    }
+
+
+    // ==============================================
+
+
+    void CreateNewHeart(int id)
+    {
+        var emptyH = Instantiate(emptyHeart, new Vector3(initialPosition, 0, 0), Quaternion.identity) as GameObject;
+        emptyH.transform.SetParent(this.transform, false);
+
+        listOfEmptyHearts.Add(emptyH);
+
+        var fullH = Instantiate(fullHeart, new Vector3(initialPosition, 0, 0), Quaternion.identity) as GameObject;
+        fullH.transform.SetParent(this.transform, false);
+        
+        listOfHearts.Add(fullH);
+
+        emptyH.transform.name = "Empty Heart " + id;
+        fullH.transform.name = "Full Heart " + id;
+
+        initialPosition += distaceBettweenHearts;
     }
 }
