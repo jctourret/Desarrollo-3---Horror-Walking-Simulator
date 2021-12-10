@@ -1,20 +1,31 @@
-﻿using System.Collections;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class NeedleBehaviour : MonoBehaviour
 {
     public int damage = 1;
 
-    //==================================
-
-    [SerializeField] float timeToBlock = 0.1f; /// Se usa para hacerlo kinematico cuando colisiona despues de el tiempo determinado
+    [SerializeField] float rotationSpeed = 0.1f;
     [SerializeField] float destroyTime = 6f;
+
+    private Rigidbody rig;
 
     //==================================
 
     private void Awake()
     {
+        rig = GetComponent<Rigidbody>();
+
         Destroy(this.gameObject, destroyTime);
+    }
+
+    private void Update()
+    {
+        if(rig.isKinematic == false)
+        {
+            float rotX = rig.velocity.y * rotationSpeed * Time.deltaTime;
+
+            this.transform.Rotate(rotX, 0, 0);
+        }
     }
 
     private void OnCollisionEnter(Collision collision)
@@ -22,18 +33,14 @@ public class NeedleBehaviour : MonoBehaviour
         this.transform.parent = collision.transform;
         BoxCollider needleCol = transform.GetComponent<BoxCollider>();
         needleCol.enabled = false;
-        StartCoroutine(StopNeedle());
+
+        rig.isKinematic = true;
+
         IDamageable damaged = collision.transform.GetComponentInChildren<IDamageable>();
+
         if (damaged != null)
         {
             damaged.TakeDamage(damage);
         }
-    }
-
-    IEnumerator StopNeedle()
-    {
-        yield return new WaitForSeconds(timeToBlock);
-
-        this.transform.GetComponent<Rigidbody>().isKinematic = true;
     }
 }

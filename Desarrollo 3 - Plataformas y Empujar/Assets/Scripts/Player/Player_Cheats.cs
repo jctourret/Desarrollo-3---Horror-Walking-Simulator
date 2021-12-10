@@ -3,7 +3,6 @@
 public class Player_Cheats : MonoBehaviour
 {
     [SerializeField] private PlayerStats player;
-    public string cheatsKey = "F9";
 
     private bool activateCheats = false;
     private Animator anim;
@@ -17,7 +16,7 @@ public class Player_Cheats : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.F9))//Input.GetButtonDown(cheatsKey))
+        if (Input.GetKeyDown(KeyCode.F9))
         {
             activateCheats = !activateCheats;
 

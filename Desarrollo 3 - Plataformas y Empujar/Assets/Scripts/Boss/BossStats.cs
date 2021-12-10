@@ -7,6 +7,7 @@ public class BossStats : MonoBehaviour, IDamageable
     public static Action ActivateDeath;
 
     public GameObject lifeBarPref;
+    public GameObject spiderBloodPref;
 
     public int maxLife = 20;
     public int actualLife = 20;
@@ -60,6 +61,11 @@ public class BossStats : MonoBehaviour, IDamageable
         }
 
         ActivateDeath?.Invoke();
+
+        // Create particles:
+        GameObject blood = Instantiate(spiderBloodPref, this.transform.position, Quaternion.Euler(Vector3.up));
+        Destroy(blood, 5f);
+        // ----
 
         // <-- Acá se llama a la animacion de muerte
 
