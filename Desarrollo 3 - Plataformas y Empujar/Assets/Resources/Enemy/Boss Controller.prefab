@@ -222,6 +222,7 @@ MonoBehaviour:
   rbody: {fileID: 0}
   hasAttacked: 0
   targetInAttackRange: 0
+  fallLimitY: -20
   target: {fileID: 0}
   damage: 3
   meleeDelay: 1
@@ -368,8 +369,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lifeBarPref: {fileID: 5848727230514126818, guid: 49a972cf374bf4a43a2d4a99595df156,
     type: 3}
-  maxLife: 30
-  actualLife: 30
+  spiderBloodPref: {fileID: 1665716702526640982, guid: 789741547be07384f9b1f8e312e1814c,
+    type: 3}
+  maxLife: 1
+  actualLife: 1
 --- !u!114 &6435447984147978695
 MonoBehaviour:
   m_ObjectHideFlags: 0

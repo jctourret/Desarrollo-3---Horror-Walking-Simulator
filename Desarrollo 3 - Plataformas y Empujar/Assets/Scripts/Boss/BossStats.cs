@@ -13,13 +13,25 @@ public class BossStats : MonoBehaviour, IDamageable
     public int actualLife = 20;
 
     private bool alive = true;
+    private Animator animator;
+    private EnemyAI enemyAI;
+
+    private GameObject activeLifeBar;
 
     //==================================
 
+    private void Awake()
+    {
+        animator = transform.parent.GetComponentInChildren<Animator>();
+        enemyAI = transform.parent.GetComponentInChildren<EnemyAI>();
+    }
+
     private void Start()
     {
-        GameObject lifeBar = Instantiate(lifeBarPref);
-        lifeBar.transform.SetParent(FindObjectOfType<Canvas>().transform, false);
+        activeLifeBar = Instantiate(lifeBarPref);
+        activeLifeBar.transform.SetParent(GameObject.Find("BossLifeBar").transform, false);
+        
+        activeLifeBar.SetActive(true);
 
         actualLife = maxLife;
 
@@ -52,8 +64,6 @@ public class BossStats : MonoBehaviour, IDamageable
 
     public void Eliminated()
     {
-        //this.transform.GetComponent<Collider>().enabled = false; //El jefe NO TIENE un boxCollider, tiene un capsuleCollider
-
         if (!alive)
         {
             Debug.LogError("Eliminacion incorrecta de BOSS: BossStats.cs");
@@ -67,22 +77,17 @@ public class BossStats : MonoBehaviour, IDamageable
         Destroy(blood, 5f);
         // ----
 
-        // <-- Acá se llama a la animacion de muerte
-
         AkSoundEngine.PostEvent("boss_muere", gameObject);
 
         AkSoundEngine.PostEvent("partida_musica06_victoria", gameObject);
 
+        animator.SetTrigger("IsDead");
+        enemyAI.KillSpider(true);
+
         alive = false;
 
+        activeLifeBar.SetActive(false);
+
         LoaderManager.Get().SpawnBasicItem(this.transform.position);
-        Destroy(this.transform.parent.gameObject); // Esta linea se tiene que eliminar cuando se tenga la animacion
-    }
-
-    //==================================
-
-    public void CallDeathAnimation()    // Esta funcion se va a llamar cuando se haga el final de la animacion de muerte
-    {
-        Destroy(this.gameObject);
     }
 }
