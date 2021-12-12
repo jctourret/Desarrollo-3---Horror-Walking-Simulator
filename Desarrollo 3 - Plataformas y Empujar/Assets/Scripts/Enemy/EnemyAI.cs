@@ -21,8 +21,8 @@ public class EnemyAI : MonoBehaviour
 
     protected bool isDead;
     bool lastDirRecorded = false;
-    bool right;
-    bool up;
+    protected bool right;
+    protected bool up;
     Collider coll;
     
     //======================================

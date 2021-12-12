@@ -15,6 +15,7 @@ public class JumperSpiderAI : EnemyAI
     [SerializeField] bool isGrounded;
     bool ignoreFirst = true;
     bool attack;
+    bool lastDirRecorded = false;
     Vector3 launchVelocity;
     Vector3 jumpTarget;
     float radiusLandingOffset = 0.5f;
@@ -30,6 +31,64 @@ public class JumperSpiderAI : EnemyAI
     {
         animator.SetFloat("Horizontal", rbody.velocity.x);
         animator.SetFloat("Vertical", rbody.velocity.z);
+
+        if (rbody.velocity.magnitude < 0.1)
+        {
+            if (!lastDirRecorded)
+            {
+                animator.SetFloat("LastDirX", rbody.velocity.x);
+                animator.SetFloat("LastDirY", rbody.velocity.z);
+                lastDirRecorded = true;
+
+                right = rbody.velocity.normalized.x <= 0;
+                up = rbody.velocity.normalized.z > 0;
+
+                if (right && up) // right up
+                {
+                    spriteRenderer.flipX = true;
+                }
+                else if (right && !up) // right down
+                {
+                    spriteRenderer.flipX = false;
+                }
+                else if (!right && up) //left up
+                {
+                    spriteRenderer.flipX = false;
+                }
+                else if (!right && !up) //left down
+                {
+                    spriteRenderer.flipX = true;
+                }
+
+            }
+        }
+        else
+        {
+            animator.SetFloat("Horizontal", rbody.velocity.x);
+            animator.SetFloat("Vertical", rbody.velocity.z);
+            lastDirRecorded = false;
+
+            right = rbody.velocity.normalized.x <= 0;
+            up = rbody.velocity.normalized.z > 0;
+
+            if (right && up) // right up
+            {
+                spriteRenderer.flipX = true;
+            }
+            else if (right && !up) // right down
+            {
+                spriteRenderer.flipX = false;
+            }
+            else if (!right && up) //left up
+            {
+                spriteRenderer.flipX = false;
+            }
+            else if (!right && !up) //left down
+            {
+                spriteRenderer.flipX = true;
+            }
+        }
+
         DeleteSpiderWhenFall();
         float distance;
         if (target != null && isDead == false)
