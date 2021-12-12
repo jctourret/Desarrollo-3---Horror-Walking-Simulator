@@ -1,8 +1,8 @@
 <p align="center">
-<img src="logo.png" alt="PONER NOMBRE DEL JUEGO ACA"/>
+<img src="logo.png" alt="Toy Box"/>
 </p>
 
-#Toy Box
+# Toy Box
 
 This is Annie’s story, Margot’s favorite ragdoll. She’s been tired of waiting for her owner’s
 return, so, she decides to escape from the toy box. However, the other toys will be always
