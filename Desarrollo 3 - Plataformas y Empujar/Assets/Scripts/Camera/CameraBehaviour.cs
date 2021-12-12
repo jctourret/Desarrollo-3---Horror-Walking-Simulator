@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class CameraBehaviour : MonoBehaviour
 {
-    public static Action<Camera> OnSendCamera;
-
     [Header("Screen Shake")]
     [SerializeField] float duration;
     [SerializeField] float magnitude;
@@ -18,11 +16,6 @@ public class CameraBehaviour : MonoBehaviour
     private void Awake()
     {
         cam = this.transform.GetComponent<Camera>();
-    }
-
-    private void Start()
-    {
-        OnSendCamera?.Invoke(GetComponent<Camera>());
     }
 
     private void OnEnable()

@@ -15,16 +15,6 @@ public class CallCameraTrigger : MonoBehaviour
 
     //=============================================
 
-    private void OnEnable()
-    {
-        CameraBehaviour.OnSendCamera += GetCamera;
-    }
-
-    private void OnDisable()
-    {
-        CameraBehaviour.OnSendCamera -= GetCamera;
-    }
-
     private void OnTriggerEnter(Collider other)
     {
         if (other.transform.tag == "Player")

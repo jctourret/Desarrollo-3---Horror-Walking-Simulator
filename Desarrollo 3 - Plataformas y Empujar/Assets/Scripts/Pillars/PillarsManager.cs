@@ -71,7 +71,6 @@ public class PillarsManager : MonoBehaviour
         BossPillarBehaviour.OnPillarUp += BakeMesh;
 
         StartLever.ActivateObject += CallOtherPillar;
-        CameraBehaviour.OnSendCamera += GetCamera;
     }
 
     private void OnDisable()
@@ -81,7 +80,6 @@ public class PillarsManager : MonoBehaviour
         BossPillarBehaviour.OnPillarUp -= BakeMesh;
 
         StartLever.ActivateObject -= CallOtherPillar;
-        CameraBehaviour.OnSendCamera -= GetCamera;
     }
 
     //=====================================

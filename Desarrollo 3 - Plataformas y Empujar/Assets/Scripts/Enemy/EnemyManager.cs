@@ -19,16 +19,6 @@ public class EnemyManager : MonoBehaviour
             Destroy(gameObject);
         }
     }
-    private void OnEnable()
-    {
-        CameraBehaviour.OnSendCamera += GetCamera;
-    }
-
-    private void OnDisable()
-    {
-        CameraBehaviour.OnSendCamera -= GetCamera;
-    }
-
     void assingTarget(GameObject target, GameObject chaser)
     {
         if(chaser.GetComponent<EnemyAI>() != null)
