@@ -20,6 +20,8 @@ public class EnemyAI : MonoBehaviour
 
     protected bool isDead;
     bool lastDirRecorded = false;
+    bool right;
+    bool up;
     Collider coll;
     
     //======================================
@@ -60,6 +62,27 @@ public class EnemyAI : MonoBehaviour
             animator.SetFloat("Vertical", agent.velocity.z);
             lastDirRecorded = false;
         }
+
+        right = agent.velocity.normalized.x <= 0;
+        up = agent.velocity.normalized.z > 0;
+
+        if (right && up) // right up
+        {
+            spriteRenderer.flipX = true;
+        }
+        else if (right && !up) // right down
+        {
+            spriteRenderer.flipX = false;
+        }
+        else if (!right && up) //left up
+        {
+            spriteRenderer.flipX = false;
+        }
+        else if (!right && !up) //left down
+        {
+            spriteRenderer.flipX = true;
+        }
+
 
         AkSoundEngine.PostEvent("arana_pasos", gameObject);
 

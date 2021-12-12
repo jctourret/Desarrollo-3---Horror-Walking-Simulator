@@ -17,7 +17,9 @@ public class PlayerMovement : MonoBehaviour
     private bool controllable;
     private bool isGrounded;
     private bool inAir = false;
-    bool lastDirRecorded = false;
+    bool lastDirRecorded;
+    bool right;
+    bool up;
 
     [Header("Gravity")]
     [SerializeField] private float gravity;
@@ -33,6 +35,7 @@ public class PlayerMovement : MonoBehaviour
 
     private CharacterController controller;
     private Animator animator;
+    private SpriteRenderer spriteRenderer;
     private PlayerStats player;
 
     //==============================================
@@ -41,6 +44,7 @@ public class PlayerMovement : MonoBehaviour
     {
         controller = GetComponent<CharacterController>();
         animator = GetComponentInChildren<Animator>();
+        spriteRenderer = GetComponentInChildren<SpriteRenderer>();
         player = GetComponent<PlayerStats>();
         controllable = false;
 
@@ -116,6 +120,26 @@ public class PlayerMovement : MonoBehaviour
                 animator.SetFloat("Horizontal",move.x);
                 animator.SetFloat("Vertical",move.z);
                 lastDirRecorded = false;
+            }
+
+            right = move.x <= 0;
+            up = move.z > 0;
+
+            if(right && up) // right up
+            {
+                spriteRenderer.flipX = true;
+            }
+            else if (right && !up) // right down
+            {
+                spriteRenderer.flipX = false;
+            }
+            else if (!right && up) //left up
+            {
+                spriteRenderer.flipX = false;
+            }
+            else if(!right && !up) //left down
+            {
+                spriteRenderer.flipX = true;
             }
 
             controller.Move(move * Time.deltaTime * currentSpeed);
