@@ -15,6 +15,11 @@ public class CallCameraTrigger : MonoBehaviour
 
     //=============================================
 
+    private void Start()
+    {
+        cam = CameraBehaviour.GetCamera();
+    }
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.transform.tag == "Player")
@@ -26,11 +31,6 @@ public class CallCameraTrigger : MonoBehaviour
     }
 
     //=============================================
-        
-    void GetCamera(Camera newCamera)
-    {
-        cam = newCamera;
-    }
     
     IEnumerator MoveCamera()
     {

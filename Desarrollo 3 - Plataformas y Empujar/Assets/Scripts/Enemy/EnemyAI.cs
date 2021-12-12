@@ -18,6 +18,7 @@ public class EnemyAI : MonoBehaviour
 
     public GameObject target;
 
+    protected SpriteRenderer spriteRenderer;
     protected bool isDead;
     bool lastDirRecorded = false;
     bool right;
@@ -36,7 +37,8 @@ public class EnemyAI : MonoBehaviour
         agent = GetComponent<NavMeshAgent>();
         animator = GetComponentInChildren<Animator>();
         coll = GetComponentInChildren<Collider>();
-        //coll.isTrigger = true;
+        spriteRenderer = GetComponentInChildren<SpriteRenderer>();
+
         rbody.isKinematic = true;
         OnEnemySpawn?.Invoke(gameObject);
     }

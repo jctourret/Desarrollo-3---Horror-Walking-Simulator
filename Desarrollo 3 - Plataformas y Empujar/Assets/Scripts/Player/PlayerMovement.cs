@@ -127,19 +127,19 @@ public class PlayerMovement : MonoBehaviour
 
             if(right && up) // right up
             {
-                spriteRenderer.flipX = true;
+                spriteRenderer.flipX = false;
             }
             else if (right && !up) // right down
             {
-                spriteRenderer.flipX = false;
+                spriteRenderer.flipX = true;
             }
             else if (!right && up) //left up
             {
-                spriteRenderer.flipX = false;
+                spriteRenderer.flipX = true;
             }
             else if(!right && !up) //left down
             {
-                spriteRenderer.flipX = true;
+                spriteRenderer.flipX = false;
             }
 
             controller.Move(move * Time.deltaTime * currentSpeed);
