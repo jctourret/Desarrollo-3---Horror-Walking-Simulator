@@ -10,6 +10,7 @@ public class EnemyAI : MonoBehaviour
 
     protected NavMeshAgent agent;
     protected Animator animator;
+    protected SpriteRenderer spriteRenderer;
 
     [SerializeField] protected Rigidbody rbody;
     [SerializeField] protected bool hasAttacked;
@@ -18,7 +19,6 @@ public class EnemyAI : MonoBehaviour
 
     public GameObject target;
 
-    protected SpriteRenderer spriteRenderer;
     protected bool isDead;
     bool lastDirRecorded = false;
     bool right;

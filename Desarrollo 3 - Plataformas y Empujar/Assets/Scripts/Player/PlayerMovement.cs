@@ -113,6 +113,26 @@ public class PlayerMovement : MonoBehaviour
                     animator.SetFloat("lastDirX", move.x);
                     animator.SetFloat("lastDirY", move.z);
                     lastDirRecorded = true;
+
+                    right = move.x <= 0;
+                    up = move.z > 0;
+
+                    if (right && up) // right up
+                    {
+                        spriteRenderer.flipX = false;
+                    }
+                    else if (right && !up) // right down
+                    {
+                        spriteRenderer.flipX = true;
+                    }
+                    else if (!right && up) //left up
+                    {
+                        spriteRenderer.flipX = true;
+                    }
+                    else if (!right && !up) //left down
+                    {
+                        spriteRenderer.flipX = false;
+                    }
                 }
             }
             else
@@ -120,27 +140,30 @@ public class PlayerMovement : MonoBehaviour
                 animator.SetFloat("Horizontal",move.x);
                 animator.SetFloat("Vertical",move.z);
                 lastDirRecorded = false;
+
+                right = move.x <= 0;
+                up = move.z > 0;
+
+                if (right && up) // right up
+                {
+                    spriteRenderer.flipX = false;
+                }
+                else if (right && !up) // right down
+                {
+                    spriteRenderer.flipX = true;
+                }
+                else if (!right && up) //left up
+                {
+                    spriteRenderer.flipX = true;
+                }
+                else if (!right && !up) //left down
+                {
+                    spriteRenderer.flipX = false;
+                }
+
+
             }
 
-            right = move.x <= 0;
-            up = move.z > 0;
-
-            if(right && up) // right up
-            {
-                spriteRenderer.flipX = false;
-            }
-            else if (right && !up) // right down
-            {
-                spriteRenderer.flipX = true;
-            }
-            else if (!right && up) //left up
-            {
-                spriteRenderer.flipX = true;
-            }
-            else if(!right && !up) //left down
-            {
-                spriteRenderer.flipX = false;
-            }
 
             controller.Move(move * Time.deltaTime * currentSpeed);
 
