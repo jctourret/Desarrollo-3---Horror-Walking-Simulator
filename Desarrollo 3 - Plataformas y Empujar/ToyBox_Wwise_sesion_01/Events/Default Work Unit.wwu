@@ -253,11 +253,12 @@
 						</Action>
 						<Action Name="" ID="{BD90311E-BF51-4F5C-A6B6-8263659D5FD6}" ShortID="70565314">
 							<PropertyList>
-								<Property Name="Delay" Type="Real64" Value="2.5"/>
+								<Property Name="Delay" Type="Real64" Value="1"/>
+								<Property Name="FadeTime" Type="Real64" Value="1"/>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
-									<ObjectRef Name="Mx postBoss ref_01" ID="{08D4CED7-DCB1-4EB5-9628-2751043EB70C}" WorkUnitID="{0068F637-75D2-4DCF-A442-34947F9C8869}"/>
+									<ObjectRef Name="TB_post_boss" ID="{993185DF-5963-4F3D-B6FA-D6565931837A}" WorkUnitID="{0068F637-75D2-4DCF-A442-34947F9C8869}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
@@ -316,7 +317,7 @@
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
-									<ObjectRef Name="Mx01_To the Rescue_inicio" ID="{8A0FDEA1-7D98-440D-B612-89066634A504}" WorkUnitID="{0068F637-75D2-4DCF-A442-34947F9C8869}"/>
+									<ObjectRef Name="TB_pilar_01" ID="{C3E6E5D7-4D92-4A40-9E0D-AA940BCE07C4}" WorkUnitID="{0068F637-75D2-4DCF-A442-34947F9C8869}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
@@ -475,6 +476,14 @@
 				<Event Name="loading_musica" ID="{301E1490-6091-43A0-8A48-3E2BF0A32A7E}"/>
 				<Event Name="loading_spacebar" ID="{83D6F01F-4E63-4AB5-9CE7-4F2E35857062}">
 					<ChildrenList>
+						<Action Name="" ID="{379FB392-29A7-4521-A5C8-08327C26D536}" ShortID="845730347">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="3"/>
+								<Property Name="FadeTime" Type="Real64" Value="1.5"/>
+								<Property Name="Scope" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList/>
+						</Action>
 						<Action Name="" ID="{D0F23347-CE57-4724-997D-669F9CA420F2}" ShortID="43892867">
 							<ReferenceList>
 								<Reference Name="Target">
@@ -488,19 +497,7 @@
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
-									<ObjectRef Name="Mx01_To the Rescue_inicio" ID="{8A0FDEA1-7D98-440D-B612-89066634A504}" WorkUnitID="{0068F637-75D2-4DCF-A442-34947F9C8869}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-						<Action Name="" ID="{379FB392-29A7-4521-A5C8-08327C26D536}" ShortID="845730347">
-							<PropertyList>
-								<Property Name="ActionType" Type="int16" Value="2"/>
-								<Property Name="FadeTime" Type="Real64" Value="1.5"/>
-								<Property Name="Scope" Type="int16" Value="1"/>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="AAIA 08 Atmos Tonal Stuttery Granular Ringing Drone" ID="{0F9B9063-87E5-446C-B1AD-1FADEE5422E6}" WorkUnitID="{0068F637-75D2-4DCF-A442-34947F9C8869}"/>
+									<ObjectRef Name="TB_pilar_01" ID="{C3E6E5D7-4D92-4A40-9E0D-AA940BCE07C4}" WorkUnitID="{0068F637-75D2-4DCF-A442-34947F9C8869}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
@@ -560,7 +557,7 @@
 						<Action Name="" ID="{E7B5CC25-1E09-4ED9-B1C6-C4969C0F9087}" ShortID="2664269">
 							<ReferenceList>
 								<Reference Name="Target">
-									<ObjectRef Name="Mx preBoss ref" ID="{13F01736-BD8E-4D3F-BE05-AF600B40C8E7}" WorkUnitID="{0068F637-75D2-4DCF-A442-34947F9C8869}"/>
+									<ObjectRef Name="TB_PreBoss_v1" ID="{0869D119-2CB3-4182-B5E0-0AB2FD361875}" WorkUnitID="{0068F637-75D2-4DCF-A442-34947F9C8869}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
@@ -946,7 +943,7 @@
 						<Action Name="" ID="{A2AE5779-A4EE-4B47-97C1-9F433928BBAD}" ShortID="287812767">
 							<ReferenceList>
 								<Reference Name="Target">
-									<ObjectRef Name="Mx01_To the Rescue_inicio" ID="{8A0FDEA1-7D98-440D-B612-89066634A504}" WorkUnitID="{0068F637-75D2-4DCF-A442-34947F9C8869}"/>
+									<ObjectRef Name="TB_pilar_01" ID="{C3E6E5D7-4D92-4A40-9E0D-AA940BCE07C4}" WorkUnitID="{0068F637-75D2-4DCF-A442-34947F9C8869}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>

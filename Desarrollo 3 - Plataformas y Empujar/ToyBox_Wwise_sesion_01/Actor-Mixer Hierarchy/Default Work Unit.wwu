@@ -1677,7 +1677,7 @@
 								</Property>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
-										<Value>6</Value>
+										<Value>5</Value>
 									</ValueList>
 								</Property>
 							</PropertyList>
@@ -1913,7 +1913,7 @@
 								</Property>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
-										<Value>-6</Value>
+										<Value>-7</Value>
 									</ValueList>
 								</Property>
 							</PropertyList>
@@ -1953,7 +1953,7 @@
 									<PropertyList>
 										<Property Name="Volume" Type="Real64">
 											<ValueList>
-												<Value>4</Value>
+												<Value>3</Value>
 											</ValueList>
 										</Property>
 									</PropertyList>
@@ -1992,7 +1992,7 @@
 								<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
 								<Property Name="Pitch" Type="int32">
 									<ValueList>
-										<Value>100</Value>
+										<Value>130</Value>
 									</ValueList>
 								</Property>
 							</PropertyList>
@@ -2039,7 +2039,7 @@
 									<PropertyList>
 										<Property Name="Volume" Type="Real64">
 											<ValueList>
-												<Value>-1</Value>
+												<Value>-3</Value>
 											</ValueList>
 										</Property>
 									</PropertyList>
@@ -2069,7 +2069,7 @@
 									<PropertyList>
 										<Property Name="Volume" Type="Real64">
 											<ValueList>
-												<Value>3</Value>
+												<Value>2</Value>
 											</ValueList>
 										</Property>
 									</PropertyList>
@@ -2096,6 +2096,13 @@
 									</ActiveSourceList>
 								</Sound>
 								<Sound Name="CORO-cm_0112" ID="{B70131B0-E592-4B18-A9CA-A9A3F5B18657}" ShortID="804374831">
+									<PropertyList>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-1</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Conversion">
 											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4DDCC0E9-8918-4EF8-AD11-22C68F85E755}"/>
@@ -2987,6 +2994,11 @@
 					<ChildrenList>
 						<Sound Name="Mx01_To the Rescue_inicio" ID="{8A0FDEA1-7D98-440D-B612-89066634A504}" ShortID="46737071">
 							<PropertyList>
+								<Property Name="Inclusion" Type="bool">
+									<ValueList>
+										<Value>False</Value>
+									</ValueList>
+								</Property>
 								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
@@ -3204,6 +3216,11 @@
 						</Sound>
 						<Sound Name="Mx preBoss ref" ID="{13F01736-BD8E-4D3F-BE05-AF600B40C8E7}" ShortID="407158898">
 							<PropertyList>
+								<Property Name="Inclusion" Type="bool">
+									<ValueList>
+										<Value>False</Value>
+									</ValueList>
+								</Property>
 								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
 								<Property Name="Lowpass" Type="int16">
 									<ValueList>
@@ -3245,6 +3262,11 @@
 						</Sound>
 						<Sound Name="Epic Dark Boss Theme" ID="{AADF1359-8122-40B7-98D0-344C947C21A5}" ShortID="1063878696">
 							<PropertyList>
+								<Property Name="Inclusion" Type="bool">
+									<ValueList>
+										<Value>False</Value>
+									</ValueList>
+								</Property>
 								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
@@ -3482,6 +3504,11 @@
 						</Sound>
 						<Sound Name="Mx postBoss ref_01" ID="{08D4CED7-DCB1-4EB5-9628-2751043EB70C}" ShortID="630497972">
 							<PropertyList>
+								<Property Name="Inclusion" Type="bool">
+									<ValueList>
+										<Value>False</Value>
+									</ValueList>
+								</Property>
 								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
 								<Property Name="Lowpass" Type="int16">
 									<ValueList>
@@ -3690,7 +3717,7 @@
 								</Property>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
-										<Value>-10</Value>
+										<Value>-11</Value>
 									</ValueList>
 								</Property>
 							</PropertyList>
@@ -3724,6 +3751,377 @@
 								<ActiveSource Name="TB _Boss_fight_v1" ID="{5F6D1391-A336-447E-841A-4B0DC16B9311}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
+						<Sound Name="TB_PreBoss_v1" ID="{0869D119-2CB3-4182-B5E0-0AB2FD361875}" ShortID="518847356">
+							<PropertyList>
+								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-2</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4DDCC0E9-8918-4EF8-AD11-22C68F85E755}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E8FBD65D-B603-4940-A021-75BCF3D47498}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="TB_PreBoss_v1" ID="{639F3FE5-A09D-4047-B4AE-DB7A1F19FBDF}">
+									<PropertyList>
+										<Property Name="CrossfadeDuration" Type="Real64" Value="467.821"/>
+										<Property Name="LoopBegin" Type="Real64" Value="0.504938809011013"/>
+										<Property Name="LoopEnd" Type="Real64" Value="40.1067303797077"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimEnd" Type="Real64" Value="40.4332676388862"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>TB_PreBoss_v1.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="447635545"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="TB_PreBoss_v1" ID="{639F3FE5-A09D-4047-B4AE-DB7A1F19FBDF}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="TB_post_boss" ID="{993185DF-5963-4F3D-B6FA-D6565931837A}" ShortID="631097777">
+							<PropertyList>
+								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4DDCC0E9-8918-4EF8-AD11-22C68F85E755}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E8FBD65D-B603-4940-A021-75BCF3D47498}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="TB_intro_outro_3" ID="{C9DA88F8-BA47-45B7-B13D-152A7AFE6B03}">
+									<PropertyList>
+										<Property Name="CrossfadeDuration" Type="Real64" Value="1437.97"/>
+										<Property Name="LoopBegin" Type="Real64" Value="0.729961832061069"/>
+										<Property Name="LoopEnd" Type="Real64" Value="33.3696837513631"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimEnd" Type="Real64" Value="34.1344056706652"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>TB_intro_outro_3.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="968835191"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="TB_intro_outro_3" ID="{C9DA88F8-BA47-45B7-B13D-152A7AFE6B03}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="TB_loagind_sc" ID="{F2189E88-C3B1-4F16-9305-232EFE5D8E57}" ShortID="746650776">
+							<PropertyList>
+								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-7</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4DDCC0E9-8918-4EF8-AD11-22C68F85E755}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E8FBD65D-B603-4940-A021-75BCF3D47498}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="TB_intro_outro_4" ID="{2473CA0A-E6D8-47A3-8F17-5DA2F38A3EAF}">
+									<PropertyList>
+										<Property Name="CrossfadeDuration" Type="Real64" Value="1917.293"/>
+										<Property Name="LoopBegin" Type="Real64" Value="1.18184296619411"/>
+										<Property Name="LoopEnd" Type="Real64" Value="33.2654034896401"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimEnd" Type="Real64" Value="34.3082061068702"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>TB_intro_outro_4.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="194561222"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="TB_intro_outro_4" ID="{2473CA0A-E6D8-47A3-8F17-5DA2F38A3EAF}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<RandomSequenceContainer Name="TB_pilar_01" ID="{C3E6E5D7-4D92-4A40-9E0D-AA940BCE07C4}" ShortID="47990057">
+							<PropertyList>
+								<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{4DDCC0E9-8918-4EF8-AD11-22C68F85E755}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{E8FBD65D-B603-4940-A021-75BCF3D47498}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<BlendContainer Name="loading blended" ID="{076022E0-DB1A-4C50-9640-ACC28C3B844B}" ShortID="414330987">
+									<PropertyList>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-7</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="conversion_main_01" ID="{CF3A7477-4B83-43D6-AD84-4CC2534FF633}" WorkUnitID="{4DDCC0E9-8918-4EF8-AD11-22C68F85E755}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Music" ID="{19FD7356-E847-4262-A161-949FBD5F4AC4}" WorkUnitID="{E8FBD65D-B603-4940-A021-75BCF3D47498}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="TB_intro_outro_01" ID="{1B06A601-DCBC-40BB-A618-01E76EE72801}" ShortID="577765499">
+											<PropertyList>
+												<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="conversion_main_01" ID="{CF3A7477-4B83-43D6-AD84-4CC2534FF633}" WorkUnitID="{4DDCC0E9-8918-4EF8-AD11-22C68F85E755}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Music" ID="{19FD7356-E847-4262-A161-949FBD5F4AC4}" WorkUnitID="{E8FBD65D-B603-4940-A021-75BCF3D47498}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="TB_intro_outro_1" ID="{B3BE3236-4CE7-4C22-A814-2EB0C084CAC0}">
+													<PropertyList>
+														<Property Name="CrossfadeDuration" Type="Real64" Value="766.917"/>
+														<Property Name="LoopBegin" Type="Real64" Value="0.590921483097056"/>
+														<Property Name="LoopEnd" Type="Real64" Value="33.5087241003272"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="TrimEnd" Type="Real64" Value="33.9953653217012"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>TB_intro_outro_1.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="1044453400"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ObjectLists/>
+											<ActiveSourceList>
+												<ActiveSource Name="TB_intro_outro_1" ID="{B3BE3236-4CE7-4C22-A814-2EB0C084CAC0}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="TB_intro_outro_02" ID="{9819A104-E992-4087-8C16-70DD434A1514}" ShortID="885982985">
+											<PropertyList>
+												<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="conversion_main_01" ID="{CF3A7477-4B83-43D6-AD84-4CC2534FF633}" WorkUnitID="{4DDCC0E9-8918-4EF8-AD11-22C68F85E755}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Music" ID="{19FD7356-E847-4262-A161-949FBD5F4AC4}" WorkUnitID="{E8FBD65D-B603-4940-A021-75BCF3D47498}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="TB_intro_outro_2" ID="{45E518F2-0F92-4E5C-B71D-8ACEB752E0A8}">
+													<PropertyList>
+														<Property Name="CrossfadeDuration" Type="Real64" Value="1150.376"/>
+														<Property Name="LoopBegin" Type="Real64" Value="0.834242093784079"/>
+														<Property Name="LoopEnd" Type="Real64" Value="33.0568429661941"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="TrimBegin" Type="Real64" Value="0.139040348964013"/>
+														<Property Name="TrimEnd" Type="Real64" Value="34.5167666303162"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>TB_intro_outro_2.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="213126749"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ObjectLists/>
+											<ActiveSourceList>
+												<ActiveSource Name="TB_intro_outro_2" ID="{45E518F2-0F92-4E5C-B71D-8ACEB752E0A8}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+									<ObjectLists/>
+								</BlendContainer>
+								<Sound Name="TB_intro_outro_01" ID="{CF8C5E7C-8EA4-449A-8AF7-2AD3CAC83324}" ShortID="308066016">
+									<PropertyList>
+										<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="conversion_main_01" ID="{CF3A7477-4B83-43D6-AD84-4CC2534FF633}" WorkUnitID="{4DDCC0E9-8918-4EF8-AD11-22C68F85E755}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Music" ID="{19FD7356-E847-4262-A161-949FBD5F4AC4}" WorkUnitID="{E8FBD65D-B603-4940-A021-75BCF3D47498}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="TB_intro_outro_1" ID="{F5546D66-0263-4D7C-9DED-808F1F6F1722}">
+											<PropertyList>
+												<Property Name="CrossfadeDuration" Type="Real64" Value="766.917"/>
+												<Property Name="LoopBegin" Type="Real64" Value="0.590921483097056"/>
+												<Property Name="LoopEnd" Type="Real64" Value="33.5087241003272"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimEnd" Type="Real64" Value="33.9953653217012"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>TB_intro_outro_1.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="1044453400"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ObjectLists/>
+									<ActiveSourceList>
+										<ActiveSource Name="TB_intro_outro_1" ID="{F5546D66-0263-4D7C-9DED-808F1F6F1722}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="TB_intro_outro_02" ID="{AB66043C-6846-46D2-BA1A-7D61878E172A}" ShortID="778441951">
+									<PropertyList>
+										<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="conversion_main_01" ID="{CF3A7477-4B83-43D6-AD84-4CC2534FF633}" WorkUnitID="{4DDCC0E9-8918-4EF8-AD11-22C68F85E755}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Music" ID="{19FD7356-E847-4262-A161-949FBD5F4AC4}" WorkUnitID="{E8FBD65D-B603-4940-A021-75BCF3D47498}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="TB_intro_outro_2" ID="{63C2E0F6-BA6C-4AF2-94CD-A902AE24E0EF}">
+											<PropertyList>
+												<Property Name="CrossfadeDuration" Type="Real64" Value="1150.376"/>
+												<Property Name="LoopBegin" Type="Real64" Value="0.834242093784079"/>
+												<Property Name="LoopEnd" Type="Real64" Value="33.0568429661941"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.139040348964013"/>
+												<Property Name="TrimEnd" Type="Real64" Value="34.5167666303162"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>TB_intro_outro_2.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="213126749"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ObjectLists/>
+									<ActiveSourceList>
+										<ActiveSource Name="TB_intro_outro_2" ID="{63C2E0F6-BA6C-4AF2-94CD-A902AE24E0EF}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<BlendContainer Name="loading blended_01" ID="{FEA0A7C3-8049-4A2C-B709-1551616EFECF}" ShortID="958680175">
+									<PropertyList>
+										<Property Name="Pitch" Type="int32">
+											<ValueList>
+												<Value>-250</Value>
+											</ValueList>
+										</Property>
+										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-7</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="conversion_main_01" ID="{CF3A7477-4B83-43D6-AD84-4CC2534FF633}" WorkUnitID="{4DDCC0E9-8918-4EF8-AD11-22C68F85E755}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Music" ID="{19FD7356-E847-4262-A161-949FBD5F4AC4}" WorkUnitID="{E8FBD65D-B603-4940-A021-75BCF3D47498}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<Sound Name="TB_intro_outro_01" ID="{B252DA52-ADE1-49D1-81C6-3098C0EFF775}" ShortID="399639391">
+											<PropertyList>
+												<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="conversion_main_01" ID="{CF3A7477-4B83-43D6-AD84-4CC2534FF633}" WorkUnitID="{4DDCC0E9-8918-4EF8-AD11-22C68F85E755}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Music" ID="{19FD7356-E847-4262-A161-949FBD5F4AC4}" WorkUnitID="{E8FBD65D-B603-4940-A021-75BCF3D47498}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="TB_intro_outro_1" ID="{AD02293A-A63B-4C34-BD59-21A58ACE1D8F}">
+													<PropertyList>
+														<Property Name="CrossfadeDuration" Type="Real64" Value="766.917"/>
+														<Property Name="LoopBegin" Type="Real64" Value="0.590921483097056"/>
+														<Property Name="LoopEnd" Type="Real64" Value="33.5087241003272"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="TrimEnd" Type="Real64" Value="33.9953653217012"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>TB_intro_outro_1.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="1044453400"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ObjectLists/>
+											<ActiveSourceList>
+												<ActiveSource Name="TB_intro_outro_1" ID="{AD02293A-A63B-4C34-BD59-21A58ACE1D8F}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+										<Sound Name="TB_intro_outro_02" ID="{1D75640D-C866-482F-8056-38F3DD0F6A01}" ShortID="16514466">
+											<PropertyList>
+												<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Conversion">
+													<ObjectRef Name="conversion_main_01" ID="{CF3A7477-4B83-43D6-AD84-4CC2534FF633}" WorkUnitID="{4DDCC0E9-8918-4EF8-AD11-22C68F85E755}"/>
+												</Reference>
+												<Reference Name="OutputBus">
+													<ObjectRef Name="Music" ID="{19FD7356-E847-4262-A161-949FBD5F4AC4}" WorkUnitID="{E8FBD65D-B603-4940-A021-75BCF3D47498}"/>
+												</Reference>
+											</ReferenceList>
+											<ChildrenList>
+												<AudioFileSource Name="TB_intro_outro_2" ID="{A78C3845-F293-4487-A432-A8F918AE5929}">
+													<PropertyList>
+														<Property Name="CrossfadeDuration" Type="Real64" Value="1150.376"/>
+														<Property Name="LoopBegin" Type="Real64" Value="0.834242093784079"/>
+														<Property Name="LoopEnd" Type="Real64" Value="33.0568429661941"/>
+														<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+														<Property Name="TrimBegin" Type="Real64" Value="0.139040348964013"/>
+														<Property Name="TrimEnd" Type="Real64" Value="34.5167666303162"/>
+													</PropertyList>
+													<Language>SFX</Language>
+													<AudioFile>TB_intro_outro_2.wav</AudioFile>
+													<MediaIDList>
+														<MediaID ID="213126749"/>
+													</MediaIDList>
+												</AudioFileSource>
+											</ChildrenList>
+											<ObjectLists/>
+											<ActiveSourceList>
+												<ActiveSource Name="TB_intro_outro_2" ID="{A78C3845-F293-4487-A432-A8F918AE5929}" Platform="Linked"/>
+											</ActiveSourceList>
+										</Sound>
+									</ChildrenList>
+									<ObjectLists/>
+								</BlendContainer>
+							</ChildrenList>
+							<ObjectLists/>
+						</RandomSequenceContainer>
 					</ChildrenList>
 					<ObjectLists/>
 				</ActorMixer>
@@ -3912,7 +4310,7 @@
 							<PropertyList>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
-										<Value>-20</Value>
+										<Value>-23</Value>
 									</ValueList>
 								</Property>
 							</PropertyList>
@@ -3942,7 +4340,7 @@
 							<PropertyList>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
-										<Value>-20</Value>
+										<Value>-27</Value>
 									</ValueList>
 								</Property>
 							</PropertyList>

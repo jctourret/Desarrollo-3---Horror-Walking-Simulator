@@ -11,7 +11,7 @@
 	<StreamedFiles/>
 	<MediaFilesNotInAnyBank/>
 	<SoundBanks>
-		<SoundBank Id="626013394" Language="SFX" Hash="52159131">
+		<SoundBank Id="626013394" Language="SFX" Hash="1862797378">
 			<ObjectPath>\SoundBanks\Default Work Unit\Main_SoundBank_01</ObjectPath>
 			<ShortName>Main_SoundBank_01</ShortName>
 			<Path>Main_SoundBank_01.bnk</Path>
@@ -101,7 +101,7 @@
 						</File>
 						<File Id="928140680" Language="SFX">
 							<ShortName>fx motor ascensor.wav</ShortName>
-							<Path>SFX/fx motor ascensor_F201362C.wem</Path>
+							<Path>SFX/fx motor ascensor_7A029747.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -127,10 +127,6 @@
 							<ShortName>CORO-cm_061.wav</ShortName>
 							<Path>SFX/CORO-cm_061_D8C07C79.wem</Path>
 						</File>
-						<File Id="56073203" Language="SFX">
-							<ShortName>Mx preBoss ref.wav</ShortName>
-							<Path>SFX/Mx preBoss ref_70A791BB.wem</Path>
-						</File>
 						<File Id="265919654" Language="SFX">
 							<ShortName>CORO-cm_060.wav</ShortName>
 							<Path>SFX/CORO-cm_060_D8C07C79.wem</Path>
@@ -142,6 +138,10 @@
 						<File Id="926393112" Language="SFX">
 							<ShortName>Boomer FX 02.wav</ShortName>
 							<Path>SFX/Boomer FX 02_BF9C30F5.wem</Path>
+						</File>
+						<File Id="968835191" Language="SFX">
+							<ShortName>TB_intro_outro_3.wav</ShortName>
+							<Path>SFX/TB_intro_outro_3_CBD43F27.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -164,6 +164,10 @@
 				<Event Id="1532439224" Name="loading_musica" ObjectPath="\Events\Default Work Unit\loading_musica" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
 				<Event Id="1066270731" Name="loading_spacebar" ObjectPath="\Events\Default Work Unit\loading_spacebar" DurationType="Infinite">
 					<IncludedMemoryFiles>
+						<File Id="213126749" Language="SFX">
+							<ShortName>TB_intro_outro_2.wav</ShortName>
+							<Path>SFX/TB_intro_outro_2_A7151293.wem</Path>
+						</File>
 						<File Id="390603775" Language="SFX">
 							<ShortName>InterfaceGlitchInteractionData-32.wav</ShortName>
 							<Path>SFX/InterfaceGlitchInteractionData-32_12599D88.wem</Path>
@@ -180,9 +184,9 @@
 							<ShortName>CORO-cm_068.wav</ShortName>
 							<Path>SFX/CORO-cm_068_D8C07C79.wem</Path>
 						</File>
-						<File Id="999355718" Language="SFX">
-							<ShortName>The Nightmare Before Christmas Soundtrack 17 To the Rescue.wav</ShortName>
-							<Path>SFX/The Nightmare Before Christmas Soundtrack 17 To the Rescue_95B84065.wem</Path>
+						<File Id="1044453400" Language="SFX">
+							<ShortName>TB_intro_outro_1.wav</ShortName>
+							<Path>SFX/TB_intro_outro_1_E4CEB6DC.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -240,13 +244,17 @@
 				<Event Id="1098363591" Name="mono_frase3_despedida" ObjectPath="\Events\Default Work Unit\mono_frase3_despedida" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
 				<Event Id="4033927831" Name="partida_click_replay" ObjectPath="\Events\Default Work Unit\partida_click_replay" DurationType="Infinite">
 					<IncludedMemoryFiles>
+						<File Id="213126749" Language="SFX">
+							<ShortName>TB_intro_outro_2.wav</ShortName>
+							<Path>SFX/TB_intro_outro_2_A7151293.wem</Path>
+						</File>
 						<File Id="475906640" Language="SFX">
 							<ShortName>PM_FSSF2_USER_INTERFACE_SIMPLE_56.wav</ShortName>
 							<Path>SFX/PM_FSSF2_USER_INTERFACE_SIMPLE_56_4360C4AF.wem</Path>
 						</File>
-						<File Id="999355718" Language="SFX">
-							<ShortName>The Nightmare Before Christmas Soundtrack 17 To the Rescue.wav</ShortName>
-							<Path>SFX/The Nightmare Before Christmas Soundtrack 17 To the Rescue_95B84065.wem</Path>
+						<File Id="1044453400" Language="SFX">
+							<ShortName>TB_intro_outro_1.wav</ShortName>
+							<Path>SFX/TB_intro_outro_1_E4CEB6DC.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -298,13 +306,13 @@
 							<ShortName>CORO-cm_054.wav</ShortName>
 							<Path>SFX/CORO-cm_054_D8C07C79.wem</Path>
 						</File>
+						<File Id="447635545" Language="SFX">
+							<ShortName>TB_PreBoss_v1.wav</ShortName>
+							<Path>SFX/TB_PreBoss_v1_97A0357B.wem</Path>
+						</File>
 						<File Id="642497657" Language="SFX">
 							<ShortName>CORO-cm_053.wav</ShortName>
 							<Path>SFX/CORO-cm_053_D8C07C79.wem</Path>
-						</File>
-						<File Id="930799098" Language="SFX">
-							<ShortName>Mx preBoss ref.wav</ShortName>
-							<Path>SFX/Mx preBoss ref_9501C1C3.wem</Path>
 						</File>
 					</IncludedMemoryFiles>
 				</Event>
@@ -506,7 +514,7 @@
 						</File>
 						<File Id="928140680" Language="SFX">
 							<ShortName>fx motor ascensor.wav</ShortName>
-							<Path>SFX/fx motor ascensor_F201362C.wem</Path>
+							<Path>SFX/fx motor ascensor_7A029747.wem</Path>
 						</File>
 						<File Id="1058335931" Language="SFX">
 							<ShortName>CORO-cm_028.wav</ShortName>
@@ -575,7 +583,7 @@
 				<GameParameter Id="3772610614" Name="tension_susurros" ObjectPath="\Game Parameters\Default Work Unit\tension_susurros"/>
 			</GameParameters>
 		</SoundBank>
-		<SoundBank Id="1355168291" Language="SFX" Hash="3376834536">
+		<SoundBank Id="1355168291" Language="SFX" Hash="3701044889">
 			<ObjectPath>Init</ObjectPath>
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>

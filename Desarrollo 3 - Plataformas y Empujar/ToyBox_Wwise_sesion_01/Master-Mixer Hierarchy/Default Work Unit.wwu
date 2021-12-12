@@ -7,7 +7,7 @@
 					<PropertyList>
 						<Property Name="BusVolume" Type="Real64">
 							<ValueList>
-								<Value>4</Value>
+								<Value>9</Value>
 							</ValueList>
 						</Property>
 						<Property Name="Volume" Type="Real64">
@@ -43,6 +43,17 @@
 						<Reference Name="AudioDevice">
 							<ObjectRef Name="System" ID="{4EC01D66-B0C9-4367-9289-C714CCD0E373}" WorkUnitID="{7E364476-D823-4629-93FB-5DC731EE5BB3}"/>
 						</Reference>
+						<Reference Name="Effect1">
+							<Custom CreatedFrom="{9FB8DC2B-7F1C-4E4E-8FA5-50872652D2DD}">
+								<Effect Name="Brick_Wall_Minus_1dB_Peak_Slow_Release (Custom)" ID="{BAB16F97-F8B9-408B-9D26-0BB17A5A131F}" ShortID="791504455" PluginName="Wwise Peak Limiter" CompanyID="0" PluginID="110" PluginType="3">
+									<PropertyList>
+										<Property Name="Ratio" Type="Real32" Value="50"/>
+										<Property Name="ReleaseTime" Type="Real32" Value="0.25"/>
+										<Property Name="Threshold" Type="Real32" Value="-1"/>
+									</PropertyList>
+								</Effect>
+							</Custom>
+						</Reference>
 					</ReferenceList>
 					<ChildrenList>
 						<Bus Name="UI" ID="{A14F5D25-1312-4E7B-A6EE-2F0054444546}">
@@ -52,7 +63,7 @@
 							<PropertyList>
 								<Property Name="BusVolume" Type="Real64">
 									<ValueList>
-										<Value>4</Value>
+										<Value>9</Value>
 									</ValueList>
 								</Property>
 								<Property Name="Volume" Type="Real64">
@@ -84,13 +95,26 @@
 									</RTPCList>
 								</Property>
 							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Effect1">
+									<Custom CreatedFrom="{9FB8DC2B-7F1C-4E4E-8FA5-50872652D2DD}">
+										<Effect Name="Brick_Wall_Minus_1dB_Peak_Slow_Release (Custom)" ID="{1D160E0F-512F-4632-B654-8861D4A821A2}" ShortID="665965697" PluginName="Wwise Peak Limiter" CompanyID="0" PluginID="110" PluginType="3">
+											<PropertyList>
+												<Property Name="Ratio" Type="Real32" Value="50"/>
+												<Property Name="ReleaseTime" Type="Real32" Value="0.25"/>
+												<Property Name="Threshold" Type="Real32" Value="-1"/>
+											</PropertyList>
+										</Effect>
+									</Custom>
+								</Reference>
+							</ReferenceList>
 							<ObjectLists/>
 						</Bus>
 						<Bus Name="SFX" ID="{9EE3F1A8-A662-4781-BAAC-4841864EECA7}">
 							<PropertyList>
 								<Property Name="BusVolume" Type="Real64">
 									<ValueList>
-										<Value>4</Value>
+										<Value>9</Value>
 									</ValueList>
 								</Property>
 								<Property Name="Volume" Type="Real64">
@@ -122,6 +146,19 @@
 									</RTPCList>
 								</Property>
 							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Effect1">
+									<Custom CreatedFrom="{9FB8DC2B-7F1C-4E4E-8FA5-50872652D2DD}">
+										<Effect Name="Brick_Wall_Minus_1dB_Peak_Slow_Release (Custom)" ID="{3B4227E5-E560-4413-8163-C0A9B904D070}" ShortID="1019073249" PluginName="Wwise Peak Limiter" CompanyID="0" PluginID="110" PluginType="3">
+											<PropertyList>
+												<Property Name="Ratio" Type="Real32" Value="50"/>
+												<Property Name="ReleaseTime" Type="Real32" Value="0.25"/>
+												<Property Name="Threshold" Type="Real32" Value="-1"/>
+											</PropertyList>
+										</Effect>
+									</Custom>
+								</Reference>
+							</ReferenceList>
 							<ObjectLists/>
 						</Bus>
 					</ChildrenList>
