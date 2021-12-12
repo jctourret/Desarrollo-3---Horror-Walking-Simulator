@@ -24,6 +24,7 @@ public class JumperSpiderAI : EnemyAI
     {
         rbody.isKinematic = false;
         animator = GetComponentInChildren<Animator>();
+        spriteRenderer = GetComponentInChildren<SpriteRenderer>();
     }
 
     // Update is called once per frame
