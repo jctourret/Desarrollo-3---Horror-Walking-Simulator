@@ -371,8 +371,8 @@ MonoBehaviour:
     type: 3}
   spiderBloodPref: {fileID: 1665716702526640982, guid: 789741547be07384f9b1f8e312e1814c,
     type: 3}
-  maxLife: 1
-  actualLife: 1
+  maxLife: 40
+  actualLife: 40
 --- !u!114 &6435447984147978695
 MonoBehaviour:
   m_ObjectHideFlags: 0
